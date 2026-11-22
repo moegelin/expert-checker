@@ -1,0 +1,51 @@
+# M0 hosting probe, docs/plan.md §3 and §6.
+# Hourly; disables itself 72 h after the first run. Delete this file after the go/no-go.
+name: probe
+
+on:
+  schedule:
+    - cron: "23 * * * *"  # hourly at :23 UTC, away from the full hour
+  workflow_dispatch:
+
+permissions:
+  contents: write  # commit data/probe.json
+  actions: write   # disable this workflow when the 72 h window ends
+
+concurrency:
+  group: probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Probe the expert API
+        id: probe
+        run: python -m scanner probe
+
+      - name: Commit data/probe.json
+        if: ${{ !cancelled() }}
+        env:
+          STAMP: ${{ steps.probe.outputs.stamp }}
+        run: |
+          test -f data/probe.json || exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/probe.json
+          git diff --cached --quiet && exit 0
+          git commit -m "probe: $STAMP"
+          git pull --rebase
+          git push
+
+      - name: Disable this workflow after 72 h
+        if: ${{ !cancelled() && steps.probe.outputs.done == 'true' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow disable probe.yml --repo "$GITHUB_REPOSITORY"
