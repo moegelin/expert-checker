@@ -16,7 +16,8 @@ ENV_FILE="$HOME/.expert-checker.env"
 echo "== packages"
 # Upgrade first: on a fresh Termux, installing packages without an upgrade mixes a new libcurl with
 # the old OpenSSL and git's https helper cannot start ("CANNOT LINK EXECUTABLE", seen 2026-11-22).
-DEBIAN_FRONTEND=noninteractive pkg upgrade -y -o Dpkg::Options::="--force-confnew"
+# apt, not pkg: pkg needs curl, which is the broken piece in that state.
+apt update && DEBIAN_FRONTEND=noninteractive apt full-upgrade -y -o Dpkg::Options::="--force-confnew"
 pkg install -y python git curl termux-api
 # Time zone database for the Berlin hour: Termux has no tzdata package, the pip package does the job.
 python3 -m pip install -q tzdata || echo "pip tzdata failed: the probe assumes CET (UTC+1)"
