@@ -40,6 +40,73 @@ New API facts found during the analysis are recorded in [expert-api.md](expert-a
 - **Commit address.** Commits in this repo use `81761762+moegelin@users.noreply.github.com` (repo-local git config), not the work address.
 - **M0 probe.** Every run: store finder, 3 `pricepds` (Philips 65OLED951 at the Online-Shop, Sony BRAVIA 9 II 65" at Berlin Tauentzien, LG OLED65C69LB at Rangsdorf), `getIndex` of the Online-Shop. Sweep: `pricepds` for the Philips at all stores + Online-Shop (349 calls, 8 workers) in the first run and then when the last sweep is 6 h old, because 5 calls cannot show throttling at scan volume. The workflow runs hourly at :23 UTC around the clock and disables itself 72 h after the first run. A failed run turns red; the GitHub failure email is the alert until ntfy (M1).
 
+### Hosting problems found 2026-11-22 (after the M0 probe)
+
+The hosting of §1 #1 does not work. The decision follows below ("Hosting decision 2026-11-22"). §2 architecture, §3 hosting and §6 milestones still describe the Actions design; they are revised after the phone test passes.
+
+Problems:
+
+| # | Problem | Status | Evidence |
+|---|---|---|---|
+| P1 | **Cloudflare blocks data-centre traffic.** GitHub Actions gets `403 (Forbidden)` with `cf-mitigated: challenge` and a "Just a moment..." page on the first call, from two data centres. The same client from a home connection in Berlin works (all calls `200`). | verified for GitHub Actions | runs 45037047940 (`PDX`) and 45037122117 (`SEA`); docs/expert-api.md, "Findings 2026-11-22 (M0 probe)" |
+| P2 | **Every other cloud host is probably blocked too:** Vercel (AWS), Netlify, Render, Fly, Google Cloud, Google Apps Script, and the planned fallback Oracle VM. Cloudflare Workers: Bot Fight Mode is known to challenge Workers subrequests; the free plan also allows only 50 subrequests per run (a scan needs 349). | not tested | Cloudflare Bot Fight Mode docs |
+| P3 | **Free cloud plans are too small anyway.** Vercel Hobby: classic cron jobs once a day; Schedules at most every 15 min with up to 1 h jitter; functions at most 5 min. Google Apps Script: request quota per day below 5 TVs × 349 stores × hourly. | from docs | Vercel cron docs |
+| P4 | **A browser app cannot call the API.** `access-control-allow-origin` is fixed to `https://www.expert.de`, so a PWA on another origin cannot read responses. A web app can only show data that something else scanned. | verified (`Origin: https://moegelin.github.io` → `access-control-allow-origin: https://www.expert.de`) | docs/expert-api.md, "Request behaviour" |
+| P5 | **The Mac is no host.** It is not on all the time. | user, 2026-11-22 | |
+| P6 | **The phone is the only free, always-on device with a home or mobile connection.** Risks: Samsung One UI kills background apps (sleeping apps; foreground services are guaranteed only since One UI 6 for apps targeting Android 14); mobile data not tested against Cloudflare (home Wi-Fi = same address as the Mac, works); data volume about 0.5–2 MB per product scan, set scans much more; without a server nothing outside the phone notices when scans stop. | not tested on the phone | dontkillmyapp.com/samsung |
+| P7 | **Phone as Tailscale relay** (GitHub Actions routes expert calls through the phone as exit node): Android exit nodes run in userspace and "may be too slow"; the free plan limits the minutes of ephemeral nodes (1 000 per month per a third-party source, not checked). | not tested | Tailscale exit-node docs |
+| P8 | **Process.** Hosting was not tested before the design and prototype work. Rule from now on: test that a path works end to end before building features on it. | lesson | |
+
+Ruled out: getting past the Cloudflare challenge with automated browsers or solver tools (circumvents expert's protection, fragile); paid residential proxies (cost, same circumvention).
+
+### Hosting decision 2026-11-22 (evening)
+
+**The scanner runs on the Galaxy S25 in Termux.** Android's JobScheduler (through Termux:API) starts it hourly in the test and every 2 h in version 1, only 06:00–22:00 Berlin. healthchecks.io is the dead-man switch: a missed run sends an email and an ntfy push, and the user restarts Termux. The options against the constraints (free, not the Mac, every 2 h by day, keeps working or tells the user to restart it):
+
+| Option | Passes Cloudflare | Free | 2 h schedule, 06–22 | Keeps working, tells the user when not | Effort |
+|---|---|---|---|---|---|
+| Any free cloud server (Vercel, Render, Fly, Oracle, Google, Workers, Apps Script) | No. Verified for Azure (GitHub Actions), every other free host is a data centre too | Yes | Free tiers too small: Vercel Hobby cron once a day, Workers 50 subrequests per run, Apps Script 20 000 fetches per day against ≈ 14 000 needed plus retries and set scans | n/a | low |
+| Phone as Tailscale exit node + Actions | Yes, through the phone | Yes | Yes | Two things must stay up (phone VPN and Actions). Tailscale: Android exit nodes are "not performant" and "still undergoing optimization" | low, fragile |
+| **Phone + Termux running the Python scanner** | Yes on Wi-Fi (verified at home, same address as the Mac); mobile data untested | Yes | Yes, JobScheduler, minimum period 15 min | Yes: Termux:Boot, wake lock per run, battery exemption, healthchecks ping | low, reuses scanner and tests |
+| Native Android app (Kotlin, WorkManager) | Yes | Yes | Yes, WorkManager periodic work is the sanctioned pattern | Best background guarantees | high, full rewrite |
+| Android app with Chaquopy around the Python scanner | Yes | Yes, Chaquopy is open source since 12.0.1 (2022-07) | Yes | Same as native | medium, keeps the Python |
+| Old Android device at home | Yes | If the user owns one | Yes | Better than the S25: always on charger and Wi-Fi | low |
+| idealo and mydealz alerts | n/a | Yes | n/a | n/a | none; no per-store prices, no cashback maths |
+
+Why Termux: the smallest change that meets every constraint. The Tailscale relay depends on the phone being awake anyway and adds Actions and an experimental exit node. A native app only buys better background guarantees; the Chaquopy route gives the same guarantees later without discarding the Python, so it is the fallback if the phone test fails.
+
+Battery, estimated: 8 runs a day with about 75 s of network each cost 2–3 % per day on Wi-Fi and 3–5 % on mobile data (S25, 4 000 mAh). Rules that keep it there: no permanent wake lock (the boot script only registers the job, the run script holds the lock for the run), JobScheduler instead of a sleep loop, set scans over all stores only on Wi-Fi or once a day, gzip (the client already sends `Accept-Encoding: gzip`; sizes in expert-api.md, "Request behaviour").
+
+Consequences for the plan, to be written after the test: §2 scanner on the phone instead of Actions, data pushed to the repo with a fine-grained PAT, GitHub Pages and the PWA unchanged (P4 does not apply: the PWA reads only repo data), alerts from the phone through ntfy or `termux-notification`; §3 replaced by the phone setup; §6 M0 = the phone test below.
+
+#### Phone test (M0, one day)
+
+Files: `phone/setup.sh` (one-time setup in Termux), `phone/schedule.sh` (registers job 1: hourly, any network, persisted across reboots), `phone/boot.sh` (Termux:Boot runs schedule.sh again; no wake lock), `phone/run-probe.sh` (one run: skips 22:00–06:00 for scheduled runs, wake lock for the run, detects Wi-Fi or mobile data with `termux-wifi-connectioninfo`, runs `python -m scanner probe --out data/probe-phone.json --event schedule|manual --network …`, pings healthchecks.io, posts a notification, cancels the job when the 24 h window is over). The probe exits 0 (clean), 1 (degraded: a call failed after retries or a check failed, the run happened) or 2 (aborted: challenge, rate limit, too many failures). Only exit 2 or a crash pings `/fail` and rings; a degraded run pings success and updates the silent notification, because a flaky `500` on one of the fixed calls is an API problem, not a hosting problem (seen on the Mac on 2026-11-22: Sony BRAVIA 9 II at Berlin Tauentzien, four `500`s). Output: `data/probe-phone.json` (records and verdict, runner `termux`), `data/probe-phone.log` (one line per start, also the skipped night runs), `data/probe-phone-last.md` (output of the last run, ignored by git). The probe keeps the Actions behaviour; the runner comes from `TERMUX_VERSION`.
+
+Pass = verdict `go` in `data/probe-phone.json` plus two manual checks:
+
+1. No challenge, no non-JSON body, no aborted run, first-try `500` under 10 % (as for Actions).
+2. At least one run on Wi-Fi and one on mobile data; manual runs count.
+3. At least 15 of the 16 hourly scheduled runs between 06:00 and 22:00 Berlin within 24 h of the first run.
+4. Manual: Settings → Battery shows Termux plus Termux:API under 5 % for the day.
+5. Manual: healthchecks.io received the pings and sent no false alarm. Check settings: cron `0 6-21 * * *`, time zone Europe/Berlin, grace 2 h (JobScheduler runs anywhere inside the hour, so two consecutive misses alert, one does not; the log counts single misses).
+
+Fail → Chaquopy app with WorkManager around the same Python package, then the same one-day test with that app.
+
+Steps, in this order (1 and 2 done on 2026-11-22 by Claude; 3 to 7 need the user; the Actions `probe` workflow is disabled):
+
+1. ~~Mac: commit and push these files.~~ Done, the phone clones the public repo `moegelin/expert-checker`.
+2. ~~Mac: disable the Actions probe.~~ Done (`gh workflow disable probe.yml`, state `disabled_manually`).
+3. Browser, healthchecks.io (free, no card, sign-up by email link): one check "expert-probe-phone". Schedule: cron `0 6-21 * * *`, time zone Europe/Berlin, grace 2 h. Integrations: email, and ntfy with a random topic name (treat it as a secret, do not commit it). Copy the ping URL (`https://hc-ping.com/<uuid>`).
+4. Phone: install Termux, Termux:API and Termux:Boot from F-Droid (same signature; not the Play Store build). Open each once. Settings → Apps → each of the three → Battery → Unrestricted. Settings → Battery → Background usage limits → Never sleeping apps: add the three. Developer options → "Disable child process restrictions" on. Install the ntfy app and subscribe to the topic of step 3.
+5. Termux: `pkg install -y git && git clone https://github.com/moegelin/expert-checker.git ~/expert-checker && bash ~/expert-checker/phone/setup.sh`; paste the ping URL when asked. The script installs packages, copies the boot script, runs the tests, registers the job and does the first run on the current network.
+6. Termux: Wi-Fi off, `bash ~/expert-checker/phone/run-probe.sh manual`, Wi-Fi on. This is the mobile-data run of criterion 2.
+7. Wait 24 h. The notification "expert probe ok" updates every hour; a failed run rings. After the window the notification "test finished" appears and the job cancels itself. Read `tail -n 30 ~/expert-checker/data/probe-phone.log` and `cat ~/expert-checker/data/probe-phone-last.md`; check criteria 4 and 5.
+8. Termux: `cd ~/expert-checker && git config credential.helper store && git add data/probe-phone.json data/probe-phone.log && git commit -m "probe: phone test" && git push` (user name `moegelin`, password = a fine-grained PAT with Contents read/write on this repo). The same token later lets the scanner push its data.
+9. Mac, new chat: evaluate with Claude; on `go`, revise §2, §3 and §6 for the phone and start M1; on `no-go` because of kills, the Chaquopy fallback.
+
+State 2026-11-22 evening: probe changes, scripts and tests committed and pushed; nothing run on the phone yet.
+
 ## 2. Architecture
 
 ```mermaid
@@ -244,7 +311,7 @@ Version 1 = M0–M4. M5 and the version-2 items in [features.md](features.md) co
 
 | Risk | Impact | Mitigation |
 |---|---|---|
-| Cloudflare blocks Azure runner IPs | no scans | M0 probe; fallback VM; the scanner CLI is host-independent |
+| Cloudflare blocks Azure runner IPs | no scans | **Happened 2026-11-22** (M0 probe); see §1, "Hosting problems found 2026-11-22". The fallback VM is a data centre too and probably blocked |
 | expert changes the API | silent wrong data | N7 on non-JSON or schema mismatch; verify endpoints and update expert-api.md |
 | PDF layouts change | amounts unknown | parser reports "unknown", N5 still fires with the link; override file |
 | GitHub disables the cron after 60 days | no scans | data commits keep the repo active; healthchecks catches it |

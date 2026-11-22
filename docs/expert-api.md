@@ -101,8 +101,10 @@ Rules:
 - About 2–7 % of calls return `500` at first. All succeeded after a retry with a short delay. Always retry.
 - No `429 (Too Many Requests)` seen at 8 parallel workers. The old script handled `429` with exponential backoff; keep that.
 - `bundlesForArticle` responses are 20–65 KB. `getIndex` is ~1.3 MB (online shop, 2026-11-22); do not load it for every store on every run.
+- **Response sizes, measured 2026-11-22** (uncompressed → with `Accept-Encoding: gzip`, which the client sends): `pricepds` 4.5–6.5 KB → 1.7–2.4 KB; `bundlesForArticle` 61 KB → 7 KB; `getIndex` 1.27 MB → 195 KB. A price scan of 5 TVs over 349 stores moves about 10 MB uncompressed, 4 MB on the wire; a set scan over all stores about 55 MB uncompressed, 7 MB on the wire. On the phone (hosting decision of 2026-11-22 in plan.md) this is the data volume on mobile data; set scans over all stores run on Wi-Fi or once a day.
 - A `500` has a JSON body (`{"error": true, "url": …, "statusCode": 500, "statusMessage": "Server Error", "message": "Server Error"}`) and takes about 1.2 s; a `200` takes 0.1–0.5 s. Example of 2026-11-22: `pricepds` for `11128378730` at Berlin Tauentzien (`e_34627162`) returned `500`, `500`, then `200`, so it needed two retries. A JSON `500` is a retry case, not a challenge.
 - Normal response headers (2026-11-22): `server: cloudflare`, `cf-cache-status: DYNAMIC`, `cf-ray: <id>-<data centre>` (`-TXL` from Berlin), `via: 1.1 google`, no `cf-mitigated`. A `cf-mitigated` header or a non-JSON body means a Cloudflare challenge.
+- **No browser calls from other sites (CORS).** Every response carries `access-control-allow-origin: https://www.expert.de`, also for a request with `Origin: https://moegelin.github.io` (verified 2026-11-22). A web app on another origin cannot read the API; native apps and server code are not affected.
 
 ## Verified examples (2026-11-21)
 

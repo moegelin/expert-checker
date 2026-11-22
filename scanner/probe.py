@@ -1,4 +1,8 @@
-"""M0 hosting probe, docs/plan.md §3 and §6: do the expert API calls work from GitHub Actions?"""
+"""M0 hosting probe, docs/plan.md §1 and §6: do the expert API calls work from the host?
+
+Runners: `actions` (GitHub Actions, 72 h window, challenged by Cloudflare on 2026-11-22), `termux` (the
+phone, 24 h window, phone/run-probe.sh), `local` (the Mac, never judged).
+"""
 
 import json
 import math
@@ -27,11 +31,15 @@ PRICE_CALLS = [
 ]
 SWEEP_WEBCODE = "11128346052"  # Philips 65OLED951
 MIN_STORES = 300
-WINDOW = timedelta(hours=72)
+WINDOWS = {"actions": timedelta(hours=72), "termux": timedelta(hours=24)}
+WINDOW = WINDOWS["actions"]
 SWEEP_EVERY = timedelta(hours=6)
 SWEEP_SLACK = timedelta(minutes=30)  # Actions schedules start late by varying amounts
 SCHEDULE_MINUTE = 23  # cron "23 * * * *" in probe.yml
 MAX_FIRST_TRY_500 = 0.10
+SCAN_HOURS = range(6, 22)  # Berlin; no scans 22:00–06:00 (docs/plan.md §1)
+PHONE_NETWORKS = ("wifi", "mobile")  # the phone test must pass on both
+MIN_SCHEDULED_RUNS = 15  # of 16 hourly runs 06:00–22:00 in the phone test
 STOP_ERRORS = (ChallengeError, RateLimitedError, ScanAborted)
 
 
@@ -42,9 +50,10 @@ def main(args, env=os.environ, now=None, api=None):
     data = json.loads(out.read_text()) if out.exists() else {}
     records = data.get("records", [])
 
-    record = run(api, records, args.sweep, env, now)
+    record = run(api, records, args.sweep, env, now,
+                 event=getattr(args, "event", None), network=getattr(args, "network", None))
     records.append(record)
-    summary = summarize(records, now)
+    summary = summarize(records, now, record["runner"])
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps({"summary": summary, "records": records}, indent=2, ensure_ascii=False) + "\n")
 
@@ -59,15 +68,17 @@ def main(args, env=os.environ, now=None, api=None):
     return exit_code(record)
 
 
-def run(api, records, sweep_mode, env, now, clock=time.monotonic):
-    runner = "actions" if env.get("GITHUB_ACTIONS") else "local"
-    event = env.get("GITHUB_EVENT_NAME")
+def run(api, records, sweep_mode, env, now, clock=time.monotonic, event=None, network=None):
+    runner = detect_runner(env)
+    event = event or env.get("GITHUB_EVENT_NAME")
     record = {
         "time": iso(now),
         "runner": runner,
         "event": event,
+        "network": network or ("datacentre" if runner == "actions" else "unknown"),
+        "berlinHour": berlin(now).hour,
         "runId": env.get("GITHUB_RUN_ID"),
-        "scheduleLagMin": (now.minute - SCHEDULE_MINUTE) % 60 if event == "schedule" else None,
+        "scheduleLagMin": (now.minute - SCHEDULE_MINUTE) % 60 if runner == "actions" and event == "schedule" else None,
         "calls": [],
         "sweep": None,
         "aborted": None,
@@ -191,9 +202,31 @@ def _has_offer(result):
     return isinstance(result, dict) and (result.get("price") or {}).get("bruttoPrice") is not None
 
 
-def summarize(records, now):
-    """Totals and verdict over the Actions runs; local runs do not count."""
-    runs = [r for r in records if r["runner"] == "actions"]
+def detect_runner(env):
+    if env.get("GITHUB_ACTIONS"):
+        return "actions"
+    if env.get("TERMUX_VERSION") or "com.termux" in env.get("PREFIX", ""):
+        return "termux"
+    return "local"
+
+
+def berlin(dt):
+    """`dt` in Europe/Berlin. Without a tz database (Termux without `tzdata`) it assumes CET."""
+    try:
+        from zoneinfo import ZoneInfo
+        return dt.astimezone(ZoneInfo("Europe/Berlin"))
+    except (ImportError, KeyError):  # ZoneInfoNotFoundError is a KeyError
+        return dt.astimezone(timezone(timedelta(hours=1)))
+
+
+def summarize(records, now, runner="actions"):
+    """Totals and verdict over the runs of one runner (`actions` or `termux`); local runs do not count.
+
+    The phone test (`termux`) also needs runs on Wi-Fi and on mobile data without a challenge, and at
+    least 15 of the 16 hourly scheduled runs between 06:00 and 22:00 Berlin within its 24 h window.
+    """
+    window = WINDOWS.get(runner, WINDOW)
+    runs = [r for r in records if r["runner"] == runner and runner != "local"]
     started = parse_time(runs[0]["time"]) if runs else None
     calls = [c for r in runs for c in r["calls"]]
     sweeps = [r["sweep"] for r in runs if r.get("sweep") and "calls" in r["sweep"]]
@@ -223,18 +256,30 @@ def summarize(records, now):
     if call_count and share_500 >= MAX_FIRST_TRY_500:
         reasons.append(f"{share_500:.1%} of calls had a 500 at the first attempt (limit < 10 %)")
 
-    done = started is not None and now >= started + WINDOW
+    networks = dict(Counter(r.get("network") or "unknown" for r in runs).most_common())
+    scheduled_in_hours = sum(1 for r in runs if r.get("event") == "schedule" and r.get("berlinHour") in SCAN_HOURS)
+    done = started is not None and now >= started + window
+    if runner == "termux" and done:
+        for network in PHONE_NETWORKS:
+            if network not in networks:
+                reasons.append(f"no run on {network}")
+        if scheduled_in_hours < MIN_SCHEDULED_RUNS:
+            reasons.append(f"{scheduled_in_hours} of 16 scheduled runs between 06:00 and 22:00 Berlin "
+                           f"(need at least {MIN_SCHEDULED_RUNS})")
     if not done:
         verdict = "pending"
     else:
         verdict = "no-go" if reasons else "go"
     return {
+        "runner": runner,
         "startedAt": iso(started) if started else None,
-        "endsAt": iso(started + WINDOW) if started else None,
+        "endsAt": iso(started + window) if started else None,
         "done": done,
         "verdict": verdict,
         "reasons": reasons,
         "runs": len(runs),
+        "networks": networks,
+        "scheduledInScanHours": scheduled_in_hours,
         "sweeps": len(sweeps),
         "calls": call_count,
         "firstTry500": first_try_500,
@@ -252,15 +297,40 @@ def summarize(records, now):
     }
 
 
+EXIT_OK, EXIT_DEGRADED, EXIT_ABORTED = 0, 1, 2
+
+
 def exit_code(record):
+    """0 = clean; 1 = degraded (a call failed after retries or a check failed; the run happened);
+    2 = aborted (challenge, 429 (Too Many Requests) after all waits, or too many failed calls)."""
+    if record["aborted"]:
+        return EXIT_ABORTED
     calls_ok = all(c["outcome"] == "ok" and c["check"] == "ok" for c in record["calls"])
     s = record["sweep"] or {}
     sweep_ok = not s.get("failedAfterRetries") and not s.get("challenges")
-    return 0 if calls_ok and sweep_ok and not record["aborted"] else 1
+    return EXIT_OK if calls_ok and sweep_ok else EXIT_DEGRADED
+
+
+def status_line(summary):
+    """One line for the log and the notification of phone/run-probe.sh."""
+    s = summary
+    networks = ", ".join(f"{k} {n}" for k, n in s.get("networks", {}).items()) or "–"
+    return (f"{s['verdict']} ({'done' if s['done'] else 'running'}) · runs {s['runs']} · "
+            f"scheduled 06–22: {s.get('scheduledInScanHours', 0)}/16 · challenges {s['challenges']} · "
+            f"aborted {s['abortedRuns']} · failed after retries {s['failedAfterRetries']} · "
+            f"first-try 500 {s['firstTry500Share']:.1%} · networks {networks}")
+
+
+def status(args):
+    """`python -m scanner probe-status --out FILE`: prints the status line; exit 0 when the window is done, else 3."""
+    data = json.loads(Path(args.out).read_text())
+    print(status_line(data["summary"]))
+    return 0 if data["summary"]["done"] else 3
 
 
 def render(record, summary):
-    lines = [f"## expert API probe, {stamp(parse_time(record['time']))} ({record['runner']})", ""]
+    lines = [f"## expert API probe, {stamp(parse_time(record['time']))} ({record['runner']}, "
+             f"{record.get('event') or 'manual'}, network {record.get('network', 'unknown')})", ""]
     lines += ["| Call | Status per attempt | ms | KB | DC | Outcome | Check |", "|---|---|---|---|---|---|---|"]
     for c in record["calls"]:
         kb = f"{c['bytes'] / 1024:.0f}" if c["bytes"] is not None else "–"
@@ -289,11 +359,16 @@ def render(record, summary):
         lines += ["", f"**Run aborted:** {record['aborted']}"]
 
     v = summary
+    runner = v.get("runner", "actions")
     lines += ["", f"### Verdict: {v['verdict']}"]
     if v["startedAt"]:
-        lines.append(f"Actions runs {stamp(parse_time(v['startedAt']))} to {stamp(parse_time(v['endsAt']))}.")
+        lines.append(f"{runner} runs {stamp(parse_time(v['startedAt']))} to {stamp(parse_time(v['endsAt']))}.")
     else:
-        lines.append("No Actions run yet.")
+        lines.append(f"No {runner} run yet.")
+    if runner == "termux":
+        networks = ", ".join(f"{k} {n}" for k, n in v["networks"].items()) or "–"
+        lines.append(f"Networks: {networks}. Scheduled runs 06:00–22:00 Berlin: {v['scheduledInScanHours']} "
+                     f"(need at least {MIN_SCHEDULED_RUNS} of 16).")
     if v["reasons"]:
         lines.append(("Reasons: " if v["verdict"] == "no-go" else "Issues so far: ") + "; ".join(v["reasons"]) + ".")
     lag, lat = v["scheduleLagMin"], v["latencyMs"]
