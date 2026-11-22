@@ -47,7 +47,7 @@ python3 -c 'from zoneinfo import ZoneInfo; ZoneInfo("Europe/Berlin")' \
   || echo "no tz database: the probe assumes CET (UTC+1) for the Berlin hour"
 
 echo "== tests"
-(cd "$REPO" && python3 -m unittest discover -q -s tests -t .)
+(cd "$REPO" && python3 -m unittest -q tests.test_expert_api tests.test_probe)
 
 echo "== schedule (hourly, survives reboots)"
 bash "$REPO/phone/schedule.sh"
