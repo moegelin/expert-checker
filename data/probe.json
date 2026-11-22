@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "startedAt": "2026-11-22T15:13:02Z",
+    "endsAt": "2026-11-25T15:13:02Z",
+    "done": false,
+    "verdict": "pending",
+    "reasons": [
+      "1 challenge(s)",
+      "1 non-JSON body/bodies",
+      "1 aborted run(s)"
+    ],
+    "runs": 1,
+    "sweeps": 0,
+    "calls": 1,
+    "firstTry500": 0,
+    "firstTry500Share": 0.0,
+    "failedAfterRetries": 0,
+    "rateLimited429": 0,
+    "challenges": 1,
+    "nonJson": 1,
+    "abortedRuns": 1,
+    "failedChecks": 0,
+    "latencyMs": {
+      "p50": 269,
+      "p95": 269,
+      "sweepP95Max": null
+    },
+    "scheduleLagMin": {
+      "median": null,
+      "max": null
+    },
+    "dataCentres": {
+      "PDX": 1
+    }
+  },
+  "records": [
+    {
+      "time": "2026-11-22T15:13:02Z",
+      "runner": "actions",
+      "event": "workflow_dispatch",
+      "runId": "45037047940",
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            403
+          ],
+          "ms": 269,
+          "bytes": 6024,
+          "dc": "PDX",
+          "outcome": "challenge",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta nam",
+          "networkErrors": [],
+          "check": null,
+          "error": "POST /_api/storeFinder/searchStoresByGeoLocation: cf-mitigated=challenge"
+        }
+      ],
+      "sweep": null,
+      "aborted": "ChallengeError: POST /_api/storeFinder/searchStoresByGeoLocation: cf-mitigated=challenge"
+    }
+  ]
+}
