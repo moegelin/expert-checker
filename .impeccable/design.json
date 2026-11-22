@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-21T10:30:57+00:00",
+  "title": "Design System: expert-checker",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Cool Ground",
+        "canonical": "#f2f4f7",
+        "tonalRamp": [
+          "oklch(15% 0.008 250)",
+          "oklch(25% 0.008 250)",
+          "oklch(35% 0.008 250)",
+          "oklch(45% 0.008 250)",
+          "oklch(55% 0.008 250)",
+          "oklch(65% 0.008 250)",
+          "oklch(78% 0.008 250)",
+          "oklch(88% 0.008 250)"
+        ],
+        "darkThemeValue": "#121417"
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Card White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.0 250)",
+          "oklch(25% 0.0 250)",
+          "oklch(35% 0.0 250)",
+          "oklch(45% 0.0 250)",
+          "oklch(55% 0.0 250)",
+          "oklch(65% 0.0 250)",
+          "oklch(78% 0.0 250)",
+          "oklch(88% 0.0 250)"
+        ],
+        "darkThemeValue": "#1c2026"
+      },
+      "card-sunken": {
+        "role": "neutral",
+        "displayName": "Card Sunken",
+        "canonical": "#f6f7f9",
+        "tonalRamp": [
+          "oklch(15% 0.006 250)",
+          "oklch(25% 0.006 250)",
+          "oklch(35% 0.006 250)",
+          "oklch(45% 0.006 250)",
+          "oklch(55% 0.006 250)",
+          "oklch(65% 0.006 250)",
+          "oklch(78% 0.006 250)",
+          "oklch(88% 0.006 250)"
+        ],
+        "darkThemeValue": "#232830"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1b1f24",
+        "tonalRamp": [
+          "oklch(15% 0.012 250)",
+          "oklch(25% 0.012 250)",
+          "oklch(35% 0.012 250)",
+          "oklch(45% 0.012 250)",
+          "oklch(55% 0.012 250)",
+          "oklch(65% 0.012 250)",
+          "oklch(78% 0.012 250)",
+          "oklch(88% 0.012 250)"
+        ],
+        "darkThemeValue": "#e9edf2"
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Ink Muted",
+        "canonical": "#5f6b7a",
+        "tonalRamp": [
+          "oklch(15% 0.025 250)",
+          "oklch(25% 0.025 250)",
+          "oklch(35% 0.025 250)",
+          "oklch(45% 0.025 250)",
+          "oklch(55% 0.025 250)",
+          "oklch(65% 0.025 250)",
+          "oklch(78% 0.025 250)",
+          "oklch(88% 0.025 250)"
+        ],
+        "darkThemeValue": "#9aa6b4"
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#e3e7ec",
+        "tonalRamp": [
+          "oklch(15% 0.01 250)",
+          "oklch(25% 0.01 250)",
+          "oklch(35% 0.01 250)",
+          "oklch(45% 0.01 250)",
+          "oklch(55% 0.01 250)",
+          "oklch(65% 0.01 250)",
+          "oklch(78% 0.01 250)",
+          "oklch(88% 0.01 250)"
+        ],
+        "darkThemeValue": "#2b323b"
+      },
+      "hairline-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "#d0d6de",
+        "tonalRamp": [
+          "oklch(15% 0.012 250)",
+          "oklch(25% 0.012 250)",
+          "oklch(35% 0.012 250)",
+          "oklch(45% 0.012 250)",
+          "oklch(55% 0.012 250)",
+          "oklch(65% 0.012 250)",
+          "oklch(78% 0.012 250)",
+          "oklch(88% 0.012 250)"
+        ],
+        "darkThemeValue": "#3a434e"
+      },
+      "action-blue": {
+        "role": "primary",
+        "displayName": "Action Blue",
+        "canonical": "#1a66d6",
+        "tonalRamp": [
+          "oklch(15% 0.19 262)",
+          "oklch(25% 0.19 262)",
+          "oklch(35% 0.19 262)",
+          "oklch(45% 0.19 262)",
+          "oklch(55% 0.19 262)",
+          "oklch(65% 0.19 262)",
+          "oklch(78% 0.19 262)",
+          "oklch(88% 0.19 262)"
+        ],
+        "darkThemeValue": "#6ea4f5"
+      },
+      "action-blue-soft": {
+        "role": "primary",
+        "displayName": "Action Blue Soft",
+        "canonical": "#e8f0fd",
+        "tonalRamp": [
+          "oklch(15% 0.03 262)",
+          "oklch(25% 0.03 262)",
+          "oklch(35% 0.03 262)",
+          "oklch(45% 0.03 262)",
+          "oklch(55% 0.03 262)",
+          "oklch(65% 0.03 262)",
+          "oklch(78% 0.03 262)",
+          "oklch(88% 0.03 262)"
+        ],
+        "darkThemeValue": "#1b2a44"
+      },
+      "action-blue-ink": {
+        "role": "primary",
+        "displayName": "Action Blue Ink",
+        "canonical": "#154f9f",
+        "tonalRamp": [
+          "oklch(15% 0.16 262)",
+          "oklch(25% 0.16 262)",
+          "oklch(35% 0.16 262)",
+          "oklch(45% 0.16 262)",
+          "oklch(55% 0.16 262)",
+          "oklch(65% 0.16 262)",
+          "oklch(78% 0.16 262)",
+          "oklch(88% 0.16 262)"
+        ],
+        "darkThemeValue": "#9cc0fa"
+      },
+      "best-green": {
+        "role": "secondary",
+        "displayName": "Best Green",
+        "canonical": "#188038",
+        "tonalRamp": [
+          "oklch(15% 0.15 150)",
+          "oklch(25% 0.15 150)",
+          "oklch(35% 0.15 150)",
+          "oklch(45% 0.15 150)",
+          "oklch(55% 0.15 150)",
+          "oklch(65% 0.15 150)",
+          "oklch(78% 0.15 150)",
+          "oklch(88% 0.15 150)"
+        ],
+        "darkThemeValue": "#5dc47a"
+      },
+      "best-green-soft": {
+        "role": "secondary",
+        "displayName": "Best Green Soft",
+        "canonical": "#e4f3e8",
+        "tonalRamp": [
+          "oklch(15% 0.03 150)",
+          "oklch(25% 0.03 150)",
+          "oklch(35% 0.03 150)",
+          "oklch(45% 0.03 150)",
+          "oklch(55% 0.03 150)",
+          "oklch(65% 0.03 150)",
+          "oklch(78% 0.03 150)",
+          "oklch(88% 0.03 150)"
+        ],
+        "darkThemeValue": "#17301f"
+      },
+      "best-green-ink": {
+        "role": "secondary",
+        "displayName": "Best Green Ink",
+        "canonical": "#146c2e",
+        "tonalRamp": [
+          "oklch(15% 0.13 150)",
+          "oklch(25% 0.13 150)",
+          "oklch(35% 0.13 150)",
+          "oklch(45% 0.13 150)",
+          "oklch(55% 0.13 150)",
+          "oklch(65% 0.13 150)",
+          "oklch(78% 0.13 150)",
+          "oklch(88% 0.13 150)"
+        ],
+        "darkThemeValue": "#8ddba1"
+      },
+      "cashback-amber": {
+        "role": "tertiary",
+        "displayName": "Cashback Amber",
+        "canonical": "#b45f06",
+        "tonalRamp": [
+          "oklch(15% 0.15 60)",
+          "oklch(25% 0.15 60)",
+          "oklch(35% 0.15 60)",
+          "oklch(45% 0.15 60)",
+          "oklch(55% 0.15 60)",
+          "oklch(65% 0.15 60)",
+          "oklch(78% 0.15 60)",
+          "oklch(88% 0.15 60)"
+        ],
+        "darkThemeValue": "#f0b04f"
+      },
+      "cashback-amber-soft": {
+        "role": "tertiary",
+        "displayName": "Cashback Amber Soft",
+        "canonical": "#fdf0d8",
+        "tonalRamp": [
+          "oklch(15% 0.04 80)",
+          "oklch(25% 0.04 80)",
+          "oklch(35% 0.04 80)",
+          "oklch(45% 0.04 80)",
+          "oklch(55% 0.04 80)",
+          "oklch(65% 0.04 80)",
+          "oklch(78% 0.04 80)",
+          "oklch(88% 0.04 80)"
+        ],
+        "darkThemeValue": "#3a2a10"
+      },
+      "cashback-amber-ink": {
+        "role": "tertiary",
+        "displayName": "Cashback Amber Ink",
+        "canonical": "#8f4b00",
+        "tonalRamp": [
+          "oklch(15% 0.13 60)",
+          "oklch(25% 0.13 60)",
+          "oklch(35% 0.13 60)",
+          "oklch(45% 0.13 60)",
+          "oklch(55% 0.13 60)",
+          "oklch(65% 0.13 60)",
+          "oklch(78% 0.13 60)",
+          "oklch(88% 0.13 60)"
+        ],
+        "darkThemeValue": "#f6c877"
+      },
+      "set-teal": {
+        "role": "tertiary",
+        "displayName": "Set Teal",
+        "canonical": "#0b7285",
+        "tonalRamp": [
+          "oklch(15% 0.09 215)",
+          "oklch(25% 0.09 215)",
+          "oklch(35% 0.09 215)",
+          "oklch(45% 0.09 215)",
+          "oklch(55% 0.09 215)",
+          "oklch(65% 0.09 215)",
+          "oklch(78% 0.09 215)",
+          "oklch(88% 0.09 215)"
+        ],
+        "darkThemeValue": "#5cc3d6"
+      },
+      "set-teal-soft": {
+        "role": "tertiary",
+        "displayName": "Set Teal Soft",
+        "canonical": "#e0f3f6",
+        "tonalRamp": [
+          "oklch(15% 0.025 215)",
+          "oklch(25% 0.025 215)",
+          "oklch(35% 0.025 215)",
+          "oklch(45% 0.025 215)",
+          "oklch(55% 0.025 215)",
+          "oklch(65% 0.025 215)",
+          "oklch(78% 0.025 215)",
+          "oklch(88% 0.025 215)"
+        ],
+        "darkThemeValue": "#0f2b31"
+      },
+      "set-teal-ink": {
+        "role": "tertiary",
+        "displayName": "Set Teal Ink",
+        "canonical": "#0a5c6b",
+        "tonalRamp": [
+          "oklch(15% 0.08 215)",
+          "oklch(25% 0.08 215)",
+          "oklch(35% 0.08 215)",
+          "oklch(45% 0.08 215)",
+          "oklch(55% 0.08 215)",
+          "oklch(65% 0.08 215)",
+          "oklch(78% 0.08 215)",
+          "oklch(88% 0.08 215)"
+        ],
+        "darkThemeValue": "#8fd8e6"
+      },
+      "clearance-red": {
+        "role": "tertiary",
+        "displayName": "Clearance Red",
+        "canonical": "#c5221f",
+        "tonalRamp": [
+          "oklch(15% 0.2 28)",
+          "oklch(25% 0.2 28)",
+          "oklch(35% 0.2 28)",
+          "oklch(45% 0.2 28)",
+          "oklch(55% 0.2 28)",
+          "oklch(65% 0.2 28)",
+          "oklch(78% 0.2 28)",
+          "oklch(88% 0.2 28)"
+        ],
+        "darkThemeValue": "#ff8a80"
+      },
+      "clearance-red-soft": {
+        "role": "tertiary",
+        "displayName": "Clearance Red Soft",
+        "canonical": "#fde8e6",
+        "tonalRamp": [
+          "oklch(15% 0.03 28)",
+          "oklch(25% 0.03 28)",
+          "oklch(35% 0.03 28)",
+          "oklch(45% 0.03 28)",
+          "oklch(55% 0.03 28)",
+          "oklch(65% 0.03 28)",
+          "oklch(78% 0.03 28)",
+          "oklch(88% 0.03 28)"
+        ],
+        "darkThemeValue": "#3d1f1c"
+      },
+      "clearance-red-ink": {
+        "role": "tertiary",
+        "displayName": "Clearance Red Ink",
+        "canonical": "#a11b18",
+        "tonalRamp": [
+          "oklch(15% 0.17 28)",
+          "oklch(25% 0.17 28)",
+          "oklch(35% 0.17 28)",
+          "oklch(45% 0.17 28)",
+          "oklch(55% 0.17 28)",
+          "oklch(65% 0.17 28)",
+          "oklch(78% 0.17 28)",
+          "oklch(88% 0.17 28)"
+        ],
+        "darkThemeValue": "#ffa8a0"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Prices in detail tiles (22px); 26px headline cashback amount, 24px calculator total."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Top-bar title and detail hero title."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Product name in a list row, offer title."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "Price in a list-row column; 17–20px in store rows and amounts."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default text; 14px in buttons and settings, 13.5px in facts and conditions."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Subtitles, places, distances, notes, hints."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase VERSAND / ABHOLUNG column keys only."
+      },
+      "badge": {
+        "displayName": "Badge",
+        "purpose": "Text inside the one badge shape."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card",
+        "value": "0 1px 2px rgba(27,31,36,.06), 0 2px 8px rgba(27,31,36,.06)",
+        "purpose": "Every card and the toast; the only shadow."
+      },
+      {
+        "name": "card-dark",
+        "value": "0 1px 2px rgba(0,0,0,.5), 0 2px 10px rgba(0,0,0,.35)",
+        "purpose": "The same token under the dark theme."
+      }
+    ],
+    "motion": [
+      {
+        "name": "screen-fade",
+        "value": "fade .16s ease-out (opacity .5→1, translateY 3px→0)",
+        "purpose": "Screen entry; only under prefers-reduced-motion: no-preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "column",
+        "value": "480px",
+        "purpose": "max-width of the app column"
+      },
+      {
+        "name": "framed",
+        "value": "560px",
+        "purpose": "above this the column gains hairline side borders"
+      }
+    ],
+    "focus": {
+      "value": "outline: 2px solid var(--blue); outline-offset: 2px",
+      "purpose": "Every button, link, input and select."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one filled action on a card, e.g. 'Beobachten' next to the URL input.",
+      "html": "<button class=\"ds-btn-primary\">Beobachten</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:6px;border:1px solid transparent;border-radius:9px;padding:8px 13px;font:500 14px/1.45 -apple-system,BlinkMacSystemFont,'SF Pro Text',Roboto,'Segoe UI',system-ui,sans-serif;background:var(--blue,#1a66d6);color:#fff;cursor:pointer;transition:background .12s}.ds-btn-primary:hover{background:var(--blue-ink,#154f9f)}.ds-btn-primary:focus-visible{outline:2px solid var(--blue,#1a66d6);outline-offset:2px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Default bordered button; small variant for row action strips; aria-pressed turns it into a blue-soft toggle.",
+      "html": "<button class=\"ds-btn\">Bei diesem Markt öffnen</button> <button class=\"ds-btn ds-btn-small\">PLZ kopieren</button> <button class=\"ds-btn ds-btn-small\" aria-pressed=\"true\">Im Rechner</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-2,#d0d6de);border-radius:9px;padding:8px 13px;font:500 14px/1.45 -apple-system,BlinkMacSystemFont,'SF Pro Text',Roboto,'Segoe UI',system-ui,sans-serif;background:var(--card,#fff);color:var(--fg,#1b1f24);cursor:pointer}.ds-btn:hover{background:var(--card-2,#f6f7f9)}.ds-btn.ds-btn-small{padding:5px 10px;font-size:12.5px;border-radius:7px}.ds-btn[aria-pressed=\"true\"]{background:var(--blue-soft,#e8f0fd);color:var(--blue-ink,#154f9f);border-color:transparent}.ds-btn[disabled]{opacity:.5;cursor:default}.ds-btn:focus-visible{outline:2px solid var(--blue,#1a66d6);outline-offset:2px}"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Pill filter; the selected chip inverts to ink.",
+      "html": "<span class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Geld zurück</button><button class=\"ds-chip\">Zugaben</button><button class=\"ds-chip\">alles</button></span>",
+      "css": ".ds-chips{display:inline-flex;gap:6px;flex-wrap:wrap}.ds-chip{border:1px solid var(--line-2,#d0d6de);background:var(--card,#fff);border-radius:999px;padding:5px 12px;font:13px/1.45 -apple-system,BlinkMacSystemFont,'SF Pro Text',Roboto,'Segoe UI',system-ui,sans-serif;color:var(--fg,#1b1f24);cursor:pointer}.ds-chip:hover{background:var(--card-2,#f6f7f9)}.ds-chip[aria-pressed=\"true\"]{background:var(--fg,#1b1f24);border-color:var(--fg,#1b1f24);color:var(--bg,#f2f4f7);font-weight:500}.ds-chip:focus-visible{outline:2px solid var(--blue,#1a66d6);outline-offset:2px}"
+    },
+    {
+      "name": "Badge",
+      "kind": "chip",
+      "refersTo": "badge-set",
+      "description": "One shape for every status; hue by meaning (teal set, amber cashback, red Aussteller, green drop, blue new, neutral off).",
+      "html": "<span class=\"ds-badge ds-b-set\">Set-Deal</span> <span class=\"ds-badge ds-b-cash\">Cashback 150 €</span> <span class=\"ds-badge ds-b-aus\">Aussteller</span> <span class=\"ds-badge ds-b-down\">80 € seit gestern</span> <span class=\"ds-badge ds-b-new\">neu seit heute</span> <span class=\"ds-badge ds-b-off\">beendet</span>",
+      "css": ".ds-badge{display:inline-flex;align-items:center;gap:4px;border-radius:6px;padding:2px 7px;font:600 11.5px/1.4 -apple-system,BlinkMacSystemFont,'SF Pro Text',Roboto,'Segoe UI',system-ui,sans-serif;white-space:nowrap;font-variant-numeric:tabular-nums}.ds-b-set{background:var(--teal-soft,#e0f3f6);color:var(--teal-ink,#0a5c6b)}.ds-b-cash{background:var(--amber-soft,#fdf0d8);color:var(--amber-ink,#8f4b00)}.ds-b-aus{background:var(--red-soft,#fde8e6);color:var(--red-ink,#a11b18)}.ds-b-down{background:var(--green-soft,#e4f3e8);color:var(--green-ink,#146c2e)}.ds-b-new{background:var(--blue-soft,#e8f0fd);color:var(--blue-ink,#154f9f)}.ds-b-off{background:var(--card-2,#f6f7f9);color:var(--muted,#5f6b7a)}"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "White card with the single soft shadow; rows divided by hairlines; muted note at the foot.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-row\"><div><div class=\"ds-row-n\">expert Rangsdorf</div><div class=\"ds-row-a\"><b>15834 Rangsdorf</b> · 25 km · 1 im Markt</div></div><div class=\"ds-row-p\">2.095 €<small>Abholung</small></div></div><div class=\"ds-row\"><div><div class=\"ds-row-n\">expert Berlin-Steglitz</div><div class=\"ds-row-a\"><b>12165 Berlin</b> · 4 km · nicht im Markt</div></div><div class=\"ds-row-p\">2.174,90 €<small>Abholung</small></div></div><div class=\"ds-note\">Auf expert.de wählst du den Markt mit der <b>PLZ</b>.</div></div>",
+      "css": ".ds-card{background:var(--card,#fff);border-radius:12px;box-shadow:var(--shadow,0 1px 2px rgba(27,31,36,.06),0 2px 8px rgba(27,31,36,.06));font:15px/1.45 -apple-system,BlinkMacSystemFont,'SF Pro Text',Roboto,'Segoe UI',system-ui,sans-serif;color:var(--fg,#1b1f24);font-variant-numeric:tabular-nums;max-width:420px}.ds-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;padding:11px 14px;border-top:1px solid var(--line,#e3e7ec);align-items:start}.ds-row:first-child{border-top:0}.ds-row:hover{background:var(--card-2,#f6f7f9)}.ds-row-n{font-weight:600;font-size:14.5px;line-height:1.3}.ds-row-a{font-size:12.5px;color:var(--muted,#5f6b7a);line-height:1.4}.ds-row-a b{color:var(--fg,#1b1f24);font-weight:500}.ds-row-p{text-align:right;font-weight:700;font-size:17px;line-height:1.15;white-space:nowrap}.ds-row-p small{display:block;font-weight:400;font-size:11.5px;color:var(--muted,#5f6b7a);margin-top:1px}.ds-note{font-size:12.5px;color:var(--muted,#5f6b7a);padding:10px 14px;border-top:1px solid var(--line,#e3e7ec)}.ds-note b{color:var(--fg,#1b1f24);font-weight:500}"
+    },
+    {
+      "name": "Price Columns",
+      "kind": "custom",
+      "refersTo": "price-column-best",
+      "description": "The signature: Versand and Abholung side by side, the cheaper path green with a check, each naming its place.",
+      "html": "<div class=\"ds-prices\"><div class=\"ds-pc\"><div class=\"ds-k\"><svg viewBox=\"0 0 24 24\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M1 3h15v13H1zM16 8h4l3 3v5h-7z\"/><circle cx=\"5.5\" cy=\"18.5\" r=\"2.5\"/><circle cx=\"18.5\" cy=\"18.5\" r=\"2.5\"/></svg>Versand</div><div class=\"ds-v\">2.174,90 €</div><div class=\"ds-w\"><b>Rangsdorf</b> · inkl. 79,90 €</div></div><div class=\"ds-pc ds-best\"><div class=\"ds-k\"><svg viewBox=\"0 0 24 24\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5L20 7\"/></svg>Abholung</div><div class=\"ds-v\">2.095 €</div><div class=\"ds-w\"><b>Rangsdorf</b> · 15834 · 25 km</div></div></div>",
+      "css": ".ds-prices{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:420px;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text',Roboto,'Segoe UI',system-ui,sans-serif;font-variant-numeric:tabular-nums;color:var(--fg,#1b1f24)}.ds-pc{border:1px solid transparent;border-radius:9px;padding:7px 10px;min-width:0}.ds-pc.ds-best{border-color:var(--green,#188038);background:var(--green-soft,#e4f3e8)}.ds-k{font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--muted,#5f6b7a);display:flex;align-items:center;gap:4px}.ds-best .ds-k,.ds-best .ds-v{color:var(--green-ink,#146c2e)}.ds-v{font-size:19px;font-weight:700;line-height:1.15;margin-top:2px;white-space:nowrap}.ds-w{font-size:11.5px;color:var(--muted,#5f6b7a);line-height:1.3;margin-top:2px}.ds-w b{font-weight:500;color:var(--fg,#1b1f24)}"
+    },
+    {
+      "name": "URL Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "The product-link field with the primary button beside it.",
+      "html": "<div class=\"ds-add\"><input class=\"ds-input\" type=\"url\" placeholder=\"Produktlink von expert.de einfügen …\" aria-label=\"Produktlink\"><button class=\"ds-add-btn\">Beobachten</button></div>",
+      "css": ".ds-add{display:flex;gap:8px;align-items:center;max-width:420px;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text',Roboto,'Segoe UI',system-ui,sans-serif}.ds-input{flex:1;min-width:0;font:inherit;font-size:15px;padding:9px 11px;border:1px solid var(--line-2,#d0d6de);border-radius:9px;background:var(--card,#fff);color:var(--fg,#1b1f24)}.ds-input::placeholder{color:var(--muted,#5f6b7a)}.ds-input:focus-visible{outline:2px solid var(--blue,#1a66d6);outline-offset:2px}.ds-add-btn{border:0;border-radius:9px;padding:8px 13px;font:500 14px/1.45 inherit;background:var(--blue,#1a66d6);color:#fff;cursor:pointer}.ds-add-btn:hover{background:var(--blue-ink,#154f9f)}.ds-add-btn:focus-visible{outline:2px solid var(--blue,#1a66d6);outline-offset:2px}"
+    },
+    {
+      "name": "Bottom Tabs",
+      "kind": "nav",
+      "refersTo": "tab",
+      "description": "Three equal tabs, icon over label; active is blue; the Cashback tab carries an amber count bubble.",
+      "html": "<nav class=\"ds-tabs\"><button class=\"ds-tab\" aria-current=\"page\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"13\" rx=\"2\"/><path d=\"M8 21h8M12 17v4\"/></svg><span>Beobachten</span></button><button class=\"ds-tab\"><span class=\"ds-cnt\">1</span><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v10M9.5 9.5h4a1.5 1.5 0 010 3h-3a1.5 1.5 0 000 3h4\"/></svg><span>Cashback</span></button><button class=\"ds-tab\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M19.4 15a1.7 1.7 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.8-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1.1-1.5 1.7 1.7 0 00-1.8.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.8 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.5-1.1 1.7 1.7 0 00-.3-1.8l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.8.3H9a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.1a1.7 1.7 0 001 1.5 1.7 1.7 0 001.8-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.8V9a1.7 1.7 0 001.5 1H21a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z\"/></svg><span>Einstellungen</span></button></nav>",
+      "css": ".ds-tabs{max-width:420px;background:var(--card,#fff);border-top:1px solid var(--line,#e3e7ec);display:grid;grid-template-columns:1fr 1fr 1fr;padding:6px 8px 8px;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text',Roboto,'Segoe UI',system-ui,sans-serif}.ds-tab{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;padding:5px 4px;border:0;background:none;border-radius:8px;font-size:11px;font-weight:500;color:var(--muted,#5f6b7a);cursor:pointer}.ds-tab:hover{background:var(--card-2,#f6f7f9)}.ds-tab[aria-current=\"page\"]{color:var(--blue,#1a66d6)}.ds-tab:focus-visible{outline:2px solid var(--blue,#1a66d6);outline-offset:2px}.ds-cnt{position:absolute;left:calc(50% + 6px);top:0;background:var(--amber,#b45f06);color:#fff;font-size:10px;font-weight:700;border-radius:999px;padding:0 5px;line-height:15px}"
+    },
+    {
+      "name": "Infobox",
+      "kind": "custom",
+      "refersTo": "infobox",
+      "description": "Blue-soft explanation panel with an icon; the calculator's verdict in one German sentence.",
+      "html": "<div class=\"ds-infobox\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 16v-4M12 8h.01\"/></svg><span>Günstigster Weg: <b>TV + Soundbar, Soundbar verkauft</b>, 212 € unter „Nur der TV“.</span></div>",
+      "css": ".ds-infobox{display:flex;gap:10px;align-items:flex-start;background:var(--blue-soft,#e8f0fd);color:var(--blue-ink,#154f9f);border-radius:10px;padding:10px 12px;font:13.5px/1.45 -apple-system,BlinkMacSystemFont,'SF Pro Text',Roboto,'Segoe UI',system-ui,sans-serif;max-width:420px}.ds-infobox svg{flex:none;margin-top:1px}.ds-infobox b{font-weight:600}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Der Preisvergleich am Küchentisch",
+    "overview": "The comparison table a careful buyer draws by hand on the kitchen table, made native. The app plays the price-tracker category straight: white cards on a cool grey ground, the system sans of the phone, tabular numerals everywhere, and a phone-width column (max 480px) that stays a phone column even on a desktop. Nothing is decorated; every colour, badge and bold weight carries a meaning the buyer would otherwise have to write in the margin.\n\nThe signature is the two-column price row. Every product shows \"Versand\" and \"Abholung\" side by side, each with its price, its place and its distance; the cheaper path is tinted green with a check. There is no single best-price headline that hides where the price is. Colour is a vocabulary, not a mood: green is the cheapest path, blue is action and selection, amber is cashback, teal is a set deal, red is Aussteller, Restposten and price rises.\n\nDensity is high but legible: 15px body, 12.5px captions, hairline dividers between rows, 12px gaps between cards. Depth is a whisper (one two-layer shadow under every card). A dark theme exists with the same roles remapped; the light theme is the canonical source of tokens.",
+    "keyCharacteristics": [
+      "Category-standard price-tracker look, idealo and Geizhals level polish, no brand theatre.",
+      "White cards (12px radius, soft shadow) on cool grey; hairline dividers between rows inside a card.",
+      "System sans (SF Pro on iPhone, Roboto fallback), tabular numerals on the whole body.",
+      "Five semantic hues, each in a triad (base, soft tint, ink), used only for their meaning.",
+      "One badge shape and size everywhere (6px radius, 11.5px, 600 weight, soft tint + ink text).",
+      "Product image at the left of every product row (84px thumb in list, 110px in detail)."
+    ],
+    "rules": [
+      {
+        "name": "The Meaning-Only Colour Rule",
+        "body": "A hue appears only with its meaning: green = cheapest path, blue = action/selection, amber = cashback, teal = set deal, red = Aussteller/Restposten/price rise. No hue is used for decoration, headings or brand accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Triad Rule",
+        "body": "Each semantic colour is used as base (borders, icons, solid fills), soft (tinted background) and ink (text on the soft tint). Text on a soft tint is always the ink step, never the base.",
+        "section": "colors"
+      },
+      {
+        "name": "The Light-Canon Rule",
+        "body": "The light theme is the token source; the dark theme (`prefers-color-scheme` or `data-theme=\"dark\"`) remaps every role to a lifted equivalent and never introduces a new role.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Every number is tabular; prices never wrap (`white-space: nowrap`), and the weight 700 is reserved for prices, amounts and totals.",
+        "section": "typography"
+      },
+      {
+        "name": "The Place Line Rule",
+        "body": "A price is always followed by its place in caption size: the store name in 500 weight ink, then postcode, city and distance in muted.",
+        "section": "typography"
+      },
+      {
+        "name": "The One-Shadow Rule",
+        "body": "There is exactly one shadow token. Depth differences are expressed by tint and hairline, never by a second shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** show two price columns (\"Versand\" and \"Abholung\") on every product, each with price, place and distance, and tint only the cheaper one green with a check.",
+      "**Do** use the single badge shape (6px radius, 2px 7px, 11.5px 600, soft tint + ink) for every status; pick the hue by meaning.",
+      "**Do** keep every number tabular and every price `nowrap` in weight 700.",
+      "**Do** place a product image at the left of every product row in a white 8px box.",
+      "**Do** separate rows inside a card with a 1px hairline and reserve the one card shadow for the card itself.",
+      "**Do** mark selection and pressed states with the blue soft/ink pair, never with a filled primary button."
+    ],
+    "donts": [
+      "**Don't** introduce a hue outside the five semantic triads, or use a triad for decoration or headings.",
+      "**Don't** publish a single \"best price\" without its path and place.",
+      "**Don't** add a second shadow, a card border, or a hard offset shadow; depth is tint and hairline.",
+      "**Don't** break the 480px column or let a price wrap.",
+      "**Don't** use expert or manufacturer logos as the app's identity (PRODUCT.md brand commitment)."
+    ]
+  }
+}
