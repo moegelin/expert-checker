@@ -5,24 +5,24 @@
     "done": false,
     "verdict": "pending",
     "reasons": [
-      "1 challenge(s)",
-      "1 non-JSON body/bodies",
-      "1 aborted run(s)"
+      "2 challenge(s)",
+      "2 non-JSON body/bodies",
+      "2 aborted run(s)"
     ],
-    "runs": 1,
+    "runs": 2,
     "sweeps": 0,
-    "calls": 1,
+    "calls": 2,
     "firstTry500": 0,
     "firstTry500Share": 0.0,
     "failedAfterRetries": 0,
     "rateLimited429": 0,
-    "challenges": 1,
-    "nonJson": 1,
-    "abortedRuns": 1,
+    "challenges": 2,
+    "nonJson": 2,
+    "abortedRuns": 2,
     "failedChecks": 0,
     "latencyMs": {
       "p50": 269,
-      "p95": 269,
+      "p95": 330,
       "sweepP95Max": null
     },
     "scheduleLagMin": {
@@ -30,7 +30,8 @@
       "max": null
     },
     "dataCentres": {
-      "PDX": 1
+      "PDX": 1,
+      "SEA": 1
     }
   },
   "records": [
@@ -51,6 +52,33 @@
           "ms": 269,
           "bytes": 6024,
           "dc": "PDX",
+          "outcome": "challenge",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta nam",
+          "networkErrors": [],
+          "check": null,
+          "error": "POST /_api/storeFinder/searchStoresByGeoLocation: cf-mitigated=challenge"
+        }
+      ],
+      "sweep": null,
+      "aborted": "ChallengeError: POST /_api/storeFinder/searchStoresByGeoLocation: cf-mitigated=challenge"
+    },
+    {
+      "time": "2026-11-22T15:13:40Z",
+      "runner": "actions",
+      "event": "workflow_dispatch",
+      "runId": "45037122117",
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            403
+          ],
+          "ms": 330,
+          "bytes": 6024,
+          "dc": "SEA",
           "outcome": "challenge",
           "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta nam",
           "networkErrors": [],
