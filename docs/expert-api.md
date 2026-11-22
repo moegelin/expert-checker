@@ -5,7 +5,7 @@ expert can change it at any time. Verify an endpoint before you build on it.
 
 ## Hosts
 
-- `https://production.brntgs.expert.de` — API host. **No Cloudflare challenge.** Plain HTTP clients (curl, Python `urllib`) work with a normal browser `User-Agent`.
+- `https://production.brntgs.expert.de` — API host. **No Cloudflare challenge from a home connection** (Berlin): plain HTTP clients (curl, Python `urllib`) work with a normal browser `User-Agent`. **GitHub Actions runners get a challenge** (see "Findings 2026-11-22 (M0 probe)").
 - `https://www.expert.de` — web site. **Behind Cloudflare** (JS challenge, `307 (Temporary Redirect)` to a challenge page for plain clients). Do not scrape the HTML pages. The same `/api/...` paths also answer on this host from a browser.
 
 ## Endpoints
@@ -146,3 +146,16 @@ Verified with live calls while writing [plan.md](plan.md).
 - **Store finder names** are partly generic: five stores around Berlin are called "ESC" (Berlin Tauentzienstr., Rangsdorf, Königs Wusterhausen, Fürstenwalde, Cottbus); show city and street.
 - **Berlin example (14167, 50 km), 2026-11-21:** Philips 65OLED951 online 2298.99 € + 79.90 € (−10 € WERO10); Rangsdorf and Fürstenwalde 2095 € as Aussteller, 1 in store, 1 shippable. Sony K65XR95M2PB BRAVIA 9 II online 3469 € free shipping, no store within 50 km; set with Theatre Bar 6: 3888 → 3788 €. LG OLED65C69LB: Rangsdorf 1214.10 € pickup; set DSC9S at Rangsdorf 1666.69 → 1466.69 €. Samsung 65" Frame Pro: online 1529 € + 79.90 €, Berlin Tauentzien 1663 €, Rangsdorf 1499 €.
 - **Sony cashback `e_4294` covers BRAVIA 7 II and 8 II only** (8 TVs); the BRAVIA 9 II is not in it.
+
+## Findings 2026-11-22 (M0 probe)
+
+First runs of the `probe` workflow (`ubuntu-latest`, Python 3.12, client `scanner/expert_api.py` with the headers of docs/plan.md M0):
+
+| Run (UTC) | Runner data centre (`cf-ray`) | First call | Result |
+|---|---|---|---|
+| 15:13, run 45037047940 | `PDX` | `POST /_api/storeFinder/searchStoresByGeoLocation` | `403 (Forbidden)`, `cf-mitigated: challenge`, HTML "Just a moment..." page |
+| 15:13, run 45037122117 | `SEA` | same | same |
+
+- The probe stops at the first challenge, so the `GET` endpoints (`pricepds`, `getIndex`) were not called from Actions.
+- The same client from Berlin at 15:10 and 15:12 UTC: all 5 calls `200`, data centre `TXL`; sweep of 349 `pricepds` in 14.4 s, 3 first-try `500`s, all recovered, no `429`.
+- So Cloudflare challenges by client network (Azure data-centre IPs), not by request shape.
