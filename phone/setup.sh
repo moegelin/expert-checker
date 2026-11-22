@@ -2,7 +2,9 @@
 # One-time setup of the phone test (docs/plan.md §1, "Hosting decision 2026-11-22"). Run inside Termux:
 #
 #   pkg install -y git && git clone https://github.com/moegelin/expert-checker.git ~/expert-checker
-#   bash ~/expert-checker/phone/setup.sh
+#   bash ~/expert-checker/phone/setup.sh https://hc-ping.com/<uuid>
+#
+# The argument is the healthchecks.io ping URL (optional; without it the script asks). Safe to run again.
 #
 # Needs the apps Termux, Termux:API and Termux:Boot, all from F-Droid (same signature), with battery
 # set to "Unrestricted", and Termux:Boot opened once. The script checks what it can.
@@ -12,7 +14,9 @@ REPO="$HOME/expert-checker"
 ENV_FILE="$HOME/.expert-checker.env"
 
 echo "== packages"
-pkg install -y python git curl termux-api tzdata
+pkg install -y python git curl termux-api
+# Time zone database for the Berlin hour: Termux has no tzdata package, the pip package does the job.
+python3 -m pip install -q tzdata || echo "pip tzdata failed: the probe assumes CET (UTC+1)"
 
 echo "== Termux:API app"
 if ! timeout 20 termux-battery-status >/dev/null 2>&1; then
@@ -27,7 +31,9 @@ cp "$REPO/phone/boot.sh" "$HOME/.termux/boot/expert-checker.sh"
 chmod +x "$HOME/.termux/boot/expert-checker.sh" "$REPO"/phone/*.sh
 
 echo "== healthchecks.io"
-if [ ! -f "$ENV_FILE" ]; then
+if [ -n "${1:-}" ]; then
+  printf 'HEALTHCHECKS_URL=%s\n' "$1" > "$ENV_FILE"
+elif [ ! -f "$ENV_FILE" ]; then
   printf 'Ping URL of the healthchecks.io check (https://hc-ping.com/<uuid>), empty = no dead-man switch: '
   read -r url
   printf 'HEALTHCHECKS_URL=%s\n' "$url" > "$ENV_FILE"
