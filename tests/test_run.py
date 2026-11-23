@@ -237,6 +237,29 @@ class RunTest(unittest.TestCase):
         self.go({"prices": step()})
         self.assertEqual(self.git.calls, [])
 
+    def test_alerts_file_is_written_and_an_abort_sends_n7(self):
+        code = self.go({"prices": step(error=ChallengeError("GET /api/pricepds: cf-mitigated=challenge"))})
+        self.assertEqual(code, run.EXIT_ABORTED)
+        inbox = run.read_json(self.data / "alerts.json")
+        self.assertEqual(len(inbox["alerts"]), 1)
+        self.assertEqual(inbox["alerts"][0]["kind"], "failure")
+        self.assertEqual(self.ntfy.sent[0][0], "expert-checker: scan failed")
+        self.assertEqual(self.status["alerts"], ["2026-11-23T13:40:00Z:failure:failure:run"])
+        self.assertIn("· 1 alert(s)", self.line)
+
+    def test_clean_run_has_no_alerts(self):
+        self.go({"prices": step()})
+        self.assertEqual(self.status["alerts"], [])
+        self.assertEqual(run.read_json(self.data / "alerts.json")["alerts"], [])
+        self.assertNotIn("alert", self.line)
+
+    def test_push_alert_is_in_the_inbox(self):
+        git = FakeGit(fail={"push": (128, "fatal: Authentication failed")})
+        self.go({"prices": step()}, push=True, git=git,
+                push_state={"failures": 2, "last": "x", "lastSuccess": "y", "error": "e"})
+        inbox = run.read_json(self.data / "alerts.json")
+        self.assertEqual([a["title"] for a in inbox["alerts"]], ["expert-checker: push failed"])
+
     def test_lock_is_released_after_the_run(self):
         self.go({"prices": step()})
         held = run.acquire_lock(self.data / ".lock")

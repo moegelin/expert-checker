@@ -1,7 +1,8 @@
 """`python -m scanner run`: one scan run (docs/plan.md §2 and §3).
 
 Takes the lock, pulls the repo (with --push), runs the steps that are due by the cadence table of §3,
-writes data/status.json, commits and pushes data/ (with --push), and prints one status line last.
+evaluates the alert rules (§5, alerts.py), writes data/status.json, commits and pushes data/ (with --push),
+and prints one status line last.
 Exit codes: 0 clean, 1 degraded (a step, the pull or the push failed; the run happened), 2 aborted
 (challenge, rate limit, too many failed calls), 3 another run holds the lock.
 """
@@ -13,7 +14,7 @@ import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from . import prices, repo, stores
+from . import alerts, prices, repo, stores
 from .expert_api import ChallengeError, ExpertApi, ExpertApiError, RateLimitedError, ScanAborted
 from .jsonfile import read_json, write_json  # noqa: F401  (tests and steps use run.read_json / run.write_json)
 from .notify import Ntfy
@@ -71,6 +72,7 @@ def _run(args, env, now, steps, api, git, ntfy, clock, data):
     previous = read_json(data / "status.json") or {}
     push_state = read_json(data / ".push.json") or {"failures": 0, "last": None, "lastSuccess": None, "error": None}
     warnings = []
+    inbox = alerts.Alerts(data, ntfy, now)
 
     if push_wanted:
         ok, error = repo.pull(git)
@@ -117,17 +119,22 @@ def _run(args, env, now, steps, api, git, ntfy, clock, data):
         "steps": results,
         "skipped": skipped,
         "calls": len(api.calls),
+        "alerts": [],
         "durationS": None,
     }
+    status["alerts"] = inbox.evaluate(ctx, status)
+    warnings.extend(inbox.warnings)
+    inbox.save()
 
     push = {"wanted": push_wanted, "committed": False, "pushed": None, "error": None}
     if push_wanted:
         status["durationS"] = round(clock() - started, 1)
         write_json(data / "status.json", status)
-        push = push_data(git, push_state, berlin(now).strftime("%Y-%m-%d %H:%M %Z"), ntfy)
+        push = push_data(git, push_state, berlin(now).strftime("%Y-%m-%d %H:%M %Z"), inbox)
         write_json(data / ".push.json", push_state)
         if push["error"]:
             warnings.append(f"push failed ({push_state['failures']} in a row): {push['error']}")
+            inbox.save()  # the push alert, if any, lands in the next commit like status.json
     status["durationS"] = round(clock() - started, 1)
     if not push_wanted or push["error"]:
         write_json(data / "status.json", status)  # the push result of this run lands in the next commit
@@ -170,8 +177,9 @@ def run_step(args, name, now=None, api=None, ntfy=None, env=os.environ):
         release_lock(lock)
 
 
-def push_data(git, push_state, stamp, ntfy):
-    """Commit `data/` when it changed, push when something is committed or an earlier push failed."""
+def push_data(git, push_state, stamp, inbox):
+    """Commit `data/` when it changed, push when something is committed or an earlier push failed.
+    N7 through `inbox` (alerts.Alerts) after three failed pushes in a row."""
     committed, error = repo.commit(git, f"scan: {stamp}")
     result = {"wanted": True, "committed": committed, "pushed": None, "error": error}
     if error:
@@ -187,10 +195,10 @@ def push_data(git, push_state, stamp, ntfy):
         push_state["failures"] += 1
         push_state["error"] = error
         if push_state["failures"] % PUSH_FAILURES_TO_ALERT == 0:
-            ntfy.send("expert-checker: push failed",
-                      f"{push_state['failures']} pushes in a row failed; the app shows old data. "
-                      f"Check the PAT (expiry) and the network. Last error: {error}",
-                      tags=["warning"], priority="high")
+            inbox.emit("failure", "failure:push",
+                       f"{push_state['failures']} pushes in a row failed; the app shows old data. "
+                       f"Check the PAT (expiry) and the network. Last error: {error}",
+                       priority="high", title="expert-checker: push failed")
     return result
 
 
@@ -256,6 +264,8 @@ def status_line(status, push, push_state, code):
     else:
         push_text = "no changes"
     line = f"{kind} · {status['berlinTime']} · {status['network']} · " + " · ".join(parts) + f" · {push_text}"
+    if status.get("alerts"):
+        line += f" · {len(status['alerts'])} alert(s)"
     if status["aborted"]:
         line += f" · aborted: {status['aborted']}"
     for w in status["warnings"]:

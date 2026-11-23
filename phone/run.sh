@@ -50,7 +50,8 @@ status="$(tail -n 1 "$LAST")"
 [ -n "$status" ] || status="no output (crash, see data/run-last.md)"
 
 # Exit codes: 0 clean, 1 degraded (a step or the push failed, the run happened), 2 aborted
-# (challenge, rate limit, too many failed calls), 3 another run holds the lock, anything else = crash.
+# (challenge, rate limit, too many failed calls; the scanner sent N7 itself, 1 per 6 h), 3 another run
+# holds the lock, anything else = crash (no N7 possible, so this script sends the failure message).
 if [ "$rc" -eq 3 ]; then
   echo "$now  $EVENT  $network  skipped (another run is active)" >> "$LOG"
   exit 0
@@ -59,22 +60,26 @@ echo "$now  $EVENT  $network  rc=$rc  $status" >> "$LOG"
 case "$rc" in
   0) kind=ok ;;
   1) kind=degraded ;;
+  2) kind=aborted ;;
   *) kind=failed ;;
 esac
 
 if [ -n "$HEALTHCHECKS_URL" ]; then
-  if [ "$kind" = failed ]; then
-    tail -c 2000 "$LAST" | curl -fsS -m 10 --retry 3 -o /dev/null --data-binary @- "$HEALTHCHECKS_URL/fail" || true
-  else
+  if [ "$kind" = ok ] || [ "$kind" = degraded ]; then
     curl -fsS -m 10 --retry 3 -o /dev/null "$HEALTHCHECKS_URL" || true
+  else
+    tail -c 2000 "$LAST" | curl -fsS -m 10 --retry 3 -o /dev/null --data-binary @- "$HEALTHCHECKS_URL/fail" || true
   fi
 fi
 
 if [ "$kind" = failed ]; then
-  python3 -m scanner notify --title "expert-checker: scan failed ($network, exit $rc)" \
+  python3 -m scanner notify --title "expert-checker: scan crashed ($network, exit $rc)" \
     --message "$now · $status" --tags rotating_light --priority high >/dev/null 2>&1 \
   || termux-notification --id expert-scan-failed --priority high --sound \
-       --title "expert-checker: scan failed ($network, exit $rc)" --content "$now · $status"
+       --title "expert-checker: scan crashed ($network, exit $rc)" --content "$now · $status"
+elif [ "$kind" = aborted ]; then
+  termux-notification --id expert-scan-failed --priority high \
+    --title "expert-checker: scan aborted ($network)" --content "$now · $status"
 else
   termux-notification --id expert-scan --alert-once --title "expert-checker: scan $kind ($network)" \
     --content "$now · $status"
