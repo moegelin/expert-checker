@@ -1,21 +1,24 @@
 # expert-checker — features
 
-Status: draft for review, 2026-11-21. Milestones are defined in [plan.md](plan.md), section 6. Version 1 = M0–M4.
+Status: draft for review, 2026-11-21; revised 2026-11-23 after the phone test (the scanner runs on the phone, plan.md §3). Milestones are defined in [plan.md](plan.md), section 6. Version 1 = M0–M4.
 
 Legend: **in** = version 1, **out** = version 2 or later, **✗** = not planned.
 
-## M0 — Hosting probe
+## M0 — Hosting probe (done 2026-11-23)
 
 | Feature | v1 | Notes |
 |---|---|---|
 | API client with browser `User-Agent`, 8 workers, retry `500` ×3, backoff on `429 (Too Many Requests)` | in | shared by every later command |
 | Challenge detection (non-JSON body, `cf-mitigated` header) | in | feeds the failure alert |
-| `probe` workflow: hourly for 3 days around the clock (5 calls; sweep of 349 `pricepds` in the first run and every 6 h), writes `data/probe.json`, disables itself after 72 h | in | deleted after the go/no-go |
+| `probe` workflow: hourly for 3 days around the clock (5 calls; sweep of 349 `pricepds` in the first run and every 6 h), writes `data/probe.json`, disables itself after 72 h | in | no-go on 2026-11-22 (Cloudflare challenge); the workflow is deleted in M1, the `probe` command stays as a diagnostic |
+| Phone test: the same probe hourly for 24 h on the Galaxy S25 in Termux (JobScheduler, Termux:Boot, healthchecks ping) | in | go on 2026-11-23; plan.md §1, "Phone test result" |
 
-## M1 — Price scanner and push
+## M1 — Phone runtime, price scanner and push
 
 | Feature | v1 | Notes |
 |---|---|---|
+| Phone runtime: `scanner run` orchestrator with lock file and `data/status.json`; `phone/run.sh` (time window, wake lock, `git pull`, scan, commit and push of `data/` with the PAT, healthchecks ping); JobScheduler job every 2 h | in | plan.md §2 and §3, decided 2026-11-23 |
+| Unknown offers: a call that fails after the retries or a thin body without `bruttoPrice` keeps the previous offer for 24 h without an alert; a run that loses more than half of a product's offers is incomplete | in | findings F3 and F4 of the phone test |
 | Watch list in `config/watchlist.json` (product URL or webcode, label, target price, alert mode, watch sets) | in | |
 | Store list from the store finder, online shop added by hand, weekly refresh | in | |
 | Full scan: price, shipping, online stock, store stock, display type per store | in | 349 stores + online per product |
@@ -25,10 +28,11 @@ Legend: **in** = version 1, **out** = version 2 or later, **✗** = not planned.
 | Real display items (Ausstellungsstück) included, with badge | in | can be hidden in the app |
 | Daily history point per product (best shipped, best pickup), 90 days | in | 30-day sparkline and verdict in the list card (M2); 90-day chart in M5 |
 | ntfy push: price drop (N1, default every drop against the previous scan, also after a rise; per product switchable to new 30-day low or target price), target price (N2, optional), Restposten deal (N3), failure (N7); rises shown in the app, never pushed | in | rules in plan.md §5 |
-| healthchecks.io dead-man ping | in | |
-| Scan window 06:00–22:00 Berlin, no night runs (`timezone: "Europe/Berlin"` in the schedules); the healthchecks.io schedule matches the window | in | decided 2026-11-22 |
+| healthchecks.io dead-man ping from `run.sh`; cron every 2 h, 06–20 Berlin, grace 2 h | in | |
+| Scan window 06:00–22:00 Berlin, no night runs (`run.sh` skips the night); the healthchecks.io schedule matches the window | in | decided 2026-11-22 |
 | Quiet hours | ✗ | not needed: no scans 22:00–06:00 (decided 2026-11-22) |
-| Matrix split for more than 10 products | out | M5 |
+| Product images: the scanner stores the `cdn.expert.de` URL, the app loads it from there | in | no Pillow on the phone; M2 verifies the browser may load it, otherwise the scanner stores the original file |
+| More than 10 products: the price step scans two halves in consecutive runs | out | M5 |
 | Email instead of ntfy | ✗ | |
 
 ## M2 — PWA v1
@@ -43,12 +47,12 @@ Legend: **in** = version 1, **out** = version 2 or later, **✗** = not planned.
 | Cashback tab | open | the user doubts the tab; see requirements.md, open question 9 |
 | Filter in product detail: shipped / pickup / within radius / show display items | in | |
 | UI in German | in | decided 2026-11-21 |
-| Product images from cdn.expert.de, cached by the scanner | in | |
-| Add product by pasting the URL | in | writes config through the GitHub API when a token is stored; otherwise shows the JSON to paste on GitHub |
+| Product images from cdn.expert.de, URL stored by the scanner | in | |
+| Add product by pasting the URL | in | writes config through the GitHub API when a token is stored; otherwise shows the JSON to paste on GitHub; the next run (at most 2 h later) scans it |
 | Settings: postcode, radius, target prices, ntfy topic name (display only), GitHub token | in | token in `localStorage`, never in the repo |
-| "Scan now" button (workflow_dispatch) | in | needs the token |
+| "Scan now" button | out | dropped 2026-11-23: no Actions; a manual run is `phone/run.sh manual` in Termux, a Termux:Widget shortcut is M5 |
 | Home-screen install (manifest, icons, offline shell) | in | data needs network |
-| Last-scan age with warning when older than 3 h | in | |
+| Last-scan age (from `data/status.json`) with warning when older than 4 h | in | runs every 2 h |
 | Alert inbox (list of `data/alerts.json`) | out | M5 |
 | Price history sparkline | out | M5 |
 | Web push from the PWA (no ntfy app) | out | version 2 |
@@ -97,13 +101,15 @@ Legend: **in** = version 1, **out** = version 2 or later, **✗** = not planned.
 | Price history sparkline per product (90 days) | out | |
 | Alert inbox in the app | out | |
 | Per-rule cooldowns in config | out | v1 uses the defaults from plan.md §5 |
-| Matrix split for more than 10 products | out | |
+| More than 10 products in two halves per run | out | |
+| Termux:Widget shortcut for a manual run | out | |
+| Delete the `actions` runner code of the probe; repo size check after 30 days of 8 pushes a day | out | |
 | Weekly summary message | out | |
 | Web push from the PWA, no ntfy app needed | out | |
 | Native-feel polish from the finish review: disclosure chevron on tappable rows, segmented control instead of chips, tap-to-read on the price chart, swipe actions on the watch list (remove, change alert), pull-to-refresh tied to "Scan" | out | reviewer's ceiling notes, 2026-11-21 |
 
 ## Version 1 at a glance
 
-**In:** Actions-hosted scanner, best shipped and pickup price across all stores, Restposten deals, set deals with effective accessory price, cashback discovery with Samsung and Sony amounts, qualifying TVs and soundbars, resale calculator, ntfy push for the seven rules, PWA with the four screens, failure alerts.
+**In:** scanner on the phone (Termux, JobScheduler every 2 h, data pushed to the repo), best shipped and pickup price across all stores, Restposten deals, set deals with effective accessory price, cashback discovery with Samsung and Sony amounts, qualifying TVs and soundbars, resale calculator, ntfy push for the seven rules, PWA with the four screens, failure alerts.
 
-**Out:** web push from the PWA, history charts, alert inbox, more brand parsers, aggregator amounts, other shops, native app.
+**Out:** web push from the PWA, "Scan now" in the app, history charts, alert inbox, more brand parsers, aggregator amounts, other shops, native app.

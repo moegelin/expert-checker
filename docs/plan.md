@@ -1,6 +1,6 @@
 # expert-checker — plan
 
-Status: draft for review, 2026-11-21, revised after the first review (German UI, Berlin location, redesigned prototype). Builds on [requirements.md](requirements.md) and [expert-api.md](expert-api.md). Feature list: [features.md](features.md). Clickable prototype: [prototype/index.html](../prototype/index.html), published at https://claude.ai/artifact/Cf3Y6zg8fAqWNPkKaELWdt (run locally with `python3 -m http.server 8765 --directory prototype`). Revised and final prototype (card B2, 2026-11-22): [prototype/b2.html](../prototype/b2.html), published at https://claude.ai/artifact/Y1dntJo3RAE6oRvnXTK2h2.
+Status: draft for review, 2026-11-21, revised after the first review (German UI, Berlin location, redesigned prototype); §1, §2, §3, §6 and §7 revised 2026-11-23 after the phone test (the scanner runs on the phone, §3). Builds on [requirements.md](requirements.md) and [expert-api.md](expert-api.md). Feature list: [features.md](features.md). Clickable prototype: [prototype/index.html](../prototype/index.html), published at https://claude.ai/artifact/Cf3Y6zg8fAqWNPkKaELWdt (run locally with `python3 -m http.server 8765 --directory prototype`). Revised and final prototype (card B2, 2026-11-22): [prototype/b2.html](../prototype/b2.html), published at https://claude.ai/artifact/Y1dntJo3RAE6oRvnXTK2h2.
 
 ## 1. Decisions on the open questions
 
@@ -8,7 +8,7 @@ The open questions in requirements.md were analyzed with live API calls on 2026-
 
 | # | Question | Decision | Evidence |
 |---|---|---|---|
-| 1 | Hosting | **GitHub Actions cron in a public repo.** Milestone 0 is a 3-day probe, because the API host *is* behind Cloudflare (`server: cloudflare`, `cf-ray`) and GitHub runners use Azure data-center IPs. Cloudflare Workers are ruled out: the free plan allows 50 external subrequests per invocation; a scan needs 349. Fallback if the probe fails: Oracle Cloud "Always Free" VM with cron (needs a card at signup, no charge). | Response headers of `pricepds`; Cloudflare Workers limits; GitHub Actions docs. |
+| 1 | Hosting | **Superseded 2026-11-23: the scanner runs on the phone (§1, "Hosting decision 2026-11-22", and §3).** Original decision: GitHub Actions cron in a public repo. Milestone 0 is a 3-day probe, because the API host *is* behind Cloudflare (`server: cloudflare`, `cf-ray`) and GitHub runners use Azure data-center IPs. Cloudflare Workers are ruled out: the free plan allows 50 external subrequests per invocation; a scan needs 349. Fallback if the probe fails: Oracle Cloud "Always Free" VM with cron (needs a card at signup, no charge). | Response headers of `pricepds`; Cloudflare Workers limits; GitHub Actions docs. |
 | 2 | App type | **PWA on GitHub Pages + ntfy push (ntfy.sh, Android app).** Data = JSON files the scanner commits into the repo. The phone is a Samsung Galaxy S25 (Android, confirmed 2026-11-21), so web push has no iOS limits; it stays version 2 because the scanner would have to store push subscriptions and sign VAPID requests; ntfy needs one `POST`. | ntfy docs. |
 | 3 | Cashback amounts | **Parse the Teilnahmebedingungen PDF on `cdn.expert.de`** that the promotion description links. Samsung and Sony PDFs hold model-code tables (`Modell-Code / Zoll / Cashback`, `Bezeichnung / SAP / Cashback / Double-Cashback`). `possibleDiscountRanges` is `null` for TV cashbacks (it is filled only for household appliances: Bosch, Siemens, AEG). Manual override file for unparsed brands. | PDFs of `e_4294` (Sony) and `e_4288` (Samsung Frame Pro); `compactPromotionData`. |
 | 4 | Qualifying devices | **TVs: from `getIndex.indexed` (complete for expert's range). Soundbars: not linked** (Sony cashback `e_4294` → 8 TVs, 0 soundbars). Soundbar list comes from the PDF; expert articles for them are found through the TV article's `additionalArticles` cross-sell list (numeric ids → `search/article?articleId=e_<id>`), matched by model code. Manual add as fallback. | `indexed` reverse map; `search/article` response. |
@@ -42,7 +42,7 @@ New API facts found during the analysis are recorded in [expert-api.md](expert-a
 
 ### Hosting problems found 2026-11-22 (after the M0 probe)
 
-The hosting of §1 #1 does not work. The decision follows below ("Hosting decision 2026-11-22"). §2 architecture, §3 hosting and §6 milestones still describe the Actions design; they are revised after the phone test passes.
+The hosting of §1 #1 does not work. The decision follows below ("Hosting decision 2026-11-22"). §2 architecture, §3 hosting and §6 milestones were revised on 2026-11-23, after the phone test passed.
 
 Problems:
 
@@ -77,7 +77,7 @@ Why Termux: the smallest change that meets every constraint. The Tailscale relay
 
 Battery, estimated: 8 runs a day with about 75 s of network each cost 2–3 % per day on Wi-Fi and 3–5 % on mobile data (S25, 4 000 mAh). Rules that keep it there: no permanent wake lock (the boot script only registers the job, the run script holds the lock for the run), JobScheduler instead of a sleep loop, set scans over all stores only on Wi-Fi or once a day, gzip (the client already sends `Accept-Encoding: gzip`; sizes in expert-api.md, "Request behaviour").
 
-Consequences for the plan, to be written after the test: §2 scanner on the phone instead of Actions, data pushed to the repo with a fine-grained PAT, GitHub Pages and the PWA unchanged (P4 does not apply: the PWA reads only repo data), alerts from the phone through ntfy or `termux-notification`; §3 replaced by the phone setup; §6 M0 = the phone test below.
+Consequences for the plan, applied on 2026-11-23: §2 scanner on the phone instead of Actions, data pushed to the repo with a fine-grained PAT, GitHub Pages and the PWA unchanged (P4 does not apply: the PWA reads only repo data), alerts from the phone through ntfy with `termux-notification` as the fallback; §3 replaced by the phone setup; §6 M0 = the phone test below, M1 starts with the phone runtime.
 
 #### Phone test (M0, one day)
 
@@ -107,53 +107,101 @@ Steps, in this order (1 and 2 done on 2026-11-22 by Claude; 3 to 7 need the user
 
 State 2026-11-22 evening: probe changes, scripts and tests committed and pushed; nothing run on the phone yet.
 
+Steps 3 to 8 were done by the user on 2026-11-22 and 2026-11-23; step 9 is the result below and the revision of §2, §3 and §6 of 2026-11-23.
+
+#### Phone test result (2026-11-23): go
+
+Evaluated by the user on 2026-11-23 at 12:40 CET, 19 h into the 24 h window (2026-11-22 17:50 to 2026-11-23 17:50 CET). The probe writes its own `go` or `no-go` at the end of the window and the job cancels itself then. Evidence: `data/probe-phone.json` and `data/probe-phone.log` as pushed from the phone (commit 5ebd21c).
+
+| Criterion | Result | Evidence |
+|---|---|---|
+| 1. No challenge, no non-JSON body, no aborted run, first-try `500` under 10 % | **Pass.** 13 runs, 763 calls (two sweeps of 349), 0 challenges, 0 non-JSON bodies, 0 aborted runs, 0 `429 (Too Many Requests)`, 20 first-try `500` (2.6 %), 1 call failed after the retries (F4). Every call went through Cloudflare `TXL`. Latency p50 336 ms, p95 1 274 ms; the sweeps took 14.0 s and 23.4 s | `summary` in `data/probe-phone.json` |
+| 2. One run on Wi-Fi and one on mobile data | **Pass**, with F2. 11 runs on Wi-Fi, 2 manual runs on mobile data (5 calls each, all `200`, 227–674 ms) | records of 17:51 and 17:52 CET |
+| 3. At least 15 of the 16 scheduled runs 06:00–22:00 | **Pass so far:** 11 of the 11 possible by 12:40 CET (17:50–21:51 on 11-22, 06:50–11:42 on 11-23). The 8 night runs were skipped as designed. The reboot at 09:40 re-registered the job (`boot: job registered`) and the next run came at once | `data/probe-phone.log` |
+| 4. Termux plus Termux:API under 5 % battery for the day | **Pass.** User: far below 5 %; the figure was not recorded | user, 2026-11-23 |
+| 5. healthchecks.io received the pings, no false alarm | Not reported in the evaluation; checked in step 0 of M1 | – |
+
+Findings:
+
+- **F1 Concurrent runs clobber the probe file.** `setup.sh` registers the job and then starts the manual first run; JobScheduler starts a new periodic job at once, so both ran at 17:50 (two log lines, both "runs 1"). Both read the empty file and the last writer won: the file holds one record for 17:50 and the manual record is lost. Fix in M1: the scanner holds a lock file for the run (§2), and `setup.sh` registers the job after the first run.
+- **F2 No 349-call sweep on mobile data.** The two mobile runs were manual runs one and two minutes after the first sweep, so no sweep was due. The 5 fixed calls passed on mobile data. A sweep on mobile data is step 0 of M1.
+- **F3 Thin `pricepds` bodies after the night.** The Philips at the online shop returned 955 B instead of ≈ 4.5 KB at 06:50 and 10:40 CET (the check still passed: `articleId` and `price` present; the body is not recorded). The 06:50 sweep found an offer at 22 of 349 stores instead of 230 and had 15 first-try `500`s (4.3 %) instead of 2. The response carries `cacheLevel` and `cachedOn`, so this looks like a cold price cache. M1 records `cacheLevel`, treats a vanished offer as unknown for 24 h and marks such a run incomplete (§3, rules).
+- **F4 One persistent `500`.** Sony BRAVIA 9 II at Berlin Tauentzien: four `500`s at 10:40 CET, the same call that needed two retries on the Mac on 2026-11-22. 1 of 763 calls. M1 treats a call that fails after the retries as unknown (§3), not as a lost offer.
+- **F5 Phase drift.** A periodic job runs anywhere inside its period: at :50 in the test, at :40 after the reboot. The healthchecks grace must cover one period (§3).
+
 ## 2. Architecture
+
+Revised 2026-11-23 after the phone test: the scanner runs on the phone. GitHub keeps the repo and Pages; nothing runs in Actions.
 
 ```mermaid
 flowchart LR
-  subgraph GH["GitHub (free)"]
-    A["Actions cron\nscanner (Python)"] -->|commits JSON| R["repo: config/ + data/"]
-    R --> P["GitHub Pages\nPWA (static)"]
+  subgraph PH["Galaxy S25 (Termux)"]
+    J["JobScheduler job 1\nevery 2 h, 06–22"] --> RS["phone/run.sh\nwake lock · git pull · commit · push"]
+    RS --> SC["scanner run (Python)\nlock file · stores · prices · sets · cashback · notify"]
+    I["ntfy app"]
+    S["PWA on the home screen"]
   end
-  A -->|8 parallel, retry 500| X["production.brntgs.expert.de\npricepds · bundlesForArticle\ngetIndex · search/article · storeFinder"]
-  A -->|download| C["cdn.expert.de\nTeilnahmebedingungen PDF"]
-  A -->|POST message| N["ntfy.sh topic"]
-  A -->|ping per run| H["healthchecks.io\n(dead-man switch)"]
-  N --> I["Galaxy S25: ntfy app"]
-  P --> S["Galaxy S25: PWA on home screen"]
-  S -->|optional: fine-grained PAT\nwrite config, trigger run| R
+  subgraph GH["GitHub (free)"]
+    R["repo: config/ + data/"] --> P["GitHub Pages\nPWA (static)"]
+  end
+  RS -->|push data/ with the PAT| R
+  SC -->|8 parallel, retry 500| X["production.brntgs.expert.de\npricepds · bundlesForArticle\ngetIndex · search/article · storeFinder"]
+  SC -->|download| C["cdn.expert.de\nTeilnahmebedingungen PDF"]
+  SC -->|POST message| N["ntfy.sh topic"]
+  RS -->|ping per run| H["healthchecks.io\n(dead-man switch)"]
+  H -->|missed run: email + ntfy| N
+  N --> I
+  P --> S
+  S -->|optional: fine-grained PAT\nwrite config| R
   Z["api.zippopotam.us"] -.->|postcode → lat/lng| S
 ```
 
 Components:
 
-- **Scanner** (`scanner/`, Python 3.12, stdlib + `pypdf`): one CLI with subcommands `stores`, `prices`, `sets`, `cashback`, `notify`. Runs locally and in Actions. No framework, no database.
-- **Repo as database**: `config/*.json` (user input), `data/*.json` (scanner output). Every run commits its data, without `[skip ci]` (see §1, 2026-11-22). Git history is the price history backup.
-- **PWA** (`app/`, static HTML/JS, no build step): reads `data/*.json` with `fetch`, renders the four screens of the prototype, installable on the home screen. Writes config through the GitHub Contents API when a fine-grained token (scope: this repo, Contents read/write, Actions read/write) is stored in the app; otherwise the user edits `config/watchlist.json` on GitHub.
-- **Push**: ntfy topic with a random name (treated as a secret: Actions secret `NTFY_TOPIC`). Messages carry title, price line, store, distance, and a click URL to the product page with `?branch_id=<store>`.
-- **Dead-man switch**: `healthchecks.io` free plan (20 checks). Pings at the end of each run. Missed ping → email/ntfy. Covers the silent disable of scheduled workflows after 60 days without activity (the data commits count as activity, but the check is the safety net).
+- **Scanner** (`scanner/`, Python 3.12 or newer, Termux ships 3.14; stdlib + `pypdf`): one CLI. `run` is the entry point on the phone: it takes the lock, reads the last-run times in `data/status.json` and calls the steps that are due (`stores`, `prices`, `sets`, `cashback`, `notify`; cadences in §3). Every step is also a sub-command of its own for the Mac. No framework, no database.
+- **Lock file**: `run` holds `data/.lock` (`fcntl.flock`, non-blocking) for the whole run. A second instance exits with code 3 ("another run is active"); the run script logs it and pings nothing (finding F1).
+- **Phone runtime** (`phone/`): `setup.sh` (one-time: packages, Termux:Boot script, ping URL, ntfy topic, PAT through `git credential.helper store`, tests, first run, then the job), `schedule.sh` (job 1: period 2 h, any network, persisted), `boot.sh` (re-registers the job after a reboot, no wake lock), `run.sh` (one run: skip 22:00–06:00, wake lock, network detection, `git pull --rebase`, `scanner run`, `git commit` and `git push` of `data/`, healthchecks ping, failure notification). `run-probe.sh` is replaced by `run.sh` in M1. Secrets live in `~/.expert-checker.env` (ping URL, ntfy topic) and `~/.git-credentials` (PAT), both in Termux's private storage, never in the repo.
+- **Repo as database**: `config/*.json` (user or PWA), `data/*.json` (scanner only). From M1 on only the phone commits to `data/`; the Mac never does, so the rebase before a run never conflicts. Every run with changes commits and pushes. A push with the PAT also starts the Pages build (`GITHUB_TOKEN` pushes did not; verified in M2). Git history is the price history backup.
+- **Code updates** reach the phone through the `git pull` at the start of each run. The Mac runs `python3 -m unittest` before every push to `main`. A broken run shows up within one period through the failure notification and within two through healthchecks.
+- **PWA** (`app/`, static HTML/JS, no build step): unchanged. Reads `data/*.json` from Pages (P4 does not apply: the PWA calls no expert endpoint). Writes config through the GitHub Contents API when a fine-grained token (this repo, Contents read/write) is stored in the app; the next run, at most 2 h later, picks the change up. The "Scan now" button of M2 is dropped: a manual run is `bash ~/expert-checker/phone/run.sh manual` in Termux; a Termux:Widget shortcut is a version-2 option.
+- **Push**: ntfy topic with a random name (secret in `~/.expert-checker.env`), sent by the scanner from the phone. Messages carry title, price line, store, distance and a click URL to the product page with `?branch_id=<store>`. When the POST to ntfy.sh fails, the run script posts the same text with `termux-notification`.
+- **Dead-man switch**: `healthchecks.io` free plan. The run script pings at the end of each run: success, or `/fail` with the log tail after an aborted run or a crash. Check schedule: cron `0 6-21/2 * * *`, Europe/Berlin, grace 2 h, so one missed run alerts (email and ntfy through the healthchecks integration) and the night pause does not. The user then opens Termux, reads `data/scanner.log` and re-runs `phone/setup.sh` if the job is gone.
 
 ## 3. Hosting details
 
-| Item | Choice | Why |
+Revised 2026-11-23: the phone replaces GitHub Actions. The Actions table of 2026-11-21 is in the git history.
+
+| Item | Choice | Why, evidence |
 |---|---|---|
-| Repo visibility | Public | Unlimited Actions minutes on standard runners. Private = 2000 min/month, hourly runs would exceed it. The repo holds no secrets: ntfy topic, healthchecks URL, and PAT are Actions secrets or on the phone. |
-| Runner | `ubuntu-latest`, Python 3.12 | Fastest cold start, no Docker. |
-| Run length | 1–4 min per run | 35 s per product for prices (349 stores, 8 workers), 60–90 s for set deals (bundles are 20–65 KB per store). |
-| Schedule delays | Accepted | Actions cron may run 5–30 min late. No requirement for exact times. |
-| Fallback | Oracle Cloud Always Free ARM VM + cron, same scanner CLI | Only if milestone 0 shows Cloudflare blocking. |
+| Device | Galaxy S25 with Termux, Termux:API and Termux:Boot (F-Droid builds), battery "Unrestricted", all three in "Never sleeping apps" | Phone test 2026-11-22/23: 13 runs, 763 calls, no challenge, reboot survived, battery far below 5 % per day |
+| Repo visibility | Public, unchanged | GitHub Pages. Actions minutes no longer matter. The repo holds no secrets |
+| Scheduler | Android JobScheduler through `termux-job-scheduler`: job id 1, period 2 h, network any, `--battery-not-low false`, persisted | Minimum period 15 min. A periodic job runs once anywhere inside each period, so the phase drifts (test: :50, after the reboot :40). `run.sh` skips 22:00–06:00, which leaves 8 runs a day whatever the phase |
+| Run length | 2–4 min for 5 products: prices ≈ 20–25 s per product (349 calls took 14–23 s in the test), sets 1–2 min, cashback ≈ 10 s, commit and push ≈ 10 s. Wake lock only for the run | The battery estimate of §1 held in the test |
+| Network | Wi-Fi and mobile data both work. Set scans run on Wi-Fi; on mobile data at most once a day | A price scan of 5 products moves ≈ 3.5 MB on the wire, 8 a day ≈ 30 MB; a set scan ≈ 7 MB (expert-api.md, "Request behaviour") |
+| Data push | `git pull --rebase`, `git add data`, `git commit`, `git push` in `run.sh`, with the fine-grained PAT of test step 8 (this repo, Contents read/write, 90-day expiry) stored by `git credential.helper store` | Only the phone commits to `data/`, so the rebase never conflicts |
+| Failed push | Does not fail the run: the commits wait locally and go with the next push; N7 after three failed pushes in a row (≈ 6 h); the success ping is still sent | GitHub mails a week before the PAT expires. Renewal: new PAT, `git credential reject`, the next push asks for it |
+| Dead-man switch | healthchecks.io check "expert-scanner": cron `0 6-21/2 * * *`, Europe/Berlin, grace 2 h, integrations email and ntfy | The test check "expert-probe-phone" can be deleted after the window |
+| Alerts | ntfy.sh topic (the app subscribed in the test); fallback `termux-notification` | |
+| Manual run | Termux: `bash ~/expert-checker/phone/run.sh manual` (ignores the time window) | |
+| Code updates | `git pull --rebase` at the start of each run; tests on the Mac before every push | |
+| Fallback | Chaquopy app with WorkManager around the same Python package | Only if Android starts killing the job (healthchecks alarms without a reason in the log) |
 
-### Batch scan schedule (cron in Europe/Berlin through the `timezone` key; no scans 22:00–06:00)
+### Run schedule (JobScheduler every 2 h; `run.sh` skips 22:00–06:00 Berlin)
 
-| Workflow | Cron | Work per run | Calls per run (5 watched products) |
+One job, one process. `scanner run` decides per step from the last-run times in `data/status.json`:
+
+| Step | Cadence | Work per run | Calls per run (5 watched products) |
 |---|---|---|---|
-| `scan-prices` | `15 6-21 * * *` (hourly 06:15–21:15, 16 runs; no night run) | `pricepds` for every watched product × 349 stores + online; compute best shipped / pickup; diff; notify | ≈ 1 750 |
-| `scan-sets` | `45 6-21/3 * * *` | `bundlesForArticle` only for stores that offer the product (≈ 190 of 349 for a TV); diff set deals; notify | ≈ 950, ≈ 40 MB |
-| `scan-cashback` | `30 6-21/6 * * *` | 1 × `getIndex` (online shop, 1.2 MB); filter `CASHBACK` promotions for watched brands and watched articles; download new PDFs; parse amounts; resolve qualifying TVs with `search/article` (cached in `data/articles.json`); refresh best prices of qualifying devices the user picked | 1 + ≤ 50 |
-| `refresh-stores` | `0 6 * * 1` (weekly) | store finder → `data/stores.json`; alert when count changes by > 10 % | 1 |
-| `probe` (milestone 0 only) | `23 * * * *` in UTC, around the clock; disables itself 72 h after the first run | 1 store finder, 3 `pricepds`, 1 `getIndex`; log status, `cf-mitigated`/challenge detection; sweep: `pricepds` for one TV at all stores in the first run and every 6 h | 5, plus 349 per sweep |
+| `stores` | when `data/stores.json` is older than 7 days | store finder → `data/stores.json`; alert when the count changes by > 10 % | 1 |
+| `prices` | every run (8 a day) | `pricepds` for every watched product × 349 stores + online; best shipped and pickup; diff; daily history point; N1–N3 | ≈ 1 750 |
+| `sets` | every run on Wi-Fi; on mobile data when the last set scan is older than 24 h | `bundlesForArticle` for the stores that offer the product (≈ 190 of 349 for a TV); diff; N4 | ≈ 950, ≈ 7 MB on the wire |
+| `cashback` | when the last cashback scan is older than 6 h (every third run) | `getIndex` of the online shop (195 KB on the wire); `CASHBACK` promotions for watched brands and articles; new PDFs; `search/article` for qualifying devices (cached) | 1 + ≤ 50 |
+| push | every run that changed `data/` | commit and push | – |
+| `probe` | not scheduled | stays as a diagnostic command (`python -m scanner probe`) | – |
 
-Rules: 8 workers, retry `500` three times with 1–2 s delay, exponential backoff on `429 (Too Many Requests)`, abort the run when > 20 % of calls fail (and notify). More than 10 watched products → split `scan-prices` into a matrix of 10 products per job. The requirement "150 stores, then the rest 30 minutes later" is not needed on Actions; a full scan of one product takes 35 s.
+Rules: 8 workers, retry `500` three times with 1–2 s delay, exponential backoff on `429 (Too Many Requests)`, abort the run when > 20 % of calls fail (fail ping, N7). A call that still fails after the retries (test: 1 of 763, finding F4) and a thin body without `bruttoPrice` where the previous scan had an offer (finding F3) count as "unknown": the previous offer is kept with a flag for up to 24 h and raises no alert. A run in which more than half of a product's previous offers vanish is marked incomplete and sends no price alert for that product. More than 10 products → the price step scans them in two halves in consecutive runs. The requirement "150 stores, then the rest 30 minutes later" is not needed on the phone either: a product takes about 25 s.
+
+The writers in the file table of §4 (`refresh-stores`, `scan-prices`, `scan-sets`, `scan-cashback`) are the steps `stores`, `prices`, `sets` and `cashback` of this table.
 
 ## 4. Data model
 
@@ -288,7 +336,7 @@ Every rule writes an `ALERT` and sends one ntfy message. No scans run 22:00–06
 | N4 | New set deal | new `bundleId` for a watched product at the online shop or a store within range, or `discount` grows by ≥ 20 € | once per bundle and store |
 | N5 | New cashback | new `CASHBACK` promotion whose brand is in `brands`, or whose `indexed` articles include a watched product. Second message when amounts become known (PDF parsed or override added). Third message 3 days before `buyTo`. | once per event |
 | N6 | Cashback device price | best price of a qualifying device the user picked (role `cashback-tv` / `cashback-soundbar`) drops (same thresholds as N1) | 6 h |
-| N7 | Scan failure | run aborted, > 20 % failed calls, non-JSON response (Cloudflare challenge), store count change > 10 %, or no successful run for 3 h (healthchecks.io, with a cron schedule in Europe/Berlin, so the night pause is no failure) | 1 per 6 h |
+| N7 | Scan failure | run aborted, > 20 % failed calls, non-JSON response (Cloudflare challenge), store count change > 10 %, three failed pushes in a row, or no successful run for 4 h (healthchecks.io, cron every 2 h in Europe/Berlin with grace 2 h, so the night pause is no failure) | 1 per 6 h |
 
 Rises are shown in the app (sparkline, "X € über dem 30-Tage-Tief") and never pushed (decided 2026-11-22).
 
@@ -296,16 +344,31 @@ Message format: `LG OLED65C69LB: 1 294 € pickup (was 1 339 €) · expert Bisc
 
 ## 6. Milestones
 
+Revised 2026-11-23: M0 is done, M1 contains the phone runtime. Version 1 = M0–M4.
+
 | M | Name | Deliverable | Done when |
 |---|---|---|---|
-| **M0** | Hosting probe | `probe` workflow + `scanner/expert_api.py` (client with retry/backoff) | 3 days of hourly runs from Actions show JSON responses, no challenge, no aborted run, < 10 % `500` at the first attempt. Decision hosting = Actions or fallback. |
-| **M1** | Price scanner + push | `stores`, `prices`, `notify`; `config/watchlist.json`; `data/products/*.json`; ntfy N1, N2, N3, N7; healthchecks | Watching 3 TVs for a week with correct best prices (checked against the website) and alerts on the phone. |
-| **M2** | PWA v1 | `app/` with watch list and product detail (screens 1–2 of the prototype), home-screen install, settings with postcode, radius, PAT | App on the phone shows the data within 1 min of a run; adding a product URL in the app triggers a scan. |
-| **M3** | Set deals | `sets`; per-store set deals in product detail; N4 | LG DSC9S set shows 199 € effective at Pasternak and "no set" at Bischofswerda (verified example). |
-| **M4** | Cashback | `cashback`; PDF parsers Samsung + Sony; qualifying TVs from the index; soundbars via cross-sell + manual; cashback list and detail with resale calculator (screens 3–4); N5, N6; `cashback-overrides.json` | Sony `e_4294` shows 8 TVs with single/double amounts and 6 soundbars; Samsung Frame Pro shows 4 TVs with amounts; calculator gives effective TV cost. |
-| **M5** | Hardening | 90-day history sparkline, alert inbox, matrix split for > 10 products, docs | 30 days without a silent failure. |
+| **M0** | Hosting probe | **Done 2026-11-23.** `scanner/expert_api.py`, `scanner/probe.py`, `phone/*.sh`. Actions: no-go (Cloudflare challenge, 2026-11-22). Phone: go (§1, "Phone test result") | – |
+| **M1** | Phone runtime, price scanner, push | (a) runtime: `scanner run`, lock file, `data/status.json`, `phone/run.sh`, `schedule.sh` with 2 h, `setup.sh` with PAT and ntfy topic, healthchecks ping, Actions workflow deleted; (b) `stores`, `prices`, `config/watchlist.json`, `data/stores.json`, `data/products/*.json` with history; (c) `notify` with ntfy, N1, N2, N3, N7, `data/alerts.json` | 7 days with 3 TVs on the phone: at least 50 of 56 scheduled runs pushed data and every missed run is explained by the log; best prices checked against the website on 3 days; price and target alerts arrived on the phone; healthchecks quiet except for real misses; no clobbered or conflicting file; battery still far below 5 % |
+| **M2** | PWA v1 | As before, minus "Scan now" (the next run picks up a new product within 2 h), plus the push age from `data/status.json` | App on the phone shows the data within 2 min of a push; adding a product URL in the app writes the config and the next run scans it |
+| M3 | Set deals | As before; set scans on Wi-Fi, once a day on mobile data (§3) | LG DSC9S set shows 199 € effective at Pasternak and "no set" at Bischofswerda (verified example). |
+| M4 | Cashback | As before | Sony `e_4294` shows 8 TVs with single/double amounts and 6 soundbars; Samsung Frame Pro shows 4 TVs with amounts; calculator gives effective TV cost. |
+| M5 | Hardening | As before, plus: delete the `actions` runner code of the probe, check the repo size after 30 days of 8 pushes a day, Termux:Widget shortcut for a manual run | 30 days without a silent failure. |
 
-Version 1 = M0–M4. M5 and the version-2 items in [features.md](features.md) come after the first month of use.
+M5 and the version-2 items in [features.md](features.md) come after the first month of use.
+
+### M1 scope (proposed 2026-11-23)
+
+Order: the runtime first, because the push from the phone and the lock are the untested parts; then the scanner steps, which the probe already does in part (store finder, `pricepds` over all stores).
+
+0. **Close the test (user, Termux, after 17:50 on 2026-11-23).** Wi-Fi off; `cd ~/expert-checker && python3 -m scanner probe --out data/probe-phone.json --sweep always --event manual --network mobile` (the sweep of F2; the job has cancelled itself by then, so no clobber); Wi-Fi on; `git add data/probe-phone.json data/probe-phone.log && git commit -m "probe: phone test, final" && git push`. On healthchecks.io: the pings arrived and no alert was sent (criterion 5).
+1. **Runtime (Claude, Mac).** `scanner/run.py` with the lock, `status.json` and the cadence table of §3 (steps stubbed); `scanner/notify.py` (ntfy POST, message format of §5); `phone/run.sh`, `schedule.sh` (2 h), `setup.sh` (asks for the ntfy topic, stores the PAT, registers the job after the first run); `boot.sh` unchanged; `.github/workflows/probe.yml` deleted; tests for the lock, the cadence and the ntfy payload.
+2. **Stores and prices (Claude, Mac).** `scanner/stores.py` (store finder, coordinates, online shop added, Haversine from the location in `config/watchlist.json`); `scanner/prices.py` (`pricepds` × stores per product, offers, best shipped and pickup, daily history point, the unknown and incomplete rules of §3, `cacheLevel` recorded); `config/watchlist.json` with the Philips 65OLED951 and the two Sony BRAVIA 9 II; product name, brand and image URL from `search/article` and `medium`. The image is linked from `cdn.expert.de`, not copied: no Pillow on the phone; M2 verifies that the browser may load it, otherwise the scanner stores the original file.
+3. **Alerts (Claude, Mac).** N1 (three modes), N2, N3, N7 with the cooldowns of §5; `data/alerts.json`; ntfy from the phone; `termux-notification` fallback in `run.sh`.
+4. **Deploy (user, phone).** healthchecks.io: the check of §3 (or edit the test check: cron `0 6-21/2 * * *`, grace 2 h). Termux: `cd ~/expert-checker && git pull && bash phone/setup.sh` (does the first run and registers job 1 with 2 h). On GitHub: the first run pushed `data/`.
+5. **Watch for 7 days (user).** Daily: the ntfy messages, `tail ~/expert-checker/data/scanner.log`, the push age on GitHub. On three days: the best prices of the three TVs against expert.de.
+
+Decisions this scope makes (open for the review): one job and one orchestrator instead of four jobs; a push after every run with changes (8 commits a day); images linked, not copied; "Scan now" out of M2; the probe stays as a diagnostic command.
 
 ## 7. Risks
 
@@ -314,7 +377,8 @@ Version 1 = M0–M4. M5 and the version-2 items in [features.md](features.md) co
 | Cloudflare blocks Azure runner IPs | no scans | **Happened 2026-11-22** (M0 probe); see §1, "Hosting problems found 2026-11-22". The fallback VM is a data centre too and probably blocked |
 | expert changes the API | silent wrong data | N7 on non-JSON or schema mismatch; verify endpoints and update expert-api.md |
 | PDF layouts change | amounts unknown | parser reports "unknown", N5 still fires with the link; override file |
-| GitHub disables the cron after 60 days | no scans | data commits keep the repo active; healthchecks catches it |
-| Data commits do not reach GitHub Pages (M2) | the app shows old data | commits without `[skip ci]`; in M2, verify that a commit pushed with `GITHUB_TOKEN` updates Pages, else deploy Pages from the scanner workflow |
+| Android kills the Termux job or Termux:Boot (One UI update, battery setting reset, Termux update) | no scans | healthchecks alarms after one missed run; `phone/setup.sh` re-registers the job; fallback: Chaquopy app with WorkManager (§3) |
+| Data pushes do not reach GitHub Pages (M2) | the app shows old data | pushes with a PAT start the Pages build (`GITHUB_TOKEN` pushes did not); verify in M2; the app shows the push age |
 | ntfy.sh rate limits / outage | missed alerts | alerts are also in `data/alerts.json`, visible in the PWA |
-| Private token on the phone | repo write access | fine-grained PAT limited to one repo, 90-day expiry; optional feature |
+| PAT on the phone (required from M1) | repo write access | fine-grained PAT limited to this repo, Contents only, 90-day expiry, in Termux's private storage; N7 after three failed pushes |
+| Repo growth from 8 data commits a day | slow clone and pull on the phone | stable key order in the JSON files (small deltas); size check in M5; squash the history if needed |

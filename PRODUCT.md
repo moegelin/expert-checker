@@ -26,7 +26,7 @@ Every expert store has its own price and its own promotions. Price comparison si
 
 ## Operating Context
 
-- Data from the unofficial expert API (`production.brntgs.expert.de`), scanned by a scheduled job; the app reads static JSON.
+- Data from the unofficial expert API (`production.brntgs.expert.de`), scanned every 2 h (06–22) by a Python scanner on the user's own phone in Termux, which pushes JSON files to the public GitHub repo; the app reads that static JSON from GitHub Pages. Cloud hosts are blocked by Cloudflare (verified for GitHub Actions, 2026-11-22); the phone test passed on 2026-11-23.
 - Store pickup requires a store choice on expert.de; the store picker on expert.de works by postcode, so every store in the app shows its postcode and city, and links to the product page with `?branch_id=<store id>`.
 - "Online-Shop" = expert's central online shop (`e_2879130`), ships from the central warehouse; it has its own price, free or paid shipping, and online-only codes (for example WERO10).
 - Restposten (clearance) and display items are real offers at a store, pickup only, usually one unit.
@@ -39,7 +39,7 @@ Every expert store has its own price and its own promotions. Price comparison si
 - UI language: German (confirmed). Documentation: English.
 - Product images come from `cdn.expert.de` (path from `/api/medium/<id>`).
 - No product search in the API (search endpoint gone, verified 2026-11-21); input is a product URL. Open: a search by model name over a cached article list.
-- Free hosting only, no server. Everything must work as static files.
+- Free hosting only, no server. Everything must work as static files; the scanner is a process on the phone, so a manual scan is a Termux command, not an app button.
 - Prices and stock change hourly; the app always shows the scan age.
 
 ## Brand Commitments
