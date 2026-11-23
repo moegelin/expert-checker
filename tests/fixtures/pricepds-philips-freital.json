@@ -1,0 +1,56 @@
+{
+ "articleId": "e_977673",
+ "webcode": "11128346052",
+ "store": "e_26051723",
+ "price": {
+  "createdOn": 1795435382948,
+  "lastUpdated": 1795435383038,
+  "onlineButtonAction": "NONE",
+  "basicPrice": null,
+  "basicPriceQuantity": null,
+  "basicPriceUnit": null,
+  "storeButtonAction": "RESERVE",
+  "itemOnDisplay": {
+   "onDisplay": false,
+   "type": null,
+   "description": null,
+   "gallery": []
+  },
+  "showStoreName": null,
+  "storeStock": 1,
+  "onlineStock": 0,
+  "storeId": "26051723",
+  "nettoPrice": 2268.07,
+  "bruttoPrice": 2699,
+  "taxRate": 0.19,
+  "storeAvailability": "AVAILABLE",
+  "minStoreDelivery": null,
+  "maxStoreDelivery": null,
+  "shipmentArray": [
+   {
+    "shipmentType": "WOL",
+    "shipmentNettoPrice": 67.14,
+    "shipmentBruttoPrice": 79.9,
+    "shipmentTaxRate": 0.19,
+    "shipmentCurrency": "EUR",
+    "hideVskText": true
+   }
+  ],
+  "availableServices": [],
+  "cachedOn": 1795435774199,
+  "cacheLevel": "MOST_RECENT",
+  "pubSource": "mongoPub",
+  "promotedPrice": null
+ },
+ "promotionPrice": {
+  "currentPrice": 2699,
+  "directDiscount": 0,
+  "directDiscountTitle": "",
+  "checkoutPrice": 2699,
+  "cashbackDiscount": 0,
+  "cashbackTitle": "",
+  "cashbackSummaryTitle": "",
+  "afterCashbackPrice": 2699
+ },
+ "warranties": []
+}

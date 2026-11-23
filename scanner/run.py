@@ -13,8 +13,9 @@ import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from . import repo
+from . import prices, repo, stores
 from .expert_api import ChallengeError, ExpertApi, ExpertApiError, RateLimitedError, ScanAborted
+from .jsonfile import read_json, write_json  # noqa: F401  (tests and steps use run.read_json / run.write_json)
 from .notify import Ntfy
 from .probe import berlin, detect_runner, iso, parse_time
 
@@ -28,19 +29,21 @@ PUSH_FAILURES_TO_ALERT = 3  # N7 after three failed pushes in a row (≈ 6 h)
 STOP_ERRORS = (ChallengeError, RateLimitedError, ScanAborted)
 EXIT_OK, EXIT_DEGRADED, EXIT_ABORTED, EXIT_LOCKED = 0, 1, 2, 3
 
-STEPS = {}  # name -> fn(ctx) -> summary dict; registered by stores/prices/sets/cashback (M1 steps 2 and 3)
+STEPS = {"stores": stores.step, "prices": prices.step}  # name -> fn(ctx) -> summary dict; sets and cashback in M3 and M4
 
 
 class Context:
-    """What a step gets: the API client, the data dir, the run's network and time, the push channel."""
+    """What a step gets: the API client, the data and config dirs, the run's network and time, the push channel."""
 
-    def __init__(self, api, data, network, now, ntfy, status):
+    def __init__(self, api, data, network, now, ntfy, status, config=None, options=None):
         self.api = api
         self.data = data
+        self.config = config if config is not None else data.parent / "config"
         self.network = network
         self.now = now
         self.ntfy = ntfy
         self.status = status  # the status of the previous run (read-only for steps)
+        self.options = options or {}  # sub-command flags, for example {"force": True} for `stores --force`
 
 
 def main(args, env=os.environ, now=None, steps=None, api=None, git=None, ntfy=None, clock=time.monotonic):
@@ -139,6 +142,34 @@ def _run(args, env, now, steps, api, git, ntfy, clock, data):
     return code
 
 
+def run_step(args, name, now=None, api=None, ntfy=None, env=os.environ):
+    """`python -m scanner stores|prices`: one step on its own (the Mac). Writes the data files, not status.json.
+    Exit codes as `run`: 0 ok, 1 failed, 2 aborted, 3 locked."""
+    data = Path(args.data)
+    data.mkdir(parents=True, exist_ok=True)
+    lock = acquire_lock(data / ".lock")
+    if lock is None:
+        print("another run is active")
+        return EXIT_LOCKED
+    try:
+        api = api or ExpertApi()
+        ctx = Context(api, data, getattr(args, "network", None) or "unknown", now or datetime.now(timezone.utc),
+                      ntfy or Ntfy(env=env), read_json(data / "status.json") or {},
+                      options={"force": bool(getattr(args, "force", False))})
+        try:
+            summary = STEPS[name](ctx) or {}
+        except STOP_ERRORS as e:
+            print(f"{name} aborted: {type(e).__name__}: {e} · {len(api.calls)} calls")
+            return EXIT_ABORTED
+        except ExpertApiError as e:
+            print(f"{name} FAILED: {e} · {len(api.calls)} calls")
+            return EXIT_DEGRADED
+        print(f"{name} ok · {len(api.calls)} calls · " + json.dumps(summary, ensure_ascii=False))
+        return EXIT_OK
+    finally:
+        release_lock(lock)
+
+
 def push_data(git, push_state, stamp, ntfy):
     """Commit `data/` when it changed, push when something is committed or an earlier push failed."""
     committed, error = repo.commit(git, f"scan: {stamp}")
@@ -231,13 +262,3 @@ def status_line(status, push, push_state, code):
         line += f" · {w}"
     return line
 
-
-def read_json(path):
-    try:
-        return json.loads(path.read_text())
-    except (OSError, ValueError):
-        return None
-
-
-def write_json(path, value):
-    path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n")

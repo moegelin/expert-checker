@@ -1,0 +1,292 @@
+[
+ {
+  "store": {
+   "id": "e_36696318",
+   "expId": "36696318",
+   "canUseShop": true,
+   "decentralizedShop": true,
+   "website": true,
+   "openingHours": [
+    {
+     "dayFrom": "MONDAY",
+     "dayTo": "FRIDAY",
+     "comment": "",
+     "timeFrom": 540,
+     "timeTo": 1110
+    },
+    {
+     "dayFrom": "SATURDAY",
+     "dayTo": "SATURDAY",
+     "comment": "",
+     "timeFrom": 540,
+     "timeTo": 1020
+    }
+   ],
+   "latitude": 47.5718193,
+   "longitude": 7.7983777,
+   "street": "Schildgasse 21",
+   "zip": "79618",
+   "city": "Rheinfelden",
+   "phone": "07623 20084",
+   "name": "expert Villringer",
+   "autoAssignDistance": 30000,
+   "centralStore": false
+  },
+  "startLat": 0.0,
+  "startLng": 0.0,
+  "linearDistance": 5343137.508503496,
+  "distance": 0.0,
+  "duration": 0,
+  "openingTimes": {
+   "Mo. - Fr.": {
+    "times": [
+     "09:00 - 18:30 Uhr"
+    ],
+    "comment": ""
+   },
+   "Sa.": {
+    "times": [
+     "09:00 - 17:00 Uhr"
+    ],
+    "comment": ""
+   }
+  }
+ },
+ {
+  "store": {
+   "id": "e_1907435",
+   "expId": "1907435",
+   "canUseShop": true,
+   "decentralizedShop": true,
+   "website": true,
+   "openingHours": [
+    {
+     "dayFrom": "MONDAY",
+     "dayTo": "FRIDAY",
+     "comment": "",
+     "timeFrom": 540,
+     "timeTo": 1080
+    },
+    {
+     "dayFrom": "SATURDAY",
+     "dayTo": "SATURDAY",
+     "comment": "",
+     "timeFrom": 540,
+     "timeTo": 840
+    }
+   ],
+   "latitude": 51.4833162,
+   "longitude": 7.163403,
+   "street": "Mausegatt 40",
+   "zip": "44866",
+   "city": "Bochum",
+   "phone": "02327 60080",
+   "name": "expert Pasternak",
+   "autoAssignDistance": 10000,
+   "centralStore": false
+  },
+  "startLat": 0.0,
+  "startLng": 0.0,
+  "linearDistance": 5763888.610131739,
+  "distance": 0.0,
+  "duration": 0,
+  "openingTimes": {
+   "Mo. - Fr.": {
+    "times": [
+     "09:00 - 18:00 Uhr"
+    ],
+    "comment": ""
+   },
+   "Sa.": {
+    "times": [
+     "09:00 - 14:00 Uhr"
+    ],
+    "comment": ""
+   }
+  }
+ },
+ {
+  "store": {
+   "id": "e_26051722",
+   "expId": "26051722",
+   "canUseShop": true,
+   "decentralizedShop": true,
+   "website": true,
+   "openingHours": [
+    {
+     "dayFrom": "MONDAY",
+     "dayTo": "FRIDAY",
+     "comment": "                          ",
+     "timeFrom": 600,
+     "timeTo": 1140
+    },
+    {
+     "dayFrom": "SATURDAY",
+     "dayTo": "SATURDAY",
+     "comment": "                          ",
+     "timeFrom": 540,
+     "timeTo": 960
+    }
+   ],
+   "latitude": 50.9562,
+   "longitude": 13.9081336,
+   "street": "Hugo-Küttner-Straße 2",
+   "zip": "01796",
+   "city": "Pirna",
+   "phone": "03501 79850",
+   "name": "expert Pirna",
+   "autoAssignDistance": 30000,
+   "centralStore": false
+  },
+  "startLat": 0.0,
+  "startLng": 0.0,
+  "linearDistance": 5815861.685012374,
+  "distance": 0.0,
+  "duration": 0,
+  "openingTimes": {
+   "Mo. - Fr.": {
+    "times": [
+     "10:00 - 19:00 Uhr"
+    ],
+    "comment": "                          "
+   },
+   "Sa.": {
+    "times": [
+     "09:00 - 16:00 Uhr"
+    ],
+    "comment": "                          "
+   }
+  }
+ },
+ {
+  "store": {
+   "id": "e_26051723",
+   "expId": "26051723",
+   "canUseShop": true,
+   "decentralizedShop": true,
+   "website": true,
+   "openingHours": [
+    {
+     "dayFrom": "MONDAY",
+     "dayTo": "FRIDAY",
+     "comment": "                          ",
+     "timeFrom": 600,
+     "timeTo": 1140
+    },
+    {
+     "dayFrom": "SATURDAY",
+     "dayTo": "SATURDAY",
+     "comment": "                         ",
+     "timeFrom": 540,
+     "timeTo": 1020
+    }
+   ],
+   "latitude": 51.013047,
+   "longitude": 13.6482026,
+   "street": "Wilsdruffer Straße 33",
+   "zip": "01705",
+   "city": "Freital",
+   "phone": "0351 641 33 17",
+   "name": "expert Freital",
+   "autoAssignDistance": 30000,
+   "centralStore": false
+  },
+  "startLat": 0.0,
+  "startLng": 0.0,
+  "linearDistance": 5816413.357972329,
+  "distance": 0.0,
+  "duration": 0,
+  "openingTimes": {
+   "Mo. - Fr.": {
+    "times": [
+     "10:00 - 19:00 Uhr"
+    ],
+    "comment": "                          "
+   },
+   "Sa.": {
+    "times": [
+     "09:00 - 17:00 Uhr"
+    ],
+    "comment": "                         "
+   }
+  }
+ },
+ {
+  "store": {
+   "id": "e_32472581",
+   "expId": "32472581",
+   "canUseShop": true,
+   "decentralizedShop": true,
+   "website": true,
+   "openingHours": [
+    {
+     "dayFrom": "MONDAY",
+     "dayTo": "FRIDAY",
+     "comment": "",
+     "timeFrom": 600,
+     "timeTo": 1200
+    },
+    {
+     "dayFrom": "SATURDAY",
+     "dayTo": "SATURDAY",
+     "comment": "",
+     "timeFrom": 540,
+     "timeTo": 1200
+    }
+   ],
+   "latitude": 52.2974393,
+   "longitude": 13.4594041,
+   "street": "Klein Kienitzer Straße 2",
+   "zip": "15834",
+   "city": "Rangsdorf",
+   "phone": "033708 939810",
+   "name": "ESC",
+   "autoAssignDistance": 30000,
+   "centralStore": false
+  },
+  "startLat": 0.0,
+  "startLng": 0.0,
+  "linearDistance": 5949093.279876808,
+  "distance": 0.0,
+  "duration": 0,
+  "openingTimes": {
+   "Mo. - Fr.": {
+    "times": [
+     "10:00 - 20:00 Uhr"
+    ],
+    "comment": ""
+   },
+   "Sa.": {
+    "times": [
+     "09:00 - 20:00 Uhr"
+    ],
+    "comment": ""
+   }
+  }
+ },
+ {
+  "store": {
+   "id": "e_34627162",
+   "expId": "34627162",
+   "canUseShop": true,
+   "decentralizedShop": true,
+   "website": true,
+   "openingHours": null,
+   "latitude": 52.5015941,
+   "longitude": 13.3410033,
+   "street": "Tauentzienstr. 21-24",
+   "zip": "10789",
+   "city": "Berlin",
+   "phone": "0355 5850730 ",
+   "name": "ESC",
+   "autoAssignDistance": 100,
+   "centralStore": false
+  },
+  "startLat": 0.0,
+  "startLng": 0.0,
+  "linearDistance": 5968518.556697153,
+  "distance": 0.0,
+  "duration": 0,
+  "openingTimes": {}
+ }
+]

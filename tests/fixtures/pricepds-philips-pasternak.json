@@ -1,0 +1,52 @@
+{
+ "articleId": "e_977673",
+ "webcode": "11128346052",
+ "store": "e_1907435",
+ "price": {
+  "createdOn": 1795435395432,
+  "lastUpdated": 1795435395539,
+  "onlineButtonAction": "NONE",
+  "basicPrice": null,
+  "basicPriceQuantity": null,
+  "basicPriceUnit": null,
+  "storeButtonAction": "REQUEST_LEAD_TIME",
+  "itemOnDisplay": {
+   "onDisplay": false,
+   "type": null,
+   "description": null,
+   "gallery": []
+  },
+  "showStoreName": null,
+  "storeStock": 0,
+  "onlineStock": 0,
+  "storeId": "1907435",
+  "storeAvailability": "PROCURABLE",
+  "minStoreDelivery": null,
+  "maxStoreDelivery": null,
+  "shipmentArray": [
+   {
+    "shipmentType": "WOL",
+    "shipmentNettoPrice": 67.14,
+    "shipmentBruttoPrice": 79.9,
+    "shipmentTaxRate": 0.19,
+    "shipmentCurrency": "EUR",
+    "hideVskText": true
+   }
+  ],
+  "availableServices": [],
+  "cachedOn": 1795435774193,
+  "cacheLevel": "MOST_RECENT",
+  "pubSource": "mongoPub",
+  "promotedPrice": null
+ },
+ "promotionPrice": {
+  "directDiscount": 0,
+  "directDiscountTitle": "",
+  "checkoutPrice": null,
+  "cashbackDiscount": 0,
+  "cashbackTitle": "",
+  "cashbackSummaryTitle": "",
+  "afterCashbackPrice": null
+ },
+ "warranties": []
+}

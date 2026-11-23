@@ -31,6 +31,14 @@ def main(argv=None):
     r.add_argument("--push", action="store_true", help="git pull before, commit and push data/ after (the phone)")
     r.set_defaults(run=run.main)
 
+    for name, help_text in (("stores", "store finder → data/stores.json (docs/plan.md §3)"),
+                            ("prices", "price scan of the watch list → data/products/*.json (docs/plan.md §3)")):
+        c = commands.add_parser(name, help=help_text)
+        c.add_argument("--data", default="data", help="data directory (default: data)")
+        if name == "stores":
+            c.add_argument("--force", action="store_true", help="accept a store count that changed by more than 10 %%")
+        c.set_defaults(run=lambda args, name=name: run.run_step(args, name))
+
     n = commands.add_parser("notify", help="send one ntfy message (NTFY_TOPIC from the environment)")
     n.add_argument("--title", required=True)
     n.add_argument("--message", required=True)

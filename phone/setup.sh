@@ -69,7 +69,7 @@ python3 -c 'from zoneinfo import ZoneInfo; ZoneInfo("Europe/Berlin")' \
   || echo "no tz database: the scanner assumes CET (UTC+1) for the Berlin hour"
 
 echo "== tests"
-python3 -m unittest -q tests.test_expert_api tests.test_probe tests.test_notify tests.test_repo tests.test_run
+python3 -m unittest -q tests.test_expert_api tests.test_probe tests.test_notify tests.test_repo tests.test_run tests.test_stores tests.test_prices
 
 # The first run comes before the job: a new periodic job starts at once and two runs at the same
 # time clobbered the probe file in the phone test (finding F1; the lock file guards it now, too).

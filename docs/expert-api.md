@@ -166,3 +166,10 @@ First runs of the `probe` workflow (`ubuntu-latest`, Python 3.12, client `scanne
 ## Findings 2026-11-23 (phone test)
 
 Same client on the Galaxy S25 in Termux (Python 3.14), hourly for 24 h, plan.md §1 "Phone test result": 13 runs, 763 calls, 0 challenges, 0 non-JSON bodies, 0 `429 (Too Many Requests)`, 20 first-try `500` (2.6 %), every call through data centre `TXL` on Wi-Fi and on mobile data (2 manual runs, 5 calls each). Sweeps of 349 `pricepds` took 14.0 s and 23.4 s (p95 646 and 954 ms). So a home or mobile connection passes Cloudflare; data-centre addresses do not (findings of 2026-11-22).
+
+### Additions 2026-11-23 (M1 step 2, Mac)
+
+- **The thin `pricepds` body is a normal "not offered here" answer.** 958 B, `price` without `bruttoPrice`, `storeAvailability: PROCURABLE`, `storeButtonAction: REQUEST_LEAD_TIME`, stock 0, shipping and `cacheLevel: MOST_RECENT` present, `promotionPrice.checkoutPrice: null`. Example: Sony BRAVIA 9 II 65" (`11128378730`) at `e_13068209`. So "no `bruttoPrice`" means "no offer", also in a thin body; the 24 h unknown rule (plan.md §3) covers the case where the previous scan had an offer.
+- **Burst of `500`s after a sweep.** At 13:18 CET, right after a 349-call sweep for the Philips, the first 20 calls of the next product had 16 failures (`500` ×4 each), which aborted the step. A probe of the same 19 stores two minutes later and a full re-run (3 products, 1 051 calls, 77 s) were clean. The price step now retries a product's sweep once after a 20 s pause; a second abort ends the run.
+- **Offer counts at 13:18 CET**: Philips 65OLED951 29 of 349 stores (230 on 2026-11-21 in the evening), Sony 65" 99, Sony 75" 95. Best Philips: Rangsdorf 2 095 € Aussteller (pickup, 24.7 km) and 2 174.90 € shipped; Sony 65" online 3 469 € − 10 € WERO10, free shipping; a Sony 65" Aussteller at `e_1906881` 3 199 € + 79.90 €.
+- `GET /api/search/article?webcode=…` ✅ and `GET /api/medium/<id>` ✅ verified again; `headline` is `<Brand> <name> (...)`, the brand name is the headline's prefix before `name` (`brandId` is an id such as `e_443`). The two Sony sizes share one `primaryImage`.

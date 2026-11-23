@@ -45,7 +45,10 @@ SNIPPET_CHARS = 200
 
 
 class ExpertApiError(Exception):
-    """A call failed. `outcome` is the call-log outcome, `status` the last HTTP status."""
+    """A call failed. `outcome` is the call-log outcome, `status` the last HTTP status.
+
+    Also the base class of every error a step raises to say "this step failed, the run goes on" (run.py).
+    """
 
     outcome = "http_error"
 
@@ -119,6 +122,12 @@ class ExpertApi:
 
     def promotion_index(self, store_id):
         return self.get_json("/api/promotions/getIndex", storeId=store_id)
+
+    def search_article(self, webcode):
+        return self.get_json("/api/search/article", webcode=webcode)
+
+    def medium(self, medium_id):
+        return self.get_json(f"/api/medium/{medium_id}")
 
     # Requests
 

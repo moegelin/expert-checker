@@ -1,0 +1,56 @@
+{
+ "articleId": "e_977673",
+ "webcode": "11128346052",
+ "store": "e_2879130",
+ "price": {
+  "createdOn": 1795435278399,
+  "lastUpdated": 1795435278503,
+  "onlineButtonAction": "ORDER",
+  "basicPrice": null,
+  "basicPriceQuantity": null,
+  "basicPriceUnit": null,
+  "storeButtonAction": "NONE",
+  "itemOnDisplay": {
+   "onDisplay": false,
+   "type": null,
+   "description": null,
+   "gallery": []
+  },
+  "showStoreName": null,
+  "storeStock": 0,
+  "onlineStock": 1,
+  "storeId": "1907204",
+  "nettoPrice": 1982.35,
+  "bruttoPrice": 2359,
+  "taxRate": 0.19,
+  "onlineAvailability": "AVAILABLE",
+  "minOnlineDelivery": 4,
+  "maxOnlineDelivery": 7,
+  "shipmentArray": [
+   {
+    "shipmentType": "WOL",
+    "shipmentNettoPrice": 67.14,
+    "shipmentBruttoPrice": 79.9,
+    "shipmentTaxRate": 0.19,
+    "shipmentCurrency": "EUR",
+    "hideVskText": false
+   }
+  ],
+  "availableServices": [],
+  "cachedOn": 1795435774164,
+  "cacheLevel": "MOST_RECENT",
+  "pubSource": "mongoPub",
+  "promotedPrice": null
+ },
+ "promotionPrice": {
+  "currentPrice": 2359,
+  "directDiscount": 0,
+  "directDiscountTitle": "sofort-rabatt",
+  "checkoutPrice": 2359,
+  "cashbackDiscount": -10,
+  "cashbackTitle": "10€ Rabatt mit WERO10",
+  "cashbackSummaryTitle": "Dein Preis nach Cashback",
+  "afterCashbackPrice": 2349
+ },
+ "warranties": []
+}

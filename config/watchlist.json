@@ -1,0 +1,35 @@
+{
+  "location": {
+    "zip": "14167",
+    "lat": 52.5167,
+    "lng": 13.4,
+    "maxDistanceKm": 50,
+    "source": "api.zippopotam.us/de/14167"
+  },
+  "brands": ["Philips", "Sony", "LG", "Samsung"],
+  "notify": {},
+  "products": [
+    {
+      "webcode": "11128346052",
+      "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128346052-65oled951-oled-tv.html",
+      "label": "Philips 65OLED951",
+      "targetPrice": null,
+      "alertMode": "every",
+      "watchSets": true
+    },
+    {
+      "webcode": "11128378730",
+      "label": "Sony BRAVIA 9 II 65\"",
+      "targetPrice": null,
+      "alertMode": "every",
+      "watchSets": true
+    },
+    {
+      "webcode": "11128379730",
+      "label": "Sony BRAVIA 9 II 75\"",
+      "targetPrice": null,
+      "alertMode": "every",
+      "watchSets": true
+    }
+  ]
+}

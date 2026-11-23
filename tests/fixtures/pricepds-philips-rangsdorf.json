@@ -1,0 +1,59 @@
+{
+ "articleId": "e_977673",
+ "webcode": "11128346052",
+ "store": "e_32472581",
+ "price": {
+  "createdOn": 1795435415242,
+  "lastUpdated": 1795435415343,
+  "onlineButtonAction": "ORDER",
+  "basicPrice": null,
+  "basicPriceQuantity": null,
+  "basicPriceUnit": null,
+  "storeButtonAction": "RESERVE",
+  "itemOnDisplay": {
+   "onDisplay": true,
+   "type": "Aussteller",
+   "description": "Bei dem Artikel handelt es sich um ein Ausstellungsstück und ist im Preis reduziert. Der Artikel ist in einem guten und voll funktionsfähigen Zustand, kann aber gegebenenfalls Abnutzungsspuren aufweisen. Die Ware ist nicht mehr originalverpackt.",
+   "gallery": []
+  },
+  "showStoreName": null,
+  "storeStock": 1,
+  "onlineStock": 1,
+  "storeId": "32472581",
+  "nettoPrice": 1760.5,
+  "bruttoPrice": 2095,
+  "taxRate": 0.19,
+  "onlineAvailability": "AVAILABLE",
+  "minOnlineDelivery": 4,
+  "maxOnlineDelivery": 7,
+  "storeAvailability": "AVAILABLE",
+  "minStoreDelivery": null,
+  "maxStoreDelivery": null,
+  "shipmentArray": [
+   {
+    "shipmentType": "WOL",
+    "shipmentNettoPrice": 67.14,
+    "shipmentBruttoPrice": 79.9,
+    "shipmentTaxRate": 0.19,
+    "shipmentCurrency": "EUR",
+    "hideVskText": false
+   }
+  ],
+  "availableServices": [],
+  "cachedOn": 1795435774330,
+  "cacheLevel": "MOST_RECENT",
+  "pubSource": "mongoPub",
+  "promotedPrice": null
+ },
+ "promotionPrice": {
+  "currentPrice": 2095,
+  "directDiscount": 0,
+  "directDiscountTitle": "",
+  "checkoutPrice": 2095,
+  "cashbackDiscount": 0,
+  "cashbackTitle": "",
+  "cashbackSummaryTitle": "",
+  "afterCashbackPrice": 2095
+ },
+ "warranties": []
+}
