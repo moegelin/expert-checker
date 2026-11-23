@@ -1,0 +1,1223 @@
+{
+  "summary": {
+    "runner": "termux",
+    "startedAt": "2026-11-22T16:50:23Z",
+    "endsAt": "2026-11-23T16:50:23Z",
+    "done": false,
+    "verdict": "pending",
+    "reasons": [],
+    "runs": 13,
+    "networks": {
+      "wifi": 11,
+      "mobile": 2
+    },
+    "scheduledInScanHours": 11,
+    "sweeps": 2,
+    "calls": 763,
+    "firstTry500": 20,
+    "firstTry500Share": 0.0262,
+    "failedAfterRetries": 1,
+    "rateLimited429": 0,
+    "challenges": 0,
+    "nonJson": 0,
+    "abortedRuns": 0,
+    "failedChecks": 0,
+    "latencyMs": {
+      "p50": 336,
+      "p95": 1274,
+      "sweepP95Max": 954
+    },
+    "scheduleLagMin": {
+      "median": null,
+      "max": null
+    },
+    "dataCentres": {
+      "TXL": 65
+    }
+  },
+  "records": [
+    {
+      "time": "2026-11-22T16:50:23Z",
+      "runner": "termux",
+      "event": "schedule",
+      "network": "wifi",
+      "berlinHour": 17,
+      "runId": null,
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            200
+          ],
+          "ms": 357,
+          "bytes": 245414,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Philips 65OLED951 @ Online-Shop",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128346052&storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 183,
+          "bytes": 4497,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Sony BRAVIA 9 II 65\" @ Berlin Tauentzien",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128378730&storeId=e_34627162",
+          "attempts": [
+            200
+          ],
+          "ms": 226,
+          "bytes": 6521,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds LG OLED65C69LB @ Rangsdorf",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128647509&storeId=e_32472581",
+          "attempts": [
+            200
+          ],
+          "ms": 263,
+          "bytes": 6460,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "getIndex Online-Shop",
+          "endpoint": "/api/promotions/getIndex",
+          "query": "storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 288,
+          "bytes": 1268816,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        }
+      ],
+      "sweep": {
+        "stores": 349,
+        "calls": 349,
+        "durationS": 14.0,
+        "firstTry500": 2,
+        "failedAfterRetries": 0,
+        "rateLimited429": 0,
+        "challenges": 0,
+        "nonJson": 0,
+        "withOffer": 230,
+        "p50Ms": 210,
+        "p95Ms": 646,
+        "aborted": null
+      },
+      "aborted": null
+    },
+    {
+      "time": "2026-11-22T16:51:36Z",
+      "runner": "termux",
+      "event": "manual",
+      "network": "mobile",
+      "berlinHour": 17,
+      "runId": null,
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            200
+          ],
+          "ms": 250,
+          "bytes": 245414,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Philips 65OLED951 @ Online-Shop",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128346052&storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 260,
+          "bytes": 4497,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Sony BRAVIA 9 II 65\" @ Berlin Tauentzien",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128378730&storeId=e_34627162",
+          "attempts": [
+            200
+          ],
+          "ms": 227,
+          "bytes": 6521,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds LG OLED65C69LB @ Rangsdorf",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128647509&storeId=e_32472581",
+          "attempts": [
+            200
+          ],
+          "ms": 354,
+          "bytes": 6460,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "getIndex Online-Shop",
+          "endpoint": "/api/promotions/getIndex",
+          "query": "storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 265,
+          "bytes": 1268816,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        }
+      ],
+      "sweep": null,
+      "aborted": null
+    },
+    {
+      "time": "2026-11-22T16:52:57Z",
+      "runner": "termux",
+      "event": "manual",
+      "network": "mobile",
+      "berlinHour": 17,
+      "runId": null,
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            200
+          ],
+          "ms": 347,
+          "bytes": 245414,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Philips 65OLED951 @ Online-Shop",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128346052&storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 465,
+          "bytes": 4497,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Sony BRAVIA 9 II 65\" @ Berlin Tauentzien",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128378730&storeId=e_34627162",
+          "attempts": [
+            200
+          ],
+          "ms": 431,
+          "bytes": 6521,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds LG OLED65C69LB @ Rangsdorf",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128647509&storeId=e_32472581",
+          "attempts": [
+            200
+          ],
+          "ms": 674,
+          "bytes": 6460,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "getIndex Online-Shop",
+          "endpoint": "/api/promotions/getIndex",
+          "query": "storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 453,
+          "bytes": 1268816,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        }
+      ],
+      "sweep": null,
+      "aborted": null
+    },
+    {
+      "time": "2026-11-22T17:51:09Z",
+      "runner": "termux",
+      "event": "schedule",
+      "network": "wifi",
+      "berlinHour": 18,
+      "runId": null,
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            200
+          ],
+          "ms": 511,
+          "bytes": 245414,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Philips 65OLED951 @ Online-Shop",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128346052&storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 225,
+          "bytes": 4497,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Sony BRAVIA 9 II 65\" @ Berlin Tauentzien",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128378730&storeId=e_34627162",
+          "attempts": [
+            200
+          ],
+          "ms": 576,
+          "bytes": 6519,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds LG OLED65C69LB @ Rangsdorf",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128647509&storeId=e_32472581",
+          "attempts": [
+            200
+          ],
+          "ms": 451,
+          "bytes": 6458,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "getIndex Online-Shop",
+          "endpoint": "/api/promotions/getIndex",
+          "query": "storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 271,
+          "bytes": 1268816,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        }
+      ],
+      "sweep": null,
+      "aborted": null
+    },
+    {
+      "time": "2026-11-22T18:52:09Z",
+      "runner": "termux",
+      "event": "schedule",
+      "network": "wifi",
+      "berlinHour": 19,
+      "runId": null,
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            200
+          ],
+          "ms": 331,
+          "bytes": 245414,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Philips 65OLED951 @ Online-Shop",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128346052&storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 195,
+          "bytes": 4497,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Sony BRAVIA 9 II 65\" @ Berlin Tauentzien",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128378730&storeId=e_34627162",
+          "attempts": [
+            500,
+            200
+          ],
+          "ms": 327,
+          "bytes": 6521,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds LG OLED65C69LB @ Rangsdorf",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128647509&storeId=e_32472581",
+          "attempts": [
+            200
+          ],
+          "ms": 503,
+          "bytes": 6458,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "getIndex Online-Shop",
+          "endpoint": "/api/promotions/getIndex",
+          "query": "storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 336,
+          "bytes": 1268816,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        }
+      ],
+      "sweep": null,
+      "aborted": null
+    },
+    {
+      "time": "2026-11-22T19:53:37Z",
+      "runner": "termux",
+      "event": "schedule",
+      "network": "wifi",
+      "berlinHour": 20,
+      "runId": null,
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            200
+          ],
+          "ms": 447,
+          "bytes": 245414,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Philips 65OLED951 @ Online-Shop",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128346052&storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 206,
+          "bytes": 4497,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Sony BRAVIA 9 II 65\" @ Berlin Tauentzien",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128378730&storeId=e_34627162",
+          "attempts": [
+            200
+          ],
+          "ms": 1196,
+          "bytes": 6518,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds LG OLED65C69LB @ Rangsdorf",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128647509&storeId=e_32472581",
+          "attempts": [
+            200
+          ],
+          "ms": 206,
+          "bytes": 6460,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "getIndex Online-Shop",
+          "endpoint": "/api/promotions/getIndex",
+          "query": "storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 383,
+          "bytes": 1268726,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        }
+      ],
+      "sweep": null,
+      "aborted": null
+    },
+    {
+      "time": "2026-11-22T20:51:43Z",
+      "runner": "termux",
+      "event": "schedule",
+      "network": "wifi",
+      "berlinHour": 21,
+      "runId": null,
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            200
+          ],
+          "ms": 1064,
+          "bytes": 245414,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Philips 65OLED951 @ Online-Shop",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128346052&storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 164,
+          "bytes": 4497,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Sony BRAVIA 9 II 65\" @ Berlin Tauentzien",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128378730&storeId=e_34627162",
+          "attempts": [
+            200
+          ],
+          "ms": 953,
+          "bytes": 6520,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds LG OLED65C69LB @ Rangsdorf",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128647509&storeId=e_32472581",
+          "attempts": [
+            200
+          ],
+          "ms": 149,
+          "bytes": 6460,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "getIndex Online-Shop",
+          "endpoint": "/api/promotions/getIndex",
+          "query": "storeId=e_2879130",
+          "attempts": [
+            "network",
+            "network",
+            200
+          ],
+          "ms": 396,
+          "bytes": 1268726,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [
+            "163 ms: RemoteDisconnected('Remote end closed connection without response')",
+            "738 ms: ConnectionAbortedError(103, 'Software caused connection abort')"
+          ],
+          "check": "ok"
+        }
+      ],
+      "sweep": null,
+      "aborted": null
+    },
+    {
+      "time": "2026-11-23T05:50:35Z",
+      "runner": "termux",
+      "event": "schedule",
+      "network": "wifi",
+      "berlinHour": 6,
+      "runId": null,
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            200
+          ],
+          "ms": 401,
+          "bytes": 245414,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Philips 65OLED951 @ Online-Shop",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128346052&storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 155,
+          "bytes": 955,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Sony BRAVIA 9 II 65\" @ Berlin Tauentzien",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128378730&storeId=e_34627162",
+          "attempts": [
+            500,
+            500,
+            500,
+            200
+          ],
+          "ms": 463,
+          "bytes": 6521,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds LG OLED65C69LB @ Rangsdorf",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128647509&storeId=e_32472581",
+          "attempts": [
+            200
+          ],
+          "ms": 152,
+          "bytes": 6536,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "getIndex Online-Shop",
+          "endpoint": "/api/promotions/getIndex",
+          "query": "storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 270,
+          "bytes": 1269360,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        }
+      ],
+      "sweep": {
+        "stores": 349,
+        "calls": 349,
+        "durationS": 23.4,
+        "firstTry500": 15,
+        "failedAfterRetries": 0,
+        "rateLimited429": 0,
+        "challenges": 0,
+        "nonJson": 0,
+        "withOffer": 22,
+        "p50Ms": 234,
+        "p95Ms": 954,
+        "aborted": null
+      },
+      "aborted": null
+    },
+    {
+      "time": "2026-11-23T06:50:49Z",
+      "runner": "termux",
+      "event": "schedule",
+      "network": "wifi",
+      "berlinHour": 7,
+      "runId": null,
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            200
+          ],
+          "ms": 355,
+          "bytes": 245414,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Philips 65OLED951 @ Online-Shop",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128346052&storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 231,
+          "bytes": 4485,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Sony BRAVIA 9 II 65\" @ Berlin Tauentzien",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128378730&storeId=e_34627162",
+          "attempts": [
+            200
+          ],
+          "ms": 1424,
+          "bytes": 6519,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds LG OLED65C69LB @ Rangsdorf",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128647509&storeId=e_32472581",
+          "attempts": [
+            200
+          ],
+          "ms": 535,
+          "bytes": 6534,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "getIndex Online-Shop",
+          "endpoint": "/api/promotions/getIndex",
+          "query": "storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 288,
+          "bytes": 1269360,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        }
+      ],
+      "sweep": null,
+      "aborted": null
+    },
+    {
+      "time": "2026-11-23T07:50:59Z",
+      "runner": "termux",
+      "event": "schedule",
+      "network": "wifi",
+      "berlinHour": 8,
+      "runId": null,
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            200
+          ],
+          "ms": 272,
+          "bytes": 245414,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Philips 65OLED951 @ Online-Shop",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128346052&storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 176,
+          "bytes": 4490,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Sony BRAVIA 9 II 65\" @ Berlin Tauentzien",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128378730&storeId=e_34627162",
+          "attempts": [
+            200
+          ],
+          "ms": 711,
+          "bytes": 6519,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds LG OLED65C69LB @ Rangsdorf",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128647509&storeId=e_32472581",
+          "attempts": [
+            200
+          ],
+          "ms": 1619,
+          "bytes": 6534,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "getIndex Online-Shop",
+          "endpoint": "/api/promotions/getIndex",
+          "query": "storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 376,
+          "bytes": 1269360,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        }
+      ],
+      "sweep": null,
+      "aborted": null
+    },
+    {
+      "time": "2026-11-23T08:40:26Z",
+      "runner": "termux",
+      "event": "schedule",
+      "network": "wifi",
+      "berlinHour": 9,
+      "runId": null,
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            200
+          ],
+          "ms": 1274,
+          "bytes": 245281,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Philips 65OLED951 @ Online-Shop",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128346052&storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 174,
+          "bytes": 4490,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Sony BRAVIA 9 II 65\" @ Berlin Tauentzien",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128378730&storeId=e_34627162",
+          "attempts": [
+            200
+          ],
+          "ms": 225,
+          "bytes": 6521,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds LG OLED65C69LB @ Rangsdorf",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128647509&storeId=e_32472581",
+          "attempts": [
+            200
+          ],
+          "ms": 219,
+          "bytes": 6536,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "getIndex Online-Shop",
+          "endpoint": "/api/promotions/getIndex",
+          "query": "storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 369,
+          "bytes": 1268344,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        }
+      ],
+      "sweep": null,
+      "aborted": null
+    },
+    {
+      "time": "2026-11-23T09:40:27Z",
+      "runner": "termux",
+      "event": "schedule",
+      "network": "wifi",
+      "berlinHour": 10,
+      "runId": null,
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            200
+          ],
+          "ms": 467,
+          "bytes": 245290,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Philips 65OLED951 @ Online-Shop",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128346052&storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 221,
+          "bytes": 955,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Sony BRAVIA 9 II 65\" @ Berlin Tauentzien",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128378730&storeId=e_34627162",
+          "attempts": [
+            500,
+            500,
+            500,
+            500
+          ],
+          "ms": 2228,
+          "bytes": 203,
+          "dc": "TXL",
+          "outcome": "http_error",
+          "snippet": null,
+          "networkErrors": [],
+          "check": null,
+          "error": "GET /api/pricepds: HTTP 500 after 3 retries"
+        },
+        {
+          "name": "pricepds LG OLED65C69LB @ Rangsdorf",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128647509&storeId=e_32472581",
+          "attempts": [
+            200
+          ],
+          "ms": 238,
+          "bytes": 6536,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "getIndex Online-Shop",
+          "endpoint": "/api/promotions/getIndex",
+          "query": "storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 446,
+          "bytes": 1268344,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        }
+      ],
+      "sweep": null,
+      "aborted": null
+    },
+    {
+      "time": "2026-11-23T10:42:18Z",
+      "runner": "termux",
+      "event": "schedule",
+      "network": "wifi",
+      "berlinHour": 11,
+      "runId": null,
+      "scheduleLagMin": null,
+      "calls": [
+        {
+          "name": "storeFinder",
+          "endpoint": "/_api/storeFinder/searchStoresByGeoLocation",
+          "query": "",
+          "attempts": [
+            200
+          ],
+          "ms": 239,
+          "bytes": 245291,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Philips 65OLED951 @ Online-Shop",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128346052&storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 169,
+          "bytes": 4464,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds Sony BRAVIA 9 II 65\" @ Berlin Tauentzien",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128378730&storeId=e_34627162",
+          "attempts": [
+            200
+          ],
+          "ms": 783,
+          "bytes": 2978,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "pricepds LG OLED65C69LB @ Rangsdorf",
+          "endpoint": "/api/pricepds",
+          "query": "webcode=11128647509&storeId=e_32472581",
+          "attempts": [
+            200
+          ],
+          "ms": 579,
+          "bytes": 6534,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        },
+        {
+          "name": "getIndex Online-Shop",
+          "endpoint": "/api/promotions/getIndex",
+          "query": "storeId=e_2879130",
+          "attempts": [
+            200
+          ],
+          "ms": 230,
+          "bytes": 1268434,
+          "dc": "TXL",
+          "outcome": "ok",
+          "snippet": null,
+          "networkErrors": [],
+          "check": "ok"
+        }
+      ],
+      "sweep": null,
+      "aborted": null
+    }
+  ]
+}
