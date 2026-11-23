@@ -1,7 +1,8 @@
 """M0 hosting probe, docs/plan.md §1 and §6: do the expert API calls work from the host?
 
 Runners: `actions` (GitHub Actions, 72 h window, challenged by Cloudflare on 2026-11-22), `termux` (the
-phone, 24 h window, phone/run-probe.sh), `local` (the Mac, never judged).
+phone, 24 h window, passed 2026-11-23), `local` (the Mac, never judged). Since M1 the probe is a diagnostic
+command only (`python -m scanner probe`); the scheduled run is `scanner run` (run.py).
 """
 
 import json

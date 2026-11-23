@@ -3,7 +3,7 @@
 import argparse
 import sys
 
-from . import probe
+from . import notify, probe, run
 
 
 def main(argv=None):
@@ -23,6 +23,21 @@ def main(argv=None):
     s = commands.add_parser("probe-status", help="one status line of a probe file; exit 0 when its window is done, else 3")
     s.add_argument("--out", default="data/probe.json", help="probe log (default: data/probe.json)")
     s.set_defaults(run=probe.status)
+
+    r = commands.add_parser("run", help="one scan run: the steps that are due, then commit and push (docs/plan.md §3)")
+    r.add_argument("--data", default="data", help="data directory (default: data)")
+    r.add_argument("--event", choices=("schedule", "manual"), default="manual")
+    r.add_argument("--network", choices=("wifi", "mobile", "unknown"), default="unknown")
+    r.add_argument("--push", action="store_true", help="git pull before, commit and push data/ after (the phone)")
+    r.set_defaults(run=run.main)
+
+    n = commands.add_parser("notify", help="send one ntfy message (NTFY_TOPIC from the environment)")
+    n.add_argument("--title", required=True)
+    n.add_argument("--message", required=True)
+    n.add_argument("--click", default=None, help="URL opened on tap")
+    n.add_argument("--tags", default=None, help="comma-separated ntfy tags")
+    n.add_argument("--priority", default=None, choices=sorted(notify.PRIORITIES))
+    n.set_defaults(run=notify.main)
 
     args = parser.parse_args(argv)
     return args.run(args)

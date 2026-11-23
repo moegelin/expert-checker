@@ -17,7 +17,7 @@ Legend: **in** = version 1, **out** = version 2 or later, **✗** = not planned.
 
 | Feature | v1 | Notes |
 |---|---|---|
-| Phone runtime: `scanner run` orchestrator with lock file and `data/status.json`; `phone/run.sh` (time window, wake lock, `git pull`, scan, commit and push of `data/` with the PAT, healthchecks ping); JobScheduler job every 2 h | in | plan.md §2 and §3, decided 2026-11-23 |
+| Phone runtime: `scanner run --push` (lock file, `git pull`, the due steps, `data/status.json`, commit and push of `data/` with the PAT, N7 after three failed pushes); `phone/run.sh` (time window, wake lock, network, healthchecks ping, failure notification); JobScheduler job every 2 h | in | plan.md §2 and §3; built 2026-11-23 (M1 step 1) |
 | Unknown offers: a call that fails after the retries or a thin body without `bruttoPrice` keeps the previous offer for 24 h without an alert; a run that loses more than half of a product's offers is incomplete | in | findings F3 and F4 of the phone test |
 | Watch list in `config/watchlist.json` (product URL or webcode, label, target price, alert mode, watch sets) | in | |
 | Store list from the store finder, online shop added by hand, weekly refresh | in | |

@@ -2,3 +2,7 @@ __pycache__/
 .venv/
 .DS_Store
 data/probe-phone-last.md
+data/.lock
+data/.push.json
+data/scanner.log
+data/run-last.md
