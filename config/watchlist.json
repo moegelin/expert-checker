@@ -3,7 +3,7 @@
     "zip": "14167",
     "lat": 52.5167,
     "lng": 13.4,
-    "maxDistanceKm": 50,
+    "maxDistanceKm": 100,
     "source": "api.zippopotam.us/de/14167"
   },
   "brands": ["Philips", "Sony", "LG", "Samsung"],

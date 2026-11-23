@@ -167,7 +167,7 @@ class WatchlistTest(unittest.TestCase):
         wl = watchlist.load(Path(__file__).parent.parent / "config")
         self.assertEqual([p["webcode"] for p in wl["products"]], ["11128346052", "11128378730", "11128379730"])
         self.assertEqual(wl["location"]["zip"], "14167")
-        self.assertEqual(wl["location"]["maxDistanceKm"], 50.0)
+        self.assertEqual(wl["location"]["maxDistanceKm"], 100.0)
 
 
 class CommandTest(unittest.TestCase):
