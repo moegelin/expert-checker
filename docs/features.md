@@ -46,7 +46,7 @@ Built 2026-11-24 (plan.md §6, "M2 scope"): https://moegelin.github.io/expert-ch
 | Green = lowest effective price of the last 30 days and at least 3 % under the 30-day high; otherwise black with "X € über dem 30-Tage-Tief" | in | DESIGN.md, Colors |
 | Screen 2 (Produkt): hero image, receipt rows and trend, cashback explanation; then Aktionen directly under the price (cashback offer card, set deals, Zugaben); then alert mode (every drop / new 30-day low / target) with an optional target, the 30-day chart (Versand and Abholung lines, target line only when set); stores within the radius as separate cards with postcode, street, stock, display badge, "ohne Cashback" label, "mit Cashback" net line, link to the store's product page (`?branch_id`) and a copy-postcode button; Online-Shop card with explanation; further shippers collapsed behind "n weitere Versender" | in | prototype/b2.html |
 | Icon of the Aktionen lines in the expanded area aligned to the first text line (reviewer saw it centred) | in | review 2026-11-22 |
-| Cashback tab | open | the user doubts the tab; see requirements.md, open question 9. Not in the app of 2026-11-24 (two tabs: Beobachten, Einstellungen); decided at the start of M4 |
+| Cashback tab | in | built 2026-11-24 with M4: three tabs, count bubble for new cashbacks; the product page also carries the offers (open question 9 closed: both) |
 | Filter in product detail: shipped / pickup / within radius / show display items | in | |
 | UI in German | in | decided 2026-11-21 |
 | Product images from cdn.expert.de, URL stored by the scanner | in | verified 2026-11-24: the CDN serves to the browser, images stay linked |
@@ -64,6 +64,8 @@ Built 2026-11-24 (plan.md §6, "M2 scope"): https://moegelin.github.io/expert-ch
 
 ## M3 — Set deals
 
+Built 2026-11-24 (plan.md §6, "M3 and M4 scope").
+
 | Feature | v1 | Notes |
 |---|---|---|
 | Set deals per store from `bundlesForArticle` for stores that offer the product | in | every 3 h |
@@ -76,6 +78,8 @@ Built 2026-11-24 (plan.md §6, "M2 scope"): https://moegelin.github.io/expert-ch
 
 ## M4 — Cashback
 
+Built 2026-11-24 (plan.md §6, "M3 and M4 scope"). Device prices come from the online shop; "Watch this" gives the full scan.
+
 | Feature | v1 | Notes |
 |---|---|---|
 | Discovery: one `getIndex` call for the online shop per run, all `CASHBACK` promotions | in | every 6 h |
@@ -86,7 +90,7 @@ Built 2026-11-24 (plan.md §6, "M2 scope"): https://moegelin.github.io/expert-ch
 | Qualifying TVs from `getIndex.indexed`, names via `search/article` (cached) | in | |
 | Amounts from the Teilnahmebedingungen PDF on `cdn.expert.de`: Samsung parser (`Modell-Code / Zoll / Cashback`), Sony parser (`Bezeichnung / SAP / Cashback / Double`) | in | other brands: "amount unknown" + link |
 | Manual override file for amounts and devices | in | `config/cashback-overrides.json` |
-| Soundbar candidates: PDF list matched against the TV article's cross-sell list (`additionalArticles`) by model code; manual add by URL | in | |
+| Soundbar candidates: PDF list matched against the accessories named in set-deal descriptions of the brand by model code; manual add in `config/cashback-overrides.json` | in | `additionalArticles` holds cables and mounts, not soundbars (2026-11-24) |
 | Screen 4 (Aktion): amount headline, buy/register dates, links, rule and condition in plain German, qualifying TVs with amount, best price and net, soundbars with best price and set-deal hint, "your TV does not qualify" note | in | prototype screen "Aktion" |
 | Resale calculator: TV (best store) + soundbar (best store, may differ) − cashback − expected resale = effective TV cost; comparison with TV-only cashback and with a set deal in the same cart | in | prototype screen "Offer", section "Resale calculator" |
 | "Watch this" on a qualifying device adds it to the watch list with role `cashback-tv` / `cashback-soundbar` | in | |
