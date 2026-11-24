@@ -22,7 +22,7 @@ class PullTest(unittest.TestCase):
     def test_ok(self):
         g = FakeGit()
         self.assertEqual(repo.pull(g), (True, None))
-        self.assertEqual(g.calls, [["pull", "--rebase", "--quiet"]])
+        self.assertEqual(g.calls, [["pull", "--rebase", "--autostash", "--quiet"]])
 
     def test_failure_aborts_the_rebase(self):
         g = FakeGit(fail={"pull": (1, "CONFLICT (content): data/status.json\n")})

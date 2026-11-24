@@ -23,8 +23,10 @@ class Git:
 
 
 def pull(git):
-    """`git pull --rebase`. Returns (ok, error)."""
-    r = git("pull", "--rebase", "--quiet")
+    """`git pull --rebase --autostash`: local edits in the working tree (a chmod, a stray file edit on the
+    phone) are stashed and re-applied instead of blocking the pull, which would leave the phone on old
+    code and every push rejected (seen 2026-11-24). Returns (ok, error)."""
+    r = git("pull", "--rebase", "--autostash", "--quiet")
     if r.returncode == 0:
         return True, None
     git("rebase", "--abort")
