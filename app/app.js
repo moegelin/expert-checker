@@ -1,25 +1,28 @@
-/* expert-checker PWA (M2). Reads config/ and data/ of the repo from GitHub Pages and writes
+/* expert-checker PWA (M2–M4). Reads config/ and data/ of the repo from GitHub Pages and writes
    config/watchlist.json through the GitHub Contents API when a fine-grained token is stored
    on this phone (localStorage). No build step, no framework. Routes by hash:
-   #liste | #p-<webcode> | #einstellungen. */
+   #liste | #p-<webcode> | #cashback | #o-<promotion id> | #einstellungen. */
 "use strict";
 
-const APP_VERSION = "2026-11-24.3";
+const APP_VERSION = "2026-11-24.4";
 const REPO = "moegelin/expert-checker";
 const BRANCH = "main";
 const ROOT = new URL("../", location.href).href;        // repo root on Pages (data/, config/)
 const ONLINE_ID = "e_2879130";
 const STALE_HOURS = 4;                                  // the scanner runs every 2 h
 const HISTORY_DAYS = 30;
+const NEW_DAYS = 3;                                     // a promotion first seen within this many days is "neu"
 const PENDING_MINUTES = 15;                             // how long a local write overrides a stale Pages copy
 const EDIT_URL = `https://github.com/${REPO}/edit/${BRANCH}/config/watchlist.json`;
+const OVERRIDES_URL = `https://github.com/${REPO}/edit/${BRANCH}/config/cashback-overrides.json`;
 const DATA_URL = `https://github.com/${REPO}/tree/${BRANCH}/data`;
 const TOKEN_URL = "https://github.com/settings/personal-access-tokens/new";
 
 const state = {
-  wlRaw: null, wl: null, status: null, stores: {}, products: {},
+  wlRaw: null, wl: null, status: null, stores: {}, products: {}, promos: {}, promosUpdated: null,
   loaded: false, error: null, loadedAt: 0,
-  open: new Set(), openShip: new Set(), add: false,
+  open: new Set(), openShip: new Set(), add: false, filter: "cashback",
+  calc: {},                                             // promotion id → {tv, bar, resale}
   token: lsGet("gh-token") || "",
 };
 
@@ -39,6 +42,8 @@ function berlinDate(d) {
   return `${g("year")}-${g("month")}-${g("day")}`;
 }
 const fmtDate = iso => iso ? `${iso.slice(8, 10)}.${iso.slice(5, 7)}.` : "";
+const dmy = iso => iso && /^\d{4}-\d{2}-\d{2}/.test(iso) ? `${iso.slice(8, 10)}.${iso.slice(5, 7)}.${iso.slice(0, 4)}` : (iso || "");
+const daysBetween = (a, b) => Math.round((Date.parse(b) - Date.parse(a)) / 86400000);
 function ageText(iso) {
   const t = Date.parse(iso);
   if (isNaN(t)) return "unbekannt";
@@ -60,6 +65,12 @@ function parseWebcode(value) {
   const m = WEBCODE.exec(text.split("?", 1)[0]);
   return m ? m[1] : null;
 }
+const shortAcc = s => ((s || "Zubehör").replace(/\s+(schwarz|weiß|weiss|silber|grau|titan)\b.*$/i, "").replace(/\s+(Soundbar|Lautsprecher).*$/i, "").trim()) || s;
+function firstSentence(t, max) {
+  const lim = max || 140, s = (t || "").replace(/^\s*(Jetzt\s+)?/, "");
+  const i = s.search(/[.!?](\s|$)/);
+  return i > 0 && i < lim ? s.slice(0, i + 1) : s.slice(0, lim) + (s.length > lim ? " …" : "");
+}
 
 /* Icons: Tabler Icons (MIT), inline */
 const ic = d => `<svg class="i" viewBox="0 0 24 24" aria-hidden="true">${d}</svg>`;
@@ -75,6 +86,7 @@ const I = {
   cash: ic('<path d="M7 9m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z"/><path d="M14 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2"/>'),
   gear: ic('<path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"/><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/>'),
   set: ic('<path d="M12 4l-8 4l8 4l8 -4l-8 -4"/><path d="M4 12l8 4l8 -4"/><path d="M4 16l8 4l8 -4"/>'),
+  gift: ic('<path d="M3 8m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z"/><path d="M12 8l0 13"/><path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5"/>'),
   copy: ic('<path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z"/><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1"/>'),
   reload: ic('<path d="M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1 7.935 1.007 9.425 4.747"/><path d="M20 4v5h-5"/>'),
 };
@@ -113,16 +125,19 @@ function applyPending(fetched) {
 }
 async function load(silent) {
   try {
-    const [wlRaw, status, stores] = await Promise.all([
+    const [wlRaw, status, stores, cashbacks] = await Promise.all([
       getJSON("config/watchlist.json"),
       getJSON("data/status.json").catch(() => null),
       getJSON("data/stores.json").catch(() => null),
+      getJSON("data/cashbacks.json").catch(() => null),
     ]);
     state.wlRaw = applyPending(wlRaw);
     state.wl = normalize(state.wlRaw);
     state.status = status;
     state.stores = {};
     ((stores && stores.stores) || []).forEach(s => { state.stores[s.id] = s; });
+    state.promos = (cashbacks && cashbacks.promotions) || {};
+    state.promosUpdated = cashbacks ? cashbacks.updated : null;
     const recs = await Promise.all(state.wl.products.map(p => getJSON(`data/products/${p.webcode}.json`).catch(() => null)));
     state.products = {};
     recs.forEach((r, i) => { if (r) state.products[state.wl.products[i].webcode] = r; });
@@ -147,10 +162,30 @@ function storeName(s) {
   const first = city.split(/[\s-]/)[0].toLowerCase();
   return (s.name || "").toLowerCase().includes(first) ? s.name : `${s.name} ${city}`;
 }
+const inRadius = s => !!s.online || (s.distanceKm != null && s.distanceKm <= state.wl.location.maxDistanceKm);
 const productUrl = p => p.url || (p.rec && p.rec.url) || `https://www.expert.de/shop/${p.webcode}.html`;
 const storeUrl = (p, storeId) => storeId && storeId !== ONLINE_ID ? `${productUrl(p)}?branch_id=${storeId}` : productUrl(p);
 
-/* ===== Per product: offers, best paths, history, verdict ===== */
+/* ===== Promotions (data/cashbacks.json) ===== */
+const promoOf = id => state.promos[id] || null;
+const isEnded = p => !p.active || (!!p.buyTo && p.buyTo < todayISO());
+const isNew = p => !!p.firstSeen && (Date.now() - Date.parse(p.firstSeen)) < NEW_DAYS * 86400000;
+function amounts(p) {
+  const a = (p.devices || []).map(d => d.amount).filter(x => x != null);
+  const d = (p.devices || []).map(x => x.amountDouble).filter(x => x != null);
+  return { min: a.length ? Math.min(...a) : null, max: a.length ? Math.max(...a) : null, dbl: d.length ? Math.max(...d) : null };
+}
+function amountText(p) {
+  const a = amounts(p);
+  if (a.min == null) return "Betrag unbekannt";
+  return a.min === a.max ? eur0(a.min) : `${eur0(a.min).replace(" €", "")} bis ${eur0(a.max)}`;
+}
+const sourceText = p => ({ pdf: "Beträge aus den Teilnahmebedingungen (PDF)", override: "Beträge aus config/cashback-overrides.json",
+  unknown: "Beträge nicht lesbar: PDF-Layout unbekannt, Eintrag in config/cashback-overrides.json nötig", none: "" }[p.amountSource] || "");
+const brandClass = b => ({ sony: "sony", samsung: "samsung", philips: "philips", lg: "lg" }[(b || "").toLowerCase()] || "");
+const deviceName = d => (d.name || d.modelCode || d.articleId || "").replace(/\s+(True RGB TV|OLED TV|Neo QLED TV|LED TV|QLED TV|Mini LED TV)$/, "");
+
+/* ===== Per product: offers, best paths, sets, cashback, history, verdict ===== */
 function splitTop(s) {
   const out = []; let d = 0, cur = "";
   for (const c of s) { if (c === "(") d++; if (c === ")") d--; if (c === "," && d === 0) { out.push(cur.trim()); cur = ""; } else cur += c; }
@@ -169,11 +204,28 @@ function titleOf(cfg, rec) {
   if (rec && (rec.brand || rec.name)) return `${rec.brand || ""} ${rec.name || ""}`.trim();
   return `Produkt ${cfg.webcode}`;
 }
+/* Set deals grouped by accessory: the cheapest within reach (online or in the radius) and the cheapest overall. */
+function setGroups(sets) {
+  const groups = new Map();
+  (sets || []).forEach(x => {
+    if (x.accessoryEffective == null) return;
+    const key = x.accessory || x.bundleId;
+    const g = groups.get(key) || { accessory: x.accessory || "Zubehör", near: null, far: null, count: 0, discount: x.discount || 0, validTo: x.validTo };
+    g.count += 1;
+    const s = storeOf(x.storeId);
+    const eff = x.accessoryEffective;
+    if (inRadius(s) && (g.near == null || eff < g.near.accessoryEffective)) g.near = { ...x, s };
+    if (g.far == null || eff < g.far.accessoryEffective) g.far = { ...x, s };
+    if ((x.discount || 0) > g.discount) g.discount = x.discount;
+    groups.set(key, g);
+  });
+  return [...groups.values()].map(g => ({ ...g, best: g.near || g.far })).sort((a, b) => a.best.accessoryEffective - b.best.accessoryEffective);
+}
 function enrich(cfg) {
   const rec = state.products[cfg.webcode] || null;
   const radius = state.wl.location.maxDistanceKm;
   const name = titleOf(cfg, rec);
-  if (!rec) return { ...cfg, rec, name, sub: "wird beim nächsten Scan aufgenommen", image: null, pending: true, radius };
+  if (!rec) return { ...cfg, rec, name, sub: "wird beim nächsten Scan aufgenommen", image: null, pending: true, radius, sets: [], groups: [], extras: [], off: null, cb: 0 };
   const offers = (rec.offers || []).map(o => {
     const s = storeOf(o.storeId);
     const inRange = !s.online && o.distanceKm != null && o.distanceKm <= radius;
@@ -182,16 +234,19 @@ function enrich(cfg) {
   const byTotal = k => (a, b) => a[k] - b[k] || (a.unknown ? 1 : 0) - (b.unknown ? 1 : 0) || (a.distanceKm == null ? 1e9 : a.distanceKm) - (b.distanceKm == null ? 1e9 : b.distanceKm);
   const ship = offers.filter(o => o.shipped != null).sort(byTotal("shipped"))[0] || null;
   const pick = offers.filter(o => o.pickup != null).sort(byTotal("pickup"))[0] || null;
-  const cb = 0, off = null;                      // manufacturer cashback comes with M4
+  const info = rec.cashback || null;
+  const cb = info && info.amount ? info.amount : 0;
+  const off = info ? { id: info.promotionId, brand: info.brand || "", title: info.title, to: dmy(info.buyTo), regBy: dmy(info.registerBy),
+    amount: info.amount, amountDouble: info.amountDouble, sameInvoice: info.sameInvoice, unknown: info.amount == null, promo: promoOf(info.promotionId) } : null;
   const shipEff = ship ? round2(ship.shipped - cb) : null, pickEff = pick ? round2(pick.pickup - cb) : null;
   const bestKind = !pick ? "ship" : !ship ? "pick" : (pickEff <= shipEff ? "pick" : "ship");
   const bestOff = bestKind === "pick" ? pick : ship;
   const gross = bestOff ? (bestKind === "pick" ? bestOff.pickup : bestOff.shipped) : null;
   const best = gross != null ? round2(gross - cb) : null;
-  // history: one point per Berlin day, the lower of best shipped and best pickup; the last 30 days
+  // history: one point per Berlin day, the lower of best shipped and best pickup, minus today's cashback; the last 30 days
   const cutoff = new Date(Date.now() - HISTORY_DAYS * 86400000).toISOString().slice(0, 10);
   const hist = (rec.history || []).filter(h => h.date >= cutoff);
-  const series = hist.map(h => { const v = [h.shipped, h.pickup].filter(x => x != null); return v.length ? Math.min(...v) : null; });
+  const series = hist.map(h => { const v = [h.shipped, h.pickup].filter(x => x != null); return v.length ? round2(Math.min(...v) - cb) : null; });
   const vals = series.filter(v => v != null);
   const min30 = vals.length ? Math.min(...vals) : null, max30 = vals.length ? Math.max(...vals) : null;
   const li = series.length - 1;
@@ -200,6 +255,7 @@ function enrich(cfg) {
   const chg30 = vals.length >= 2 && today != null ? round2(today - vals[0]) : null;
   const good = best != null && vals.length >= 2 && best <= min30 && (max30 - best) / max30 >= 0.03;
   const target = cfg.targetPrice == null ? null : cfg.targetPrice;
+  const extras = (rec.promotionIds || []).map(promoOf).filter(p => p && !isEnded(p) && p.kind === "extra");
   return {
     ...cfg, rec, name, sub: subtitle(rec, name), image: rec.image || null, radius, pending: false,
     off, cb, offers, ship, pick, shipEff, pickEff, bestKind, bestOff, gross, best, good, target,
@@ -211,11 +267,11 @@ function enrich(cfg) {
     far: offers.filter(o => !o.s.online && !o.inRange && o.shipped != null).sort(byTotal("shipped")),
     on: offers.find(o => o.s.online) || null,
     sets: rec.sets || [],
+    groups: setGroups(rec.sets),
+    extras,
     scan: rec.scan || {},
   };
 }
-const setEff = (p, x) => { const tv = p.offers.find(o => o.storeId === x.storeId); return tv && x.promoted != null ? round2(x.promoted - tv.price) : null; };
-const setName = x => x.accessory || x.name || x.title || "Zubehör";
 const dispBadge = o => o && o.displayType ? `<span class="badge b-aus">${esc(o.displayType)}</span>` : "";
 const unknownNote = o => o && o.unknown ? ", Preis vom letzten Scan" : "";
 function codeName(o) { const m = /\b([A-Z]{3,}\d{1,3})\b/.exec(o.codeTitle || ""); return m ? `Code ${m[1]}` : (o.codeTitle || "Gutscheincode"); }
@@ -233,15 +289,18 @@ function ledger(p, big) {
   if (!o) rows.push(lr("Kein Angebot", `weder Versand noch ein Markt im Umkreis von ${p.radius} km`, "", "alt"));
   else if (p.cb) {
     rows.push(lr(`${I.check}${label(k)}${dispBadge(o)}`, `${sub(o, k)}, ohne Cashback`, money(p.gross), "first"));
-    rows.push(lr(`${esc(p.off.brand)} Cashback`, `Kauf bis ${p.off.to}, registrieren bis ${p.off.regBy}`, `− ${eur0(p.cb)}`, "cash"));
+    rows.push(lr(`${esc(p.off.brand)} Cashback`, `Kauf bis ${p.off.to}, registrieren bis ${p.off.regBy}${p.off.amountDouble ? `, ${eur0(p.off.amountDouble)} mit Soundbar` : ""}`, `− ${eur0(p.cb)}`, "cash"));
     rows.push(lr("Dein Preis inkl. Cashback", big ? `${label(k)} bei ${esc(storeName(o.s))}` : "", money(p.best), `main ${p.good ? "ok" : ""}`));
-  } else rows.push(lr(`${I.check}${label(k)}${dispBadge(o)}`, `${sub(o, k)}, kein Cashback`, money(p.best), `main ${p.good ? "ok" : ""}`));
+  } else {
+    rows.push(lr(`${I.check}${label(k)}${dispBadge(o)}`, `${sub(o, k)}, ${p.off ? "ohne Cashback" : "kein Cashback"}`, money(p.best), `main ${p.good ? "ok" : ""}`));
+    if (p.off) rows.push(lr(`${esc(p.off.brand)} Cashback`, `Betrag für dieses Modell unbekannt, Kauf bis ${p.off.to}`, "", "cash"));
+  }
   const ak = k === "pick" ? "ship" : "pick", a = ak === "ship" ? p.ship : p.pick;
   if (a) rows.push(lr(`${label(ak)}${dispBadge(a)}`, `${sub(a, ak)}${p.cb ? `, mit Cashback ${money(ak === "ship" ? p.shipEff : p.pickEff)}` : ""}`, money(ak === "ship" ? a.shipped : a.pickup), "alt"));
   else if (o) rows.push(lr(label(ak), ak === "ship" ? "niemand verschickt gerade" : `kein Markt im Umkreis von ${p.radius} km`, "", "alt"));
-  (big ? p.sets : p.sets.slice(0, 1)).forEach(x => {
-    const eff = setEff(p, x), s = storeOf(x.storeId);
-    rows.push(lr(`Set mit ${esc(setName(x))}`, `nicht im Preis: im selben Warenkorb bei ${esc(storeName(s))}${eff != null ? ` kostet das Zubehör ${money(eff)} statt ${money(eff + (x.discount || 0))}` : ""}${big && x.validTo ? `, bis ${esc(x.validTo)}` : ""}`, x.discount ? `− ${eur0(x.discount)}` : "", "set"));
+  (big ? p.groups : p.groups.slice(0, 1)).forEach(g => {
+    const x = g.best, eff = x.accessoryEffective;
+    rows.push(lr(`Set mit ${esc(shortAcc(g.accessory))}`, `nicht im Preis: im selben Warenkorb bei ${esc(storeName(x.s))}${x.s.online ? "" : ` (${km(x.distanceKm)})`} kostet das Zubehör ${money(eff)} statt ${money(round2(eff + x.discount))}${g.count > 1 ? `, bei ${g.count} Märkten` : ""}${big && x.validTo ? `, bis ${esc(x.validTo)}` : ""}`, `− ${eur0(x.discount)}`, "set"));
   });
   return `<div class="led">${rows.join("")}</div>`;
 }
@@ -254,7 +313,7 @@ function spark(p) {
   let d = "", open = false;
   s.forEach((v, i) => { if (v == null) { open = false; return; } d += (open ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1) + " "; open = true; });
   const endV = p.best != null ? Math.min(p.best, s[li] == null ? Infinity : s[li]) : s[li];
-  return `<svg viewBox="0 0 ${W} ${H}" aria-hidden="true">${n > 1 ? `<path d="${d} L${x(li).toFixed(1)} ${H} L${x(0).toFixed(1)} ${H} Z" fill="var(--muted)" opacity=".12"/><path d="${d}" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linejoin="round"/>` : ""}${p.cb ? `<line x1="${x(li).toFixed(1)}" x2="${x(li).toFixed(1)}" y1="${y(s[li]).toFixed(1)}" y2="${y(endV).toFixed(1)}" stroke="var(--amber)" stroke-width="1.5" stroke-dasharray="2 2"/>` : ""}<circle cx="${x(li).toFixed(1)}" cy="${y(endV).toFixed(1)}" r="3" fill="${p.good ? "var(--green)" : "var(--fg)"}"/></svg>`;
+  return `<svg viewBox="0 0 ${W} ${H}" aria-hidden="true">${n > 1 ? `<path d="${d} L${x(li).toFixed(1)} ${H} L${x(0).toFixed(1)} ${H} Z" fill="var(--muted)" opacity=".12"/><path d="${d}" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linejoin="round"/>` : ""}<circle cx="${x(li).toFixed(1)}" cy="${y(endV).toFixed(1)}" r="3" fill="${p.good ? "var(--green)" : "var(--fg)"}"/></svg>`;
 }
 function trend(p, withSpark) {
   const d = p.delta, c = p.chg30, days = p.hist.length;
@@ -272,18 +331,21 @@ function trend(p, withSpark) {
 function extOf(p) {
   const stores = p.inR.map(o => `<div class="xr"><div><div class="n">${esc(storeName(o.s))}${dispBadge(o)}</div><div class="s">${esc(o.s.zip || "")} ${esc(cityOf(o.s))} · ${km(o.distanceKm)}, ${o.storeStock > 0 ? `${o.storeStock} im Markt` : "nicht im Markt"}${unknownNote(o)}</div></div><div class="p">${money(o.pickup != null ? o.pickup : o.shipped != null ? o.shipped : o.price)}<small>${o.pickup != null ? "Abholung" : o.shipped != null ? "nur Versand" : "kein Bestand"}</small></div></div>`).join("");
   const shippers = p.offers.filter(o => o.shipped != null).sort((a, b) => a.shipped - b.shipped).slice(0, 3).map(o => `<div class="xr"><div><div class="n">${esc(storeName(o.s))}${dispBadge(o)}</div><div class="s">${o.s.online ? `${o.shipping ? `${money(o.price)} + ${eur(o.shipping)}` : "versandkostenfrei"}${codeLine(o)}` : `${money(o.price)} + ${eur(o.shipping)} Versand, ${km(o.distanceKm)}`}${unknownNote(o)}</div></div><div class="p">${money(o.shipped)}<small>Versand</small></div></div>`).join("");
-  const sets = p.sets.map(x => { const eff = setEff(p, x), s = storeOf(x.storeId); return `<div class="xd set">${I.set}<span><b>Set-Deal bei ${esc(storeName(s))}:</b> ${esc(setName(x))} im selben Warenkorb${eff != null ? ` für ${money(eff)} statt ${money(eff + (x.discount || 0))}` : x.discount ? ` mit ${eur0(x.discount)} Rabatt` : ""}${x.validTo ? `, bis ${esc(x.validTo)}` : ""}. Nicht im Preis oben.</span></div>`; }).join("");
+  const cash = p.off ? `<div class="xd cash">${I.cash}<span>${p.cb ? `<b>${eur0(p.cb)} Cashback</b> von ${esc(p.off.brand)}, oben schon abgezogen: Kauf bis ${p.off.to}, registrieren bis ${p.off.regBy}.` : `<b>${esc(p.off.title || p.off.brand + " Cashback")}</b> läuft für dieses Gerät, der Betrag für dieses Modell ist unbekannt.`} <a href="#o-${esc(p.off.id)}">Aktion ansehen</a></span></div>` : "";
+  const sets = p.groups.map(g => { const x = g.best, eff = x.accessoryEffective; return `<div class="xd set">${I.set}<span><b>Set-Deal bei ${esc(storeName(x.s))}:</b> ${esc(g.accessory)} im selben Warenkorb für ${money(eff)} statt ${money(round2(eff + x.discount))}${x.validTo ? `, bis ${esc(x.validTo)}` : ""}${g.count > 1 ? `; ${g.count} Märkte haben das Set` : ""}. Nicht im Preis oben.</span></div>`; }).join("");
+  const extras = p.extras.map(x => `<div class="xd">${I.gift}<span><b>${esc(x.title)}</b>${x.brand ? ` (${esc(x.brand)})` : ""}: ${esc(firstSentence(x.text, 120))}${x.buyTo ? ` Kauf bis ${dmy(x.buyTo)}.` : ""} <a href="#o-${esc(x.id)}">Details</a></span></div>`).join("");
   return `${stores ? `<div class="xh">Märkte im Umkreis von ${p.radius} km${p.cb ? ", Preise ohne Cashback" : ""}</div>${stores}` : `<div class="xh">Kein Markt im Umkreis von ${p.radius} km hat das Gerät.</div>`}
     <div class="xh">Versand, günstigste zuerst${p.cb ? ", ohne Cashback" : ""}</div>${shippers || `<div class="xr"><div class="s">niemand verschickt gerade</div></div>`}
-    ${sets ? `<div class="xh">Aktionen</div>${sets}` : ""}
+    ${(cash || sets || extras) ? `<div class="xh">Aktionen</div>${cash}${sets}${extras}` : ""}
     <div class="xact"><button class="btn small" onclick="go('p-${p.webcode}')">Alle Details und Preisverlauf</button></div>`;
 }
 
-/* ===== 30-day chart ===== */
+/* ===== 30-day chart (prices without cashback; the target line is shifted by the cashback) ===== */
 function chart(p, H) {
   const W = 420, L = 50, Rr = 10, T = 12, B = 28, hist = p.hist, n = hist.length;
   const a = hist.map(h => h.shipped == null ? null : h.shipped), b = hist.map(h => h.pickup == null ? null : h.pickup);
-  const all = [...a, ...b].filter(v => v != null).concat(p.target != null ? [p.target] : []);
+  const tline = p.target != null ? p.target + p.cb : null;
+  const all = [...a, ...b].filter(v => v != null).concat(tline != null ? [tline] : []);
   if (!n || !all.length) return `<div class="note" style="border-top:0;padding:4px 0 8px">Noch kein Preisverlauf.</div>`;
   let min = Math.min(...all), max = Math.max(...all); const pad = (max - min || 100) * .12; min -= pad; max += pad;
   const x = i => L + (n > 1 ? i / (n - 1) : 0.5) * (W - L - Rr), y = v => T + (1 - (v - min) / (max - min)) * (H - T - B);
@@ -294,7 +356,7 @@ function chart(p, H) {
   const left = fmtDate(hist[0].date), right = hist[n - 1].date === todayISO() ? "heute" : fmtDate(hist[n - 1].date);
   return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Preisverlauf ${n} Tage">
     ${ticks}
-    ${p.target != null ? `<line x1="${L}" x2="${W - Rr}" y1="${y(p.target).toFixed(1)}" y2="${y(p.target).toFixed(1)}" stroke="var(--line-2)" stroke-dasharray="4 3"/>` : ""}
+    ${tline != null ? `<line x1="${L}" x2="${W - Rr}" y1="${y(tline).toFixed(1)}" y2="${y(tline).toFixed(1)}" stroke="var(--line-2)" stroke-dasharray="4 3"/>` : ""}
     ${la >= 0 && n > 1 ? `<path d="${path(a)} L${x(la).toFixed(1)} ${(H - B).toFixed(1)} L${x(0).toFixed(1)} ${(H - B).toFixed(1)} Z" fill="var(--blue)" opacity=".08"/><path d="${path(a)}" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linejoin="round"/>` : ""}
     ${lb >= 0 && n > 1 ? `<path d="${path(b)}" fill="none" stroke="var(--green)" stroke-width="2" stroke-linejoin="round"/>` : ""}
     ${lb >= 0 ? `<circle cx="${x(lb).toFixed(1)}" cy="${y(b[lb]).toFixed(1)}" r="3.5" fill="var(--green)"/>` : ""}
@@ -308,11 +370,11 @@ function scanInfo() {
   const st = state.status;
   if (!st || !st.lastRun) return { text: "unbekannt", warn: true, detail: "Kein Status gefunden." };
   const h = (Date.now() - Date.parse(st.lastRun)) / 3600000;
-  const prices = (st.steps && st.steps.prices) || {};
+  const steps = st.steps || {};
   const problems = [];
   if (st.aborted) problems.push(`Lauf abgebrochen: ${st.aborted}`);
-  if (prices.ok === false) problems.push(`Preise fehlgeschlagen: ${prices.error || "unbekannt"}`);
-  if ((prices.incomplete || []).length) problems.push(`unvollständig: ${prices.incomplete.join(", ")}`);
+  Object.entries(steps).forEach(([name, s]) => { if (s.ok === false && s.lastAttempt === st.lastRun) problems.push(`Schritt ${name} fehlgeschlagen: ${s.error || "unbekannt"}`); });
+  if (((steps.prices || {}).incomplete || []).length) problems.push(`unvollständig: ${steps.prices.incomplete.join(", ")}`);
   if (h > STALE_HOURS) problems.push(`Letzter Lauf ist älter als ${STALE_HOURS} Stunden.`);
   return { text: ageText(st.lastRun), warn: problems.length > 0, detail: problems.join(" ") };
 }
@@ -326,8 +388,9 @@ function setTop(title, back, extra) {
   t.innerHTML = (back ? `<button class="back" aria-label="Zurück" onclick="go('${back}')">${I.back}</button>` : "") + `<h1>${esc(title)}</h1>${extra == null ? metaBlock() : extra}`;
 }
 function setTabs(active) {
-  const t = [["liste", "Beobachten", I.tv], ["einstellungen", "Einstellungen", I.gear]];
-  document.getElementById("tabs").innerHTML = t.map(([id, l, svg]) => `<button class="tab" ${active === id ? 'aria-current="page"' : ""} onclick="go('${id}')">${svg}<span>${l}</span></button>`).join("");
+  const n = Object.values(state.promos).filter(p => p.kind === "cashback" && !isEnded(p) && isNew(p)).length;
+  const t = [["liste", "Beobachten", I.tv], ["cashback", "Cashback", I.cash], ["einstellungen", "Einstellungen", I.gear]];
+  document.getElementById("tabs").innerHTML = t.map(([id, l, svg]) => `<button class="tab" ${active === id ? 'aria-current="page"' : ""} onclick="go('${id}')">${svg}${id === "cashback" && n ? `<span class="cnt">${n}</span>` : ""}<span>${l}</span></button>`).join("");
 }
 function toast(m, long) { const t = document.getElementById("toast"); t.textContent = m; t.hidden = false; clearTimeout(t._h); t._h = setTimeout(() => { t.hidden = true; }, long ? 5000 : 2400); }
 function go(r) { if (location.hash.replace("#", "") === r) route(); else location.hash = r; }
@@ -366,7 +429,7 @@ function renderList() {
   screen(`${addCard}${s.warn && s.detail ? `<div class="card cond warn" style="border-top:0">${I.warn}<span>${esc(s.detail)} <a href="#einstellungen">Details</a></span></div>` : ""}
     <div class="sec"><h2>${ps.length === 1 ? "1 Produkt" : `${ps.length} Produkte`}</h2><span class="hint">Umkreis ${state.wl.location.maxDistanceKm} km</span></div>
     ${cards || `<div class="card note">Noch kein Produkt. Tippe oben auf +, füge einen Produktlink von expert.de ein.</div>`}
-    <p class="foot">Grün heißt: tiefster Preis seit 30 Tagen${ps.some(p => p.cb) ? ", Cashback schon abgezogen" : ""}. Preise aller 348 expert-Märkte und des Online-Shops, alle 2 Stunden.</p>`);
+    <p class="foot">Grün heißt: tiefster Preis seit 30 Tagen${ps.some(p => p.cb) ? ", Cashback schon abgezogen" : ""}. Preise aller 348 expert-Märkte und des Online-Shops, alle 2 Stunden; Set-Deals und Aktionen aus dem Aktionsindex.</p>`);
   if (state.add) { const i = document.getElementById("addurl"); if (i) i.focus(); }
 }
 function toggleAdd() { state.add = !state.add; renderList(); }
@@ -378,6 +441,13 @@ async function addProduct() {
   const entry = { webcode, url: /^https?:\/\//.test(url) ? url.split("?")[0] : undefined, targetPrice: null, alertMode: "every", watchSets: true };
   const ok = await saveWatchlist(wl => { wl.products = wl.products || []; if (!wl.products.some(p => parseWebcode(p.webcode || p.url) === webcode)) wl.products.push(entry); }, `config: watch ${webcode}`);
   if (ok) { state.add = false; toast("Gespeichert. Der nächste Scan holt die Preise."); renderList(); }
+}
+async function watchDevice(webcode, label, role) {
+  if (!webcode) { toast("Kein Webcode bekannt"); return; }
+  if (state.wl.products.some(p => p.webcode === webcode)) { toast("Schon auf der Liste"); return; }
+  const entry = { webcode, label, targetPrice: null, alertMode: "every", watchSets: true, role };
+  const ok = await saveWatchlist(wl => { wl.products = wl.products || []; if (!wl.products.some(p => parseWebcode(p.webcode || p.url) === webcode)) wl.products.push(entry); }, `config: watch ${webcode} (${role})`);
+  if (ok) { toast("Auf die Beobachtungsliste gesetzt. Der nächste Scan holt alle Märkte."); route(); }
 }
 
 /* ===== Screen 2: Produkt ===== */
@@ -405,24 +475,27 @@ function renderProduct(wc) {
       <div class="a">${on.shipping ? `${money(on.price)} + ${eur(on.shipping)} Versand. ` : ""}Zentrallager, ${on.onlineStock > 0 ? `${on.onlineStock} versandbereit` : "nicht versandbereit"}${on.codeDiscount ? `. <b>${esc(codeName(on))}</b> (−${eur0(on.codeDiscount)}) gilt nur hier, schon abgezogen.` : ""}${on.unknown ? "<br>Preis vom letzten Scan." : ""}${p.cb ? `<br><span style="color:var(--amber-ink)">mit ${eur0(p.cb)} Cashback ${money(on.shipped - p.cb)}</span>` : ""}</div>
       <div class="act"><a class="btn small" href="${esc(productUrl(p))}" target="_blank" rel="noopener">Im Online-Shop öffnen ${I.ext}</a></div></div>` : "";
   const farOpen = state.openShip.has(p.webcode), farShown = farOpen ? p.far : p.far.slice(0, 1), farRest = p.far.length - farShown.length;
-  const sets = p.sets.map(x => { const eff = setEff(p, x), s = storeOf(x.storeId);
-    return `<div class="setrow"><div><div class="n">${esc(setName(x))}</div><div class="d">im Warenkorb mit dem TV bei <b>${esc(storeName(s))}</b>${s.distanceKm != null ? ` (${km(s.distanceKm)})` : ""}${x.unpromoted != null && x.promoted != null ? `<br>Set <span class="was">${money(x.unpromoted)}</span> → ${money(x.promoted)}` : ""}${x.validTo ? `, bis ${esc(x.validTo)}` : ""}</div></div><div class="e">${eff != null ? money(eff) : x.discount ? "−" + eur0(x.discount) : ""}<small>${eff != null ? "Zubehör effektiv" : "Rabatt"}</small></div></div>`; }).join("");
-  const nAkt = (p.cb ? 1 : 0) + p.sets.length;
-  const setCard = sets ? `<div class="card"><div class="chd">Set-Deal: TV + Zubehör im selben Warenkorb</div>${sets}<div class="note">Zubehör effektiv = Setpreis − TV-Preis desselben Markts. Sets gibt es nur bei manchen Märkten.</div></div>` : "";
+  const setRow = (g, x, tag) => `<div class="setrow"><div><div class="n">${esc(g.accessory)}</div><div class="d">${tag}im Warenkorb mit dem TV bei <b>${esc(storeName(x.s))}</b>${x.s.online ? "" : ` (${km(x.distanceKm)})`}<br>Set <span class="was">${money(x.unpromoted)}</span> → ${money(x.promoted)}${x.validTo ? `, bis ${esc(x.validTo)}` : ""}${g.count > 1 ? `; ${g.count} Märkte haben das Set` : ""}</div></div><div class="e">${money(x.accessoryEffective)}<small>Zubehör effektiv</small></div></div>`;
+  const sets = p.groups.map(g => setRow(g, g.best, "") + (g.near && g.far && g.far.storeId !== g.near.storeId && g.far.accessoryEffective < g.near.accessoryEffective ? setRow(g, g.far, "günstiger bei einem Versender: ") : "")).join("");
+  const setCard = sets ? `<div class="card"><div class="chd">Set-Deal: TV + Zubehör im selben Warenkorb</div>${sets}<div class="note">Zubehör effektiv = Setpreis − TV-Preis desselben Markts. Sets gibt es nur bei manchen Märkten; der Set-Rabatt (−${eur0(p.groups[0].discount)}) wird im Warenkorb abgezogen.</div></div>` : "";
+  const cashCard = p.off ? (p.off.promo ? `<div class="card">${offerCard(p.off.promo)}</div>` : `<div class="card cond">${I.cash}<span><b>${esc(p.off.title || "Cashback")}</b>: ${p.cb ? `${eur0(p.cb)} für dieses Modell` : "Betrag unbekannt"}, Kauf bis ${p.off.to}, registrieren bis ${p.off.regBy}.</span></div>`) : "";
+  const extraCard = p.extras.length ? `<div class="card"><div class="chd">Zugaben: kein Geld, aber Extras</div>${p.extras.map(x => `<div class="extra"><div><div class="t">${esc(x.title)}</div><div class="s">${esc(firstSentence(x.text, 160))}${x.buyTo ? ` Kauf bis ${dmy(x.buyTo)}${x.registerBy ? `, registrieren bis ${dmy(x.registerBy)}` : ""}.` : ""}</div></div><a href="#o-${esc(x.id)}">Details</a></div>`).join("")}</div>` : "";
+  const nAkt = (p.off ? 1 : 0) + p.groups.length + p.extras.length;
   const sc = p.scan || {};
   const scanNote = sc.incomplete ? `<div class="cond warn">${I.warn}<span>Der letzte Scan war unvollständig: mehr als die Hälfte der Märkte hat nicht geantwortet. Die Preise können veraltet sein.</span></div>` : "";
   screen(`
     <div class="card">
       <div class="hero2">${p.image ? `<img class="thumb" src="${esc(p.image)}" alt="">` : ""}<h2>${esc(p.name)}</h2><div class="sub">${esc(p.sub)}</div><div class="links"><a href="${esc(productUrl(p))}" target="_blank" rel="noopener">Bei expert.de öffnen ${I.ext}</a></div></div>
       <div class="sum2">${ledger(p, true)}<div class="trow">${trend(p, false)}</div></div>
-      ${p.cb ? `<div class="cond">${I.cash}<span>Du zahlst im Markt ${money(p.gross)} und bekommst <b>${eur0(p.cb)}</b> von ${esc(p.off.brand)} nach der Registrierung bis ${p.off.regBy} zurück.</span></div>` : ""}
+      ${p.cb ? `<div class="cond">${I.cash}<span>Du zahlst im Markt ${money(p.gross)} und bekommst <b>${eur0(p.cb)}</b> von ${esc(p.off.brand)} nach der Registrierung bis ${p.off.regBy} zurück.${p.off.amountDouble ? ` Mit einer teilnehmenden Soundbar auf derselben Rechnung sind es ${eur0(p.off.amountDouble)}.` : ""}</span></div>` : ""}
+      ${p.off && !p.cb ? `<div class="cond info">${I.info}<span>${esc(p.off.title || "Cashback")} gilt für dieses Gerät, aber der Betrag für dieses Modell steht nicht lesbar im PDF. Trag ihn in <b>config/cashback-overrides.json</b> ein, dann rechnet die App ihn ab.</span></div>` : ""}
       ${scanNote}
     </div>
     <div class="sec"><h2>Aktionen</h2><span class="hint">${nAkt ? `${nAkt} für dieses Gerät` : "keine zurzeit"}</span></div>
-    ${setCard}${nAkt ? "" : `<div class="card note">Zurzeit keine Aktion für dieses Gerät. Set-Deals kommen mit dem nächsten Ausbau des Scanners, Cashback danach.</div>`}
+    ${cashCard}${setCard}${extraCard}${nAkt ? "" : `<div class="card note">Zurzeit keine Aktion für dieses Gerät: kein Cashback des Herstellers, kein Set-Deal, keine Zugabe im Aktionsindex.</div>`}
     ${alertCard(p)}
     <div class="sec"><h2>Preisverlauf</h2><span class="hint">${p.hist.length} ${p.hist.length === 1 ? "Tag" : "Tage"}, bester Preis je Weg${p.cb ? ", ohne Cashback" : ""}</span></div>
-    <div class="card chart">${chart(p, 160)}<div class="leg"><span><i style="background:var(--blue)"></i>Versand</span><span><i style="background:var(--green)"></i>Abholung ≤ ${p.radius} km</span>${p.target != null ? `<span><i style="background:var(--line-2);height:1px"></i>Zielpreis ${eur0(p.target)}</span>` : ""}</div></div>
+    <div class="card chart">${chart(p, 160)}<div class="leg"><span><i style="background:var(--blue)"></i>Versand</span><span><i style="background:var(--green)"></i>Abholung ≤ ${p.radius} km</span>${p.target != null ? `<span><i style="background:var(--line-2);height:1px"></i>Zielpreis ${eur0(p.target)}${p.cb ? " + Cashback" : ""}</span>` : ""}</div></div>
     <div class="sec"><h2>Abholung im Umkreis</h2><span class="hint">${p.inR.length ? `${p.inR.length} ${p.inR.length === 1 ? "Markt" : "Märkte"}, nach Entfernung` : `${p.radius} km`}</span></div>
     <div class="grp">${p.inR.map(o => storeCard(o, "pick")).join("") || `<div class="card note">Kein Markt im Umkreis von ${p.radius} km hat das Gerät.</div>`}</div>
     <p class="foot left">Auf expert.de wählst du den Markt mit der <b>PLZ</b>; der Link öffnet die Produktseite direkt mit diesem Markt.</p>
@@ -431,6 +504,7 @@ function renderProduct(wc) {
     <p class="foot left">Der Online-Shop ist expert zentral: eigene Preise, eigener Bestand, eigene Codes. Märkte verschicken selbst, meist per Spedition.</p>
     <div class="sec"><h2>Scan</h2><span class="hint">${sc.time ? ageText(sc.time) : ""}</span></div>
     <div class="card"><div class="set"><div class="k">Märkte mit Angebot<small>von ${sc.stores || 349} abgefragten</small></div><div class="v"><b>${sc.withOffer != null ? sc.withOffer : "–"}</b></div></div>${sc.unknown ? `<div class="set"><div class="k">Ohne Antwort<small>alter Preis bis zu 24 h behalten</small></div><div class="v"><b>${sc.unknown}</b></div></div>` : ""}
+      ${p.rec.setsScan ? `<div class="set"><div class="k">Set-Deals<small>${ageText(p.rec.setsScan.time)}, ${p.rec.setsScan.stores} Märkte abgefragt</small></div><div class="v"><b>${p.rec.setsScan.withSet} mit Set</b></div></div>` : `<div class="set"><div class="k">Set-Deals<small>noch nicht abgefragt (auf WLAN jeden Lauf, mobil täglich)</small></div><div class="v">–</div></div>`}
       <div class="set"><div class="k">Nicht mehr beobachten<small>entfernt das Produkt aus der Liste</small></div><div class="v"><button class="btn small danger" onclick="removeProduct('${p.webcode}')">Entfernen</button></div></div></div>`);
 }
 function alertCard(p) {
@@ -458,10 +532,125 @@ async function removeProduct(wc) {
 }
 function copyZip(z) { const done = () => toast("PLZ " + z + " kopiert"); if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(z).then(done, () => toast("PLZ: " + z)); else toast("PLZ: " + z); }
 
-/* ===== Screen 3: Einstellungen ===== */
+/* ===== Offer card (Cashback list and product page) ===== */
+function prog(from, to) {
+  if (!from || !to) return 50;
+  const total = daysBetween(from, to), done = daysBetween(from, todayISO());
+  return total > 0 ? Math.max(3, Math.min(100, Math.round(done / total * 100))) : 100;
+}
+function offerCard(o) {
+  const ended = isEnded(o), a = amounts(o), tvs = (o.devices || []).filter(d => d.type !== "soundbar"), bars = o.soundbars || [];
+  const pair = bars.length > 0 || a.dbl != null;
+  const watched = (o.watched || []).length > 0;
+  return `<button class="offer ${ended ? "ended" : ""}" onclick="go('o-${esc(o.id)}')"><div class="logo ${brandClass(o.brand)}" aria-hidden="true">${esc(o.brand || "?")}</div><div class="t">${esc(o.title)}</div><div class="s">${o.kind === "cashback" ? `${tvs.length ? `${tvs.length} TVs bei expert` : "Geräte noch nicht aufgelöst"}${bars.length ? `, ${bars.length} Soundbars` : ""}${a.dbl ? ", doppelt mit Soundbar" : ""}` : `Zugabe${o.brand ? ` von ${esc(o.brand)}` : ""}${o.articleCount ? `, ${o.articleCount} Geräte` : ""}`}${ended ? " · beendet" : ""}</div>
+    ${o.kind === "cashback" ? `<div class="amt"><b>${amountText(o)}</b><span>je TV${a.dbl ? `, bis ${eur0(a.dbl)} mit Soundbar` : ""}</span></div>` : `<div class="amt"><span>${esc(firstSentence(o.text, 110))}</span></div>`}
+    <div class="tl"><div class="bar"><i style="width:${ended ? 100 : prog(o.buyFrom, o.buyTo)}%"></i></div><div class="lbl"><span>${o.buyFrom ? `Kauf ${dmy(o.buyFrom)} bis ${dmy(o.buyTo)}` : o.buyTo ? `Kauf bis ${dmy(o.buyTo)}` : "Zeitraum unbekannt"}</span><span>${o.registerBy ? `Registrieren bis ${dmy(o.registerBy)}` : ""}</span></div></div>
+    <div class="tags">${isNew(o) && !ended ? '<span class="badge b-new">neu</span>' : ""}${ended ? '<span class="badge b-off">beendet</span>' : ""}${o.kind === "cashback" ? (pair ? `<span class="badge b-cash">${o.sameInvoice ? "TV + Soundbar auf einer Rechnung" : "TV + Soundbar, getrennt kaufen erlaubt"}</span>` : '<span class="badge b-off">nur TV, keine Soundbar nötig</span>') : '<span class="badge b-cash">Zugabe</span>'}${watched ? '<span class="badge b-set">dein Gerät nimmt teil</span>' : ""}${o.kind === "cashback" && o.amountSource === "unknown" ? '<span class="badge b-off">Betrag unbekannt</span>' : ""}</div></button>`;
+}
+
+/* ===== Screen 3: Cashback ===== */
+function renderCashback() {
+  setTop("Cashback"); setTabs("cashback");
+  const all = Object.values(state.promos);
+  const cash = all.filter(p => p.kind === "cashback" && !isEnded(p)).sort((a, b) => (isNew(b) - isNew(a)) || (a.buyTo || "").localeCompare(b.buyTo || ""));
+  const extras = all.filter(p => p.kind === "extra" && !isEnded(p)).sort((a, b) => (a.brand || "").localeCompare(b.brand || ""));
+  const ended = all.filter(p => p.kind !== "other" && isEnded(p));
+  const K = state.filter;
+  const brands = (state.wl.brands || []).join(", ");
+  screen(`
+    <div class="chips"><button class="chip" aria-pressed="${K === "cashback"}" onclick="state.filter='cashback';renderCashback()">Geld zurück</button><button class="chip" aria-pressed="${K === "extra"}" onclick="state.filter='extra';renderCashback()">Zugaben</button><button class="chip" aria-pressed="${K === "alle"}" onclick="state.filter='alle';renderCashback()">Alles</button></div>
+    ${K !== "extra" ? `<div class="sec"><h2>Aktive Cashback-Aktionen</h2><span class="hint">${brands ? `${(state.wl.brands || []).length} Marken beobachtet` : "keine Marke"}</span></div>${cash.map(o => `<div class="card">${offerCard(o)}</div>`).join("") || `<div class="card note">Zurzeit kein Cashback für ${esc(brands || "die beobachteten Marken")}${state.promosUpdated ? "" : " (noch kein Aktionsscan)"}.</div>`}` : ""}
+    ${K !== "cashback" ? `<div class="sec"><h2>Zugaben</h2><span class="hint">Spiel, Testphase, Garantie</span></div>${extras.map(o => `<div class="card">${offerCard(o)}</div>`).join("") || `<div class="card note">Keine Zugabe für die beobachteten Marken und Geräte.</div>`}` : ""}
+    ${ended.length && K !== "extra" ? `<div class="sec"><h2>Beendet</h2><span class="hint">letzte 30 Tage</span></div>${ended.map(o => `<div class="card">${offerCard(o)}</div>`).join("")}` : ""}
+    <p class="foot">Quelle: Aktionsindex des expert Online-Shops, alle 6 Stunden${state.promosUpdated ? ` (zuletzt ${ageText(state.promosUpdated)})` : ""}. Beträge aus den Teilnahmebedingungen; fehlt ein Betrag, steht die Aktion trotzdem hier, mit Link.</p>`);
+}
+
+/* ===== Screen 4: Aktion + Rechner ===== */
+function renderOffer(id) {
+  const o = promoOf(id);
+  setTop(o.title, "cashback"); setTabs("cashback");
+  const ended = isEnded(o), a = amounts(o);
+  const tvs = (o.devices || []).filter(d => d.type !== "soundbar").sort((x, y) => (x.amount || 0) - (y.amount || 0) || (x.price || 1e9) - (y.price || 1e9));
+  const bars = (o.soundbars || []);
+  const C = calcState(o, tvs, bars);
+  const watchedOf = d => d.webcode ? state.wl.products.find(p => p.webcode === d.webcode) : null;
+  const tvRows = tvs.map(t => { const w = watchedOf(t); const net = t.price != null && t.amount != null ? round2(t.price - t.amount) : null;
+    return `<div class="dev ${bars.length && C && C.tv === t.modelCode ? "sel" : ""}"><div><div class="n">${esc(deviceName(t))}${w ? '<span class="badge b-set">beobachtet</span>' : ""}</div><div class="s">${esc(t.modelCode || "")}${t.price != null ? `, ${t.priceSource === "watchlist" ? "bester Markt" : "Online-Shop"}` : ", kein Preis"}</div></div>
+    <div class="a">${t.amount != null ? eur0(t.amount) : "?"}${t.amountDouble ? `<small>${eur0(t.amountDouble)} mit Soundbar</small>` : ""}</div><div class="pr">${t.price != null ? money(t.price) : "k. A."}<small>${net != null ? `netto ${money(net)}` : ""}</small></div>
+    <div class="pick">${bars.length && t.amount != null && t.price != null ? `<button class="btn small" aria-pressed="${C && C.tv === t.modelCode}" onclick="setCalc('${esc(id)}','tv','${esc(t.modelCode)}')">Im Rechner</button>` : ""}${w ? `<button class="btn small" onclick="go('p-${esc(w.webcode)}')">Zum Produkt</button>` : `<button class="btn small" onclick="watchDevice('${esc(t.webcode || "")}','${esc(deviceName(t)).replace(/'/g, "")}','cashback-tv')">Beobachten</button>`}</div></div>`; }).join("");
+  const barRows = bars.map(b => { const w = watchedOf(b);
+    return `<div class="dev ${C && C.bar === b.modelCode ? "sel" : ""}"><div><div class="n">${esc(b.label || b.modelCode)}${w ? '<span class="badge b-set">beobachtet</span>' : ""}</div><div class="s">${esc(b.modelCode)}${b.name ? `, ${esc(b.name)}` : ""}${b.price != null ? `, ${b.priceSource === "watchlist" ? "bester Markt" : "Online-Shop"}` : b.webcode ? ", kein Preis" : ", bei expert nicht gefunden"}</div></div><div></div><div class="pr">${b.price != null ? money(b.price) : "k. A."}<small>${b.price != null ? "Preis" : "kein Preis"}</small></div>
+    <div class="pick"><button class="btn small" aria-pressed="${C && C.bar === b.modelCode}" ${b.price != null ? "" : "disabled"} onclick="setCalc('${esc(id)}','bar','${esc(b.modelCode)}')">Im Rechner</button>${w ? `<button class="btn small" onclick="go('p-${esc(w.webcode)}')">Zum Produkt</button>` : b.webcode ? `<button class="btn small" onclick="watchDevice('${esc(b.webcode)}','${esc(b.label || b.modelCode).replace(/'/g, "")}','cashback-soundbar')">Beobachten</button>` : ""}</div></div>`; }).join("");
+  const watchedNote = (o.watched || []).length ? `<div class="cond">${I.check}<span>Dein Gerät nimmt teil: ${o.watched.map(wc => { const c = state.wl.products.find(p => p.webcode === wc); return `<a href="#p-${wc}">${esc(c ? titleOf(c, state.products[wc]) : wc)}</a>`; }).join(", ")}.</span></div>` : "";
+  screen(`
+    <div class="card"><div class="sum"><div class="logo ${brandClass(o.brand)}" aria-hidden="true">${esc(o.brand || "?")}</div><div><div style="font-weight:600">${esc(o.title)}</div><div class="small muted">${ended ? `beendet${o.buyTo ? ` am ${dmy(o.buyTo)}` : ""}` : o.buyTo ? `läuft noch bis ${dmy(o.buyTo)}` : "läuft"}${o.kind === "extra" ? " · Zugabe" : ""}</div></div>
+      ${o.kind === "cashback" ? `<div class="big"><b>${amountText(o)}</b><span class="muted small">je TV${a.dbl ? `, verdoppelt mit Soundbar (max. ${eur0(a.dbl)})` : ""}</span></div>` : ""}</div>
+      <dl class="facts"><dt>Kaufen</dt><dd>${o.buyFrom ? `${dmy(o.buyFrom)} bis ` : "bis "}${o.buyTo ? dmy(o.buyTo) : "unbekannt"}</dd><dt>Registrieren</dt><dd>${o.registerFrom ? `${dmy(o.registerFrom)} bis ` : o.registerBy ? "bis " : ""}${o.registerBy ? dmy(o.registerBy) : "keine Frist bekannt"}${o.url ? `<br><a href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.url.replace(/^https?:\/\/(www\.)?/, ""))} ${I.ext}</a>` : ""}</dd><dt>Bedingungen</dt><dd>${o.pdfUrl ? `<a href="${esc(o.pdfUrl)}" target="_blank" rel="noopener">Teilnahmebedingungen (PDF) ${I.ext}</a>` : "keine Datei"}${sourceText(o) ? `<br><span class="muted small">${esc(sourceText(o))}</span>` : ""}</dd></dl>
+      <div class="rule">${esc(o.text || "")}</div>
+      ${o.kind === "cashback" && (bars.length || a.dbl) ? `<div class="cond">${I.warn}<span>${o.sameInvoice ? "TV und Soundbar müssen auf <b>derselben Rechnung</b> stehen. In zwei Märkten gekauft gibt es nur den einfachen Betrag." : "TV und Soundbar dürfen in verschiedenen Märkten und an verschiedenen Tagen gekauft werden."}</span></div>` : ""}
+      ${watchedNote}
+      ${o.kind === "cashback" && o.amountSource === "unknown" ? `<div class="cond warn">${I.warn}<span>Die Beträge stehen in einem PDF-Layout, das der Scanner nicht liest. Trag sie in <a href="${OVERRIDES_URL}" target="_blank" rel="noopener">config/cashback-overrides.json</a> ein (Modell-Code, Betrag).</span></div>` : ""}</div>
+    ${tvs.length ? `<div class="sec"><h2>Teilnehmende TVs</h2><span class="hint">Cashback, Preis, netto</span></div><div class="card">${tvRows}</div>` : ""}
+    ${bars.length ? `<div class="sec"><h2>Teilnehmende Soundbars</h2><span class="hint">aus dem PDF, bei expert zugeordnet</span></div><div class="card">${barRows}</div>` : ""}
+    ${C ? renderCalc(o, tvs, bars, C) : ""}`);
+}
+function calcState(o, tvs, bars) {
+  const tvOk = tvs.filter(t => t.amount != null && t.price != null), barOk = bars.filter(b => b.price != null);
+  if (!tvOk.length || !barOk.length) return null;
+  const c = state.calc[o.id] || {};
+  const tv = tvOk.find(t => t.modelCode === c.tv) || tvOk.find(t => t.watched) || tvOk[0];
+  const bar = barOk.find(b => b.modelCode === c.bar) || barOk[0];
+  const resale = c.resale != null ? c.resale : Math.round(bar.price * 0.6 / 10) * 10;
+  state.calc[o.id] = { tv: tv.modelCode, bar: bar.modelCode, resale };
+  return state.calc[o.id];
+}
+function setCalc(id, key, value) { state.calc[id] = { ...(state.calc[id] || {}), [key]: key === "resale" ? Math.max(0, +value || 0) : value }; renderOffer(id); }
+function setDiscountFor(tv, bar) {
+  const rec = tv.webcode ? state.products[tv.webcode] : null;
+  if (!rec) return 0;
+  const code = (bar.modelCode || "").replace(/[^A-Z0-9]/gi, "").toUpperCase();
+  const hit = code ? (rec.sets || []).find(s => s.accessory && s.accessory.replace(/[^A-Z0-9]/gi, "").toUpperCase().includes(code)) : null;
+  return hit ? hit.discount : 0;
+}
+function renderCalc(o, tvs, bars, C) {
+  const tv = tvs.find(t => t.modelCode === C.tv), bar = bars.find(b => b.modelCode === C.bar);
+  const dbl = tv.amountDouble || tv.amount;
+  const setDisc = setDiscountFor(tv, bar);
+  const s = [
+    { k: "tv", t: "Nur der TV", sub: `${money(tv.price)} − ${eur0(tv.amount)} einfacher Cashback`, parts: { tv: tv.price, bar: 0, cash: tv.amount, res: 0 }, ok: true },
+    { k: "set", t: "TV + Soundbar im selben Warenkorb, Soundbar verkaufen", sub: `${setDisc ? `Set-Deal −${eur0(setDisc)}, ` : ""}${tv.amountDouble ? `doppelter Cashback ${eur0(dbl)}` : `Cashback ${eur0(dbl)}`}, Wiederverkauf ${eur0(C.resale)}`, parts: { tv: tv.price, bar: bar.price - setDisc, cash: dbl, res: C.resale }, ok: true },
+    { k: "sep", t: "TV und Soundbar in verschiedenen Märkten", sub: o.sameInvoice ? "bei dieser Aktion nicht erlaubt (eine Rechnung)" : "bester Markt für jedes Gerät", parts: { tv: tv.price, bar: bar.price, cash: dbl, res: C.resale }, ok: !o.sameInvoice },
+  ].map(x => ({ ...x, eff: round2(x.parts.tv + x.parts.bar - x.parts.cash - x.parts.res) }));
+  const okS = s.filter(x => x.ok), bestEff = Math.min(...okS.map(x => x.eff)), maxG = Math.max(...s.map(x => x.parts.tv + x.parts.bar)), W = 420, H = 22;
+  const bar1 = x => { const sc = v => v / maxG * W, tw = sc(x.parts.tv), bw = sc(x.parts.bar), cw = sc(x.parts.cash), rw = sc(x.parts.res), ex = sc(x.eff);
+    return `<svg viewBox="0 0 ${W} ${H}" aria-hidden="true" style="opacity:${x.ok ? 1 : .4}"><rect x="0" y="4" width="${tw}" height="14" rx="3" fill="var(--blue)"/><rect x="${tw + 2}" y="4" width="${Math.max(0, bw - 2)}" height="14" rx="3" fill="var(--blue)" opacity=".45"/><rect x="${ex}" y="4" width="${cw}" height="14" fill="var(--amber)" opacity=".9"/><rect x="${ex + cw}" y="4" width="${rw}" height="14" fill="var(--card-2)" stroke="var(--muted)" stroke-dasharray="3 2"/><line x1="${ex}" x2="${ex}" y1="0" y2="${H}" stroke="var(--fg)" stroke-width="2"/></svg>`; };
+  const winner = okS.slice().sort((a, b) => a.eff - b.eff)[0];
+  const breakEven = round2((bar.price - setDisc) - (dbl - tv.amount));
+  return `
+    <div class="sec"><h2>Wiederverkaufs-Rechner</h2><span class="hint">${tv.priceSource === "watchlist" ? "mit deinen Marktpreisen" : "mit Online-Shop-Preisen"}</span></div>
+    <div class="card calc">
+      <div class="line"><div class="l">TV<small>${esc(deviceName(tv))}, ${tv.priceSource === "watchlist" ? "bester Markt" : "Online-Shop"}</small></div><div class="v">${money(tv.price)}</div></div>
+      <div class="line"><div class="l">Soundbar<small>${esc(bar.label || bar.modelCode)}${bar.name ? `, ${esc(bar.name)}` : ""}${setDisc ? `, Set-Deal −${eur0(setDisc)}` : ""}</small></div><div class="v">${money(bar.price - setDisc)}</div></div>
+      <div class="line minus"><div class="l">Cashback<small>${tv.amountDouble ? "doppelt, TV + Soundbar" + (o.sameInvoice ? " auf einer Rechnung" : "") : "einfach"}</small></div><div class="v">− ${eur0(dbl)}</div></div>
+      <div class="line minus"><div class="l">Wiederverkauf der Soundbar<small>deine Schätzung, ${Math.round(C.resale / bar.price * 100)} % vom Neupreis</small></div><div class="v"><input type="number" step="10" min="0" value="${C.resale}" aria-label="Erwarteter Wiederverkaufspreis" onchange="setCalc('${esc(o.id)}','resale',this.value)"></div></div>
+      <input type="range" min="0" max="${Math.round(bar.price)}" step="10" value="${C.resale}" aria-label="Wiederverkaufspreis" onchange="setCalc('${esc(o.id)}','resale',this.value)">
+      <div class="line total"><div class="l">Effektiver TV-Preis<small>TV + Soundbar − Cashback − Wiederverkauf</small></div><div class="v">${money(s[1].eff)}</div></div>
+      <div class="infobox">${I.info}<span>${winner.k === "tv" ? `Die Soundbar zu verkaufen lohnt sich hier nicht: erst ab <b>${eur0(breakEven)}</b> Wiederverkauf schlägt der Weg „Nur der TV“.` : `Günstigster Weg: <b>${esc(winner.t)}</b>, ${money(round2(s[0].eff - winner.eff))} unter „Nur der TV“. Ab ${eur0(breakEven)} Wiederverkauf lohnt sich die Soundbar.`}</span></div>
+    </div>
+    <div class="sec"><h2>Wege im Vergleich</h2><span class="hint">weniger ist besser</span></div>
+    <div class="card"><div class="scen">${s.map(x => `<div class="s"><div class="t">${esc(x.t)}<small>${esc(x.sub)}</small></div><div class="e ${x.ok ? (x.eff === bestEff ? "best" : "") : "na"}">${x.ok ? money(x.eff) : "nicht möglich"}</div>${bar1(x)}</div>`).join("")}</div>
+      <div class="legend"><span><i style="background:var(--blue)"></i>TV</span><span><i style="background:var(--blue);opacity:.45"></i>Soundbar</span><span><i style="background:var(--amber)"></i>Cashback</span><span><i style="border:1px dashed var(--muted)"></i>Wiederverkauf</span><span><i style="width:2px;height:11px;background:var(--fg);border-radius:0"></i>effektiver Preis</span></div></div>`;
+}
+
+/* ===== Screen 5: Einstellungen ===== */
+function stepRow(name, label, hint) {
+  const s = ((state.status || {}).steps || {})[name] || {};
+  const extra = hint(s);
+  return `<div class="set"><div class="k">${label}<small>${s.lastRun ? ageText(s.lastRun) : "noch nie"}${extra ? ` · ${extra}` : ""}${s.error && s.ok === false ? `<br>${esc(s.error)}` : ""}</small></div><div class="v"><b class="${s.ok === false ? "" : "ok"}">${s.ok == null ? "–" : s.ok ? "ok" : "Fehler"}</b></div></div>`;
+}
 function renderSettings() {
   setTop("Einstellungen", null, ""); setTabs("einstellungen");
-  const loc = state.wl.location, st = state.status || {}, steps = st.steps || {}, pr = steps.prices || {}, so = steps.stores || {}, s = scanInfo();
+  const loc = state.wl.location, st = state.status || {}, s = scanInfo();
   const brands = (state.wl.brands || []).join(", ") || "keine";
   screen(`
     <div class="sec"><h2>Standort</h2><span class="hint">für Entfernung und Abhol-Umkreis</span></div>
@@ -471,22 +660,24 @@ function renderSettings() {
     <div class="sec"><h2>Benachrichtigungen</h2></div>
     <div class="card"><div class="set"><div class="k">Standard für neue Produkte<small>je Produkt umschaltbar: neues 30-Tage-Tief oder Zielpreis</small></div><div class="v"><b>bei jeder Senkung</b></div></div>
       <div class="set"><div class="k">Preisanstiege<small>werden in der App angezeigt</small></div><div class="v">keine Nachricht</div></div>
+      <div class="set"><div class="k">Set-Deals und Cashback<small>neues Set oder 20 € mehr Rabatt; neue Aktion, bekannte Beträge, 3 Tage vor Ende</small></div><div class="v">Nachricht</div></div>
       <div class="set"><div class="k">Push-Kanal<small>ntfy-App; das Thema liegt nur auf dem Handy in Termux</small></div><div class="v"><b>ntfy</b></div></div>
       <div class="set"><div class="k">Scanfenster</div><div class="v">06–22 Uhr, alle 2 h</div></div>
-      <div class="set"><div class="k">Cashback-Marken<small>für spätere Cashback-Meldungen</small></div><div class="v"><b>${esc(brands)}</b></div></div></div>
+      <div class="set"><div class="k">Cashback-Marken<small>Aktionen dieser Marken erscheinen im Cashback-Tab (config/watchlist.json, brands)</small></div><div class="v"><b>${esc(brands)}</b></div></div></div>
     <div class="sec"><h2>Scanner</h2><span class="hint">läuft auf dem Handy in Termux</span></div>
-    <div class="card"><div class="set"><div class="k">Letzter Lauf<small>${esc(st.berlinTime || "")}${st.event ? ` · ${esc(st.event)}` : ""}${st.network ? ` · ${esc(st.network)}` : ""}</small></div><div class="v ${s.warn ? "warn" : ""}"><b>${esc(s.text)}</b></div></div>
+    <div class="card"><div class="set"><div class="k">Letzter Lauf<small>${esc(st.berlinTime || "")}${st.event ? ` · ${esc(st.event)}` : ""}${st.network ? ` · ${esc(st.network)}` : ""}${st.calls != null ? ` · ${st.calls} Aufrufe` : ""}${st.durationS != null ? `, ${Math.round(st.durationS)} s` : ""}</small></div><div class="v ${s.warn ? "warn" : ""}"><b>${esc(s.text)}</b></div></div>
       ${s.detail ? `<div class="cond warn">${I.warn}<span>${esc(s.detail)}</span></div>` : ""}
       ${(st.warnings || []).length ? `<div class="cond info">${I.info}<span>${esc(st.warnings.join(" "))}</span></div>` : ""}
-      <div class="set"><div class="k">Preise<small>${pr.lastRun ? ageText(pr.lastRun) : "noch nie"}${pr.products != null ? ` · ${pr.products} Produkte, ${pr.withOffer} Angebote` : ""}${pr.unknown ? `, ${pr.unknown} ohne Antwort` : ""}</small></div><div class="v"><b class="${pr.ok === false ? "" : "ok"}">${pr.ok == null ? "–" : pr.ok ? "ok" : "Fehler"}</b></div></div>
-      <div class="set"><div class="k">Märkte<small>${so.lastRun ? ageText(so.lastRun) : "noch nie"}${so.stores != null ? ` · ${so.stores} Märkte, ${so.withinRadius} im Umkreis` : ""}</small></div><div class="v"><b class="${so.ok === false ? "" : "ok"}">${so.ok == null ? "–" : so.ok ? "ok" : "Fehler"}</b></div></div>
-      <div class="set"><div class="k">Letzter Lauf<small>Aufrufe und Dauer</small></div><div class="v">${st.calls != null ? `${st.calls} Aufrufe` : ""}${st.durationS != null ? `, ${Math.round(st.durationS)} s` : ""}</div></div>
+      ${stepRow("prices", "Preise", x => x.products != null ? `${x.products} Produkte, ${x.withOffer} Angebote${x.unknown ? `, ${x.unknown} ohne Antwort` : ""}` : "")}
+      ${stepRow("sets", "Set-Deals", x => x.products != null ? `${x.sets} Sets an ${x.stores} Märkten` : "auf WLAN jeden Lauf, mobil täglich")}
+      ${stepRow("cashback", "Aktionen", x => x.kept != null ? `${x.cashbacks} Cashback, ${x.extras} Zugaben, ${x.devices} Geräte` : "alle 6 Stunden")}
+      ${stepRow("stores", "Märkte", x => x.stores != null ? `${x.stores} Märkte, ${x.withinRadius} im Umkreis` : "wöchentlich")}
       <div class="set"><div class="k">Jetzt scannen<small>kein Knopf: ein Lauf außer der Reihe startet in Termux</small></div><div class="v"><a href="${DATA_URL}" target="_blank" rel="noopener">Daten auf GitHub ${I.ext}</a></div></div>
       <div class="set col"><code class="cmd">bash ~/expert-checker/phone/run.sh manual</code></div></div>
     <div class="sec"><h2>GitHub-Zugang</h2><span class="hint">zum Schreiben der Beobachtungsliste</span></div>
     <div class="card"><div class="set"><div class="k">Token<small>fein abgestimmt, nur dieses Repo, Contents: Lesen und Schreiben. Bleibt nur auf diesem Handy.</small></div><div class="v"><b class="${state.token ? "ok" : ""}">${state.token ? "gespeichert" : "keins"}</b></div></div>
       <div class="set col"><input id="token" type="password" autocomplete="off" placeholder="${state.token ? "neues Token einfügen" : "github_pat_…"}" aria-label="GitHub-Token"><div class="act"><button class="btn primary" onclick="saveToken()">Prüfen und speichern</button>${state.token ? `<button class="btn" onclick="testToken()">Prüfen</button><button class="btn danger" onclick="clearToken()">Entfernen</button>` : ""}<a class="btn" href="${TOKEN_URL}" target="_blank" rel="noopener">Token anlegen ${I.ext}</a></div></div>
-      <div class="note">Ohne Token zeigt die App jede Änderung als Datei an, die du auf GitHub in <b>config/watchlist.json</b> einfügst.</div></div>
+      <div class="note">Ohne Token zeigt die App jede Änderung als Datei an, die du auf GitHub in <b>config/watchlist.json</b> einfügst. Cashback-Beträge, die der Scanner nicht lesen kann, trägst du in <a href="${OVERRIDES_URL}" target="_blank" rel="noopener">config/cashback-overrides.json</a> ein.</div></div>
     <div class="sec"><h2>App</h2></div>
     <div class="card"><div class="set"><div class="k">Version</div><div class="v"><b>${APP_VERSION}</b></div></div>
       <div class="set"><div class="k">Daten<small>geladen ${ageText(new Date(state.loadedAt).toISOString())}</small></div><div class="v"><button class="btn small" onclick="load(true)">${I.reload}Neu laden</button></div></div>
@@ -584,8 +775,10 @@ function route() {
   window.scrollTo(0, 0);
   if (!state.loaded) return state.error ? renderError() : null;
   if (h === "liste") return renderList();
+  if (h === "cashback") return renderCashback();
   if (h === "einstellungen") return renderSettings();
   if (h.startsWith("p-")) return state.wl.products.some(p => p.webcode === h.slice(2)) ? renderProduct(h.slice(2)) : renderList();
+  if (h.startsWith("o-")) return promoOf(h.slice(2)) ? renderOffer(h.slice(2)) : renderCashback();
   renderList();
 }
 window.addEventListener("hashchange", route);
