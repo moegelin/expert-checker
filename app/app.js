@@ -4,7 +4,7 @@
    #liste | #p-<webcode> | #cashback | #o-<promotion id> | #einstellungen. */
 "use strict";
 
-const APP_VERSION = "2026-11-24.5";
+const APP_VERSION = "2026-11-24.6";
 const REPO = "moegelin/expert-checker";
 const BRANCH = "main";
 const ROOT = new URL("../", location.href).href;        // repo root on Pages (data/, config/)
@@ -387,8 +387,13 @@ function setTop(title, back, extra) {
   t.className = "top" + (back ? " detail" : "");
   t.innerHTML = (back ? `<button class="back" aria-label="Zurück" onclick="go('${back}')">${I.back}</button>` : "") + `<h1>${esc(title)}</h1>${extra == null ? metaBlock() : extra}`;
 }
+/* The count on the Cashback tab: active cashbacks this phone has not seen yet. Opening the tab marks
+   every active promotion as seen (localStorage), so the count returns only with a new promotion. */
+function seenPromos() { try { return new Set(JSON.parse(lsGet("promos-seen") || "[]")); } catch (e) { return new Set(); } }
+function unseenCount() { const seen = seenPromos(); return Object.values(state.promos).filter(p => p.kind === "cashback" && !isEnded(p) && !seen.has(p.id)).length; }
+function markPromosSeen() { lsSet("promos-seen", JSON.stringify(Object.values(state.promos).filter(p => !isEnded(p)).map(p => p.id))); }
 function setTabs(active) {
-  const n = Object.values(state.promos).filter(p => p.kind === "cashback" && !isEnded(p) && isNew(p)).length;
+  const n = unseenCount();
   const t = [["liste", "Beobachten", I.tv], ["cashback", "Cashback", I.cash], ["einstellungen", "Einstellungen", I.gear]];
   document.getElementById("tabs").innerHTML = t.map(([id, l, svg]) => `<button class="tab" ${active === id ? 'aria-current="page"' : ""} onclick="go('${id}')">${svg}${id === "cashback" && n ? `<span class="cnt">${n}</span>` : ""}<span>${l}</span></button>`).join("");
 }
@@ -560,7 +565,7 @@ function offerCard(o) {
 
 /* ===== Screen 3: Cashback ===== */
 function renderCashback() {
-  setTop("Cashback"); setTabs("cashback");
+  setTop("Cashback"); markPromosSeen(); setTabs("cashback");
   const all = Object.values(state.promos);
   const cash = all.filter(p => p.kind === "cashback" && !isEnded(p)).sort((a, b) => (isNew(b) - isNew(a)) || (a.buyTo || "").localeCompare(b.buyTo || ""));
   const extras = all.filter(p => p.kind === "extra" && !isEnded(p)).sort((a, b) => (a.brand || "").localeCompare(b.brand || ""));

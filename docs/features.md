@@ -47,7 +47,7 @@ Built 2026-11-24 (plan.md §6, "M2 scope"): https://moegelin.github.io/expert-ch
 | Green = lowest effective price of the last 30 days and at least 3 % under the 30-day high; otherwise black with "X € über dem 30-Tage-Tief" | in | DESIGN.md, Colors |
 | Screen 2 (Produkt): hero image, receipt rows and trend, cashback explanation; then Aktionen directly under the price (cashback offer card, set deals, Zugaben); then alert mode (every drop / new 30-day low / target) with an optional target, the 30-day chart (Versand and Abholung lines, target line only when set); stores within the radius as separate cards with postcode, street, stock, display badge, "ohne Cashback" label, "mit Cashback" net line, link to the store's product page (`?branch_id`) and a copy-postcode button; Online-Shop card with explanation; further shippers collapsed behind "n weitere Versender" | in | prototype/b2.html |
 | Icon of the Aktionen lines in the expanded area aligned to the first text line (reviewer saw it centred) | in | review 2026-11-22 |
-| Cashback tab | in | built 2026-11-24 with M4: three tabs, count bubble for new cashbacks; the product page also carries the offers (open question 9 closed: both) |
+| Cashback tab | in | built 2026-11-24 with M4: three tabs; the count bubble shows active cashbacks this phone has not seen yet, opening the tab marks them seen (localStorage), the "neu" badge on a card stays 3 days; the product page also carries the offers (open question 9 closed: both) |
 | Filter in product detail: shipped / pickup / within radius / show display items | in | |
 | UI in German | in | decided 2026-11-21 |
 | Product images from cdn.expert.de, URL stored by the scanner | in | verified 2026-11-24: the CDN serves to the browser, images stay linked |
