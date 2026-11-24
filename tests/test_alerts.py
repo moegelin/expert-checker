@@ -66,7 +66,7 @@ class AlertsTest(unittest.TestCase):
         self.assertEqual(inbox.raised, [])
         self.assertEqual(self.file()["state"]["prices"][PHILIPS],
                          {"total": 2095, "path": "pickup", "storeId": RANGSDORF, "distanceKm": 24.7, "unknown": False,
-                          "scan": "2026-11-23T13:40:00Z"})
+                          "cashback": None, "scan": "2026-11-23T13:40:00Z"})
 
     def test_drop_against_the_previous_scan(self):
         self.run_rules(record(shipped=2428.9, pickup=2095))
