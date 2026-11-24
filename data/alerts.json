@@ -4,12 +4,12 @@
     "cooldowns": {},
     "prices": {
       "11128346052": {
-        "total": 2095,
-        "path": "pickup",
-        "storeId": "e_32472581",
-        "distanceKm": 24.7,
+        "total": 2159,
+        "path": "shipped",
+        "storeId": "e_2879130",
+        "distanceKm": null,
         "unknown": false,
-        "scan": "2026-11-24T09:44:52Z"
+        "scan": "2026-11-24T11:45:04Z"
       },
       "11128378730": {
         "total": 3278.9,
@@ -17,7 +17,7 @@
         "storeId": "e_1906881",
         "distanceKm": 391.7,
         "unknown": false,
-        "scan": "2026-11-24T09:44:52Z"
+        "scan": "2026-11-24T11:45:04Z"
       },
       "11128379730": {
         "total": 3578.9,
@@ -25,7 +25,7 @@
         "storeId": "e_1906876",
         "distanceKm": 411.2,
         "unknown": false,
-        "scan": "2026-11-24T09:44:52Z"
+        "scan": "2026-11-24T11:45:04Z"
       }
     },
     "target": {},

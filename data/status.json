@@ -1,11 +1,13 @@
 {
-  "lastRun": "2026-11-24T09:44:52Z",
-  "berlinTime": "2026-11-24 10:44",
+  "lastRun": "2026-11-24T11:45:04Z",
+  "berlinTime": "2026-11-24 12:45",
   "event": "schedule",
   "network": "wifi",
   "runner": "termux",
   "aborted": null,
-  "warnings": [],
+  "warnings": [
+    "pull failed: error: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them."
+  ],
   "steps": {
     "stores": {
       "lastAttempt": "2026-11-24T09:43:19Z",
@@ -18,15 +20,15 @@
       "calls": 1
     },
     "prices": {
-      "lastAttempt": "2026-11-24T09:44:52Z",
+      "lastAttempt": "2026-11-24T11:45:04Z",
       "ok": true,
       "error": null,
       "products": 3,
-      "withOffer": 228,
+      "withOffer": 229,
       "unknown": 1,
       "incomplete": [],
       "articleErrors": {},
-      "lastRun": "2026-11-24T09:44:52Z",
+      "lastRun": "2026-11-24T11:45:04Z",
       "calls": 1047
     }
   },
@@ -35,5 +37,5 @@
   ],
   "calls": 1047,
   "alerts": [],
-  "durationS": 47.2
+  "durationS": 187.0
 }
