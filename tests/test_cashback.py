@@ -138,7 +138,9 @@ class StepTest(unittest.TestCase):
         self.assertEqual((philips["kind"], philips["brand"], philips["watched"], philips["buyTo"], philips["registerBy"]),
                          ("extra", "Philips", [PHILIPS], "2026-12-31", "2027-02-14"))
         paypal = data["promotions"]["e_3157"]
-        self.assertEqual((paypal["kind"], sorted(paypal["watched"])), ("other", [PHILIPS, SONY65]))  # kept: touches watched products
+        self.assertEqual((paypal["kind"], paypal["brand"], sorted(paypal["watched"])), ("other", None, [PHILIPS, SONY65]))  # kept: touches watched products
+        self.assertNotIn("articleIds", paypal)
+        self.assertEqual(paypal["articleCount"], 3)
         samsung = data["promotions"]["e_4288"]
         self.assertEqual(samsung["url"], "https://samsung.de/theframeprodeals")
         self.assertEqual(data["updated"], run.iso(T0))

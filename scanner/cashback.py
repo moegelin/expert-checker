@@ -103,16 +103,20 @@ def step(ctx):
         if p["type"] != "CASHBACK":
             continue
         touches = [aid for aid in p["articleIds"] if aid in watched]
-        brand = brand_in_text(p["title"] + " " + p["text"], brands) or (watched[touches[0]].get("brand") if touches else None)
+        brand = brand_in_text(p["title"] + " " + p["text"], brands)
+        if brand is None and touches and p["kind"] != "other":
+            brand = watched[touches[0]].get("brand")
         if p["kind"] == "other" and not touches:
             continue
         if not touches and not brand:
             continue
+        if p["kind"] == "extra" and not touches and not TV_WORDS.search(p["title"] + " " + p["text"]):
+            continue  # a watched brand's extra for other product groups (vacuum, watch, …)
         old = data["promotions"].get(pid) or {}
         entry = {
             "id": pid, "kind": p["kind"], "title": p["title"], "text": p["text"][:TEXT_CHARS], "url": p["url"],
             "pdfUrl": p["pdfUrl"], "brand": brand, "buyFrom": p["buyFrom"], "buyTo": p["buyTo"],
-            "registerFrom": p["registerFrom"], "registerBy": p["registerBy"], "articleIds": p["articleIds"],
+            "registerFrom": p["registerFrom"], "registerBy": p["registerBy"], "articleCount": len(p["articleIds"]),
             "watched": sorted(watched[aid]["webcode"] for aid in touches),
             "firstSeen": old.get("firstSeen") or iso(ctx.now), "lastSeen": iso(ctx.now), "active": True,
             "sameInvoice": None, "amountSource": "none", "devices": [], "soundbars": [],
@@ -196,6 +200,7 @@ OTHER = re.compile(r"payback|paypal|finanzierung|°punkte|altger[äa]t|made in g
                    r"saphirmatt|black weeks|hyrox|e-scooter|design|kompetenz|wero", re.IGNORECASE)
 TRIAL = re.compile(r"\d+\s*tage\s*(geld|testen|zufrieden)|geld.?zur[üu]ck.?garantie", re.IGNORECASE)
 CASHBACK = re.compile(r"cashback|bonus|geld.?zur[üu]ck|€\s*zur[üu]ck|rückerstattung", re.IGNORECASE)
+TV_WORDS = re.compile(r"\btv\b|fernseher|soundbar|bravia|oled|qled|ambilight|streaming|heimkino|lautsprecher", re.IGNORECASE)
 EXTRA = re.compile(r"gratis|geschenkt|inklusive|inkl\.|dazu|kostenlos|gutschein|garantie|testen|abonnement|sichern|"
                    r"monate|vorrat|voucher|gewinnspiel|zugabe|set\b|kapseln|content", re.IGNORECASE)
 
