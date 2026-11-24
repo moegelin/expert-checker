@@ -127,8 +127,8 @@ class StepTest(unittest.TestCase):
 
     def test_relevant_promotions_kinds_and_dates(self):
         summary, data, _ = self.run_step()
-        self.assertEqual(sorted(data["promotions"]), ["e_3157", "e_3693", "e_4066", "e_4203", "e_4288", "e_4294"])
-        self.assertEqual((summary["cashbacks"], summary["extras"], summary["kept"]), (2, 3, 6))
+        self.assertEqual(sorted(data["promotions"]), ["e_3157", "e_4066", "e_4203", "e_4288", "e_4294"])  # e_3693: Sony warranty, no TV words
+        self.assertEqual((summary["cashbacks"], summary["extras"], summary["kept"]), (2, 2, 5))
         sony = data["promotions"]["e_4294"]
         self.assertEqual((sony["kind"], sony["brand"], sony["buyFrom"], sony["buyTo"], sony["registerBy"], sony["sameInvoice"]),
                          ("cashback", "Sony", "2026-11-12", "2027-01-10", "2027-03-07", True))
@@ -140,7 +140,7 @@ class StepTest(unittest.TestCase):
         paypal = data["promotions"]["e_3157"]
         self.assertEqual((paypal["kind"], paypal["brand"], sorted(paypal["watched"])), ("other", None, [PHILIPS, SONY65]))  # kept: touches watched products
         self.assertNotIn("articleIds", paypal)
-        self.assertEqual(paypal["articleCount"], 3)
+        self.assertEqual(paypal["articleCount"], 15)  # every article of the fixture index
         samsung = data["promotions"]["e_4288"]
         self.assertEqual(samsung["url"], "https://samsung.de/theframeprodeals")
         self.assertEqual(data["updated"], run.iso(T0))
