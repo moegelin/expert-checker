@@ -1,5 +1,17 @@
 {
-  "alerts": [],
+  "alerts": [
+    {
+      "id": "2026-11-24T15:45:51Z:failure:failure:push",
+      "time": "2026-11-24T15:45:51Z",
+      "kind": "failure",
+      "webcode": null,
+      "storeId": null,
+      "title": "expert-checker: push failed",
+      "text": "3 pushes in a row failed; the app shows old data. Check the PAT (expiry) and the network. Last error:  the remote contains work that you do not\nhint: have locally. This is usually caused by another repository pushing to\nhint: the same ref. If you want to integrate the remote changes, use\nhint: 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.",
+      "url": null,
+      "sent": true
+    }
+  ],
   "state": {
     "cooldowns": {},
     "prices": {
@@ -9,7 +21,7 @@
         "storeId": "e_2879130",
         "distanceKm": null,
         "unknown": false,
-        "scan": "2026-11-24T15:45:51Z"
+        "scan": "2026-11-24T17:42:40Z"
       },
       "11128378730": {
         "total": 3278.9,
@@ -17,7 +29,7 @@
         "storeId": "e_1906881",
         "distanceKm": 391.7,
         "unknown": false,
-        "scan": "2026-11-24T15:45:51Z"
+        "scan": "2026-11-24T17:42:40Z"
       },
       "11128379730": {
         "total": 3578.9,
@@ -25,7 +37,7 @@
         "storeId": "e_1906876",
         "distanceKm": 411.2,
         "unknown": false,
-        "scan": "2026-11-24T15:45:51Z"
+        "scan": "2026-11-24T17:42:40Z"
       }
     },
     "target": {},
