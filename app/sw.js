@@ -1,6 +1,6 @@
 /* expert-checker service worker: the app shell is cached (offline start), data files are network-first
    with the last copy as the fallback, product images from cdn.expert.de are cached on first load. */
-const VERSION = "2026-11-24.1";
+const VERSION = "2026-11-24.2";
 const SHELL = `shell-${VERSION}`, DATA = "data-v1", IMG = "img-v1";
 const SHELL_FILES = ["./", "./index.html", "./app.css", "./app.js", "./manifest.webmanifest", "./icon.svg", "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png"];
 const SCOPE = new URL("./", self.location.href).pathname;
@@ -24,7 +24,7 @@ self.addEventListener("fetch", e => {
   if (url.origin === self.location.origin && (url.pathname.includes("/data/") || url.pathname.includes("/config/"))) {
     // scanner output: network first, cached copy when offline
     const key = url.origin + url.pathname;
-    e.respondWith(fetch(req).then(res => { if (res.ok) caches.open(DATA).then(c => c.put(key, res.clone())); return res; })
+    e.respondWith(fetch(req).then(res => { if (res.ok) { const copy = res.clone(); caches.open(DATA).then(c => c.put(key, copy)); } return res; })
       .catch(() => caches.open(DATA).then(c => c.match(key)).then(hit => hit || new Response("{}", { status: 503, headers: { "Content-Type": "application/json" } }))));
     return;
   }

@@ -40,6 +40,8 @@ svg.i{width:1em;height:1em;flex:none;stroke:currentColor;fill:none;stroke-width:
 .muted{color:var(--muted)} .small{font-size:12.5px}
 [hidden]{display:none !important}
 .thumb{display:block;background:#fff;border-radius:8px;object-fit:contain;padding:3px}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .thumb{background:#f3f4f6} }
+:root[data-theme="dark"] .thumb{background:#f3f4f6}
 img.thumb{width:100%}
 div.thumb{background:var(--card-2)}
 

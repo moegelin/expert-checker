@@ -37,6 +37,8 @@ Legend: **in** = version 1, **out** = version 2 or later, **✗** = not planned.
 
 ## M2 — PWA v1
 
+Built 2026-11-24 (plan.md §6, "M2 scope"): https://moegelin.github.io/expert-checker/app/
+
 | Feature | v1 | Notes |
 |---|---|---|
 | Screen 1 (Beobachten): one card per product; head with image, name, subtitle (no price); receipt rows: cheapest path first (place, distance, stock, Aussteller/Restposten badge, "kein Cashback" or "ohne Cashback"), cashback deduction, total "Dein Preis inkl. Cashback", the other path with "mit Cashback", set deal "nicht im Preis"; footer with 30-day sparkline, movement and verdict; "Mehr" expands stores within the radius, the three cheapest shippers and all promotions including Zugaben | in | prototype/b2.html (design B2, 2026-11-22) |
@@ -44,14 +46,14 @@ Legend: **in** = version 1, **out** = version 2 or later, **✗** = not planned.
 | Green = lowest effective price of the last 30 days and at least 3 % under the 30-day high; otherwise black with "X € über dem 30-Tage-Tief" | in | DESIGN.md, Colors |
 | Screen 2 (Produkt): hero image, receipt rows and trend, cashback explanation; then Aktionen directly under the price (cashback offer card, set deals, Zugaben); then alert mode (every drop / new 30-day low / target) with an optional target, the 30-day chart (Versand and Abholung lines, target line only when set); stores within the radius as separate cards with postcode, street, stock, display badge, "ohne Cashback" label, "mit Cashback" net line, link to the store's product page (`?branch_id`) and a copy-postcode button; Online-Shop card with explanation; further shippers collapsed behind "n weitere Versender" | in | prototype/b2.html |
 | Icon of the Aktionen lines in the expanded area aligned to the first text line (reviewer saw it centred) | in | review 2026-11-22 |
-| Cashback tab | open | the user doubts the tab; see requirements.md, open question 9 |
+| Cashback tab | open | the user doubts the tab; see requirements.md, open question 9. Not in the app of 2026-11-24 (two tabs: Beobachten, Einstellungen); decided at the start of M4 |
 | Filter in product detail: shipped / pickup / within radius / show display items | in | |
 | UI in German | in | decided 2026-11-21 |
-| Product images from cdn.expert.de, URL stored by the scanner | in | |
+| Product images from cdn.expert.de, URL stored by the scanner | in | verified 2026-11-24: the CDN serves to the browser, images stay linked |
 | Add product by pasting the URL | in | writes config through the GitHub API when a token is stored; otherwise shows the JSON to paste on GitHub; the next run (at most 2 h later) scans it |
-| Settings: postcode, radius, target prices, ntfy topic name (display only), GitHub token | in | token in `localStorage`, never in the repo |
+| Settings: postcode, radius, target prices, ntfy topic name (display only), GitHub token | in | token in `localStorage`, never in the repo. Built 2026-11-24: postcode with geocoding, radius, scanner status, token check; target prices live on the product page; the ntfy topic is not shown (it is a secret on the phone, the app only names the channel) |
 | "Scan now" button | out | dropped 2026-11-23: no Actions; a manual run is `phone/run.sh manual` in Termux, a Termux:Widget shortcut is M5 |
-| Home-screen install (manifest, icons, offline shell) | in | data needs network |
+| Home-screen install (manifest, icons, offline shell) | in | data needs network; built 2026-11-24: `sw.js` caches the shell and the last data copy, images from `cdn.expert.de` on first load |
 | Last-scan age (from `data/status.json`) with warning when older than 4 h | in | runs every 2 h |
 | Alert inbox (list of `data/alerts.json`) | out | M5 |
 | Price history sparkline | out | M5 |
