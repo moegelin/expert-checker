@@ -12,9 +12,9 @@
   "alertMode": "every",
   "watchSets": true,
   "role": "watch",
-  "lastScan": "2026-11-24T13:46:19Z",
+  "lastScan": "2026-11-24T15:45:51Z",
   "scan": {
-    "time": "2026-11-24T13:46:19Z",
+    "time": "2026-11-24T15:45:51Z",
     "stores": 349,
     "withOffer": 96,
     "failed": 0,
@@ -53,8 +53,8 @@
       "totalPickup": null,
       "distanceKm": 198.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:07Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:46:56Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_13068215",
@@ -69,8 +69,8 @@
       "totalPickup": null,
       "distanceKm": 199.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:07Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:46:56Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_14756051",
@@ -85,8 +85,8 @@
       "totalPickup": null,
       "distanceKm": 479.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:07Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:46:57Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_14756052",
@@ -101,8 +101,8 @@
       "totalPickup": null,
       "distanceKm": 319.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:08Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:46:57Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_15090077",
@@ -117,8 +117,8 @@
       "totalPickup": null,
       "distanceKm": 424.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:08Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:46:57Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_15305380",
@@ -133,8 +133,8 @@
       "totalPickup": null,
       "distanceKm": 324.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:08Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:00Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_18323570",
@@ -149,8 +149,8 @@
       "totalPickup": null,
       "distanceKm": 467.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:09Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:46:58Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1906845",
@@ -165,8 +165,8 @@
       "totalPickup": null,
       "distanceKm": 232.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:10Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:46:59Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1906846",
@@ -181,8 +181,8 @@
       "totalPickup": null,
       "distanceKm": 324.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:10Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:46:59Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1906876",
@@ -197,8 +197,8 @@
       "totalPickup": null,
       "distanceKm": 411.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:11Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:00Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1906888",
@@ -213,8 +213,8 @@
       "totalPickup": null,
       "distanceKm": 411.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:12Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:01Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1906924",
@@ -229,8 +229,8 @@
       "totalPickup": null,
       "distanceKm": 405.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:12Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:02Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1906930",
@@ -245,8 +245,8 @@
       "totalPickup": null,
       "distanceKm": 479.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:13Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:02Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1906978",
@@ -261,8 +261,8 @@
       "totalPickup": null,
       "distanceKm": 487.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:15Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:04Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907031",
@@ -277,8 +277,8 @@
       "totalPickup": null,
       "distanceKm": 483.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:15Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:04Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907032",
@@ -293,24 +293,24 @@
       "totalPickup": null,
       "distanceKm": 384.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:15Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:04Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907034",
       "price": 3999,
       "shipping": 0,
-      "codeDiscount": 0,
-      "codeTitle": null,
+      "codeDiscount": 10,
+      "codeTitle": "THEINER-Bonus",
       "onlineStock": 1,
       "storeStock": 1,
       "displayType": "Aussteller",
-      "totalShipped": 3999,
+      "totalShipped": 3989,
       "totalPickup": null,
       "distanceKm": 456.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:15Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:04Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907035",
@@ -325,8 +325,8 @@
       "totalPickup": null,
       "distanceKm": 384.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:16Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:05Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907073",
@@ -341,8 +341,8 @@
       "totalPickup": null,
       "distanceKm": 320.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:17Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:06Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907082",
@@ -357,8 +357,8 @@
       "totalPickup": null,
       "distanceKm": 395.9,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:17Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:06Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907154",
@@ -373,8 +373,8 @@
       "totalPickup": null,
       "distanceKm": 590.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:18Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:10Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907179",
@@ -389,8 +389,8 @@
       "totalPickup": null,
       "distanceKm": 231.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:19Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:11Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907185",
@@ -405,8 +405,8 @@
       "totalPickup": null,
       "distanceKm": 486.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:19Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:11Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907216",
@@ -421,8 +421,8 @@
       "totalPickup": null,
       "distanceKm": 301.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:20Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:11Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907281",
@@ -437,8 +437,8 @@
       "totalPickup": null,
       "distanceKm": 282.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:22Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:13Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907286",
@@ -453,8 +453,8 @@
       "totalPickup": null,
       "distanceKm": 230.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:22Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:13Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907303",
@@ -469,8 +469,8 @@
       "totalPickup": null,
       "distanceKm": 250.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:23Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:13Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907324",
@@ -485,8 +485,8 @@
       "totalPickup": null,
       "distanceKm": 482.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:28Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:14Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907367",
@@ -501,8 +501,8 @@
       "totalPickup": null,
       "distanceKm": 533.9,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:25Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:16Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907398",
@@ -517,8 +517,8 @@
       "totalPickup": null,
       "distanceKm": 298.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:26Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:21Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907418",
@@ -533,8 +533,8 @@
       "totalPickup": null,
       "distanceKm": 380.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:26Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:18Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907423",
@@ -549,24 +549,24 @@
       "totalPickup": null,
       "distanceKm": 480.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:26Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:20Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907438",
-      "price": 3999,
+      "price": 3979,
       "shipping": 79.9,
       "codeDiscount": 0,
       "codeTitle": null,
       "onlineStock": 1,
       "storeStock": 1,
       "displayType": null,
-      "totalShipped": 4078.9,
+      "totalShipped": 4058.9,
       "totalPickup": null,
       "distanceKm": 682.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:27Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:24Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907468",
@@ -581,8 +581,8 @@
       "totalPickup": null,
       "distanceKm": 288.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:28Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:26Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907554",
@@ -597,8 +597,8 @@
       "totalPickup": null,
       "distanceKm": 393.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:30Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:27Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907577",
@@ -613,8 +613,8 @@
       "totalPickup": null,
       "distanceKm": 563.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:30Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:27Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_1907584",
@@ -629,8 +629,8 @@
       "totalPickup": null,
       "distanceKm": 581.9,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:30Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:28Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_20575054",
@@ -645,8 +645,8 @@
       "totalPickup": null,
       "distanceKm": 509.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:31Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:29Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_2126219",
@@ -661,8 +661,8 @@
       "totalPickup": null,
       "distanceKm": 439.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:31Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:29Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_2144945",
@@ -677,8 +677,8 @@
       "totalPickup": null,
       "distanceKm": 606.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:34Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:29Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_21476261",
@@ -693,8 +693,8 @@
       "totalPickup": null,
       "distanceKm": 309.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:31Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:29Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_21476262",
@@ -709,8 +709,8 @@
       "totalPickup": null,
       "distanceKm": 337.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:32Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:30Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_21476263",
@@ -725,8 +725,8 @@
       "totalPickup": null,
       "distanceKm": 291.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:32Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:29Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_2150035",
@@ -741,8 +741,8 @@
       "totalPickup": null,
       "distanceKm": 571.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:32Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:30Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_2268016",
@@ -757,8 +757,8 @@
       "totalPickup": null,
       "distanceKm": 529.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:34Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:33Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_2268075",
@@ -773,8 +773,8 @@
       "totalPickup": null,
       "distanceKm": 575.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:34Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:34Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_2268081",
@@ -789,8 +789,8 @@
       "totalPickup": null,
       "distanceKm": 211.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:34Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:31Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_24135176",
@@ -805,8 +805,8 @@
       "totalPickup": null,
       "distanceKm": 485.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:35Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:31Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_25401148",
@@ -821,8 +821,8 @@
       "totalPickup": null,
       "distanceKm": 309.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:36Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:32Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_25401149",
@@ -837,8 +837,8 @@
       "totalPickup": null,
       "distanceKm": 264.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:36Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:32Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_2552963",
@@ -853,8 +853,8 @@
       "totalPickup": null,
       "distanceKm": 480.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:36Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:32Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_25731520",
@@ -869,8 +869,8 @@
       "totalPickup": null,
       "distanceKm": 471.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:36Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:33Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_25910829",
@@ -885,8 +885,8 @@
       "totalPickup": null,
       "distanceKm": 156.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:36Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:33Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_25910830",
@@ -901,8 +901,8 @@
       "totalPickup": null,
       "distanceKm": 125.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:36Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:33Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_26344894",
@@ -917,8 +917,8 @@
       "totalPickup": null,
       "distanceKm": 500.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:37Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:33Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_26647453",
@@ -933,8 +933,8 @@
       "totalPickup": null,
       "distanceKm": 225.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:37Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:33Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_26802905",
@@ -949,8 +949,8 @@
       "totalPickup": null,
       "distanceKm": 671.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:37Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:36Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_27284126",
@@ -965,8 +965,8 @@
       "totalPickup": null,
       "distanceKm": 360.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:37Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:33Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_2739145",
@@ -981,8 +981,8 @@
       "totalPickup": null,
       "distanceKm": 248.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:38Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:34Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_27509128",
@@ -997,8 +997,8 @@
       "totalPickup": null,
       "distanceKm": 537.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:38Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:34Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_2879130",
@@ -1013,8 +1013,8 @@
       "totalPickup": null,
       "distanceKm": null,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:52Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:48Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_29487094",
@@ -1029,8 +1029,8 @@
       "totalPickup": null,
       "distanceKm": 496.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:42Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:35Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_29932478",
@@ -1045,8 +1045,8 @@
       "totalPickup": null,
       "distanceKm": 500.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:39Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:35Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_29932479",
@@ -1061,8 +1061,8 @@
       "totalPickup": null,
       "distanceKm": 533.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:40Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:36Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_30481005",
@@ -1077,8 +1077,8 @@
       "totalPickup": null,
       "distanceKm": 216.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:39Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:36Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_30553851",
@@ -1093,8 +1093,8 @@
       "totalPickup": null,
       "distanceKm": 405.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:41Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:39Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_30553854",
@@ -1109,8 +1109,8 @@
       "totalPickup": null,
       "distanceKm": 402.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:40Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:40Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_30725279",
@@ -1125,8 +1125,8 @@
       "totalPickup": null,
       "distanceKm": 474.9,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:43Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:37Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_31826556",
@@ -1141,8 +1141,8 @@
       "totalPickup": null,
       "distanceKm": 382.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:44Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:37Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_31826557",
@@ -1157,8 +1157,8 @@
       "totalPickup": null,
       "distanceKm": 408.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:44Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:38Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_31952340",
@@ -1173,8 +1173,8 @@
       "totalPickup": null,
       "distanceKm": 272.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:44Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:38Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_31952341",
@@ -1189,8 +1189,8 @@
       "totalPickup": null,
       "distanceKm": 254.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:45Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:38Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_32667526",
@@ -1205,8 +1205,8 @@
       "totalPickup": null,
       "distanceKm": 526.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:45Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:40Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_33858322",
@@ -1221,8 +1221,8 @@
       "totalPickup": null,
       "distanceKm": 574.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:44Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:40Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_33961708",
@@ -1237,8 +1237,8 @@
       "totalPickup": null,
       "distanceKm": 151.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:45Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:40Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_33961709",
@@ -1253,8 +1253,8 @@
       "totalPickup": null,
       "distanceKm": 174.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:45Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:40Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_36242297",
@@ -1269,8 +1269,8 @@
       "totalPickup": null,
       "distanceKm": 477.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:49Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:43Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_36696318",
@@ -1285,8 +1285,8 @@
       "totalPickup": null,
       "distanceKm": 679.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:47Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:43Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_36986843",
@@ -1301,8 +1301,8 @@
       "totalPickup": null,
       "distanceKm": 329.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:48Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:44Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_36986844",
@@ -1317,8 +1317,8 @@
       "totalPickup": null,
       "distanceKm": 345.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:48Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:44Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_38226027",
@@ -1333,8 +1333,8 @@
       "totalPickup": null,
       "distanceKm": 193.9,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:48Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:45Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_38877254",
@@ -1349,8 +1349,8 @@
       "totalPickup": null,
       "distanceKm": 246.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:48Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:45Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_38877255",
@@ -1365,8 +1365,8 @@
       "totalPickup": null,
       "distanceKm": 283.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:49Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:45Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_38877256",
@@ -1381,8 +1381,8 @@
       "totalPickup": null,
       "distanceKm": 203.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:51Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:48Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_38998105",
@@ -1397,8 +1397,8 @@
       "totalPickup": null,
       "distanceKm": 366.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:49Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:46Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_39800614",
@@ -1413,8 +1413,8 @@
       "totalPickup": null,
       "distanceKm": 484.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:49Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:45Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_40239259",
@@ -1429,8 +1429,8 @@
       "totalPickup": null,
       "distanceKm": 353.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:49Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:46Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_40239262",
@@ -1445,8 +1445,8 @@
       "totalPickup": null,
       "distanceKm": 347.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:52Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:46Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_40757250",
@@ -1461,8 +1461,8 @@
       "totalPickup": null,
       "distanceKm": 581.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:52Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:46Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_40757251",
@@ -1477,8 +1477,8 @@
       "totalPickup": null,
       "distanceKm": 598.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:50Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:46Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_40847599",
@@ -1493,8 +1493,8 @@
       "totalPickup": null,
       "distanceKm": 214.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:50Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:47Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_40886826",
@@ -1509,8 +1509,8 @@
       "totalPickup": null,
       "distanceKm": 340.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:50Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:47Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_40983883",
@@ -1525,8 +1525,8 @@
       "totalPickup": null,
       "distanceKm": 354.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:51Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:47Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_40986695",
@@ -1541,8 +1541,8 @@
       "totalPickup": null,
       "distanceKm": 571.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:51Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:48Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_41192084",
@@ -1557,8 +1557,8 @@
       "totalPickup": null,
       "distanceKm": 234.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:52Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:48Z",
+      "seen": "2026-11-24T15:45:51Z"
     },
     {
       "storeId": "e_8956393",
@@ -1573,8 +1573,8 @@
       "totalPickup": null,
       "distanceKm": 482.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-24T13:52:52Z",
-      "seen": "2026-11-24T13:46:19Z"
+      "cachedOn": "2026-11-24T15:47:48Z",
+      "seen": "2026-11-24T15:45:51Z"
     }
   ],
   "history": [

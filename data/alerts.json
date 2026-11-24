@@ -9,7 +9,7 @@
         "storeId": "e_2879130",
         "distanceKm": null,
         "unknown": false,
-        "scan": "2026-11-24T13:46:19Z"
+        "scan": "2026-11-24T15:45:51Z"
       },
       "11128378730": {
         "total": 3278.9,
@@ -17,7 +17,7 @@
         "storeId": "e_1906881",
         "distanceKm": 391.7,
         "unknown": false,
-        "scan": "2026-11-24T13:46:19Z"
+        "scan": "2026-11-24T15:45:51Z"
       },
       "11128379730": {
         "total": 3578.9,
@@ -25,7 +25,7 @@
         "storeId": "e_1906876",
         "distanceKm": 411.2,
         "unknown": false,
-        "scan": "2026-11-24T13:46:19Z"
+        "scan": "2026-11-24T15:45:51Z"
       }
     },
     "target": {},
