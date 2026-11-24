@@ -72,16 +72,16 @@ if [ -n "$HEALTHCHECKS_URL" ]; then
   fi
 fi
 
+# Local Termux notifications only as the ntfy fallback (2026-11-24): after a crash, and after an aborted
+# run whose N7 could not be sent (no topic, or the status line says "ntfy failed"). Clean and degraded
+# runs post nothing here: the log, the push age on GitHub and healthchecks cover them.
 if [ "$kind" = failed ]; then
   python3 -m scanner notify --title "expert-checker: scan crashed ($network, exit $rc)" \
     --message "$now · $status" --tags rotating_light --priority high >/dev/null 2>&1 \
   || termux-notification --id expert-scan-failed --priority high --sound \
        --title "expert-checker: scan crashed ($network, exit $rc)" --content "$now · $status"
-elif [ "$kind" = aborted ]; then
-  termux-notification --id expert-scan-failed --priority high \
+elif [ "$kind" = aborted ] && { [ -z "$NTFY_TOPIC" ] || printf '%s' "$status" | grep -q "ntfy failed"; }; then
+  termux-notification --id expert-scan-failed --priority high --sound \
     --title "expert-checker: scan aborted ($network)" --content "$now · $status"
-else
-  termux-notification --id expert-scan --alert-once --title "expert-checker: scan $kind ($network)" \
-    --content "$now · $status"
 fi
 exit "$rc"
