@@ -1,13 +1,11 @@
 {
-  "lastRun": "2026-11-24T17:42:40Z",
-  "berlinTime": "2026-11-24 18:42",
-  "event": "schedule",
+  "lastRun": "2026-11-24T17:58:58Z",
+  "berlinTime": "2026-11-24 18:58",
+  "event": "manual",
   "network": "wifi",
   "runner": "termux",
   "aborted": null,
-  "warnings": [
-    "pull failed: error: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them."
-  ],
+  "warnings": [],
   "steps": {
     "stores": {
       "lastAttempt": "2026-11-24T09:43:19Z",
@@ -20,22 +18,56 @@
       "calls": 1
     },
     "prices": {
-      "lastAttempt": "2026-11-24T17:42:40Z",
+      "lastAttempt": "2026-11-24T17:58:58Z",
       "ok": true,
       "error": null,
-      "products": 3,
-      "withOffer": 234,
-      "unknown": 0,
+      "products": 2,
+      "withOffer": 137,
+      "unknown": 1,
       "incomplete": [],
       "articleErrors": {},
-      "lastRun": "2026-11-24T17:42:40Z",
-      "calls": 1047
+      "lastRun": "2026-11-24T17:58:58Z",
+      "calls": 698
+    },
+    "sets": {
+      "lastAttempt": "2026-11-24T17:58:58Z",
+      "ok": true,
+      "error": null,
+      "products": 2,
+      "stores": 138,
+      "sets": 95,
+      "failed": 0,
+      "skipped": [],
+      "lastRun": "2026-11-24T17:58:58Z",
+      "calls": 138
+    },
+    "cashback": {
+      "lastAttempt": "2026-11-24T17:58:58Z",
+      "ok": true,
+      "error": null,
+      "indexed": 83,
+      "kept": 6,
+      "cashbacks": 2,
+      "extras": 3,
+      "devices": 12,
+      "articleLookups": 12,
+      "priceLookups": 12,
+      "warnings": [],
+      "lastRun": "2026-11-24T17:58:58Z",
+      "calls": 25
     }
   },
   "skipped": [
     "stores"
   ],
-  "calls": 1047,
-  "alerts": [],
-  "durationS": 80.1
+  "calls": 861,
+  "alerts": [
+    "2026-11-24T17:58:58Z:set:11128378730:e_2879130",
+    "2026-11-24T17:58:58Z:cashback",
+    "2026-11-24T17:58:58Z:cashback",
+    "2026-11-24T17:58:58Z:cashback",
+    "2026-11-24T17:58:58Z:cashback",
+    "2026-11-24T17:58:58Z:cashback"
+  ],
+  "durationS": 49.0
 }

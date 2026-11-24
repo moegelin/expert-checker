@@ -10,6 +10,72 @@
       "text": "3 pushes in a row failed; the app shows old data. Check the PAT (expiry) and the network. Last error:  the remote contains work that you do not\nhint: have locally. This is usually caused by another repository pushing to\nhint: the same ref. If you want to integrate the remote changes, use\nhint: 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.",
       "url": null,
       "sent": true
+    },
+    {
+      "id": "2026-11-24T17:58:58Z:set:11128378730:e_2879130",
+      "time": "2026-11-24T17:58:58Z",
+      "kind": "set",
+      "webcode": "11128378730",
+      "storeId": "e_2879130",
+      "title": "Set deal",
+      "text": "Sony BRAVIA 9 II 65\": set with BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer −100 €, accessory effectively 319 € until 30.11.2026 · Online-Shop",
+      "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128378730-k65xr95m2pb-bravia-9-ii-rgb-led.html?branch_id=e_2879130",
+      "sent": true
+    },
+    {
+      "id": "2026-11-24T17:58:58Z:cashback",
+      "time": "2026-11-24T17:58:58Z",
+      "kind": "cashback",
+      "webcode": null,
+      "storeId": null,
+      "title": "New extra",
+      "text": "New extra: 100 Tage testen (Philips): amount unknown, buy until 2027-03-31, watched: 11128346052",
+      "url": "http://www.ambilight-tv-testen.com",
+      "sent": true
+    },
+    {
+      "id": "2026-11-24T17:58:58Z:cashback",
+      "time": "2026-11-24T17:58:58Z",
+      "kind": "cashback",
+      "webcode": null,
+      "storeId": null,
+      "title": "New extra",
+      "text": "New extra: Inklusive Streaming Content* (Samsung): amount unknown, buy until 2026-12-31",
+      "url": "https://samsung.de/madeforgermany",
+      "sent": true
+    },
+    {
+      "id": "2026-11-24T17:58:58Z:cashback",
+      "time": "2026-11-24T17:58:58Z",
+      "kind": "cashback",
+      "webcode": null,
+      "storeId": null,
+      "title": "New extra",
+      "text": "New extra: Assassin's Creed sichern! (Philips): amount unknown, buy until 2026-12-31, register by 2027-02-14, watched: 11128346052",
+      "url": "http://www.ambilight-bonus.com/",
+      "sent": true
+    },
+    {
+      "id": "2026-11-24T17:58:58Z:cashback",
+      "time": "2026-11-24T17:58:58Z",
+      "kind": "cashback",
+      "webcode": null,
+      "storeId": null,
+      "title": "New cashback",
+      "text": "New cashback: Samsung Cashback (Samsung): 130–250 €, buy until 2026-12-06, register by 2026-12-20",
+      "url": "https://samsung.de/theframeprodeals",
+      "sent": true
+    },
+    {
+      "id": "2026-11-24T17:58:58Z:cashback",
+      "time": "2026-11-24T17:58:58Z",
+      "kind": "cashback",
+      "webcode": null,
+      "storeId": null,
+      "title": "New cashback",
+      "text": "New cashback: Sony Cashback (Sony): 150–500 €, up to 1 000 € with soundbar, buy until 2027-01-10, register by 2027-03-07",
+      "url": "https://www.sony.de/cashback/TVWinter2026",
+      "sent": true
     }
   ],
   "state": {
@@ -21,7 +87,8 @@
         "storeId": "e_2879130",
         "distanceKm": null,
         "unknown": false,
-        "scan": "2026-11-24T17:42:40Z"
+        "cashback": null,
+        "scan": "2026-11-24T17:58:58Z"
       },
       "11128378730": {
         "total": 3278.9,
@@ -29,7 +96,8 @@
         "storeId": "e_1906881",
         "distanceKm": 391.7,
         "unknown": false,
-        "scan": "2026-11-24T17:42:40Z"
+        "cashback": null,
+        "scan": "2026-11-24T17:58:58Z"
       },
       "11128379730": {
         "total": 3578.9,
@@ -41,6 +109,28 @@
       }
     },
     "target": {},
-    "restposten": {}
+    "restposten": {},
+    "sets": {
+      "11128378730:20000083:e_2879130": 100
+    },
+    "cashback": {
+      "e_4066": {
+        "new": "2026-11-24T17:58:58Z"
+      },
+      "e_4093": {
+        "new": "2026-11-24T17:58:58Z"
+      },
+      "e_4203": {
+        "new": "2026-11-24T17:58:58Z"
+      },
+      "e_4288": {
+        "new": "2026-11-24T17:58:58Z",
+        "amounts": "2026-11-24T17:58:58Z"
+      },
+      "e_4294": {
+        "new": "2026-11-24T17:58:58Z",
+        "amounts": "2026-11-24T17:58:58Z"
+      }
+    }
   }
 }
