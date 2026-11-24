@@ -6,7 +6,12 @@
     "maxDistanceKm": 100,
     "source": "api.zippopotam.us/de/14167"
   },
-  "brands": ["Philips", "Sony", "LG", "Samsung"],
+  "brands": [
+    "Philips",
+    "Sony",
+    "LG",
+    "Samsung"
+  ],
   "notify": {},
   "products": [
     {
@@ -20,13 +25,6 @@
     {
       "webcode": "11128378730",
       "label": "Sony BRAVIA 9 II 65\"",
-      "targetPrice": null,
-      "alertMode": "every",
-      "watchSets": true
-    },
-    {
-      "webcode": "11128379730",
-      "label": "Sony BRAVIA 9 II 75\"",
       "targetPrice": null,
       "alertMode": "every",
       "watchSets": true
