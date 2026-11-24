@@ -1,12 +1,13 @@
 /* expert-checker service worker: the app shell is cached (offline start), data files are network-first
    with the last copy as the fallback, product images from cdn.expert.de are cached on first load. */
-const VERSION = "2026-11-24.2";
+const VERSION = "2026-11-24.3";
 const SHELL = `shell-${VERSION}`, DATA = "data-v1", IMG = "img-v1";
 const SHELL_FILES = ["./", "./index.html", "./app.css", "./app.js", "./manifest.webmanifest", "./icon.svg", "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png"];
 const SCOPE = new URL("./", self.location.href).pathname;
 
 self.addEventListener("install", e => {
-  e.waitUntil(caches.open(SHELL).then(c => c.addAll(SHELL_FILES)).then(() => self.skipWaiting()));
+  // cache: "reload" bypasses the HTTP cache (Pages serves max-age=600), so a new worker always gets new files
+  e.waitUntil(caches.open(SHELL).then(c => Promise.all(SHELL_FILES.map(u => fetch(u, { cache: "reload" }).then(r => { if (!r.ok) throw new Error(u + " " + r.status); return c.put(u, r); })))).then(() => self.skipWaiting()));
 });
 self.addEventListener("activate", e => {
   e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k.startsWith("shell-") && k !== SHELL).map(k => caches.delete(k)))).then(() => self.clients.claim()));

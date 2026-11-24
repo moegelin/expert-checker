@@ -4,7 +4,7 @@
    #liste | #p-<webcode> | #einstellungen. */
 "use strict";
 
-const APP_VERSION = "2026-11-24.2";
+const APP_VERSION = "2026-11-24.3";
 const REPO = "moegelin/expert-checker";
 const BRANCH = "main";
 const ROOT = new URL("../", location.href).href;        // repo root on Pages (data/, config/)
