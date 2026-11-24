@@ -195,7 +195,7 @@ class CommandTest(unittest.TestCase):
         self.assertIn("stores FAILED: store finder returned no stores", out.getvalue())
 
     def test_steps_are_registered(self):
-        self.assertEqual(sorted(run.STEPS), ["prices", "stores"])
+        self.assertEqual(sorted(run.STEPS), ["prices", "sets", "stores"])
 
 
 if __name__ == "__main__":

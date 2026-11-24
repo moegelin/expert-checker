@@ -1,0 +1,2568 @@
+{
+"bundles": [
+{
+"id": "20000083",
+"deliveryCost": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+},
+"promotedPrice": {
+"taxValues": [
+{
+"taxRate": 0,
+"taxes": 0
+},
+{
+"taxRate": 0.19,
+"taxes": 604.8
+}
+],
+"net": 3183.2,
+"gross": 3788,
+"currency": "EUR"
+},
+"unPromotedPrice": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 620.77
+}
+],
+"net": 3267.23,
+"gross": 3888,
+"currency": "EUR"
+},
+"onlineButtonAction": "ORDER",
+"validFrom": "01.11.2026",
+"validTo": "30.11.2026",
+"discounts": [
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "67f4f5faf1641d0001d584bd",
+"teaser": "67f4f5faf1641d0001d584bd",
+"title": "Im Set sparen",
+"description": "<p>Sichere Dir jetzt einen Direktabzug in Höhe von 100.00 €.  Kaufe eines der folgenden Aktionsgeräte<ol><li>Sony K-75S39B BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128356730-k-75s39b-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128356730</a>)</li><li>Sony K65XR95M2PB BRAVIA 9 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128378730-k65xr95m2pb-bravia-9-ii-rgb-led.html\" target=\"\" rel=\"\">11128378730</a>)</li><li>Sony K65XR79M2B BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128374730-k65xr79m2b-bravia-7-ii-rgb-led.html\" target=\"\" rel=\"\">11128374730</a>)</li><li>Sony K55S25VM2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128363730-k55s25vm2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11128363730</a>)</li><li>Sony K55XR79M2B BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128373730-k55xr79m2b-bravia-7-ii-rgb-led.html\" target=\"\" rel=\"\">11128373730</a>)</li><li>Sony K75XR95M2PB BRAVIA 9 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128379730-k75xr95m2pb-bravia-9-ii-rgb-led.html\" target=\"\" rel=\"\">11128379730</a>)</li><li>Sony K77A69PB BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128407730-k77a69pb-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11128407730</a>)</li><li>Sony K43XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11124060730-k43xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11124060730</a>)</li><li>Sony K85XR75M2PB BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128376730-k85xr75m2pb-bravia-7-ii-rgb-led.html\" target=\"\" rel=\"\">11128376730</a>)</li><li>Sony K55XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128367730-k55xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128367730</a>)</li><li>Sony K-65XR59B BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128352730-k-65xr59b-bravia-5-mini-led-tv.html\" target=\"\" rel=\"\">11128352730</a>)</li><li>Sony K-55XR84B Bravia 8 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128344730-k-55xr84b-bravia-8-oled-tv.html\" target=\"\" rel=\"\">11128344730</a>)</li><li>Sony K-75XR59PB BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128351730-k-75xr59pb-bravia-5-mini-led-tv.html\" target=\"\" rel=\"\">11128351730</a>)</li><li>Sony K-85S35PB BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128355730-k-85s35pb-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128355730</a>)</li><li>Sony K-65S39B BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128357730-k-65s39b-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128357730</a>)</li><li>Sony K-85XR59BP BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128350730-led-tv.html\" target=\"\" rel=\"\">11128350730</a>)</li><li>Sony K-43S39PB BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11124058730-k43s39bp-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11124058730</a>)</li><li>Sony K-65XR90B Bravia 9 QLED Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128349730-k-65xr90-bravia-9-mini-led-tv.html\" target=\"\" rel=\"\">11128349730</a>)</li><li>Sony K85XR35M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128370730-k85xr35m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128370730</a>)</li><li>Sony K65XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128368730-k65xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128368730</a>)</li><li>Sony K85XR95M2PB BRAVIA 9 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128400730-k85xr95m2pb-bravia-9-ii-rgb-led.html\" target=\"\" rel=\"\">11128400730</a>)</li><li>Sony K50XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128366730-k50xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128366730</a>)</li><li>Sony K-98XR55BP BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128354730-k-98xr55-bravia-5-mini-led-tv.html\" target=\"\" rel=\"\">11128354730</a>)</li><li>Sony K-55XR8M25BP BRAVIA 8 II OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128361730-k-55xr8m25bp-bravia-8-ii-oled-tv.html\" target=\"\" rel=\"\">11128361730</a>)</li><li>Sony K-83A69 BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128408730-k-83a69-bravia-6-oled-tv.html\" target=\"\" rel=\"\">11128408730</a>)</li><li>Sony K50XR79M2PB BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128402730-k50xr79m2pb-bravia-7-ii-true-rgb-tv.html\" target=\"\" rel=\"\">11128402730</a>)</li><li>Sony K65A69PB BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128406730-k65a69pb-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11128406730</a>)</li><li>Sony K-75XR90B Bravia 9 QLED Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128342730-k-75xr90b-bravia-9-qled-mini-led-tv.html\" target=\"\" rel=\"\">11128342730</a>)</li><li>Sony K48A69PB BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11126054730-k48a69pb-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11126054730</a>)</li><li>Sony K-77XR84B Bravia 8 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128343730-k-77xr84b-bravia-8-oled-tv.html\" target=\"\" rel=\"\">11128343730</a>)</li><li>Sony K75XR79M2PB BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128403730-k75xr79m2pb-bravia-7-ii-true-rgb-tv.html\" target=\"\" rel=\"\">11128403730</a>)</li><li>Sony K-65XR84B Bravia 8 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128348730-k-65xr84b-bravia-8-oled-tv.html\" target=\"\" rel=\"\">11128348730</a>)</li><li>Sony K115XR95M2B BRAVIA 9 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128401730-k115xr95m2b-bravia-9-ii-true-rgb-tv.html\" target=\"\" rel=\"\">11128401730</a>)</li><li>Sony K-65XR8M25B BRAVIA 8 II OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128360730-k-65xr8m25b-bravia-8-ii-oled-tv.html\" target=\"\" rel=\"\">11128360730</a>)</li><li>Sony K75S25M2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128365730-k75s25m2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11128365730</a>)</li><li>Sony K65S25VM2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128364730-k65s25vm2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11128364730</a>)</li><li>Sony K75XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128369730-k75xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128369730</a>)</li><li>Sony K-100XR35M2 BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128371730-k-100xr35m2-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128371730</a>)</li><li>Sony K50S25VM2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128362730-k50s25vm2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11128362730</a>)</li><li>Sony K-55XR59B BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128353730-k-55xr59b-bravia-5-mini-led-tv.html\" target=\"\" rel=\"\">11128353730</a>)</li><li>Sony K-55S39B BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128358730-k-55s39b-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128358730</a>)</li><li>Sony K-50S39B BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128359730-k-50s39b-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128359730</a>)</li><li>Sony KD32W804P1 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11120016730-kd32w804p1aep-led-tv.html\" target=\"\" rel=\"\">11120016730</a>)</li><li>Sony K43S25VM2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11124059730-k43s25vm2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11124059730</a>)</li><li>Sony K55A69PB BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128405730-k55a69pb-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11128405730</a>)</li><li>Sony K-85XR90B Bravia 9 QLED Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128341730-k-85xr90b-bravia-9-qled-mini-led-tv.html\" target=\"\" rel=\"\">11128341730</a>)</li><li>Sony K98XR75M2PB BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128404730-k98xr75m2pb-bravia-7-ii-true-rgb-tv.html\" target=\"\" rel=\"\">11128404730</a>)</li></ol>in Kombination mit Sony BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/12220063730-soundbar-mit-subwoofer-htbd60-schwarz.html\" target=\"\" rel=\"\">12220063730</a>) und spare!</p><p>So funktioniert es:</p><ol><li>Lege beide Aktionsgeräte bis zum 30.11.2026 in deinen Warenkorb.</li><li>Ein Direktabzug in Höhe von 100.00 € wird dir anschließend automatisch im Warenkorb abgezogen.</li></ol>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_4205",
+"modificationId": "e_4205_5247726",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": -15.97
+}
+],
+"net": -84.03,
+"gross": -100,
+"currency": "EUR"
+}
+},
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "6a05f718f8def70001410c7d",
+"teaser": "6a05f718f8def70001410c7d",
+"title": "10€ Rabatt mit WERO10",
+"description": "<p>Sichere dir <strong>10 € Rabatt</strong> bei Zahlung mit <strong>WERO</strong> ab einem Mindestbestellwert von 100 €. Einfach den Gutscheincode <strong>WERO10</strong> im Warenkorb eingeben.</p><h3>Wie funktioniert die Wero-Aktion mit 10 € Rabatt?</h3><p>  Im Aktionszeitraum von <strong>20.11 bis 20.12</strong> erhältst Du bei Zahlung mit Wero ab einem Mindestbestellwert von 100 € einen Sofortrabatt von 10 € pro Bestellung.</p><p>  Verwende dafür den Code <strong>WERO10</strong> auf der Warenkorbseite im Bereich „Gutscheincode eingeben“.</p><p><strong>Wichtig:</strong></p><p>  Der Rabatt wird dir sofort angezeigt, realisiert sich aber nur, wenn du deine Bestellung mit <strong>WERO</strong> abschließt.</p><p><strong>Teilnahmebedingungen:</strong></p><p>Rabatt ist nicht gültig mit anderen Zahlarten.</p><p>Nicht kombinierbar mit anderen Aktionen.</p><p><em>*Die Aktion ist befristet bis zum 20.12.2026, gilt nur solange der Vorrat reicht und nur bei online Käufen</em></p>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_7779",
+"modificationId": "e_7779_0",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+},
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "668bb19a2c68da00012a28e6",
+"teaser": "668bb19a2c68da00012a28e6",
+"title": "PayPal 0 % Finanzierung",
+"description": "<p>Sichere dir jetzt die 0 % Finanzierung mit PayPal bei einem Bestellwert von 99 Euro bis zu 5.000 Euro. Nur gültig vom 28.10. - 31.12.2026 für Onlinekäufe (nicht für stationäre Käufe möglich).</p><p>So erhältst du die 0% Finanzierung:*<br>Um PayPal Ratenzahlung nutzen zu können, benötigst du ein deutsches PayPal-Konto, in dem ein Bankkonto als Zahlungsquelle hinterlegt und bestätigt ist. Weitere Informationen findest du bei PayPal: <a href=\"https://www.paypal.de/ratenzahlung\" target=\"\" rel=\"\">https://www.paypal.de/ratenzahlung</a>. Danach gehst du wie folgt vor:</p><ol><li>Lege dein Wunschprodukt im Aktionszeitraum vom 28.10. - 31.12.2026 in den Warenkorb. Klicke im ersten Schritt „Mein Warenkorb“ auf „PayPal Jetzt Kaufen“ oder wähle im vierten Schritt „Zahlungsart auswählen“ PayPal als Zahlungsmittel aus.</li><li>Prüfe, ob PayPal Ratenzahlung in deinem PayPal-Konto als Zahlart angezeigt wird. Falls ja: Auswählen und Angaben prüfen.</li><li>Stimme der Ratenzahlungsvereinbarung, der Datenschutzerklärung und der Kreditwürdigkeitsprüfung zu.</li><li>Sofern zugelassen, beantrage verbindlich die PayPal Ratenzahlung und bestätige abschließend deinen Kauf.</li></ol><ul><li>*Achtung! Kredite können bei Verzug zu Kosten führen.<br>Vorbehaltlich Kreditwürdigkeitsprüfung. Laufzeiten von 3, 6, 12 oder 24 Monaten. Ab 99 € und bis zu 10.000 € Bestellwert (laufzeitabhängig). Im Kampagnenzeitraum vom 28.10.2026 - 31.12.2026 gilt für die Laufzeiten von 3, 6 und 12 Monate gilt ein eff. Jahreszins von 0%, p.a. zu einem festen Sollzinssatz von 0 % p.a. Repräsentatives Beispiel: Nettodarlehensbetrag 1.000 €, Gesamtbetrag 1.000 €, 12 monatliche Raten à 83,33 €, fester Sollzinssatz 0% p.a., eff. Jahreszins 0% p.a. Die Konditionen außerhalb des Kampagnenzeitraums finden Sie hier. Der Kreditgeber ist PayPal (Europe) S.à r.l. et Cie, S.C.A., 22-24 Boulevard Royal, L-2449 Luxembourg. Es gelten die Bedingungen für PayPal Ratenzahlung.</li></ul>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_3157",
+"modificationId": "e_3157_9810",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+}
+],
+"properties": {
+"title": "",
+"description": "11128378730, 12220063730",
+"teaser": null
+},
+"client": "e_2879130",
+"reserve": false,
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 4,
+"maxOnlineDelivery": 7,
+"articles": [
+{
+"id": "e_973660",
+"link": "/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128378730-k65xr95m2pb-bravia-9-ii-rgb-led.html",
+"image": "6a1d92d53a26e400017ef395",
+"isWarranty": false,
+"name": "K65XR95M2PB BRAVIA 9 II True RGB TV",
+"brand": {
+"@class": "de.expert.services.articleImport.api.ExpBrand",
+"id": "e_280",
+"logo": "69663f7df91ef80001ebe133",
+"servicePDFs": {
+"2000": "598082502ab79c00011a4d4b"
+},
+"seoBannerList": null,
+"expId": "280",
+"name": "SONY"
+},
+"articleClassification": {
+"values": {
+"@arrayMap": [
+{
+"key": "6a044fa4dae2e50001ea1808",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Eingetragener Handelsname oder Handelsmarke des Herstellers",
+"value": "Sony Corporation"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1898",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Postanschrift",
+"value": "Da Vincilaan 7-D1, 1930 Zaventem, Belgium"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Kontaktadresse",
+"value": "www.sony.de"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea198b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Modellbezeichnung",
+"value": "K65XR95M2PB.CEI"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea191b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Tuner",
+"value": "HD Triple Tuner: DVB-T/T2, DVB-C, DVB-S/S2"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18d1",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Energieeffizienzklasse",
+"value": "E"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18c9",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Highlights",
+"value": "XR Prozessor (unterstützt durch KI)"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea196f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Vesa-Norm",
+"value": "300 x 300 mm"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1894",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Displaytyp",
+"value": "RGB LED"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1950",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Displaygröße (Zoll/cm)",
+"value": "65 Zoll / 164 cm"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1970",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "HD-Typ",
+"value": "4K Ultra HD"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea192f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Auflösung in Pixel",
+"value": "3840 x 2160 Pixel"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1971",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Bildwiederholungsrate (in Hz)",
+"value": "120 Hz"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18f6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Smart TV",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18e1",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Betriebssystem",
+"value": "Google TV"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1934",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Aufnahmefunktion",
+"value": "USB-Aufnahme"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1847",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Gaming-Funktionen",
+"value": "Auto Game Mode (ALLM)"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18d7",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Sprachsteuerung/Sprachsuche",
+"value": "ja (Google Assistant)"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18fd",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "High Dynamic Range (HDR)",
+"value": "HDR 10, Dolby Vision"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1815",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "HLG (Hybrid Log Gamma)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17de",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "Bildoptimierungssysteme",
+"value": "XR Motion Clarity"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1854",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Tonoptimierung",
+"description": "Dolby/DTS Klangsystem",
+"value": "Dolby Atmos, Dolby Audio"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea195a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "HDMI",
+"value": "4x"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18ac",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "USB",
+"value": "2x"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea184d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Common Interface/ Cl+-Slot (Version)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18a6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Optischer Ausgang/ S/PDIF",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1880",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "WLAN",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1977",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Wifi-Direct",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1911",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "LAN (Ethernet)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1974",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Bluetooth",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1972",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "DLNA",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "NFC",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18da",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Abmessungen (BxHxT) ohne Fuß",
+"value": "ca. 144,5 x 82,6 x 4,3/4,5 cm"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1844",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Abmessungen (BxHxT) mit Fuß",
+"value": "ca. 144,5 x 90,6 x 34,1 cm"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea195f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Gewicht (ohne Fuß / mit Fuß)",
+"value": "26 kg /30,6 kg"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Lieferumfang",
+"value": "Batterien, Bedienungsanleitung, Fernbedienung, Fernbedienung mit Sprachsteuerung, Netzkabel, Schnelleinstellungsanleitung, Tischstandfuß, USB Type-C-Kabel"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1954",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Höhe (mm)",
+"value": "1035"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea192c",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Breite (mm)",
+"value": "1574"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1927",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Tiefe (mm)",
+"value": "194"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18ea",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Gewicht (g)",
+"value": "40000"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea189d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Testergebnisse verfügbar",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea193f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Energieeffizienz",
+"value": "E"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea191e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDR",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17e4",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Empfangsart",
+"value": "Triple Tuner (DVB-C(C2)/T2/S2)"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1856",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Auflösung",
+"value": "4K Ultra HD"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Displaytechnologie",
+"value": "RGB LED"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1896",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Sprachsteuerung/Sprachsuche",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea183d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bildwiederholfrequenz in Hz",
+"value": "100/120"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea181d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDMI 2.1",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Farbe",
+"value": "Schwarz"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17f0",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bildschirmdiagonale in Zoll",
+"value": "65"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17fe",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Aufnahmefunktion",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18a8",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Smart TV",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18b6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyClass",
+"value": "E"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1865",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyRange",
+"value": "A-G"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1834",
+"value": {
+"@class": ".ColorFeatureValue",
+"title": "energyEfficiency",
+"description": "colorCode",
+"value": "0xFABB00"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1903",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "image",
+"value": "6a1d92d43a26e400017ef394"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1913",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "pdf",
+"value": "6a1d90663a26e400017ef2dc"
+}
+}
+]
+}
+},
+"bundle": {
+"selectable": false,
+"selected": true,
+"unsupportedArticles": [],
+"id": "20000083"
+},
+"expPrice": {
+"nettoPrice": 2915.13,
+"bruttoPrice": 3469,
+"taxRate": 0.19,
+"monthly": false,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 4,
+"maxOnlineDelivery": 7,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": null,
+"type": null
+},
+"availableServices": null,
+"shipmentArray": [
+{
+"shipmentType": "WOL",
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": 0.19,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+},
+{
+"id": "e_943283",
+"link": "/shop/unsere-produkte/tv-audio/heimkino/soundbars/12220063730-soundbar-mit-subwoofer-htbd60-schwarz.html",
+"image": "67d15b23ad2dd20001fa3086",
+"isWarranty": false,
+"name": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
+"brand": {
+"@class": "de.expert.services.articleImport.api.ExpBrand",
+"id": "e_280",
+"logo": "69663f7df91ef80001ebe133",
+"servicePDFs": {
+"2000": "598082502ab79c00011a4d4b"
+},
+"seoBannerList": null,
+"expId": "280",
+"name": "SONY"
+},
+"articleClassification": {
+"values": {
+"@arrayMap": [
+{
+"key": "6a044fa4dae2e50001ea1808",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Eingetragener Handelsname oder Handelsmarke des Herstellers",
+"value": "Sony Corporation"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1898",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Postanschrift",
+"value": "Da Vincilaan 7-D1, 1930 Zaventem, Belgium"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Kontaktadresse",
+"value": "www.sony.de"
+}
+},
+{
+"key": "6a051fd5c1cf4b0001130dd1",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Info",
+"description": "Erscheinungsdatum",
+"value": "01.05.2025"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea189d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Testergebnisse verfügbar",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17ec",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Dolby Atmos",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1958",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Externer Subwoofer",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1819",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDMI",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18e8",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bluetooth",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1939",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "WLAN",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1829",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Airplay2",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1828",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "eARC",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Farbe",
+"value": "Schwarz"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1865",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyRange",
+"value": "A-G"
+}
+}
+]
+}
+},
+"bundle": {
+"selectable": true,
+"selected": true,
+"unsupportedArticles": [],
+"id": "20000083"
+},
+"expPrice": {
+"nettoPrice": 352.1,
+"bruttoPrice": 419,
+"taxRate": 0.19,
+"monthly": false,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 1,
+"maxOnlineDelivery": 3,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": null,
+"type": null
+},
+"availableServices": null,
+"shipmentArray": [
+{
+"shipmentType": "PKG",
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": 0.19,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+}
+]
+},
+{
+"id": "91503",
+"deliveryCost": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+},
+"promotedPrice": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 556.26
+},
+{
+"taxRate": 0,
+"taxes": 0
+}
+],
+"net": 2927.73,
+"gross": 3483.99,
+"currency": "EUR"
+},
+"unPromotedPrice": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 556.26
+}
+],
+"net": 2927.73,
+"gross": 3483.99,
+"currency": "EUR"
+},
+"onlineButtonAction": "ORDER",
+"validFrom": "",
+"validTo": "",
+"discounts": [
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "6a05f718f8def70001410c7d",
+"teaser": "6a05f718f8def70001410c7d",
+"title": "10€ Rabatt mit WERO10",
+"description": "<p>Sichere dir <strong>10 € Rabatt</strong> bei Zahlung mit <strong>WERO</strong> ab einem Mindestbestellwert von 100 €. Einfach den Gutscheincode <strong>WERO10</strong> im Warenkorb eingeben.</p><h3>Wie funktioniert die Wero-Aktion mit 10 € Rabatt?</h3><p>  Im Aktionszeitraum von <strong>20.11 bis 20.12</strong> erhältst Du bei Zahlung mit Wero ab einem Mindestbestellwert von 100 € einen Sofortrabatt von 10 € pro Bestellung.</p><p>  Verwende dafür den Code <strong>WERO10</strong> auf der Warenkorbseite im Bereich „Gutscheincode eingeben“.</p><p><strong>Wichtig:</strong></p><p>  Der Rabatt wird dir sofort angezeigt, realisiert sich aber nur, wenn du deine Bestellung mit <strong>WERO</strong> abschließt.</p><p><strong>Teilnahmebedingungen:</strong></p><p>Rabatt ist nicht gültig mit anderen Zahlarten.</p><p>Nicht kombinierbar mit anderen Aktionen.</p><p><em>*Die Aktion ist befristet bis zum 20.12.2026, gilt nur solange der Vorrat reicht und nur bei online Käufen</em></p>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_7779",
+"modificationId": "e_7779_0",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+},
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "668bb19a2c68da00012a28e6",
+"teaser": "668bb19a2c68da00012a28e6",
+"title": "PayPal 0 % Finanzierung",
+"description": "<p>Sichere dir jetzt die 0 % Finanzierung mit PayPal bei einem Bestellwert von 99 Euro bis zu 5.000 Euro. Nur gültig vom 28.10. - 31.12.2026 für Onlinekäufe (nicht für stationäre Käufe möglich).</p><p>So erhältst du die 0% Finanzierung:*<br>Um PayPal Ratenzahlung nutzen zu können, benötigst du ein deutsches PayPal-Konto, in dem ein Bankkonto als Zahlungsquelle hinterlegt und bestätigt ist. Weitere Informationen findest du bei PayPal: <a href=\"https://www.paypal.de/ratenzahlung\" target=\"\" rel=\"\">https://www.paypal.de/ratenzahlung</a>. Danach gehst du wie folgt vor:</p><ol><li>Lege dein Wunschprodukt im Aktionszeitraum vom 28.10. - 31.12.2026 in den Warenkorb. Klicke im ersten Schritt „Mein Warenkorb“ auf „PayPal Jetzt Kaufen“ oder wähle im vierten Schritt „Zahlungsart auswählen“ PayPal als Zahlungsmittel aus.</li><li>Prüfe, ob PayPal Ratenzahlung in deinem PayPal-Konto als Zahlart angezeigt wird. Falls ja: Auswählen und Angaben prüfen.</li><li>Stimme der Ratenzahlungsvereinbarung, der Datenschutzerklärung und der Kreditwürdigkeitsprüfung zu.</li><li>Sofern zugelassen, beantrage verbindlich die PayPal Ratenzahlung und bestätige abschließend deinen Kauf.</li></ol><ul><li>*Achtung! Kredite können bei Verzug zu Kosten führen.<br>Vorbehaltlich Kreditwürdigkeitsprüfung. Laufzeiten von 3, 6, 12 oder 24 Monaten. Ab 99 € und bis zu 10.000 € Bestellwert (laufzeitabhängig). Im Kampagnenzeitraum vom 28.10.2026 - 31.12.2026 gilt für die Laufzeiten von 3, 6 und 12 Monate gilt ein eff. Jahreszins von 0%, p.a. zu einem festen Sollzinssatz von 0 % p.a. Repräsentatives Beispiel: Nettodarlehensbetrag 1.000 €, Gesamtbetrag 1.000 €, 12 monatliche Raten à 83,33 €, fester Sollzinssatz 0% p.a., eff. Jahreszins 0% p.a. Die Konditionen außerhalb des Kampagnenzeitraums finden Sie hier. Der Kreditgeber ist PayPal (Europe) S.à r.l. et Cie, S.C.A., 22-24 Boulevard Royal, L-2449 Luxembourg. Es gelten die Bedingungen für PayPal Ratenzahlung.</li></ul>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_3157",
+"modificationId": "e_3157_9810",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+}
+],
+"properties": {
+"title": "",
+"description": "11128378730, 11190008477",
+"teaser": null
+},
+"client": "e_2879130",
+"reserve": false,
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 4,
+"maxOnlineDelivery": 7,
+"articles": [
+{
+"id": "e_973660",
+"link": "/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128378730-k65xr95m2pb-bravia-9-ii-rgb-led.html",
+"image": "6a1d92d53a26e400017ef395",
+"isWarranty": false,
+"name": "K65XR95M2PB BRAVIA 9 II True RGB TV",
+"brand": {
+"@class": "de.expert.services.articleImport.api.ExpBrand",
+"id": "e_280",
+"logo": "69663f7df91ef80001ebe133",
+"servicePDFs": {
+"2000": "598082502ab79c00011a4d4b"
+},
+"seoBannerList": null,
+"expId": "280",
+"name": "SONY"
+},
+"articleClassification": {
+"values": {
+"@arrayMap": [
+{
+"key": "6a044fa4dae2e50001ea1808",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Eingetragener Handelsname oder Handelsmarke des Herstellers",
+"value": "Sony Corporation"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1898",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Postanschrift",
+"value": "Da Vincilaan 7-D1, 1930 Zaventem, Belgium"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Kontaktadresse",
+"value": "www.sony.de"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea198b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Modellbezeichnung",
+"value": "K65XR95M2PB.CEI"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea191b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Tuner",
+"value": "HD Triple Tuner: DVB-T/T2, DVB-C, DVB-S/S2"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18d1",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Energieeffizienzklasse",
+"value": "E"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18c9",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Highlights",
+"value": "XR Prozessor (unterstützt durch KI)"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea196f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Vesa-Norm",
+"value": "300 x 300 mm"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1894",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Displaytyp",
+"value": "RGB LED"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1950",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Displaygröße (Zoll/cm)",
+"value": "65 Zoll / 164 cm"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1970",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "HD-Typ",
+"value": "4K Ultra HD"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea192f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Auflösung in Pixel",
+"value": "3840 x 2160 Pixel"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1971",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Bildwiederholungsrate (in Hz)",
+"value": "120 Hz"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18f6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Smart TV",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18e1",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Betriebssystem",
+"value": "Google TV"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1934",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Aufnahmefunktion",
+"value": "USB-Aufnahme"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1847",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Gaming-Funktionen",
+"value": "Auto Game Mode (ALLM)"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18d7",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Sprachsteuerung/Sprachsuche",
+"value": "ja (Google Assistant)"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18fd",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "High Dynamic Range (HDR)",
+"value": "HDR 10, Dolby Vision"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1815",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "HLG (Hybrid Log Gamma)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17de",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "Bildoptimierungssysteme",
+"value": "XR Motion Clarity"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1854",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Tonoptimierung",
+"description": "Dolby/DTS Klangsystem",
+"value": "Dolby Atmos, Dolby Audio"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea195a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "HDMI",
+"value": "4x"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18ac",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "USB",
+"value": "2x"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea184d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Common Interface/ Cl+-Slot (Version)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18a6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Optischer Ausgang/ S/PDIF",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1880",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "WLAN",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1977",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Wifi-Direct",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1911",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "LAN (Ethernet)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1974",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Bluetooth",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1972",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "DLNA",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "NFC",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18da",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Abmessungen (BxHxT) ohne Fuß",
+"value": "ca. 144,5 x 82,6 x 4,3/4,5 cm"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1844",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Abmessungen (BxHxT) mit Fuß",
+"value": "ca. 144,5 x 90,6 x 34,1 cm"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea195f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Gewicht (ohne Fuß / mit Fuß)",
+"value": "26 kg /30,6 kg"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Lieferumfang",
+"value": "Batterien, Bedienungsanleitung, Fernbedienung, Fernbedienung mit Sprachsteuerung, Netzkabel, Schnelleinstellungsanleitung, Tischstandfuß, USB Type-C-Kabel"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1954",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Höhe (mm)",
+"value": "1035"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea192c",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Breite (mm)",
+"value": "1574"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1927",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Tiefe (mm)",
+"value": "194"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18ea",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Gewicht (g)",
+"value": "40000"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea189d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Testergebnisse verfügbar",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea193f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Energieeffizienz",
+"value": "E"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea191e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDR",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17e4",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Empfangsart",
+"value": "Triple Tuner (DVB-C(C2)/T2/S2)"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1856",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Auflösung",
+"value": "4K Ultra HD"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Displaytechnologie",
+"value": "RGB LED"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1896",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Sprachsteuerung/Sprachsuche",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea183d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bildwiederholfrequenz in Hz",
+"value": "100/120"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea181d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDMI 2.1",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Farbe",
+"value": "Schwarz"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17f0",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bildschirmdiagonale in Zoll",
+"value": "65"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17fe",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Aufnahmefunktion",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18a8",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Smart TV",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18b6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyClass",
+"value": "E"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1865",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyRange",
+"value": "A-G"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1834",
+"value": {
+"@class": ".ColorFeatureValue",
+"title": "energyEfficiency",
+"description": "colorCode",
+"value": "0xFABB00"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1903",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "image",
+"value": "6a1d92d43a26e400017ef394"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1913",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "pdf",
+"value": "6a1d90663a26e400017ef2dc"
+}
+}
+]
+}
+},
+"bundle": {
+"selectable": false,
+"selected": true,
+"unsupportedArticles": [],
+"id": "91503"
+},
+"expPrice": {
+"nettoPrice": 2915.13,
+"bruttoPrice": 3469,
+"taxRate": 0.19,
+"monthly": false,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 4,
+"maxOnlineDelivery": 7,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": null,
+"type": null
+},
+"availableServices": null,
+"shipmentArray": [
+{
+"shipmentType": "WOL",
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": 0.19,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+},
+{
+"id": "e_847089",
+"link": "/shop/unsere-produkte/tv-audio/kabel-adapter/hdmi-kabel/11190008477-ultra-high-speed-hdmi-8k.html",
+"image": "61530f86ef918200013d7544",
+"isWarranty": false,
+"name": "Ultra High Speed HDMI 8K 1,5 m, schwarz, Gewebe",
+"brand": {
+"@class": "de.expert.services.articleImport.api.ExpBrand",
+"id": "e_212",
+"logo": "69663d48f91ef80001ebe0f6",
+"servicePDFs": {
+"213": "598082412ab79c00011a4d1b"
+},
+"seoBannerList": null,
+"expId": "212",
+"name": "KENDO"
+},
+"articleClassification": {
+"values": {
+"@arrayMap": [
+{
+"key": "6a044fa4dae2e50001ea1808",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Eingetragener Handelsname oder Handelsmarke des Herstellers",
+"value": "Hama GmbH & Co KG"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1898",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Postanschrift",
+"value": "Dresdner Straße 9, 86652 Monheim"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Kontaktadresse",
+"value": "info.de@hama.com"
+}
+},
+{
+"key": "6a051e9edc724400018cc806",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Anschlussart",
+"value": "HDMI auf HDMI (Ultra Highspeed,eARC)"
+}
+},
+{
+"key": "6a051e9ddc724400018cc4c2",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Länge in Metern",
+"value": "1,5"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1865",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyRange",
+"value": "A-G"
+}
+}
+]
+}
+},
+"bundle": {
+"selectable": true,
+"selected": true,
+"unsupportedArticles": [],
+"id": "91503"
+},
+"expPrice": {
+"nettoPrice": 12.6,
+"bruttoPrice": 14.99,
+"taxRate": 0.19,
+"monthly": false,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 1,
+"maxOnlineDelivery": 3,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": null,
+"type": null
+},
+"availableServices": null,
+"shipmentArray": [
+{
+"shipmentType": "PKG",
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": 0.19,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+}
+]
+},
+{
+"id": "warranty:e_973660",
+"deliveryCost": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+},
+"promotedPrice": {
+"taxValues": [
+{
+"taxRate": 0,
+"taxes": 0
+},
+{
+"taxRate": 0.19,
+"taxes": 553.87
+}
+],
+"net": 2915.13,
+"gross": 3469,
+"currency": "EUR"
+},
+"unPromotedPrice": {
+"taxValues": [
+{
+"taxRate": 0,
+"taxes": 0
+},
+{
+"taxRate": 0.19,
+"taxes": 553.87
+}
+],
+"net": 2915.13,
+"gross": 3469,
+"currency": "EUR"
+},
+"onlineButtonAction": "ORDER",
+"validFrom": "",
+"validTo": "",
+"discounts": [
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "6a05f718f8def70001410c7d",
+"teaser": "6a05f718f8def70001410c7d",
+"title": "10€ Rabatt mit WERO10",
+"description": "<p>Sichere dir <strong>10 € Rabatt</strong> bei Zahlung mit <strong>WERO</strong> ab einem Mindestbestellwert von 100 €. Einfach den Gutscheincode <strong>WERO10</strong> im Warenkorb eingeben.</p><h3>Wie funktioniert die Wero-Aktion mit 10 € Rabatt?</h3><p>  Im Aktionszeitraum von <strong>20.11 bis 20.12</strong> erhältst Du bei Zahlung mit Wero ab einem Mindestbestellwert von 100 € einen Sofortrabatt von 10 € pro Bestellung.</p><p>  Verwende dafür den Code <strong>WERO10</strong> auf der Warenkorbseite im Bereich „Gutscheincode eingeben“.</p><p><strong>Wichtig:</strong></p><p>  Der Rabatt wird dir sofort angezeigt, realisiert sich aber nur, wenn du deine Bestellung mit <strong>WERO</strong> abschließt.</p><p><strong>Teilnahmebedingungen:</strong></p><p>Rabatt ist nicht gültig mit anderen Zahlarten.</p><p>Nicht kombinierbar mit anderen Aktionen.</p><p><em>*Die Aktion ist befristet bis zum 20.12.2026, gilt nur solange der Vorrat reicht und nur bei online Käufen</em></p>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_7779",
+"modificationId": "e_7779_0",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+},
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "668bb19a2c68da00012a28e6",
+"teaser": "668bb19a2c68da00012a28e6",
+"title": "PayPal 0 % Finanzierung",
+"description": "<p>Sichere dir jetzt die 0 % Finanzierung mit PayPal bei einem Bestellwert von 99 Euro bis zu 5.000 Euro. Nur gültig vom 28.10. - 31.12.2026 für Onlinekäufe (nicht für stationäre Käufe möglich).</p><p>So erhältst du die 0% Finanzierung:*<br>Um PayPal Ratenzahlung nutzen zu können, benötigst du ein deutsches PayPal-Konto, in dem ein Bankkonto als Zahlungsquelle hinterlegt und bestätigt ist. Weitere Informationen findest du bei PayPal: <a href=\"https://www.paypal.de/ratenzahlung\" target=\"\" rel=\"\">https://www.paypal.de/ratenzahlung</a>. Danach gehst du wie folgt vor:</p><ol><li>Lege dein Wunschprodukt im Aktionszeitraum vom 28.10. - 31.12.2026 in den Warenkorb. Klicke im ersten Schritt „Mein Warenkorb“ auf „PayPal Jetzt Kaufen“ oder wähle im vierten Schritt „Zahlungsart auswählen“ PayPal als Zahlungsmittel aus.</li><li>Prüfe, ob PayPal Ratenzahlung in deinem PayPal-Konto als Zahlart angezeigt wird. Falls ja: Auswählen und Angaben prüfen.</li><li>Stimme der Ratenzahlungsvereinbarung, der Datenschutzerklärung und der Kreditwürdigkeitsprüfung zu.</li><li>Sofern zugelassen, beantrage verbindlich die PayPal Ratenzahlung und bestätige abschließend deinen Kauf.</li></ol><ul><li>*Achtung! Kredite können bei Verzug zu Kosten führen.<br>Vorbehaltlich Kreditwürdigkeitsprüfung. Laufzeiten von 3, 6, 12 oder 24 Monaten. Ab 99 € und bis zu 10.000 € Bestellwert (laufzeitabhängig). Im Kampagnenzeitraum vom 28.10.2026 - 31.12.2026 gilt für die Laufzeiten von 3, 6 und 12 Monate gilt ein eff. Jahreszins von 0%, p.a. zu einem festen Sollzinssatz von 0 % p.a. Repräsentatives Beispiel: Nettodarlehensbetrag 1.000 €, Gesamtbetrag 1.000 €, 12 monatliche Raten à 83,33 €, fester Sollzinssatz 0% p.a., eff. Jahreszins 0% p.a. Die Konditionen außerhalb des Kampagnenzeitraums finden Sie hier. Der Kreditgeber ist PayPal (Europe) S.à r.l. et Cie, S.C.A., 22-24 Boulevard Royal, L-2449 Luxembourg. Es gelten die Bedingungen für PayPal Ratenzahlung.</li></ul>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_3157",
+"modificationId": "e_3157_9810",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+}
+],
+"properties": {
+"title": "",
+"description": "",
+"teaser": null
+},
+"client": "e_2879130",
+"reserve": false,
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 4,
+"maxOnlineDelivery": 7,
+"articles": [
+{
+"id": "e_973660",
+"link": "/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128378730-k65xr95m2pb-bravia-9-ii-rgb-led.html",
+"image": "6a1d92d53a26e400017ef395",
+"isWarranty": false,
+"name": "K65XR95M2PB BRAVIA 9 II True RGB TV",
+"brand": {
+"@class": "de.expert.services.articleImport.api.ExpBrand",
+"id": "e_280",
+"logo": "69663f7df91ef80001ebe133",
+"servicePDFs": {
+"2000": "598082502ab79c00011a4d4b"
+},
+"seoBannerList": null,
+"expId": "280",
+"name": "SONY"
+},
+"articleClassification": {
+"values": {
+"@arrayMap": [
+{
+"key": "6a044fa4dae2e50001ea1808",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Eingetragener Handelsname oder Handelsmarke des Herstellers",
+"value": "Sony Corporation"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1898",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Postanschrift",
+"value": "Da Vincilaan 7-D1, 1930 Zaventem, Belgium"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Kontaktadresse",
+"value": "www.sony.de"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea198b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Modellbezeichnung",
+"value": "K65XR95M2PB.CEI"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea191b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Tuner",
+"value": "HD Triple Tuner: DVB-T/T2, DVB-C, DVB-S/S2"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18d1",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Energieeffizienzklasse",
+"value": "E"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18c9",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Highlights",
+"value": "XR Prozessor (unterstützt durch KI)"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea196f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Vesa-Norm",
+"value": "300 x 300 mm"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1894",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Displaytyp",
+"value": "RGB LED"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1950",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Displaygröße (Zoll/cm)",
+"value": "65 Zoll / 164 cm"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1970",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "HD-Typ",
+"value": "4K Ultra HD"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea192f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Auflösung in Pixel",
+"value": "3840 x 2160 Pixel"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1971",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Bildwiederholungsrate (in Hz)",
+"value": "120 Hz"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18f6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Smart TV",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18e1",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Betriebssystem",
+"value": "Google TV"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1934",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Aufnahmefunktion",
+"value": "USB-Aufnahme"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1847",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Gaming-Funktionen",
+"value": "Auto Game Mode (ALLM)"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18d7",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Sprachsteuerung/Sprachsuche",
+"value": "ja (Google Assistant)"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18fd",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "High Dynamic Range (HDR)",
+"value": "HDR 10, Dolby Vision"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1815",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "HLG (Hybrid Log Gamma)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17de",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "Bildoptimierungssysteme",
+"value": "XR Motion Clarity"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1854",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Tonoptimierung",
+"description": "Dolby/DTS Klangsystem",
+"value": "Dolby Atmos, Dolby Audio"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea195a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "HDMI",
+"value": "4x"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18ac",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "USB",
+"value": "2x"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea184d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Common Interface/ Cl+-Slot (Version)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18a6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Optischer Ausgang/ S/PDIF",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1880",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "WLAN",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1977",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Wifi-Direct",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1911",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "LAN (Ethernet)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1974",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Bluetooth",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1972",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "DLNA",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "NFC",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18da",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Abmessungen (BxHxT) ohne Fuß",
+"value": "ca. 144,5 x 82,6 x 4,3/4,5 cm"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1844",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Abmessungen (BxHxT) mit Fuß",
+"value": "ca. 144,5 x 90,6 x 34,1 cm"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea195f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Gewicht (ohne Fuß / mit Fuß)",
+"value": "26 kg /30,6 kg"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Lieferumfang",
+"value": "Batterien, Bedienungsanleitung, Fernbedienung, Fernbedienung mit Sprachsteuerung, Netzkabel, Schnelleinstellungsanleitung, Tischstandfuß, USB Type-C-Kabel"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1954",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Höhe (mm)",
+"value": "1035"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea192c",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Breite (mm)",
+"value": "1574"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1927",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Tiefe (mm)",
+"value": "194"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18ea",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Gewicht (g)",
+"value": "40000"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea189d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Testergebnisse verfügbar",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea193f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Energieeffizienz",
+"value": "E"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea191e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDR",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17e4",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Empfangsart",
+"value": "Triple Tuner (DVB-C(C2)/T2/S2)"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1856",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Auflösung",
+"value": "4K Ultra HD"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Displaytechnologie",
+"value": "RGB LED"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1896",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Sprachsteuerung/Sprachsuche",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea183d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bildwiederholfrequenz in Hz",
+"value": "100/120"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea181d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDMI 2.1",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Farbe",
+"value": "Schwarz"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17f0",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bildschirmdiagonale in Zoll",
+"value": "65"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17fe",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Aufnahmefunktion",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18a8",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Smart TV",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18b6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyClass",
+"value": "E"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1865",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyRange",
+"value": "A-G"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1834",
+"value": {
+"@class": ".ColorFeatureValue",
+"title": "energyEfficiency",
+"description": "colorCode",
+"value": "0xFABB00"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1903",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "image",
+"value": "6a1d92d43a26e400017ef394"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1913",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "pdf",
+"value": "6a1d90663a26e400017ef2dc"
+}
+}
+]
+}
+},
+"bundle": {
+"selectable": false,
+"selected": true,
+"unsupportedArticles": null,
+"id": "warranty:e_973660"
+},
+"expPrice": {
+"nettoPrice": 2915.13,
+"bruttoPrice": 3469,
+"taxRate": 0.19,
+"monthly": false,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 4,
+"maxOnlineDelivery": 7,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": null,
+"type": null
+},
+"availableServices": null,
+"shipmentArray": [
+{
+"shipmentType": "WOL",
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": 0.19,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+},
+{
+"id": "warranty:KOMPLETTSCHUTZ_2027",
+"link": null,
+"image": "6578d7dc078346000131d305",
+"isWarranty": true,
+"warranty": {
+"title": "Komplettschutz",
+"description": "Der prämierte WERTGARANTIE Komplettschutz sichert Ihr Gerät gegen verschiedene Arten von Defekten oder Schäden ab. Auch jene, welche gar nicht oder nicht mehr unter die Herstellergarantie oder gesetzliche Gewährleistung fallen. Das sind z.B. folgende Schäden: Displayschaden.",
+"listOfFiles": {
+"list": [
+{
+"fileName": "Allgemeine Versicherungsbedingungen - Komplettschutz",
+"fileUrl": "https://cdn.expert.de/e7/5b/02/4a6d44645b5064d3124c1b2785ed154ce9/EX_NEO_WG_DE_KS_0926_Rechtsdokumente.pdf"
+}
+]
+}
+},
+"name": "8.-€ pro Monat",
+"brand": "Komplettschutz",
+"bundle": {
+"selectable": true,
+"selected": true,
+"unsupportedArticles": [
+"warranty:GERAETESCHUTZ_KOMFORT_3_2021"
+],
+"id": "warranty:e_973660"
+},
+"expPrice": {
+"nettoPrice": 0,
+"bruttoPrice": 8,
+"taxRate": 0,
+"monthly": true,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 0,
+"maxOnlineDelivery": 0,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": "Komplettschutz",
+"type": ""
+},
+"availableServices": [],
+"shipmentArray": [
+{
+"shipmentType": null,
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": null,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+},
+{
+"id": "warranty:GERAETESCHUTZ_KOMFORT_3_2021",
+"link": null,
+"image": "6578d7fb078346000131d30b",
+"isWarranty": true,
+"warranty": {
+"title": "Geräteschutz KOMFORT 3 Jahre",
+"description": "Zusätzlich zu den Leistungen des GeräteschutzBASIS bietet Ihnen der Geräteschutz KOMFORT 3 | 5 vom 1. Tag an die volle Reparaturkosten-Übernahme bei Gerätedefekten, z. B. bei Fall-/Sturzschäden, unsachgemäßer Handhabung oder Wasser-/Feuchtigkeitsschäden sowie ein Ersatzgerät gleicher Art und Güte bei Totalschaden. Außerdem erhalten Sie beim Geräteschutz KOMFORT 3 | 5 zusätzlich bis zu 300 Euro Kostenbeteiligung, z. B. bei Raub/Einbruchdiebstahl oder Folgeschäden durch Gerätedefekt, wie verdorbenem Gefriergut etc.",
+"listOfFiles": {
+"list": [
+{
+"fileName": "Allgemeine Versicherungsbedingungen - Geräteschutz KOMFORT 3 Jahre",
+"fileUrl": "https://cdn.expert.de/8b/d8/65/8f39dc24a6e178383f628ff524c9286a63/EX%20WG%20DE%20GSBK%200122_RECHTSDOKUMENTE.PDF.PDF"
+}
+]
+}
+},
+"name": "229.90€ einmalig",
+"brand": "Geräteschutz KOMFORT 3 Jahre",
+"bundle": {
+"selectable": true,
+"selected": false,
+"unsupportedArticles": [
+"warranty:KOMPLETTSCHUTZ_2027"
+],
+"id": "warranty:e_973660"
+},
+"expPrice": {
+"nettoPrice": 229.9,
+"bruttoPrice": 229.9,
+"taxRate": 0,
+"monthly": false,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 0,
+"maxOnlineDelivery": 0,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": "Geräteschutz KOMFORT 3 Jahre",
+"type": ""
+},
+"availableServices": [],
+"shipmentArray": [
+{
+"shipmentType": null,
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": null,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+}
+]
+}
+],
+"duo": [
+{
+"bundleId": "20000083",
+"article": {
+"articleId": "e_943283",
+"imageId": "67d15b23ad2dd20001fa3086",
+"name": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
+"price": 419,
+"bundlePrice": 319
+},
+"reserve": false
+},
+{
+"bundleId": "91503",
+"article": {
+"articleId": "e_847089",
+"imageId": "61530f86ef918200013d7544",
+"name": "Ultra High Speed HDMI 8K 1,5 m, schwarz, Gewebe",
+"price": 14.99,
+"bundlePrice": null
+},
+"reserve": false
+}
+]
+}

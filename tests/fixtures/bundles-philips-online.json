@@ -1,0 +1,2565 @@
+{
+"bundles": [
+{
+"id": "90378",
+"deliveryCost": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+},
+"promotedPrice": {
+"taxValues": [
+{
+"taxRate": 0,
+"taxes": 0
+},
+{
+"taxRate": 0.19,
+"taxes": 348.7
+}
+],
+"net": 1835.29,
+"gross": 2183.99,
+"currency": "EUR"
+},
+"unPromotedPrice": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 348.7
+}
+],
+"net": 1835.29,
+"gross": 2183.99,
+"currency": "EUR"
+},
+"onlineButtonAction": "ORDER",
+"validFrom": "",
+"validTo": "",
+"discounts": [
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "6a6332f45a32a851323e714c",
+"teaser": "6a6332f45a32a851323e714c",
+"title": "100 Tage testen",
+"description": "<p>Philips Ambilight TV genießen &amp; 100 Tage testen!<br>Überzeuge Dich 100 Tage von den innovativen Smart TVs mit einzigartigem Ambilight.</p><p><b>So funktioniert es:</b></p><ol><li>Kaufe bis zum 31.03.2027 ein teilnehmendes Aktionsgerät.</li><li>Entscheidest Du dich dazu, das Gerät zurückzugeben, musst Du Dich innerhalb von 100 Tagen unter <a href=\"http://www.ambilight-tv-testen.com\" target=\"\" rel=\"\">http://www.ambilight-tv-testen.com</a>.</li><li>Im Anschluss erhältst Du eine Bestätigungsmail mit dem inkludierten Link zum Rücksendeformular.</li><li>Du erhältst nach Rückgabe den Kaufpreis zurück.</li></ol><p>Zu den&nbsp;<a href=\"https://cdn.expert.de/a8/42/cf/570f44e0a78a9f2f8a7265be71025c9665/AL_Trial_Promo_Teilnahmebedingungen_2026_FINAL.pdf.pdf\" target=\"\" rel=\"\">Teilnahmebedingungen</a></p><div><br></div>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_4066",
+"modificationId": "e_4066_3693136",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+},
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "6a05f718f8def70001410c7d",
+"teaser": "6a05f718f8def70001410c7d",
+"title": "10€ Rabatt mit WERO10",
+"description": "<p>Sichere dir <strong>10 € Rabatt</strong> bei Zahlung mit <strong>WERO</strong> ab einem Mindestbestellwert von 100 €. Einfach den Gutscheincode <strong>WERO10</strong> im Warenkorb eingeben.</p><h3>Wie funktioniert die Wero-Aktion mit 10 € Rabatt?</h3><p>  Im Aktionszeitraum von <strong>20.11 bis 20.12</strong> erhältst Du bei Zahlung mit Wero ab einem Mindestbestellwert von 100 € einen Sofortrabatt von 10 € pro Bestellung.</p><p>  Verwende dafür den Code <strong>WERO10</strong> auf der Warenkorbseite im Bereich „Gutscheincode eingeben“.</p><p><strong>Wichtig:</strong></p><p>  Der Rabatt wird dir sofort angezeigt, realisiert sich aber nur, wenn du deine Bestellung mit <strong>WERO</strong> abschließt.</p><p><strong>Teilnahmebedingungen:</strong></p><p>Rabatt ist nicht gültig mit anderen Zahlarten.</p><p>Nicht kombinierbar mit anderen Aktionen.</p><p><em>*Die Aktion ist befristet bis zum 20.12.2026, gilt nur solange der Vorrat reicht und nur bei online Käufen</em></p>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_7779",
+"modificationId": "e_7779_0",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+},
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "668bb19a2c68da00012a28e6",
+"teaser": "668bb19a2c68da00012a28e6",
+"title": "PayPal 0 % Finanzierung",
+"description": "<p>Sichere dir jetzt die 0 % Finanzierung mit PayPal bei einem Bestellwert von 99 Euro bis zu 5.000 Euro. Nur gültig vom 28.10. - 31.12.2026 für Onlinekäufe (nicht für stationäre Käufe möglich).</p><p>So erhältst du die 0% Finanzierung:*<br>Um PayPal Ratenzahlung nutzen zu können, benötigst du ein deutsches PayPal-Konto, in dem ein Bankkonto als Zahlungsquelle hinterlegt und bestätigt ist. Weitere Informationen findest du bei PayPal: <a href=\"https://www.paypal.de/ratenzahlung\" target=\"\" rel=\"\">https://www.paypal.de/ratenzahlung</a>. Danach gehst du wie folgt vor:</p><ol><li>Lege dein Wunschprodukt im Aktionszeitraum vom 28.10. - 31.12.2026 in den Warenkorb. Klicke im ersten Schritt „Mein Warenkorb“ auf „PayPal Jetzt Kaufen“ oder wähle im vierten Schritt „Zahlungsart auswählen“ PayPal als Zahlungsmittel aus.</li><li>Prüfe, ob PayPal Ratenzahlung in deinem PayPal-Konto als Zahlart angezeigt wird. Falls ja: Auswählen und Angaben prüfen.</li><li>Stimme der Ratenzahlungsvereinbarung, der Datenschutzerklärung und der Kreditwürdigkeitsprüfung zu.</li><li>Sofern zugelassen, beantrage verbindlich die PayPal Ratenzahlung und bestätige abschließend deinen Kauf.</li></ol><ul><li>*Achtung! Kredite können bei Verzug zu Kosten führen.<br>Vorbehaltlich Kreditwürdigkeitsprüfung. Laufzeiten von 3, 6, 12 oder 24 Monaten. Ab 99 € und bis zu 10.000 € Bestellwert (laufzeitabhängig). Im Kampagnenzeitraum vom 28.10.2026 - 31.12.2026 gilt für die Laufzeiten von 3, 6 und 12 Monate gilt ein eff. Jahreszins von 0%, p.a. zu einem festen Sollzinssatz von 0 % p.a. Repräsentatives Beispiel: Nettodarlehensbetrag 1.000 €, Gesamtbetrag 1.000 €, 12 monatliche Raten à 83,33 €, fester Sollzinssatz 0% p.a., eff. Jahreszins 0% p.a. Die Konditionen außerhalb des Kampagnenzeitraums finden Sie hier. Der Kreditgeber ist PayPal (Europe) S.à r.l. et Cie, S.C.A., 22-24 Boulevard Royal, L-2449 Luxembourg. Es gelten die Bedingungen für PayPal Ratenzahlung.</li></ul>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_3157",
+"modificationId": "e_3157_9810",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+},
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "6abe595440d46e1e2470e5a3",
+"teaser": "6abe595440d46e1e2470e5a3",
+"title": "Assassin's Creed sichern!",
+"description": "<p>Jetzt Philips Ambilight TV kaufen und Assassin's Creed sichern!</p><p>So funktioniert es:</p><ol><li>Kaufe zwischen dem 01.10. und 31.12.2026 ein teilnehmendes Aktionserät.</li><li>Registriere Dich frühestens 30 Kalendertage nach dem Kaufdatum bis spätestens zum 14.02.2027 unter <a href=\"http://www.ambilight-bonus.com/\" target=\"\" rel=\"\">www.ambilight-bonus.com</a></li><li>Du erhältst den Ubisoft Aktionscode per Email und kannst ihn unter <a href=\"http://www.ambilight-assassins-creed.com/\" target=\"\" rel=\"\">www.ambilight-assassins-creed.com</a> einlösen.</li><li>Mit Deiner erfolgreichen Registrierung nimmst Du automatisch am Gewinnspiel „Kaufpreis zurück“ teil. Während des Aktionszeitraums wird wöchentlich ein Gewinner aus allen bis zum jeweiligen Ziehungsstichtag vollständig registrierten und weiterhin teilnahmeberechtigten Teilnehmern gezogen. Teilnehmer, die nicht gewinnen, nehmen automatisch an den nachfolgenden Wochenziehungen teil.</li></ol><p><a href=\"https://cdn.expert.de/14/2f/81/f8313b9d41d87700ed740cff79413a762f/Teilnahmebedingungen_Philips_TV_Ubisoft_Voucher-Promotion_DACH.pdf.pdf\" target=\"\" rel=\"\" title=\"Link: https://cdn.expert.de/14/2f/81/f8313b9d41d87700ed740cff79413a762f/Teilnahmebedingungen_Philips_TV_Ubisoft_Voucher-Promotion_DACH.pdf.pdf\">Zu den Teilnahmebedingungen</a></p>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_4203",
+"modificationId": "e_4203_5230721",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+}
+],
+"properties": {
+"title": "",
+"description": "11128346052, 11190008477",
+"teaser": null
+},
+"client": "e_2879130",
+"reserve": false,
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 4,
+"maxOnlineDelivery": 7,
+"articles": [
+{
+"id": "e_977673",
+"link": "/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128346052-65oled951-oled-tv.html",
+"image": "6a83118b516e44538f9f2c55",
+"isWarranty": false,
+"name": "65OLED951 OLED TV",
+"brand": {
+"@class": "de.expert.services.articleImport.api.ExpBrand",
+"id": "e_443",
+"logo": "69663f9af91ef80001ebe1a0",
+"servicePDFs": {
+"700": "5980824c2ab79c00011a4d40"
+},
+"seoBannerList": null,
+"name": "Philips",
+"expId": "443"
+},
+"articleClassification": {
+"values": {
+"@arrayMap": [
+{
+"key": "6a044fa4dae2e50001ea1808",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Eingetragener Handelsname oder Handelsmarke des Herstellers",
+"value": "Philips GmbH Market DACH"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1898",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Postanschrift",
+"value": "Röntgenstr. 22, 22335 Hamburg"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Kontaktadresse",
+"value": "https://www.philips.de/c-w/support-home/"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea198b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Modellbezeichnung",
+"value": "65OLED951/12"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea191b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Tuner",
+"value": "HD Triple Tuner: DVB-T2 HD, DVB-C, DVB-S, DVB-S2"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18d1",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Energieeffizienzklasse",
+"value": "G"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18c9",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Highlights",
+"value": "Ambilight"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea196f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Vesa-Norm",
+"value": "300 x 300 mm"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1894",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Displaytyp",
+"value": "OLED"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1950",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Displaygröße (Zoll/cm)",
+"value": "65 Zoll / 164 cm"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1970",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "HD-Typ",
+"value": "4K Ultra HD"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea192f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Auflösung in Pixel",
+"value": "3840 x 2160 Pixel"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1971",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Bildwiederholungsrate (in Hz)",
+"value": "120 Hz"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18f6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Smart TV",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18e1",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Betriebssystem",
+"value": "Titan OS"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18d7",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Sprachsteuerung/Sprachsuche",
+"value": "ja (Google Assistant, Amazon Alexa)"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18fd",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "High Dynamic Range (HDR)",
+"value": "HDR 10, HDR 10+, Dolby Vision"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1815",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "HLG (Hybrid Log Gamma)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17de",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "Bildoptimierungssysteme",
+"value": "Pixel Dimming"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1854",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Tonoptimierung",
+"description": "Dolby/DTS Klangsystem",
+"value": "Dolby Atmos, Dolby Digital, DTS:X"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea195a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "HDMI",
+"value": "4x HDMI 2.1"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18ac",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "USB",
+"value": "2x USB 2.0"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea184d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Common Interface/ Cl+-Slot (Version)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18a6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Optischer Ausgang/ S/PDIF",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1880",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "WLAN",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1977",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Wifi-Direct",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1911",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "LAN (Ethernet)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1974",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Bluetooth",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1972",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "DLNA",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "NFC",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18da",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Abmessungen (BxHxT) ohne Fuß",
+"value": "ca. 145 x 82,9 x 4 cm"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1844",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Abmessungen (BxHxT) mit Fuß",
+"value": "ca. 145 x 84,7 x 29,6 cm"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea195f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Gewicht (ohne Fuß / mit Fuß)",
+"value": "21,2 kg / 21,4 kg"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Lieferumfang",
+"value": "Fernseher, Standfuß, 1x USB-C-Kabel zum Aufladen der Fernbedienung, Kurzanleitung, Fernbedienung, Netzkabel, Broschüre mit Sicherheits- und rechtlichen Hinweisen"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1954",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Höhe (mm)",
+"value": "995"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea192c",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Breite (mm)",
+"value": "1640"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1927",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Tiefe (mm)",
+"value": "160"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea183d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bildwiederholfrequenz in Hz",
+"value": "100/120"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1896",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Sprachsteuerung/Sprachsuche",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea181d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDMI 2.1",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Displaytechnologie",
+"value": "OLED"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea193f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Energieeffizienz",
+"value": "G"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea191e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDR",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Farbe",
+"value": "Schwarz"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17e4",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Empfangsart",
+"value": "Triple Tuner (DVB-C(C2)/T2/S2)"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1856",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Auflösung",
+"value": "4K Ultra HD"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17f0",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bildschirmdiagonale in Zoll",
+"value": "65"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18a8",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Smart TV",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18b6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyClass",
+"value": "G"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1865",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyRange",
+"value": "A-G"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1834",
+"value": {
+"@class": ".ColorFeatureValue",
+"title": "energyEfficiency",
+"description": "colorCode",
+"value": "0xE20019"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1903",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "image",
+"value": "6a83118a516e44538f9f2c53"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1913",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "pdf",
+"value": "6a83118b516e44538f9f2c56"
+}
+}
+]
+}
+},
+"bundle": {
+"selectable": false,
+"selected": true,
+"unsupportedArticles": [],
+"id": "90378"
+},
+"expPrice": {
+"nettoPrice": 1822.69,
+"bruttoPrice": 2169,
+"taxRate": 0.19,
+"monthly": false,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 4,
+"maxOnlineDelivery": 7,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": null,
+"type": null
+},
+"availableServices": null,
+"shipmentArray": [
+{
+"shipmentType": "WOL",
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": 0.19,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+},
+{
+"id": "e_847089",
+"link": "/shop/unsere-produkte/tv-audio/kabel-adapter/hdmi-kabel/11190008477-ultra-high-speed-hdmi-8k.html",
+"image": "61530f86ef918200013d7544",
+"isWarranty": false,
+"name": "Ultra High Speed HDMI 8K 1,5 m, schwarz, Gewebe",
+"brand": {
+"@class": "de.expert.services.articleImport.api.ExpBrand",
+"id": "e_212",
+"logo": "69663d48f91ef80001ebe0f6",
+"servicePDFs": {
+"213": "598082412ab79c00011a4d1b"
+},
+"seoBannerList": null,
+"name": "KENDO",
+"expId": "212"
+},
+"articleClassification": {
+"values": {
+"@arrayMap": [
+{
+"key": "6a044fa4dae2e50001ea1808",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Eingetragener Handelsname oder Handelsmarke des Herstellers",
+"value": "Hama GmbH & Co KG"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1898",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Postanschrift",
+"value": "Dresdner Straße 9, 86652 Monheim"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Kontaktadresse",
+"value": "info.de@hama.com"
+}
+},
+{
+"key": "6a051e9edc724400018cc806",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Anschlussart",
+"value": "HDMI auf HDMI (Ultra Highspeed,eARC)"
+}
+},
+{
+"key": "6a051e9ddc724400018cc4c2",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Länge in Metern",
+"value": "1,5"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1865",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyRange",
+"value": "A-G"
+}
+}
+]
+}
+},
+"bundle": {
+"selectable": true,
+"selected": true,
+"unsupportedArticles": [],
+"id": "90378"
+},
+"expPrice": {
+"nettoPrice": 12.6,
+"bruttoPrice": 14.99,
+"taxRate": 0.19,
+"monthly": false,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 1,
+"maxOnlineDelivery": 3,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": null,
+"type": null
+},
+"availableServices": null,
+"shipmentArray": [
+{
+"shipmentType": "PKG",
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": 0.19,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+}
+]
+},
+{
+"id": "341185",
+"deliveryCost": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+},
+"promotedPrice": {
+"taxValues": [
+{
+"taxRate": 0,
+"taxes": 0
+},
+{
+"taxRate": 0.19,
+"taxes": 386.22
+}
+],
+"net": 2032.77,
+"gross": 2418.99,
+"currency": "EUR"
+},
+"unPromotedPrice": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 386.22
+}
+],
+"net": 2032.77,
+"gross": 2418.99,
+"currency": "EUR"
+},
+"onlineButtonAction": "ORDER",
+"validFrom": "",
+"validTo": "",
+"discounts": [
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "6a6332f45a32a851323e714c",
+"teaser": "6a6332f45a32a851323e714c",
+"title": "100 Tage testen",
+"description": "<p>Philips Ambilight TV genießen &amp; 100 Tage testen!<br>Überzeuge Dich 100 Tage von den innovativen Smart TVs mit einzigartigem Ambilight.</p><p><b>So funktioniert es:</b></p><ol><li>Kaufe bis zum 31.03.2027 ein teilnehmendes Aktionsgerät.</li><li>Entscheidest Du dich dazu, das Gerät zurückzugeben, musst Du Dich innerhalb von 100 Tagen unter <a href=\"http://www.ambilight-tv-testen.com\" target=\"\" rel=\"\">http://www.ambilight-tv-testen.com</a>.</li><li>Im Anschluss erhältst Du eine Bestätigungsmail mit dem inkludierten Link zum Rücksendeformular.</li><li>Du erhältst nach Rückgabe den Kaufpreis zurück.</li></ol><p>Zu den&nbsp;<a href=\"https://cdn.expert.de/a8/42/cf/570f44e0a78a9f2f8a7265be71025c9665/AL_Trial_Promo_Teilnahmebedingungen_2026_FINAL.pdf.pdf\" target=\"\" rel=\"\">Teilnahmebedingungen</a></p><div><br></div>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_4066",
+"modificationId": "e_4066_3693136",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+},
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "6a05f718f8def70001410c7d",
+"teaser": "6a05f718f8def70001410c7d",
+"title": "10€ Rabatt mit WERO10",
+"description": "<p>Sichere dir <strong>10 € Rabatt</strong> bei Zahlung mit <strong>WERO</strong> ab einem Mindestbestellwert von 100 €. Einfach den Gutscheincode <strong>WERO10</strong> im Warenkorb eingeben.</p><h3>Wie funktioniert die Wero-Aktion mit 10 € Rabatt?</h3><p>  Im Aktionszeitraum von <strong>20.11 bis 20.12</strong> erhältst Du bei Zahlung mit Wero ab einem Mindestbestellwert von 100 € einen Sofortrabatt von 10 € pro Bestellung.</p><p>  Verwende dafür den Code <strong>WERO10</strong> auf der Warenkorbseite im Bereich „Gutscheincode eingeben“.</p><p><strong>Wichtig:</strong></p><p>  Der Rabatt wird dir sofort angezeigt, realisiert sich aber nur, wenn du deine Bestellung mit <strong>WERO</strong> abschließt.</p><p><strong>Teilnahmebedingungen:</strong></p><p>Rabatt ist nicht gültig mit anderen Zahlarten.</p><p>Nicht kombinierbar mit anderen Aktionen.</p><p><em>*Die Aktion ist befristet bis zum 20.12.2026, gilt nur solange der Vorrat reicht und nur bei online Käufen</em></p>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_7779",
+"modificationId": "e_7779_0",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+},
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "668bb19a2c68da00012a28e6",
+"teaser": "668bb19a2c68da00012a28e6",
+"title": "PayPal 0 % Finanzierung",
+"description": "<p>Sichere dir jetzt die 0 % Finanzierung mit PayPal bei einem Bestellwert von 99 Euro bis zu 5.000 Euro. Nur gültig vom 28.10. - 31.12.2026 für Onlinekäufe (nicht für stationäre Käufe möglich).</p><p>So erhältst du die 0% Finanzierung:*<br>Um PayPal Ratenzahlung nutzen zu können, benötigst du ein deutsches PayPal-Konto, in dem ein Bankkonto als Zahlungsquelle hinterlegt und bestätigt ist. Weitere Informationen findest du bei PayPal: <a href=\"https://www.paypal.de/ratenzahlung\" target=\"\" rel=\"\">https://www.paypal.de/ratenzahlung</a>. Danach gehst du wie folgt vor:</p><ol><li>Lege dein Wunschprodukt im Aktionszeitraum vom 28.10. - 31.12.2026 in den Warenkorb. Klicke im ersten Schritt „Mein Warenkorb“ auf „PayPal Jetzt Kaufen“ oder wähle im vierten Schritt „Zahlungsart auswählen“ PayPal als Zahlungsmittel aus.</li><li>Prüfe, ob PayPal Ratenzahlung in deinem PayPal-Konto als Zahlart angezeigt wird. Falls ja: Auswählen und Angaben prüfen.</li><li>Stimme der Ratenzahlungsvereinbarung, der Datenschutzerklärung und der Kreditwürdigkeitsprüfung zu.</li><li>Sofern zugelassen, beantrage verbindlich die PayPal Ratenzahlung und bestätige abschließend deinen Kauf.</li></ol><ul><li>*Achtung! Kredite können bei Verzug zu Kosten führen.<br>Vorbehaltlich Kreditwürdigkeitsprüfung. Laufzeiten von 3, 6, 12 oder 24 Monaten. Ab 99 € und bis zu 10.000 € Bestellwert (laufzeitabhängig). Im Kampagnenzeitraum vom 28.10.2026 - 31.12.2026 gilt für die Laufzeiten von 3, 6 und 12 Monate gilt ein eff. Jahreszins von 0%, p.a. zu einem festen Sollzinssatz von 0 % p.a. Repräsentatives Beispiel: Nettodarlehensbetrag 1.000 €, Gesamtbetrag 1.000 €, 12 monatliche Raten à 83,33 €, fester Sollzinssatz 0% p.a., eff. Jahreszins 0% p.a. Die Konditionen außerhalb des Kampagnenzeitraums finden Sie hier. Der Kreditgeber ist PayPal (Europe) S.à r.l. et Cie, S.C.A., 22-24 Boulevard Royal, L-2449 Luxembourg. Es gelten die Bedingungen für PayPal Ratenzahlung.</li></ul>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_3157",
+"modificationId": "e_3157_9810",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+},
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "6abe595440d46e1e2470e5a3",
+"teaser": "6abe595440d46e1e2470e5a3",
+"title": "Assassin's Creed sichern!",
+"description": "<p>Jetzt Philips Ambilight TV kaufen und Assassin's Creed sichern!</p><p>So funktioniert es:</p><ol><li>Kaufe zwischen dem 01.10. und 31.12.2026 ein teilnehmendes Aktionserät.</li><li>Registriere Dich frühestens 30 Kalendertage nach dem Kaufdatum bis spätestens zum 14.02.2027 unter <a href=\"http://www.ambilight-bonus.com/\" target=\"\" rel=\"\">www.ambilight-bonus.com</a></li><li>Du erhältst den Ubisoft Aktionscode per Email und kannst ihn unter <a href=\"http://www.ambilight-assassins-creed.com/\" target=\"\" rel=\"\">www.ambilight-assassins-creed.com</a> einlösen.</li><li>Mit Deiner erfolgreichen Registrierung nimmst Du automatisch am Gewinnspiel „Kaufpreis zurück“ teil. Während des Aktionszeitraums wird wöchentlich ein Gewinner aus allen bis zum jeweiligen Ziehungsstichtag vollständig registrierten und weiterhin teilnahmeberechtigten Teilnehmern gezogen. Teilnehmer, die nicht gewinnen, nehmen automatisch an den nachfolgenden Wochenziehungen teil.</li></ol><p><a href=\"https://cdn.expert.de/14/2f/81/f8313b9d41d87700ed740cff79413a762f/Teilnahmebedingungen_Philips_TV_Ubisoft_Voucher-Promotion_DACH.pdf.pdf\" target=\"\" rel=\"\" title=\"Link: https://cdn.expert.de/14/2f/81/f8313b9d41d87700ed740cff79413a762f/Teilnahmebedingungen_Philips_TV_Ubisoft_Voucher-Promotion_DACH.pdf.pdf\">Zu den Teilnahmebedingungen</a></p>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_4203",
+"modificationId": "e_4203_5230721",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+}
+],
+"properties": {
+"title": "",
+"description": "11128346052, 12220048384",
+"teaser": null
+},
+"client": "e_2879130",
+"reserve": false,
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 4,
+"maxOnlineDelivery": 7,
+"articles": [
+{
+"id": "e_977673",
+"link": "/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128346052-65oled951-oled-tv.html",
+"image": "6a83118b516e44538f9f2c55",
+"isWarranty": false,
+"name": "65OLED951 OLED TV",
+"brand": {
+"@class": "de.expert.services.articleImport.api.ExpBrand",
+"id": "e_443",
+"logo": "69663f9af91ef80001ebe1a0",
+"servicePDFs": {
+"700": "5980824c2ab79c00011a4d40"
+},
+"seoBannerList": null,
+"name": "Philips",
+"expId": "443"
+},
+"articleClassification": {
+"values": {
+"@arrayMap": [
+{
+"key": "6a044fa4dae2e50001ea1808",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Eingetragener Handelsname oder Handelsmarke des Herstellers",
+"value": "Philips GmbH Market DACH"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1898",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Postanschrift",
+"value": "Röntgenstr. 22, 22335 Hamburg"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Kontaktadresse",
+"value": "https://www.philips.de/c-w/support-home/"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea198b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Modellbezeichnung",
+"value": "65OLED951/12"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea191b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Tuner",
+"value": "HD Triple Tuner: DVB-T2 HD, DVB-C, DVB-S, DVB-S2"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18d1",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Energieeffizienzklasse",
+"value": "G"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18c9",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Highlights",
+"value": "Ambilight"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea196f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Vesa-Norm",
+"value": "300 x 300 mm"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1894",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Displaytyp",
+"value": "OLED"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1950",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Displaygröße (Zoll/cm)",
+"value": "65 Zoll / 164 cm"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1970",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "HD-Typ",
+"value": "4K Ultra HD"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea192f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Auflösung in Pixel",
+"value": "3840 x 2160 Pixel"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1971",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Bildwiederholungsrate (in Hz)",
+"value": "120 Hz"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18f6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Smart TV",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18e1",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Betriebssystem",
+"value": "Titan OS"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18d7",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Sprachsteuerung/Sprachsuche",
+"value": "ja (Google Assistant, Amazon Alexa)"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18fd",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "High Dynamic Range (HDR)",
+"value": "HDR 10, HDR 10+, Dolby Vision"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1815",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "HLG (Hybrid Log Gamma)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17de",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "Bildoptimierungssysteme",
+"value": "Pixel Dimming"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1854",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Tonoptimierung",
+"description": "Dolby/DTS Klangsystem",
+"value": "Dolby Atmos, Dolby Digital, DTS:X"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea195a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "HDMI",
+"value": "4x HDMI 2.1"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18ac",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "USB",
+"value": "2x USB 2.0"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea184d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Common Interface/ Cl+-Slot (Version)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18a6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Optischer Ausgang/ S/PDIF",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1880",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "WLAN",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1977",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Wifi-Direct",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1911",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "LAN (Ethernet)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1974",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Bluetooth",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1972",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "DLNA",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "NFC",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18da",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Abmessungen (BxHxT) ohne Fuß",
+"value": "ca. 145 x 82,9 x 4 cm"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1844",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Abmessungen (BxHxT) mit Fuß",
+"value": "ca. 145 x 84,7 x 29,6 cm"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea195f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Gewicht (ohne Fuß / mit Fuß)",
+"value": "21,2 kg / 21,4 kg"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Lieferumfang",
+"value": "Fernseher, Standfuß, 1x USB-C-Kabel zum Aufladen der Fernbedienung, Kurzanleitung, Fernbedienung, Netzkabel, Broschüre mit Sicherheits- und rechtlichen Hinweisen"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1954",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Höhe (mm)",
+"value": "995"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea192c",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Breite (mm)",
+"value": "1640"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1927",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Tiefe (mm)",
+"value": "160"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea183d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bildwiederholfrequenz in Hz",
+"value": "100/120"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1896",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Sprachsteuerung/Sprachsuche",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea181d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDMI 2.1",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Displaytechnologie",
+"value": "OLED"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea193f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Energieeffizienz",
+"value": "G"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea191e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDR",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Farbe",
+"value": "Schwarz"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17e4",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Empfangsart",
+"value": "Triple Tuner (DVB-C(C2)/T2/S2)"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1856",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Auflösung",
+"value": "4K Ultra HD"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17f0",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bildschirmdiagonale in Zoll",
+"value": "65"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18a8",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Smart TV",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18b6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyClass",
+"value": "G"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1865",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyRange",
+"value": "A-G"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1834",
+"value": {
+"@class": ".ColorFeatureValue",
+"title": "energyEfficiency",
+"description": "colorCode",
+"value": "0xE20019"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1903",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "image",
+"value": "6a83118a516e44538f9f2c53"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1913",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "pdf",
+"value": "6a83118b516e44538f9f2c56"
+}
+}
+]
+}
+},
+"bundle": {
+"selectable": false,
+"selected": true,
+"unsupportedArticles": [],
+"id": "341185"
+},
+"expPrice": {
+"nettoPrice": 1822.69,
+"bruttoPrice": 2169,
+"taxRate": 0.19,
+"monthly": false,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 4,
+"maxOnlineDelivery": 7,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": null,
+"type": null
+},
+"availableServices": null,
+"shipmentArray": [
+{
+"shipmentType": "WOL",
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": 0.19,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+},
+{
+"id": "e_913663",
+"link": "/shop/unsere-produkte/tv-audio/heimkino/soundbars/12220048384-soundbar-mit-subwoofer-cinema-sb560.html",
+"image": "6654781ae0e6f00001abe274",
+"isWarranty": false,
+"name": "Soundbar mit Subwoofer CINEMA SB560",
+"brand": {
+"@class": "de.expert.services.articleImport.api.ExpBrand",
+"id": "e_205",
+"logo": "69663d46f91ef80001ebe0ef",
+"servicePDFs": {
+"110": "598082502ab79c00011a4d4b"
+},
+"seoBannerList": null,
+"name": "JBL",
+"expId": "205"
+},
+"articleClassification": {
+"values": {
+"@arrayMap": [
+{
+"key": "6a044fa4dae2e50001ea1808",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Eingetragener Handelsname oder Handelsmarke des Herstellers",
+"value": "Harman International Industries, Incorporated"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1898",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Postanschrift",
+"value": "EMEA Liaison Office, Danzigerkade 16G, 1013 AP Amsterdam, Niederlande"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Kontaktadresse",
+"value": "customer.support@harman.com"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17ec",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Dolby Atmos",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1958",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Externer Subwoofer",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1939",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "WLAN",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18e8",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bluetooth",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1819",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDMI",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1829",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Airplay2",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1828",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "eARC",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Farbe",
+"value": "Schwarz"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1865",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyRange",
+"value": "A-G"
+}
+}
+]
+}
+},
+"bundle": {
+"selectable": true,
+"selected": true,
+"unsupportedArticles": [],
+"id": "341185"
+},
+"expPrice": {
+"nettoPrice": 210.08,
+"bruttoPrice": 249.99,
+"taxRate": 0.19,
+"monthly": false,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 1,
+"maxOnlineDelivery": 3,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": null,
+"type": null
+},
+"availableServices": null,
+"shipmentArray": [
+{
+"shipmentType": "PKG",
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": 0.19,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+}
+]
+},
+{
+"id": "warranty:e_977673",
+"deliveryCost": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+},
+"promotedPrice": {
+"taxValues": [
+{
+"taxRate": 0,
+"taxes": 0
+},
+{
+"taxRate": 0.19,
+"taxes": 346.31
+}
+],
+"net": 1822.69,
+"gross": 2169,
+"currency": "EUR"
+},
+"unPromotedPrice": {
+"taxValues": [
+{
+"taxRate": 0,
+"taxes": 0
+},
+{
+"taxRate": 0.19,
+"taxes": 346.31
+}
+],
+"net": 1822.69,
+"gross": 2169,
+"currency": "EUR"
+},
+"onlineButtonAction": "ORDER",
+"validFrom": "",
+"validTo": "",
+"discounts": [
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "6a6332f45a32a851323e714c",
+"teaser": "6a6332f45a32a851323e714c",
+"title": "100 Tage testen",
+"description": "<p>Philips Ambilight TV genießen &amp; 100 Tage testen!<br>Überzeuge Dich 100 Tage von den innovativen Smart TVs mit einzigartigem Ambilight.</p><p><b>So funktioniert es:</b></p><ol><li>Kaufe bis zum 31.03.2027 ein teilnehmendes Aktionsgerät.</li><li>Entscheidest Du dich dazu, das Gerät zurückzugeben, musst Du Dich innerhalb von 100 Tagen unter <a href=\"http://www.ambilight-tv-testen.com\" target=\"\" rel=\"\">http://www.ambilight-tv-testen.com</a>.</li><li>Im Anschluss erhältst Du eine Bestätigungsmail mit dem inkludierten Link zum Rücksendeformular.</li><li>Du erhältst nach Rückgabe den Kaufpreis zurück.</li></ol><p>Zu den&nbsp;<a href=\"https://cdn.expert.de/a8/42/cf/570f44e0a78a9f2f8a7265be71025c9665/AL_Trial_Promo_Teilnahmebedingungen_2026_FINAL.pdf.pdf\" target=\"\" rel=\"\">Teilnahmebedingungen</a></p><div><br></div>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_4066",
+"modificationId": "e_4066_3693136",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+},
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "6a05f718f8def70001410c7d",
+"teaser": "6a05f718f8def70001410c7d",
+"title": "10€ Rabatt mit WERO10",
+"description": "<p>Sichere dir <strong>10 € Rabatt</strong> bei Zahlung mit <strong>WERO</strong> ab einem Mindestbestellwert von 100 €. Einfach den Gutscheincode <strong>WERO10</strong> im Warenkorb eingeben.</p><h3>Wie funktioniert die Wero-Aktion mit 10 € Rabatt?</h3><p>  Im Aktionszeitraum von <strong>20.11 bis 20.12</strong> erhältst Du bei Zahlung mit Wero ab einem Mindestbestellwert von 100 € einen Sofortrabatt von 10 € pro Bestellung.</p><p>  Verwende dafür den Code <strong>WERO10</strong> auf der Warenkorbseite im Bereich „Gutscheincode eingeben“.</p><p><strong>Wichtig:</strong></p><p>  Der Rabatt wird dir sofort angezeigt, realisiert sich aber nur, wenn du deine Bestellung mit <strong>WERO</strong> abschließt.</p><p><strong>Teilnahmebedingungen:</strong></p><p>Rabatt ist nicht gültig mit anderen Zahlarten.</p><p>Nicht kombinierbar mit anderen Aktionen.</p><p><em>*Die Aktion ist befristet bis zum 20.12.2026, gilt nur solange der Vorrat reicht und nur bei online Käufen</em></p>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_7779",
+"modificationId": "e_7779_0",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+},
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "668bb19a2c68da00012a28e6",
+"teaser": "668bb19a2c68da00012a28e6",
+"title": "PayPal 0 % Finanzierung",
+"description": "<p>Sichere dir jetzt die 0 % Finanzierung mit PayPal bei einem Bestellwert von 99 Euro bis zu 5.000 Euro. Nur gültig vom 28.10. - 31.12.2026 für Onlinekäufe (nicht für stationäre Käufe möglich).</p><p>So erhältst du die 0% Finanzierung:*<br>Um PayPal Ratenzahlung nutzen zu können, benötigst du ein deutsches PayPal-Konto, in dem ein Bankkonto als Zahlungsquelle hinterlegt und bestätigt ist. Weitere Informationen findest du bei PayPal: <a href=\"https://www.paypal.de/ratenzahlung\" target=\"\" rel=\"\">https://www.paypal.de/ratenzahlung</a>. Danach gehst du wie folgt vor:</p><ol><li>Lege dein Wunschprodukt im Aktionszeitraum vom 28.10. - 31.12.2026 in den Warenkorb. Klicke im ersten Schritt „Mein Warenkorb“ auf „PayPal Jetzt Kaufen“ oder wähle im vierten Schritt „Zahlungsart auswählen“ PayPal als Zahlungsmittel aus.</li><li>Prüfe, ob PayPal Ratenzahlung in deinem PayPal-Konto als Zahlart angezeigt wird. Falls ja: Auswählen und Angaben prüfen.</li><li>Stimme der Ratenzahlungsvereinbarung, der Datenschutzerklärung und der Kreditwürdigkeitsprüfung zu.</li><li>Sofern zugelassen, beantrage verbindlich die PayPal Ratenzahlung und bestätige abschließend deinen Kauf.</li></ol><ul><li>*Achtung! Kredite können bei Verzug zu Kosten führen.<br>Vorbehaltlich Kreditwürdigkeitsprüfung. Laufzeiten von 3, 6, 12 oder 24 Monaten. Ab 99 € und bis zu 10.000 € Bestellwert (laufzeitabhängig). Im Kampagnenzeitraum vom 28.10.2026 - 31.12.2026 gilt für die Laufzeiten von 3, 6 und 12 Monate gilt ein eff. Jahreszins von 0%, p.a. zu einem festen Sollzinssatz von 0 % p.a. Repräsentatives Beispiel: Nettodarlehensbetrag 1.000 €, Gesamtbetrag 1.000 €, 12 monatliche Raten à 83,33 €, fester Sollzinssatz 0% p.a., eff. Jahreszins 0% p.a. Die Konditionen außerhalb des Kampagnenzeitraums finden Sie hier. Der Kreditgeber ist PayPal (Europe) S.à r.l. et Cie, S.C.A., 22-24 Boulevard Royal, L-2449 Luxembourg. Es gelten die Bedingungen für PayPal Ratenzahlung.</li></ul>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_3157",
+"modificationId": "e_3157_9810",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+},
+{
+"localizedPromotionProperties": {
+"de_DE|SHOP": {
+"eyeCatcher": "6abe595440d46e1e2470e5a3",
+"teaser": "6abe595440d46e1e2470e5a3",
+"title": "Assassin's Creed sichern!",
+"description": "<p>Jetzt Philips Ambilight TV kaufen und Assassin's Creed sichern!</p><p>So funktioniert es:</p><ol><li>Kaufe zwischen dem 01.10. und 31.12.2026 ein teilnehmendes Aktionserät.</li><li>Registriere Dich frühestens 30 Kalendertage nach dem Kaufdatum bis spätestens zum 14.02.2027 unter <a href=\"http://www.ambilight-bonus.com/\" target=\"\" rel=\"\">www.ambilight-bonus.com</a></li><li>Du erhältst den Ubisoft Aktionscode per Email und kannst ihn unter <a href=\"http://www.ambilight-assassins-creed.com/\" target=\"\" rel=\"\">www.ambilight-assassins-creed.com</a> einlösen.</li><li>Mit Deiner erfolgreichen Registrierung nimmst Du automatisch am Gewinnspiel „Kaufpreis zurück“ teil. Während des Aktionszeitraums wird wöchentlich ein Gewinner aus allen bis zum jeweiligen Ziehungsstichtag vollständig registrierten und weiterhin teilnahmeberechtigten Teilnehmern gezogen. Teilnehmer, die nicht gewinnen, nehmen automatisch an den nachfolgenden Wochenziehungen teil.</li></ol><p><a href=\"https://cdn.expert.de/14/2f/81/f8313b9d41d87700ed740cff79413a762f/Teilnahmebedingungen_Philips_TV_Ubisoft_Voucher-Promotion_DACH.pdf.pdf\" target=\"\" rel=\"\" title=\"Link: https://cdn.expert.de/14/2f/81/f8313b9d41d87700ed740cff79413a762f/Teilnahmebedingungen_Philips_TV_Ubisoft_Voucher-Promotion_DACH.pdf.pdf\">Zu den Teilnahmebedingungen</a></p>",
+"pillTitle": null,
+"pillTheme": "expert-outline",
+"eyeCatcherTarget": "ARTICLE_DETAIL_PAGE",
+"landingPageUrl": null
+}
+},
+"promotionId": {
+"promotionId": "e_4203",
+"modificationId": "e_4203_5230721",
+"freeShipping": false
+},
+"discount": {
+"taxValues": [
+{
+"taxRate": 0.19,
+"taxes": 0
+}
+],
+"net": 0,
+"gross": 0,
+"currency": "EUR"
+}
+}
+],
+"properties": {
+"title": "",
+"description": "",
+"teaser": null
+},
+"client": "e_2879130",
+"reserve": false,
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 4,
+"maxOnlineDelivery": 7,
+"articles": [
+{
+"id": "e_977673",
+"link": "/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128346052-65oled951-oled-tv.html",
+"image": "6a83118b516e44538f9f2c55",
+"isWarranty": false,
+"name": "65OLED951 OLED TV",
+"brand": {
+"@class": "de.expert.services.articleImport.api.ExpBrand",
+"id": "e_443",
+"logo": "69663f9af91ef80001ebe1a0",
+"servicePDFs": {
+"700": "5980824c2ab79c00011a4d40"
+},
+"seoBannerList": null,
+"name": "Philips",
+"expId": "443"
+},
+"articleClassification": {
+"values": {
+"@arrayMap": [
+{
+"key": "6a044fa4dae2e50001ea1808",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Eingetragener Handelsname oder Handelsmarke des Herstellers",
+"value": "Philips GmbH Market DACH"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1898",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Postanschrift",
+"value": "Röntgenstr. 22, 22335 Hamburg"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Kontaktinformationen des Herstellers",
+"description": "Kontaktadresse",
+"value": "https://www.philips.de/c-w/support-home/"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea198b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Modellbezeichnung",
+"value": "65OLED951/12"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea191b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Tuner",
+"value": "HD Triple Tuner: DVB-T2 HD, DVB-C, DVB-S, DVB-S2"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18d1",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Energieeffizienzklasse",
+"value": "G"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18c9",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Highlights",
+"value": "Ambilight"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea196f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Technische Daten",
+"description": "Vesa-Norm",
+"value": "300 x 300 mm"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1894",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Displaytyp",
+"value": "OLED"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1950",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Displaygröße (Zoll/cm)",
+"value": "65 Zoll / 164 cm"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1970",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "HD-Typ",
+"value": "4K Ultra HD"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea192f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Auflösung in Pixel",
+"value": "3840 x 2160 Pixel"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1971",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildschirm",
+"description": "Bildwiederholungsrate (in Hz)",
+"value": "120 Hz"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18f6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Smart TV",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18e1",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Betriebssystem",
+"value": "Titan OS"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18d7",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Funktionen",
+"description": "Sprachsteuerung/Sprachsuche",
+"value": "ja (Google Assistant, Amazon Alexa)"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18fd",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "High Dynamic Range (HDR)",
+"value": "HDR 10, HDR 10+, Dolby Vision"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1815",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "HLG (Hybrid Log Gamma)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17de",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Bildoptimierung",
+"description": "Bildoptimierungssysteme",
+"value": "Pixel Dimming"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1854",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Tonoptimierung",
+"description": "Dolby/DTS Klangsystem",
+"value": "Dolby Atmos, Dolby Digital, DTS:X"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea195a",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "HDMI",
+"value": "4x HDMI 2.1"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18ac",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "USB",
+"value": "2x USB 2.0"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea184d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Common Interface/ Cl+-Slot (Version)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18a6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Optischer Ausgang/ S/PDIF",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1880",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "WLAN",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1977",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Wifi-Direct",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1911",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "LAN (Ethernet)",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1974",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "Bluetooth",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1972",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "DLNA",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea186e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Anschlüsse und Schnittstellen",
+"description": "NFC",
+"value": "nein"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18da",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Abmessungen (BxHxT) ohne Fuß",
+"value": "ca. 145 x 82,9 x 4 cm"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1844",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Abmessungen (BxHxT) mit Fuß",
+"value": "ca. 145 x 84,7 x 29,6 cm"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea195f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Gewicht (ohne Fuß / mit Fuß)",
+"value": "21,2 kg / 21,4 kg"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197b",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht",
+"description": "Lieferumfang",
+"value": "Fernseher, Standfuß, 1x USB-C-Kabel zum Aufladen der Fernbedienung, Kurzanleitung, Fernbedienung, Netzkabel, Broschüre mit Sicherheits- und rechtlichen Hinweisen"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1954",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Höhe (mm)",
+"value": "995"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea192c",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Breite (mm)",
+"value": "1640"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1927",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "Abmessungen und Gewicht (Brutto)",
+"description": "Tiefe (mm)",
+"value": "160"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea183d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bildwiederholfrequenz in Hz",
+"value": "100/120"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1896",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Sprachsteuerung/Sprachsuche",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea181d",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDMI 2.1",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Displaytechnologie",
+"value": "OLED"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea193f",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Energieeffizienz",
+"value": "G"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea191e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "HDR",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea197e",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Farbe",
+"value": "Schwarz"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17e4",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Empfangsart",
+"value": "Triple Tuner (DVB-C(C2)/T2/S2)"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1856",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Auflösung",
+"value": "4K Ultra HD"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea17f0",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Bildschirmdiagonale in Zoll",
+"value": "65"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea18a8",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "expertCustom",
+"description": "Smart TV",
+"value": "ja"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea18b6",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyClass",
+"value": "G"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1865",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "efficiencyRange",
+"value": "A-G"
+}
+},
+{
+"key": "6a044fa4dae2e50001ea1834",
+"value": {
+"@class": ".ColorFeatureValue",
+"title": "energyEfficiency",
+"description": "colorCode",
+"value": "0xE20019"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1903",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "image",
+"value": "6a83118a516e44538f9f2c53"
+}
+},
+{
+"key": "6a044fa5dae2e50001ea1913",
+"value": {
+"@class": ".EnumFeatureValue",
+"title": "energyEfficiency",
+"description": "pdf",
+"value": "6a83118b516e44538f9f2c56"
+}
+}
+]
+}
+},
+"bundle": {
+"selectable": false,
+"selected": true,
+"unsupportedArticles": null,
+"id": "warranty:e_977673"
+},
+"expPrice": {
+"nettoPrice": 1822.69,
+"bruttoPrice": 2169,
+"taxRate": 0.19,
+"monthly": false,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 4,
+"maxOnlineDelivery": 7,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": null,
+"type": null
+},
+"availableServices": null,
+"shipmentArray": [
+{
+"shipmentType": "WOL",
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": 0.19,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+},
+{
+"id": "warranty:KOMPLETTSCHUTZ_2027",
+"link": null,
+"image": "6578d7dc078346000131d305",
+"isWarranty": true,
+"warranty": {
+"title": "Komplettschutz",
+"description": "Der prämierte WERTGARANTIE Komplettschutz sichert Ihr Gerät gegen verschiedene Arten von Defekten oder Schäden ab. Auch jene, welche gar nicht oder nicht mehr unter die Herstellergarantie oder gesetzliche Gewährleistung fallen. Das sind z.B. folgende Schäden: Displayschaden.",
+"listOfFiles": {
+"list": [
+{
+"fileName": "Allgemeine Versicherungsbedingungen - Komplettschutz",
+"fileUrl": "https://cdn.expert.de/e7/5b/02/4a6d44645b5064d3124c1b2785ed154ce9/EX_NEO_WG_DE_KS_0926_Rechtsdokumente.pdf"
+}
+]
+}
+},
+"name": "8.-€ pro Monat",
+"brand": "Komplettschutz",
+"bundle": {
+"selectable": true,
+"selected": true,
+"unsupportedArticles": [
+"warranty:GERAETESCHUTZ_KOMFORT_3_2021"
+],
+"id": "warranty:e_977673"
+},
+"expPrice": {
+"nettoPrice": 0,
+"bruttoPrice": 8,
+"taxRate": 0,
+"monthly": true,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 0,
+"maxOnlineDelivery": 0,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": "Komplettschutz",
+"type": ""
+},
+"availableServices": [],
+"shipmentArray": [
+{
+"shipmentType": null,
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": null,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+},
+{
+"id": "warranty:GERAETESCHUTZ_KOMFORT_3_2021",
+"link": null,
+"image": "6578d7fb078346000131d30b",
+"isWarranty": true,
+"warranty": {
+"title": "Geräteschutz KOMFORT 3 Jahre",
+"description": "Zusätzlich zu den Leistungen des GeräteschutzBASIS bietet Ihnen der Geräteschutz KOMFORT 3 | 5 vom 1. Tag an die volle Reparaturkosten-Übernahme bei Gerätedefekten, z. B. bei Fall-/Sturzschäden, unsachgemäßer Handhabung oder Wasser-/Feuchtigkeitsschäden sowie ein Ersatzgerät gleicher Art und Güte bei Totalschaden. Außerdem erhalten Sie beim Geräteschutz KOMFORT 3 | 5 zusätzlich bis zu 300 Euro Kostenbeteiligung, z. B. bei Raub/Einbruchdiebstahl oder Folgeschäden durch Gerätedefekt, wie verdorbenem Gefriergut etc.",
+"listOfFiles": {
+"list": [
+{
+"fileName": "Allgemeine Versicherungsbedingungen - Geräteschutz KOMFORT 3 Jahre",
+"fileUrl": "https://cdn.expert.de/8b/d8/65/8f39dc24a6e178383f628ff524c9286a63/EX%20WG%20DE%20GSBK%200122_RECHTSDOKUMENTE.PDF.PDF"
+}
+]
+}
+},
+"name": "189.90€ einmalig",
+"brand": "Geräteschutz KOMFORT 3 Jahre",
+"bundle": {
+"selectable": true,
+"selected": false,
+"unsupportedArticles": [
+"warranty:KOMPLETTSCHUTZ_2027"
+],
+"id": "warranty:e_977673"
+},
+"expPrice": {
+"nettoPrice": 189.9,
+"bruttoPrice": 189.9,
+"taxRate": 0,
+"monthly": false,
+"onlineButtonAction": "ORDER",
+"onlineAvailability": "AVAILABLE",
+"minOnlineDelivery": 0,
+"maxOnlineDelivery": 0,
+"storeButtonAction": "NONE",
+"storeAvailability": "SOLD_OUT",
+"itemOnDisplay": {
+"onDisplay": false,
+"gallery": [],
+"description": "Geräteschutz KOMFORT 3 Jahre",
+"type": ""
+},
+"availableServices": [],
+"shipmentArray": [
+{
+"shipmentType": null,
+"shipmentNettoPrice": 0,
+"shipmentBruttoPrice": 0,
+"shipmentTaxRate": null,
+"shipmentCurrency": "EUR",
+"hideVskText": false
+}
+]
+}
+}
+]
+}
+],
+"duo": [
+{
+"bundleId": "90378",
+"article": {
+"articleId": "e_847089",
+"imageId": "61530f86ef918200013d7544",
+"name": "Ultra High Speed HDMI 8K 1,5 m, schwarz, Gewebe",
+"price": 14.99,
+"bundlePrice": null
+},
+"reserve": false
+},
+{
+"bundleId": "341185",
+"article": {
+"articleId": "e_913663",
+"imageId": "6654781ae0e6f00001abe274",
+"name": "Soundbar mit Subwoofer CINEMA SB560",
+"price": 249.99,
+"bundlePrice": null
+},
+"reserve": false
+}
+]
+}

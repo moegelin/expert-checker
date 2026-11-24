@@ -7,7 +7,8 @@ reported (N3 fires once per store and product). A failed ntfy send never fails t
 in the file with `sent: false` and the run reports a warning.
 
 Effective price = the lower of the best shipped and the best pickup total; manufacturer cashback (M4)
-is not deducted yet. N4, N5 and N6 come with M3 and M4.
+is not deducted yet. N4 (set deals, M3): a new bundle at the online shop or a store within the radius, or
+a discount that grew by at least 20 €, once per bundle and store. N5 and N6 come with M4.
 """
 
 from datetime import timedelta
@@ -24,10 +25,11 @@ COOLDOWN_KEEP = timedelta(days=7)
 LOW_WINDOW = timedelta(days=30)
 DISPLAY_BELOW = 0.15  # N3: a Restposten or display offer at least 15 % below the best regular offer
 DEFAULT_MIN_DROP = 1.0  # € (config: notify.minDrop)
+SET_GROWTH = 20.0  # € (N4: a known set's discount grew by at least this)
 TAGS = {"price": ["chart_with_downwards_trend"], "target": ["dart"], "restposten": ["label"],
-        "failure": ["rotating_light"]}
+        "set": ["package"], "failure": ["rotating_light"]}
 TITLES = {"price": "Price drop", "target": "Target price reached", "restposten": "Restposten deal",
-          "failure": "expert-checker: scan failed"}
+          "set": "Set deal", "failure": "expert-checker: scan failed"}
 
 
 class Alerts:
@@ -35,7 +37,7 @@ class Alerts:
         self.path = data_dir / FILE
         raw = read_json(self.path) or {}
         self.items = list(raw.get("alerts") or [])
-        self.state = {"cooldowns": {}, "prices": {}, "target": {}, "restposten": {}, **(raw.get("state") or {})}
+        self.state = {"cooldowns": {}, "prices": {}, "target": {}, "restposten": {}, "sets": {}, **(raw.get("state") or {})}
         self.ntfy = ntfy
         self.now = now
         self.raised = []  # ids of this run's alerts
@@ -52,10 +54,13 @@ class Alerts:
         if wl:
             by_id = {s["id"]: s for s in stores.load(ctx.data, wl["location"]) or []}
             min_drop = float(wl["notify"].get("minDrop", DEFAULT_MIN_DROP))
+            radius = wl["location"]["maxDistanceKm"]
             for product in wl["products"]:
                 record = read_json(prices.product_path(ctx.data, product["webcode"]))
                 if record and record.get("lastScan") == iso(self.now):
                     self.product_rules(record, by_id, min_drop)
+                if record and (record.get("setsScan") or {}).get("time") == iso(self.now):
+                    self.set_rules(record, by_id, radius)
         self.failure_rules(status)
         return list(self.raised)
 
@@ -131,6 +136,31 @@ class Alerts:
             self.state["restposten"][key] = iso(self.now)
         for key in [k for k in self.state["restposten"] if k.startswith(webcode + ":") and k not in active]:
             del self.state["restposten"][key]  # gone; a later one at the same store is a new deal
+
+    def set_rules(self, record, by_id, max_distance_km):
+        """N4: a new set deal at the online shop or a store within the radius, or a discount that grew by
+        20 € or more; once per bundle and store. The state holds the last discount per bundle and store."""
+        webcode = record["webcode"]
+        label = record.get("label") or record.get("name") or webcode
+        active = set()
+        for s in record.get("sets") or []:
+            key = f"{webcode}:{s['bundleId']}:{s['storeId']}"
+            active.add(key)
+            store = by_id.get(s["storeId"]) or {}
+            in_range = store.get("online") or (s.get("distanceKm") is not None and s["distanceKm"] <= max_distance_km)
+            if not in_range:
+                continue
+            previous = self.state["sets"].get(key)
+            if previous is not None and s["discount"] - previous < SET_GROWTH:
+                continue
+            eff = s.get("accessoryEffective")
+            text = (f"{label}: set with {s.get('accessory') or 'accessory'} −{fmt_price(s['discount'])}"
+                    f"{f', accessory effectively {fmt_price(eff)}' if eff is not None else ''}"
+                    f"{f' until {s['validTo']}' if s.get('validTo') else ''} · {store_text(store, s.get('distanceKm'))}")
+            self.emit("set", None, text, url=store_url(record, s["storeId"]), webcode=webcode, store_id=s["storeId"])
+            self.state["sets"][key] = s["discount"]
+        for key in [k for k in self.state["sets"] if k.startswith(webcode + ":") and k not in active]:
+            del self.state["sets"][key]  # gone; the same bundle later is a new deal
 
     def failure_rules(self, status):
         """N7: an aborted run (challenge, rate limit, too many failed calls) or a failed step (for example a
@@ -218,6 +248,8 @@ def store_text(store, distance_km):
     """`ESC Rangsdorf, 25 km` — name plus city when the name is generic (expert-api.md), then the distance."""
     if not store:
         return "unknown store"
+    if store.get("online"):
+        return "Online-Shop"
     name = store.get("name") or store.get("id")
     city = store.get("city")
     if city and city.lower() not in name.lower():

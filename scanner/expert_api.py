@@ -123,6 +123,9 @@ class ExpertApi:
     def promotion_index(self, store_id):
         return self.get_json("/api/promotions/getIndex", storeId=store_id)
 
+    def bundles_for_article(self, article_id, store_id):
+        return self.get_json("/api/search/bundlesForArticle", articleId=article_id, storeId=store_id)
+
     def search_article(self, webcode):
         return self.get_json("/api/search/article", webcode=webcode)
 
