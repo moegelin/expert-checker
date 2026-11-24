@@ -165,7 +165,7 @@ class WatchlistTest(unittest.TestCase):
 
     def test_repo_config_is_valid(self):
         wl = watchlist.load(Path(__file__).parent.parent / "config")
-        self.assertEqual([p["webcode"] for p in wl["products"]], ["11128346052", "11128378730", "11128379730"])
+        self.assertTrue(wl["products"] and all(p["webcode"].isdigit() for p in wl["products"]))  # the PWA edits the list
         self.assertEqual(wl["location"]["zip"], "14167")
         self.assertEqual(wl["location"]["maxDistanceKm"], 100.0)
 

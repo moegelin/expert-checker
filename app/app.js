@@ -4,7 +4,7 @@
    #liste | #p-<webcode> | #cashback | #o-<promotion id> | #einstellungen. */
 "use strict";
 
-const APP_VERSION = "2026-11-24.4";
+const APP_VERSION = "2026-11-24.5";
 const REPO = "moegelin/expert-checker";
 const BRANCH = "main";
 const ROOT = new URL("../", location.href).href;        // repo root on Pages (data/, config/)
@@ -419,7 +419,7 @@ function renderList() {
       <div class="pend"><b>Wird beim nächsten Scan aufgenommen</b>, spätestens in 2 Stunden. Dann erscheinen Name, Bild und Preise.</div></article>`;
     return `<article class="card pcard">
       <button class="head" onclick="go('p-${p.webcode}')" aria-label="${esc(p.name)}, Details">${thumb}<div class="nm"><div class="name">${esc(p.name)}</div><div class="sub">${esc(p.sub)}</div></div></button>
-      ${ledger(p, false)}
+      ${ledger(p, false)}${aktionenRow(p)}
       <button class="frow" id="f-${p.webcode}" aria-expanded="${open}" aria-controls="x-${p.webcode}" onclick="toggle('${p.webcode}')">${trend(p, true)}<span class="mo">${open ? "Weniger" : "Mehr"}${I.chev}</span></button>
       <div class="ext" id="x-${p.webcode}" ${open ? "" : "hidden"}>${extOf(p)}</div>
     </article>`;
@@ -431,6 +431,16 @@ function renderList() {
     ${cards || `<div class="card note">Noch kein Produkt. Tippe oben auf +, füge einen Produktlink von expert.de ein.</div>`}
     <p class="foot">Grün heißt: tiefster Preis seit 30 Tagen${ps.some(p => p.cb) ? ", Cashback schon abgezogen" : ""}. Preise aller 348 expert-Märkte und des Online-Shops, alle 2 Stunden; Set-Deals und Aktionen aus dem Aktionsindex.</p>`);
   if (state.add) { const i = document.getElementById("addurl"); if (i) i.focus(); }
+}
+/* Marks under the receipt for what the rows do not carry already: Zugaben; a cashback without an
+   amount and set deals beyond the first one get a mark too. Nothing twice: a priced cashback and the
+   first set are rows above. */
+function aktionenRow(p) {
+  const marks = [];
+  p.groups.slice(1).forEach(g => marks.push(`<span class="badge b-set">${I.set}Set −${eur0(g.discount)}</span>`));
+  p.extras.forEach(x => marks.push(`<span class="badge b-ev">${I.gift}${esc(x.title)}</span>`));
+  if (!marks.length) return "";
+  return `<button class="akt" onclick="go('p-${p.webcode}')" aria-label="Aktionen von ${esc(p.name)}"><span class="lbl">Aktionen</span>${marks.join("")}</button>`;
 }
 function toggleAdd() { state.add = !state.add; renderList(); }
 async function addProduct() {

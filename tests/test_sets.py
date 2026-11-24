@@ -90,6 +90,7 @@ class StepTest(unittest.TestCase):
 class SetAlertTest(unittest.TestCase):
     STORES = {ONLINE_SHOP: {"id": ONLINE_SHOP, "name": "Online-Shop", "online": True, "distanceKm": None},
               RANGSDORF: {"id": RANGSDORF, "name": "ESC", "city": "Rangsdorf", "distanceKm": 24.7},
+              TAUENTZIEN: {"id": TAUENTZIEN, "name": "ESC", "city": "Berlin", "distanceKm": 4.3},
               "e_1907435": {"id": "e_1907435", "name": "expert Pasternak", "city": "Bochum", "distanceKm": 470}}
 
     def setUp(self):
@@ -103,32 +104,50 @@ class SetAlertTest(unittest.TestCase):
         inbox.save()
         return inbox
 
-    def deal(self, store_id, discount=100, bundle="20000083", distance=None):
-        return {"bundleId": bundle, "storeId": store_id, "discount": discount, "promoted": 3788, "accessoryEffective": 319,
+    def state(self):
+        return run.read_json(self.dirs.data / "alerts.json")["state"]["sets"]
+
+    def deal(self, store_id, discount=100, bundle="20000083", distance=None, eff=319):
+        return {"bundleId": bundle, "storeId": store_id, "discount": discount, "promoted": 3788, "accessoryEffective": eff,
                 "accessory": "Theatre Bar 6", "validTo": "30.11.2026", "distanceKm": distance}
 
-    def test_new_set_online_and_in_range_once_per_bundle_and_store(self):
-        rec = product(sets_=[self.deal(ONLINE_SHOP), self.deal(RANGSDORF, distance=24.7), self.deal("e_1907435", distance=470)])
+    def test_one_message_per_product_and_bundle_with_the_stores_in_range(self):
+        rec = product(sets_=[self.deal(ONLINE_SHOP), self.deal(RANGSDORF, distance=24.7, eff=249),
+                             self.deal(TAUENTZIEN, distance=4.3, eff=299), self.deal("e_1907435", distance=470, eff=199)])
         self.rules(rec)
-        self.assertEqual(len(self.ntfy.sent), 2)  # Pasternak is out of range
+        self.assertEqual(len(self.ntfy.sent), 1)  # one bundle; Pasternak is out of range and not counted
         title, text, kw = self.ntfy.sent[0]
         self.assertEqual(title, "Set deal")
-        self.assertEqual(text, 'Sony BRAVIA 9 II 65": set with Theatre Bar 6 −100 €, accessory effectively 319 € until 30.11.2026 · Online-Shop')
-        self.assertEqual(kw["click"], f"https://www.expert.de/shop/{SONY65}-x.html?branch_id={ONLINE_SHOP}")
-        self.assertEqual(self.ntfy.sent[1][1].endswith("· ESC Rangsdorf, 25 km"), True)
+        self.assertEqual(text, 'Sony BRAVIA 9 II 65": set with Theatre Bar 6 −100 €, accessory effectively 249 € until 30.11.2026 · '
+                               "Online-Shop 319 €; 2 stores within 50 km, cheapest ESC Rangsdorf, 25 km 249 €")
+        self.assertEqual(kw["click"], f"https://www.expert.de/shop/{SONY65}-x.html?branch_id={RANGSDORF}")
+        self.assertEqual(self.state(), {f"{SONY65}:20000083": {"discount": 100, "effective": 249, "scan": run.iso(T0)}})
         self.rules(rec)
-        self.assertEqual(len(self.ntfy.sent), 2)  # known now
+        self.assertEqual(len(self.ntfy.sent), 1)  # known now
+        self.rules(product(sets_=rec["sets"] + [self.deal("e_26051723", distance=168)]))
+        self.assertEqual(len(self.ntfy.sent), 1)  # another store with the same set is not news
 
-    def test_discount_growth_of_20_euro_alerts_again_and_vanished_sets_reset(self):
+    def test_only_online(self):
+        self.rules(product(sets_=[self.deal(ONLINE_SHOP)]))
+        self.assertTrue(self.ntfy.sent[0][1].endswith("· Online-Shop 319 €"))
+        self.assertEqual(self.ntfy.sent[0][2]["click"], f"https://www.expert.de/shop/{SONY65}-x.html?branch_id={ONLINE_SHOP}")
+
+    def test_growth_of_discount_or_drop_of_effective_price_alerts_again_and_vanished_sets_reset(self):
         self.rules(product(sets_=[self.deal(ONLINE_SHOP, 100)]))
         self.rules(product(sets_=[self.deal(ONLINE_SHOP, 115)]))
         self.assertEqual(len(self.ntfy.sent), 1)
         self.rules(product(sets_=[self.deal(ONLINE_SHOP, 120)]))
         self.assertEqual(len(self.ntfy.sent), 2)
+        self.rules(product(sets_=[self.deal(ONLINE_SHOP, 120, eff=299)]))
+        self.assertEqual(len(self.ntfy.sent), 3)  # effective price dropped by 20 €
         self.rules(product(sets_=[]))
-        self.assertEqual(run.read_json(self.dirs.data / "alerts.json")["state"]["sets"], {})
+        self.assertEqual(self.state(), {})
         self.rules(product(sets_=[self.deal(ONLINE_SHOP, 100)]))
-        self.assertEqual(len(self.ntfy.sent), 3)
+        self.assertEqual(len(self.ntfy.sent), 4)
+
+    def test_two_bundles_are_two_messages(self):
+        self.rules(product(sets_=[self.deal(ONLINE_SHOP), self.deal(ONLINE_SHOP, 200, bundle="20000084", eff=389)]))
+        self.assertEqual(len(self.ntfy.sent), 2)
 
 
 if __name__ == "__main__":

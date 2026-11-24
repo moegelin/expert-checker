@@ -1,6 +1,6 @@
 /* expert-checker service worker: the app shell is cached (offline start), data files are network-first
    with the last copy as the fallback, product images from cdn.expert.de are cached on first load. */
-const VERSION = "2026-11-24.4";
+const VERSION = "2026-11-24.5";
 const SHELL = `shell-${VERSION}`, DATA = "data-v1", IMG = "img-v1";
 const SHELL_FILES = ["./", "./index.html", "./app.css", "./app.js", "./manifest.webmanifest", "./icon.svg", "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png"];
 const SCOPE = new URL("./", self.location.href).pathname;

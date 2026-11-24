@@ -43,6 +43,7 @@ Built 2026-11-24 (plan.md §6, "M2 scope"): https://moegelin.github.io/expert-ch
 |---|---|---|
 | Screen 1 (Beobachten): one card per product; head with image, name, subtitle (no price); receipt rows: cheapest path first (place, distance, stock, Aussteller/Restposten badge, "kein Cashback" or "ohne Cashback"), cashback deduction, total "Dein Preis inkl. Cashback", the other path with "mit Cashback", set deal "nicht im Preis"; footer with 30-day sparkline, movement and verdict; "Mehr" expands stores within the radius, the three cheapest shippers and all promotions including Zugaben | in | prototype/b2.html (design B2, 2026-11-22) |
 | List header without the "n am Tiefstpreis" hint; "Produkt hinzufügen" as a plus button in the top bar that opens the URL field, not at the list end | in | review 2026-11-22 |
+| "Aktionen" row with marks under the receipt of a list card: Zugaben and further set deals, tappable to the product page; a priced cashback and the first set deal stay receipt rows, so nothing appears twice | in | added 2026-11-24 after the user missed the Zugaben on the list |
 | Green = lowest effective price of the last 30 days and at least 3 % under the 30-day high; otherwise black with "X € über dem 30-Tage-Tief" | in | DESIGN.md, Colors |
 | Screen 2 (Produkt): hero image, receipt rows and trend, cashback explanation; then Aktionen directly under the price (cashback offer card, set deals, Zugaben); then alert mode (every drop / new 30-day low / target) with an optional target, the 30-day chart (Versand and Abholung lines, target line only when set); stores within the radius as separate cards with postcode, street, stock, display badge, "ohne Cashback" label, "mit Cashback" net line, link to the store's product page (`?branch_id`) and a copy-postcode button; Online-Shop card with explanation; further shippers collapsed behind "n weitere Versender" | in | prototype/b2.html |
 | Icon of the Aktionen lines in the expanded area aligned to the first text line (reviewer saw it centred) | in | review 2026-11-22 |
@@ -72,7 +73,7 @@ Built 2026-11-24 (plan.md §6, "M3 and M4 scope").
 | Effective accessory price = set price − TV price at the same store | in | |
 | Product detail: set deals section, grouped by accessory, best store per set | in | prototype screen "Product", section "Set deals" |
 | Watch list: "set" badge when any set deal exists within range or online | in | |
-| Push: new set deal or discount grows by ≥ 20 € (N4) | in | |
+| Push: new set deal or discount grows by ≥ 20 € (N4) | in | one message per product and bundle with online price, stores within range and the cheapest (2026-11-24) |
 | Direct discounts (`DIRECT_DISCOUNT`, e.g. −65 € cart discount) shown as code line | in | comes from `pricepds.promotionPrice` |
 | Summed bundle price endpoint (`getSummedBundle`) | out | only if a set has optional articles |
 

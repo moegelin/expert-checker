@@ -146,28 +146,53 @@ class Alerts:
             del self.state["restposten"][key]  # gone; a later one at the same store is a new deal
 
     def set_rules(self, record, by_id, max_distance_km):
-        """N4: a new set deal at the online shop or a store within the radius, or a discount that grew by
-        20 € or more; once per bundle and store. The state holds the last discount per bundle and store."""
+        """N4: one message per product and bundle (not per store, decided 2026-11-24): the first time a set
+        is seen at the online shop or a store within the radius, and again when its discount grows by 20 €
+        or its best effective accessory price drops by 20 €. The state holds discount and best effective
+        price per bundle."""
         webcode = record["webcode"]
         label = record.get("label") or record.get("name") or webcode
-        active = set()
+        bundles = {}
         for s in record.get("sets") or []:
-            key = f"{webcode}:{s['bundleId']}:{s['storeId']}"
-            active.add(key)
             store = by_id.get(s["storeId"]) or {}
             in_range = store.get("online") or (s.get("distanceKm") is not None and s["distanceKm"] <= max_distance_km)
             if not in_range:
                 continue
-            previous = self.state["sets"].get(key)
-            if previous is not None and s["discount"] - previous < SET_GROWTH:
-                continue
+            b = bundles.setdefault(s["bundleId"], {"accessory": s.get("accessory"), "discount": 0, "best": None, "stores": 0,
+                                                  "online": None, "validTo": s.get("validTo")})
+            b["stores"] += 1
+            b["discount"] = max(b["discount"], s.get("discount") or 0)
             eff = s.get("accessoryEffective")
-            text = (f"{label}: set with {s.get('accessory') or 'accessory'} −{fmt_price(s['discount'])}"
-                    f"{f', accessory effectively {fmt_price(eff)}' if eff is not None else ''}"
-                    f"{f' until {s['validTo']}' if s.get('validTo') else ''} · {store_text(store, s.get('distanceKm'))}")
-            self.emit("set", None, text, url=store_url(record, s["storeId"]), webcode=webcode, store_id=s["storeId"])
-            self.state["sets"][key] = s["discount"]
-        for key in [k for k in self.state["sets"] if k.startswith(webcode + ":") and k not in active]:
+            if eff is not None and (b["best"] is None or eff < b["best"]["effective"]):
+                b["best"] = {"effective": eff, "store": store, "storeId": s["storeId"], "distanceKm": s.get("distanceKm")}
+            if store.get("online") and eff is not None:
+                b["online"] = eff
+        for bundle_id, b in bundles.items():
+            key = f"{webcode}:{bundle_id}"
+            previous = self.state["sets"].get(key)
+            best_eff = b["best"]["effective"] if b["best"] else None
+            if previous is not None:
+                grew = b["discount"] - (previous.get("discount") or 0) >= SET_GROWTH
+                dropped = best_eff is not None and previous.get("effective") is not None and previous["effective"] - best_eff >= SET_GROWTH
+                if not grew and not dropped:
+                    continue
+            where = []
+            if b["online"] is not None:
+                where.append(f"Online-Shop {fmt_price(b['online'])}")
+            others = b["stores"] - (1 if b["online"] is not None else 0)
+            if others:
+                best = b["best"]
+                if best and not best["store"].get("online"):
+                    where.append(f"{others} store{'s' if others != 1 else ''} within {round(max_distance_km)} km, cheapest "
+                                 f"{store_text(best['store'], best['distanceKm'])} {fmt_price(best['effective'])}")
+                else:
+                    where.append(f"{others} store{'s' if others != 1 else ''} within {round(max_distance_km)} km")
+            text = (f"{label}: set with {b['accessory'] or 'accessory'} −{fmt_price(b['discount'])}, accessory effectively "
+                    f"{fmt_price(best_eff)}{f' until {b['validTo']}' if b.get('validTo') else ''} · {'; '.join(where)}")
+            store_id = b["best"]["storeId"] if b["best"] else None
+            self.emit("set", None, text, url=store_url(record, store_id), webcode=webcode, store_id=store_id)
+            self.state["sets"][key] = {"discount": b["discount"], "effective": best_eff, "scan": record.get("lastScan")}
+        for key in [k for k in self.state["sets"] if k.startswith(webcode + ":") and k.split(":", 1)[1] not in bundles]:
             del self.state["sets"][key]  # gone; the same bundle later is a new deal
 
     def cashback_rules(self, data):

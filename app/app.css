@@ -89,6 +89,9 @@ div.thumb{background:var(--card-2)}
 .b-up{background:var(--red-soft);color:var(--red-ink)}
 .b-new{background:var(--blue-soft);color:var(--blue-ink)}
 .b-off{background:var(--card-2);color:var(--muted)}
+.b-ev{background:var(--card-2);color:var(--fg)}
+.akt{display:flex;align-items:center;gap:5px;flex-wrap:wrap;border-top:1px solid var(--line);padding:8px 0 2px;width:100%}
+.akt .lbl{font-size:12px;font-weight:600;color:var(--muted);margin-right:3px}
 .tags{display:flex;gap:5px;flex-wrap:wrap}
 
 /* ---- product card: head, receipt rows, trend footer ---- */
