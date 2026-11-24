@@ -33,7 +33,8 @@ def main(argv=None):
 
     for name, help_text in (("stores", "store finder → data/stores.json (docs/plan.md §3)"),
                             ("prices", "price scan of the watch list → data/products/*.json (docs/plan.md §3)"),
-                            ("sets", "set deals of the watch list at the stores with an offer → data/products/*.json (M3)")):
+                            ("sets", "set deals of the watch list at the stores with an offer → data/products/*.json (M3)"),
+                            ("cashback", "promotion index of the online shop → data/cashbacks.json, cashback per product (M4)")):
         c = commands.add_parser(name, help=help_text)
         c.add_argument("--data", default="data", help="data directory (default: data)")
         if name == "stores":

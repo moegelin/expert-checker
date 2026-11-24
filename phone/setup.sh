@@ -22,6 +22,8 @@ apt update && DEBIAN_FRONTEND=noninteractive apt full-upgrade -y -o Dpkg::Option
 pkg install -y python git curl termux-api
 # Time zone database for the Berlin hour: Termux has no tzdata package, the pip package does the job.
 python3 -m pip install -q tzdata || echo "pip tzdata failed: the scanner assumes CET (UTC+1)"
+# pypdf reads the cashback Teilnahmebedingungen PDFs (amounts per model); without it amounts stay unknown.
+python3 -m pip install -q pypdf || echo "pip pypdf failed: cashback amounts stay unknown"
 
 echo "== Termux:API app"
 if ! timeout 20 termux-battery-status >/dev/null 2>&1; then
@@ -69,7 +71,7 @@ python3 -c 'from zoneinfo import ZoneInfo; ZoneInfo("Europe/Berlin")' \
   || echo "no tz database: the scanner assumes CET (UTC+1) for the Berlin hour"
 
 echo "== tests"
-python3 -m unittest -q tests.test_expert_api tests.test_probe tests.test_notify tests.test_repo tests.test_run tests.test_stores tests.test_prices tests.test_alerts tests.test_sets
+python3 -m unittest -q tests.test_expert_api tests.test_probe tests.test_notify tests.test_repo tests.test_run tests.test_stores tests.test_prices tests.test_alerts tests.test_sets tests.test_cashback
 
 # The first run comes before the job: a new periodic job starts at once and two runs at the same
 # time clobbered the probe file in the phone test (finding F1; the lock file guards it now, too).

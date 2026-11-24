@@ -1,0 +1,433 @@
+{
+"indexed": {
+"e_973659": [
+"e_4294_6106508"
+],
+"e_976112": [
+"e_4294_6106509",
+"e_4205_5247726",
+"e_4206_5247727",
+"e_3157_9810"
+],
+"e_944796": [
+"e_4294_6106509",
+"e_4205_5247726",
+"e_4206_5247727",
+"e_3157_9810"
+],
+"e_973656": [
+"e_4294_6106510",
+"e_4205_5247726",
+"e_4206_5247727",
+"e_3157_9810"
+],
+"e_973654": [
+"e_4294_6106511",
+"e_4205_5247726",
+"e_4206_5247727",
+"e_3157_9810"
+],
+"e_944797": [
+"e_4294_6106511",
+"e_4205_5247726",
+"e_4206_5247727",
+"e_3157_9810"
+],
+"e_973653": [
+"e_4294_6106512",
+"e_4205_5247726",
+"e_4206_5247727",
+"e_3157_9810"
+],
+"e_974292": [
+"e_4294_6106515",
+"e_4205_5247726",
+"e_4206_5247727",
+"e_3157_9810"
+],
+"e_973320": [
+"e_3157_9810",
+"e_4288_6082809"
+],
+"e_973373": [
+"e_3157_9810",
+"e_4288_6082806"
+],
+"e_973334": [
+"e_3157_9810",
+"e_4288_6082807"
+],
+"e_973370": [
+"e_3157_9810",
+"e_4288_6082808"
+],
+"e_969892": [
+"e_4207_5247728",
+"e_3157_9810"
+],
+"e_973658": [
+"e_4205_5247726",
+"e_4206_5247727",
+"e_3157_9810"
+],
+"e_973660": [
+"e_4205_5247726",
+"e_4206_5247727",
+"e_3157_9810"
+],
+"e_977673": [
+"e_4066_3693136",
+"e_3157_9810",
+"e_4203_5230721"
+]
+},
+"compactPromotionData": {
+"e_4294_6106508": {
+"promotionId": "e_4294",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "66472f52e0e6f00001f0f921",
+"possibleDiscountRanges": [
+{
+"from": 0,
+"to": 99999,
+"taxRate": 19,
+"discount": 500,
+"discountType": "ABSOLUTE"
+}
+],
+"isSetPromotion": false
+},
+"e_4294_6106509": {
+"promotionId": "e_4294",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "64f09ce3ea403800014cdf70",
+"possibleDiscountRanges": [
+{
+"from": 0,
+"to": 99999,
+"taxRate": 19,
+"discount": 250,
+"discountType": "ABSOLUTE"
+}
+],
+"isSetPromotion": false
+},
+"e_4294_6106510": {
+"promotionId": "e_4294",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "6647284ee0e6f00001f0f903",
+"possibleDiscountRanges": [
+{
+"from": 0,
+"to": 99999,
+"taxRate": 19,
+"discount": 300,
+"discountType": "ABSOLUTE"
+}
+],
+"isSetPromotion": false
+},
+"e_4294_6106511": {
+"promotionId": "e_4294",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "663dd65a66daaf00019ca493",
+"possibleDiscountRanges": [
+{
+"from": 0,
+"to": 99999,
+"taxRate": 19,
+"discount": 200,
+"discountType": "ABSOLUTE"
+}
+],
+"isSetPromotion": false
+},
+"e_4294_6106512": {
+"promotionId": "e_4294",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "6647284be0e6f00001f0f8f1",
+"possibleDiscountRanges": [
+{
+"from": 0,
+"to": 99999,
+"taxRate": 19,
+"discount": 175,
+"discountType": "ABSOLUTE"
+}
+],
+"isSetPromotion": false
+},
+"e_4294_6106515": {
+"promotionId": "e_4294",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "64f0705aea403800014cdf14",
+"possibleDiscountRanges": [
+{
+"from": 0,
+"to": 99999,
+"taxRate": 19,
+"discount": 150,
+"discountType": "ABSOLUTE"
+}
+],
+"isSetPromotion": false
+},
+"e_4207_5247728": {
+"promotionId": "e_4207",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "67f4f5faf1641d0001d584bd",
+"isSetPromotion": true
+},
+"e_4205_5247726": {
+"promotionId": "e_4205",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "67f4f5faf1641d0001d584bd",
+"isSetPromotion": true
+},
+"e_4206_5247727": {
+"promotionId": "e_4206",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "67f4f5faf1641d0001d584bd",
+"isSetPromotion": true
+},
+"e_4066_3693136": {
+"promotionId": "e_4066",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "6a6332f45a32a851323e714c",
+"possibleDiscountRanges": null,
+"isSetPromotion": false
+},
+"e_7779_0": {
+"promotionId": "e_7779",
+"showBubbleOnlyWhenOnlineAvailable": true,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": false,
+"teaserMediumId": "6a05f718f8def70001410c7d",
+"possibleDiscountRanges": [
+{
+"from": 50,
+"to": 99999,
+"taxRate": 19,
+"discount": 10,
+"discountType": "ABSOLUTE"
+}
+],
+"isSetPromotion": false
+},
+"e_3157_9810": {
+"promotionId": "e_3157",
+"showBubbleOnlyWhenOnlineAvailable": true,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "668bb19a2c68da00012a28e6",
+"possibleDiscountRanges": null,
+"isSetPromotion": false
+},
+"e_4288_6082806": {
+"promotionId": "e_4288",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "64f09ce3ea403800014cdf70",
+"possibleDiscountRanges": null,
+"isSetPromotion": false
+},
+"e_4288_6082807": {
+"promotionId": "e_4288",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "663dd65a66daaf00019ca493",
+"possibleDiscountRanges": null,
+"isSetPromotion": false
+},
+"e_4288_6082808": {
+"promotionId": "e_4288",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "6af2cf0847d3696cf75a009b",
+"possibleDiscountRanges": null,
+"isSetPromotion": false
+},
+"e_4288_6082809": {
+"promotionId": "e_4288",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "64f0705aea403800014cdf14",
+"possibleDiscountRanges": null,
+"isSetPromotion": false
+},
+"e_4203_5230721": {
+"promotionId": "e_4203",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "6abe595440d46e1e2470e5a3",
+"possibleDiscountRanges": null,
+"isSetPromotion": false
+},
+"e_3693_1778905": {
+"promotionId": "e_3693",
+"showBubbleOnlyWhenOnlineAvailable": false,
+"showBubbleOnlyWhenStoreAvailable": false,
+"canModifyReservation": true,
+"teaserMediumId": "69e5f924c6928e00019b430a",
+"possibleDiscountRanges": null,
+"isSetPromotion": false
+}
+},
+"globalPromotions": {
+"e_4294": {
+"id": "e_4294",
+"priority": -10010,
+"showInCheckout": true,
+"type": "CASHBACK",
+"couponType": "EEC",
+"localizedProperties": {
+"description": "<p>Jetzt doppelten oder einfachen Cashback beim Kauf eines Sony Bravia TVs oder eines Bravia TVs in Kombination mit einer Soundbar sichern!</p><p>So funktioniert’s:</p><ul><li>Kaufe im Aktionszeitraum vom 12.11. – 10.01.2027 eines bis drei der teilnehmenden Aktionsmodelle von Sony.</li><li>Fülle anschließend das Antragsformular unter <a href=\"https://www.sony.de/cashback/TVWinter2026\" target=\"\" rel=\"\">https://www.sony.de/cashback/TVWinter2026</a> aus und registriere dort Dein Gerät vom 10.12. – 07.03.2027.</li><li>Nach erfolgreicher Registrierung erhältst Du die Überweisung des Cashbacks von Sony innerhalb von 28 Tagen nach Eingang des Cashback-Antrags.<br></li></ul><a href=\"https://cdn.expert.de/f3/e5/c3/8f376c6e3bf296d55ce8c81f50319425ce/FY26_HE_Double-Cashback_Promo_Expert_BG-AT.pdf.pdf\" target=\"_blank\" rel=\"\">Teilnahmebedingungen</a><br>",
+"title": "Sony Cashback",
+"pillTheme": "expert-outline",
+"pillTitle": null
+}
+},
+"e_4207": {
+"id": "e_4207",
+"priority": -10009,
+"showInCheckout": true,
+"type": "PRODUCT_SET",
+"couponType": "EEC",
+"localizedProperties": {
+"description": "<p>Sichere Dir jetzt einen Direktabzug in Höhe von 200.00 €.  Kaufe eines der teilnehmenden Aktionsgeräte in Kombination mit einem der folgenden Zubehörartikel und spare!<ol><li>LG Soundbar mit kabellosem Subwoofer DSC9S schwarz (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/12220112509-soundbar-mit-kabellosem-subwoofer-dsc9s-schwarz.html\" target=\"\" rel=\"\">12220112509</a>)</li><li>LG DSC9S 3.1.3 Dolby Atmos Soundbar mit Subwoofer (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/12220123509-dsc9s-3-1-3-dolby-atmos-soundbar-mit-subwoofer.html\" target=\"\" rel=\"\">12220123509</a>)</li></ol>So funktioniert es:<ol><li>Lege beide Aktionsgeräte bis zum 30.11.2026 in deinen Warenkorb.</li><li>Ein Direktabzug in Höhe von 200.00 € wird dir anschließend automatisch im Warenkorb abgezogen.</li></ol>",
+"title": "Im Set sparen",
+"pillTheme": "expert-outline",
+"pillTitle": null
+}
+},
+"e_4205": {
+"id": "e_4205",
+"priority": -10009,
+"showInCheckout": true,
+"type": "PRODUCT_SET",
+"couponType": "EEC",
+"localizedProperties": {
+"description": "<p>Sichere Dir jetzt einen Direktabzug in Höhe von 100.00 €.  Kaufe eines der folgenden Aktionsgeräte<ol><li>Sony K-75S39B BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128356730-k-75s39b-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128356730</a>)</li><li>Sony K65XR95M2PB BRAVIA 9 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128378730-k65xr95m2pb-bravia-9-ii-rgb-led.html\" target=\"\" rel=\"\">11128378730</a>)</li><li>Sony K65XR79M2B BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128374730-k65xr79m2b-bravia-7-ii-rgb-led.html\" target=\"\" rel=\"\">11128374730</a>)</li><li>Sony K55S25VM2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128363730-k55s25vm2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11128363730</a>)</li><li>Sony K55XR79M2B BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128373730-k55xr79m2b-bravia-7-ii-rgb-led.html\" target=\"\" rel=\"\">11128373730</a>)</li><li>Sony K75XR95M2PB BRAVIA 9 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128379730-k75xr95m2pb-bravia-9-ii-rgb-led.html\" target=\"\" rel=\"\">11128379730</a>)</li><li>Sony K77A69PB BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128407730-k77a69pb-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11128407730</a>)</li><li>Sony K43XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11124060730-k43xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11124060730</a>)</li><li>Sony K85XR75M2PB BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128376730-k85xr75m2pb-bravia-7-ii-rgb-led.html\" target=\"\" rel=\"\">11128376730</a>)</li><li>Sony K55XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128367730-k55xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128367730</a>)</li><li>Sony K-65XR59B BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128352730-k-65xr59b-bravia-5-mini-led-tv.html\" target=\"\" rel=\"\">11128352730</a>)</li><li>Sony K-55XR84B Bravia 8 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128344730-k-55xr84b-bravia-8-oled-tv.html\" target=\"\" rel=\"\">11128344730</a>)</li><li>Sony K-75XR59PB BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128351730-k-75xr59pb-bravia-5-mini-led-tv.html\" target=\"\" rel=\"\">11128351730</a>)</li><li>Sony K-85S35PB BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128355730-k-85s35pb-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128355730</a>)</li><li>Sony K-65S39B BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128357730-k-65s39b-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128357730</a>)</li><li>Sony K-85XR59BP BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128350730-led-tv.html\" target=\"\" rel=\"\">11128350730</a>)</li><li>Sony K-43S39PB BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11124058730-k43s39bp-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11124058730</a>)</li><li>Sony K-65XR90B Bravia 9 QLED Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128349730-k-65xr90-bravia-9-mini-led-tv.html\" target=\"\" rel=\"\">11128349730</a>)</li><li>Sony K85XR35M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128370730-k85xr35m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128370730</a>)</li><li>Sony K65XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128368730-k65xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128368730</a>)</li><li>Sony K85XR95M2PB BRAVIA 9 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128400730-k85xr95m2pb-bravia-9-ii-rgb-led.html\" target=\"\" rel=\"\">11128400730</a>)</li><li>Sony K50XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128366730-k50xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128366730</a>)</li><li>Sony K-98XR55BP BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128354730-k-98xr55-bravia-5-mini-led-tv.html\" target=\"\" rel=\"\">11128354730</a>)</li><li>Sony K-55XR8M25BP BRAVIA 8 II OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128361730-k-55xr8m25bp-bravia-8-ii-oled-tv.html\" target=\"\" rel=\"\">11128361730</a>)</li><li>Sony K-83A69 BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128408730-k-83a69-bravia-6-oled-tv.html\" target=\"\" rel=\"\">11128408730</a>)</li><li>Sony K50XR79M2PB BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128402730-k50xr79m2pb-bravia-7-ii-true-rgb-tv.html\" target=\"\" rel=\"\">11128402730</a>)</li><li>Sony K65A69PB BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128406730-k65a69pb-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11128406730</a>)</li><li>Sony K-75XR90B Bravia 9 QLED Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128342730-k-75xr90b-bravia-9-qled-mini-led-tv.html\" target=\"\" rel=\"\">11128342730</a>)</li><li>Sony K48A69PB BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11126054730-k48a69pb-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11126054730</a>)</li><li>Sony K-77XR84B Bravia 8 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128343730-k-77xr84b-bravia-8-oled-tv.html\" target=\"\" rel=\"\">11128343730</a>)</li><li>Sony K75XR79M2PB BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128403730-k75xr79m2pb-bravia-7-ii-true-rgb-tv.html\" target=\"\" rel=\"\">11128403730</a>)</li><li>Sony K-65XR84B Bravia 8 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128348730-k-65xr84b-bravia-8-oled-tv.html\" target=\"\" rel=\"\">11128348730</a>)</li><li>Sony K115XR95M2B BRAVIA 9 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128401730-k115xr95m2b-bravia-9-ii-true-rgb-tv.html\" target=\"\" rel=\"\">11128401730</a>)</li><li>Sony K-65XR8M25B BRAVIA 8 II OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128360730-k-65xr8m25b-bravia-8-ii-oled-tv.html\" target=\"\" rel=\"\">11128360730</a>)</li><li>Sony K75S25M2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128365730-k75s25m2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11128365730</a>)</li><li>Sony K65S25VM2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128364730-k65s25vm2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11128364730</a>)</li><li>Sony K75XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128369730-k75xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128369730</a>)</li><li>Sony K-100XR35M2 BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128371730-k-100xr35m2-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128371730</a>)</li><li>Sony K50S25VM2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128362730-k50s25vm2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11128362730</a>)</li><li>Sony K-55XR59B BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128353730-k-55xr59b-bravia-5-mini-led-tv.html\" target=\"\" rel=\"\">11128353730</a>)</li><li>Sony K-55S39B BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128358730-k-55s39b-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128358730</a>)</li><li>Sony K-50S39B BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128359730-k-50s39b-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128359730</a>)</li><li>Sony KD32W804P1 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11120016730-kd32w804p1aep-led-tv.html\" target=\"\" rel=\"\">11120016730</a>)</li><li>Sony K43S25VM2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11124059730-k43s25vm2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11124059730</a>)</li><li>Sony K55A69PB BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128405730-k55a69pb-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11128405730</a>)</li><li>Sony K-85XR90B Bravia 9 QLED Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128341730-k-85xr90b-bravia-9-qled-mini-led-tv.html\" target=\"\" rel=\"\">11128341730</a>)</li><li>Sony K98XR75M2PB BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128404730-k98xr75m2pb-bravia-7-ii-true-rgb-tv.html\" target=\"\" rel=\"\">11128404730</a>)</li></ol>in Kombination mit Sony BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/12220063730-soundbar-mit-subwoofer-htbd60-schwarz.html\" target=\"\" rel=\"\">12220063730</a>) und spare!</p><p>So funktioniert es:</p><ol><li>Lege beide Aktionsgeräte bis zum 30.11.2026 in deinen Warenkorb.</li><li>Ein Direktabzug in Höhe von 100.00 € wird dir anschließend automatisch im Warenkorb abgezogen.</li></ol>",
+"title": "Im Set sparen",
+"pillTheme": "expert-outline",
+"pillTitle": null
+}
+},
+"e_4206": {
+"id": "e_4206",
+"priority": -10009,
+"showInCheckout": true,
+"type": "PRODUCT_SET",
+"couponType": "EEC",
+"localizedProperties": {
+"description": "<p>Sichere Dir jetzt einen Direktabzug in Höhe von 200.00 €.  Kaufe eines der folgenden Aktionsgeräte<ol><li>Sony K-98XR55BP BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128354730-k-98xr55-bravia-5-mini-led-tv.html\" target=\"\" rel=\"\">11128354730</a>)</li><li>Sony K-55XR8M25BP BRAVIA 8 II OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128361730-k-55xr8m25bp-bravia-8-ii-oled-tv.html\" target=\"\" rel=\"\">11128361730</a>)</li><li>Sony K-65XR8M25B BRAVIA 8 II OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128360730-k-65xr8m25b-bravia-8-ii-oled-tv.html\" target=\"\" rel=\"\">11128360730</a>)</li><li>Sony K-83A69 BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128408730-k-83a69-bravia-6-oled-tv.html\" target=\"\" rel=\"\">11128408730</a>)</li><li>Sony K65A69PB BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128406730-k65a69pb-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11128406730</a>)</li><li>Sony K50XR79M2PB BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128402730-k50xr79m2pb-bravia-7-ii-true-rgb-tv.html\" target=\"\" rel=\"\">11128402730</a>)</li><li>Sony K65S25VM2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128364730-k65s25vm2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11128364730</a>)</li><li>Sony K75S25M2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128365730-k75s25m2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11128365730</a>)</li><li>Sony K-65XR84B Bravia 8 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128348730-k-65xr84b-bravia-8-oled-tv.html\" target=\"\" rel=\"\">11128348730</a>)</li><li>Sony K55A69PB BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128405730-k55a69pb-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11128405730</a>)</li><li>Sony KD32W804P1 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11120016730-kd32w804p1aep-led-tv.html\" target=\"\" rel=\"\">11120016730</a>)</li><li>Sony K48A69PB BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11126054730-k48a69pb-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11126054730</a>)</li><li>Sony K115XR95M2B BRAVIA 9 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128401730-k115xr95m2b-bravia-9-ii-true-rgb-tv.html\" target=\"\" rel=\"\">11128401730</a>)</li><li>Sony K-75XR90B Bravia 9 QLED Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128342730-k-75xr90b-bravia-9-qled-mini-led-tv.html\" target=\"\" rel=\"\">11128342730</a>)</li><li>Sony K-77XR84B Bravia 8 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128343730-k-77xr84b-bravia-8-oled-tv.html\" target=\"\" rel=\"\">11128343730</a>)</li><li>Sony K75XR79M2PB BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128403730-k75xr79m2pb-bravia-7-ii-true-rgb-tv.html\" target=\"\" rel=\"\">11128403730</a>)</li><li>Sony K98XR75M2PB BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128404730-k98xr75m2pb-bravia-7-ii-true-rgb-tv.html\" target=\"\" rel=\"\">11128404730</a>)</li><li>Sony K43XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11124060730-k43xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11124060730</a>)</li><li>Sony K85XR75M2PB BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128376730-k85xr75m2pb-bravia-7-ii-rgb-led.html\" target=\"\" rel=\"\">11128376730</a>)</li><li>Sony K50S25VM2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128362730-k50s25vm2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11128362730</a>)</li><li>Sony K-100XR35M2 BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128371730-k-100xr35m2-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128371730</a>)</li><li>Sony K43S25VM2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11124059730-k43s25vm2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11124059730</a>)</li><li>Sony K-50S39B BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128359730-k-50s39b-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128359730</a>)</li><li>Sony K-55XR59B BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128353730-k-55xr59b-bravia-5-mini-led-tv.html\" target=\"\" rel=\"\">11128353730</a>)</li><li>Sony K-55S39B BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128358730-k-55s39b-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128358730</a>)</li><li>Sony K75XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128369730-k75xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128369730</a>)</li><li>Sony K-85XR90B Bravia 9 QLED Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128341730-k-85xr90b-bravia-9-qled-mini-led-tv.html\" target=\"\" rel=\"\">11128341730</a>)</li><li>Sony K-43S39PB BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11124058730-k43s39bp-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11124058730</a>)</li><li>Sony K-85S35PB BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128355730-k-85s35pb-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128355730</a>)</li><li>Sony K-65S39B BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128357730-k-65s39b-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128357730</a>)</li><li>Sony K-75XR59PB BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128351730-k-75xr59pb-bravia-5-mini-led-tv.html\" target=\"\" rel=\"\">11128351730</a>)</li><li>Sony K-85XR59BP BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128350730-led-tv.html\" target=\"\" rel=\"\">11128350730</a>)</li><li>Sony K85XR95M2PB BRAVIA 9 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128400730-k85xr95m2pb-bravia-9-ii-rgb-led.html\" target=\"\" rel=\"\">11128400730</a>)</li><li>Sony K85XR35M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128370730-k85xr35m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128370730</a>)</li><li>Sony K50XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128366730-k50xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128366730</a>)</li><li>Sony K65XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128368730-k65xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128368730</a>)</li><li>Sony K-65XR90B Bravia 9 QLED Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128349730-k-65xr90-bravia-9-mini-led-tv.html\" target=\"\" rel=\"\">11128349730</a>)</li><li>Sony K55XR39M2PB BRAVIA 3 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128367730-k55xr39m2pb-bravia-3-ii-led-tv.html\" target=\"\" rel=\"\">11128367730</a>)</li><li>Sony K-65XR59B BRAVIA 5 Mini LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128352730-k-65xr59b-bravia-5-mini-led-tv.html\" target=\"\" rel=\"\">11128352730</a>)</li><li>Sony K-55XR84B Bravia 8 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128344730-k-55xr84b-bravia-8-oled-tv.html\" target=\"\" rel=\"\">11128344730</a>)</li><li>Sony K77A69PB BRAVIA 6 OLED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128407730-k77a69pb-lcd-und-led-fernseher.html\" target=\"\" rel=\"\">11128407730</a>)</li><li>Sony K75XR95M2PB BRAVIA 9 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128379730-k75xr95m2pb-bravia-9-ii-rgb-led.html\" target=\"\" rel=\"\">11128379730</a>)</li><li>Sony K-75S39B BRAVIA 3 LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128356730-k-75s39b-bravia-3-led-tv.html\" target=\"\" rel=\"\">11128356730</a>)</li><li>Sony K55XR79M2B BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128373730-k55xr79m2b-bravia-7-ii-rgb-led.html\" target=\"\" rel=\"\">11128373730</a>)</li><li>Sony K55S25VM2PB BRAVIA 2 II LED TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128363730-k55s25vm2pb-bravia-2-ii-led-tv.html\" target=\"\" rel=\"\">11128363730</a>)</li><li>Sony K65XR95M2PB BRAVIA 9 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128378730-k65xr95m2pb-bravia-9-ii-rgb-led.html\" target=\"\" rel=\"\">11128378730</a>)</li><li>Sony K65XR79M2B BRAVIA 7 II True RGB TV (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/11128374730-k65xr79m2b-bravia-7-ii-rgb-led.html\" target=\"\" rel=\"\">11128374730</a>)</li></ol>in Kombination mit Sony HTA7100KIT.CEL Soundbar mit Subwoofer (Webcode:&nbsp;<a href=\"https://www.expert.de/shop/12220065730-hta7100kit-cel-soundbar.html\" target=\"\" rel=\"\">12220065730</a>) und spare!</p><p>So funktioniert es:</p><ol><li>Lege beide Aktionsgeräte bis zum 30.11.2026 in deinen Warenkorb.</li><li>Ein Direktabzug in Höhe von 200.00 € wird dir anschließend automatisch im Warenkorb abgezogen.</li></ol>",
+"title": "Im Set sparen",
+"pillTheme": "expert-outline",
+"pillTitle": null
+}
+},
+"e_4066": {
+"id": "e_4066",
+"priority": -10008,
+"showInCheckout": true,
+"type": "CASHBACK",
+"couponType": "EEC",
+"localizedProperties": {
+"description": "<p>Philips Ambilight TV genießen &amp; 100 Tage testen!<br>Überzeuge Dich 100 Tage von den innovativen Smart TVs mit einzigartigem Ambilight.</p><p><b>So funktioniert es:</b></p><ol><li>Kaufe bis zum 31.03.2027 ein teilnehmendes Aktionsgerät.</li><li>Entscheidest Du dich dazu, das Gerät zurückzugeben, musst Du Dich innerhalb von 100 Tagen unter <a href=\"http://www.ambilight-tv-testen.com\" target=\"\" rel=\"\">http://www.ambilight-tv-testen.com</a>.</li><li>Im Anschluss erhältst Du eine Bestätigungsmail mit dem inkludierten Link zum Rücksendeformular.</li><li>Du erhältst nach Rückgabe den Kaufpreis zurück.</li></ol><p>Zu den&nbsp;<a href=\"https://cdn.expert.de/a8/42/cf/570f44e0a78a9f2f8a7265be71025c9665/AL_Trial_Promo_Teilnahmebedingungen_2026_FINAL.pdf.pdf\" target=\"\" rel=\"\">Teilnahmebedingungen</a></p><div><br></div>",
+"title": "100 Tage testen",
+"pillTheme": "expert-outline",
+"pillTitle": null
+}
+},
+"e_7779": {
+"id": "e_7779",
+"priority": -10008,
+"showInCheckout": true,
+"type": "CASHBACK",
+"couponType": "EEC",
+"localizedProperties": {
+"description": "<p>Sichere dir <strong>10 € Rabatt</strong> bei Zahlung mit <strong>WERO</strong> ab einem Mindestbestellwert von 100 €. Einfach den Gutscheincode <strong>WERO10</strong> im Warenkorb eingeben.</p><h3>Wie funktioniert die Wero-Aktion mit 10 € Rabatt?</h3><p>  Im Aktionszeitraum von <strong>20.11 bis 20.12</strong> erhältst Du bei Zahlung mit Wero ab einem Mindestbestellwert von 100 € einen Sofortrabatt von 10 € pro Bestellung.</p><p>  Verwende dafür den Code <strong>WERO10</strong> auf der Warenkorbseite im Bereich „Gutscheincode eingeben“.</p><p><strong>Wichtig:</strong></p><p>  Der Rabatt wird dir sofort angezeigt, realisiert sich aber nur, wenn du deine Bestellung mit <strong>WERO</strong> abschließt.</p><p><strong>Teilnahmebedingungen:</strong></p><p>Rabatt ist nicht gültig mit anderen Zahlarten.</p><p>Nicht kombinierbar mit anderen Aktionen.</p><p><em>*Die Aktion ist befristet bis zum 20.12.2026, gilt nur solange der Vorrat reicht und nur bei online Käufen</em></p>",
+"title": "10€ Rabatt mit WERO10",
+"pillTheme": "expert-outline",
+"pillTitle": null
+}
+},
+"e_3157": {
+"id": "e_3157",
+"priority": -10008,
+"showInCheckout": true,
+"type": "CASHBACK",
+"couponType": "EEC",
+"localizedProperties": {
+"description": "<p>Sichere dir jetzt die 0 % Finanzierung mit PayPal bei einem Bestellwert von 99 Euro bis zu 5.000 Euro. Nur gültig vom 28.10. - 31.12.2026 für Onlinekäufe (nicht für stationäre Käufe möglich).</p><p>So erhältst du die 0% Finanzierung:*<br>Um PayPal Ratenzahlung nutzen zu können, benötigst du ein deutsches PayPal-Konto, in dem ein Bankkonto als Zahlungsquelle hinterlegt und bestätigt ist. Weitere Informationen findest du bei PayPal: <a href=\"https://www.paypal.de/ratenzahlung\" target=\"\" rel=\"\">https://www.paypal.de/ratenzahlung</a>. Danach gehst du wie folgt vor:</p><ol><li>Lege dein Wunschprodukt im Aktionszeitraum vom 28.10. - 31.12.2026 in den Warenkorb. Klicke im ersten Schritt „Mein Warenkorb“ auf „PayPal Jetzt Kaufen“ oder wähle im vierten Schritt „Zahlungsart auswählen“ PayPal als Zahlungsmittel aus.</li><li>Prüfe, ob PayPal Ratenzahlung in deinem PayPal-Konto als Zahlart angezeigt wird. Falls ja: Auswählen und Angaben prüfen.</li><li>Stimme der Ratenzahlungsvereinbarung, der Datenschutzerklärung und der Kreditwürdigkeitsprüfung zu.</li><li>Sofern zugelassen, beantrage verbindlich die PayPal Ratenzahlung und bestätige abschließend deinen Kauf.</li></ol><ul><li>*Achtung! Kredite können bei Verzug zu Kosten führen.<br>Vorbehaltlich Kreditwürdigkeitsprüfung. Laufzeiten von 3, 6, 12 oder 24 Monaten. Ab 99 € und bis zu 10.000 € Bestellwert (laufzeitabhängig). Im Kampagnenzeitraum vom 28.10.2026 - 31.12.2026 gilt für die Laufzeiten von 3, 6 und 12 Monate gilt ein eff. Jahreszins von 0%, p.a. zu einem festen Sollzinssatz von 0 % p.a. Repräsentatives Beispiel: Nettodarlehensbetrag 1.000 €, Gesamtbetrag 1.000 €, 12 monatliche Raten à 83,33 €, fester Sollzinssatz 0% p.a., eff. Jahreszins 0% p.a. Die Konditionen außerhalb des Kampagnenzeitraums finden Sie hier. Der Kreditgeber ist PayPal (Europe) S.à r.l. et Cie, S.C.A., 22-24 Boulevard Royal, L-2449 Luxembourg. Es gelten die Bedingungen für PayPal Ratenzahlung.</li></ul>",
+"title": "PayPal 0 % Finanzierung",
+"pillTheme": "expert-outline",
+"pillTitle": null
+}
+},
+"e_4288": {
+"id": "e_4288",
+"priority": -10002,
+"showInCheckout": true,
+"type": "CASHBACK",
+"couponType": "EEC",
+"localizedProperties": {
+"description": "<p>Samsung Aktions-Gerät kaufen und Cashback sichern.*</p><p>So funktioniert es:</p><ul><li>Kaufe zwischen dem 16.11. – 06.12.2026 ein teilnehmendes Aktionsgerät.</li><li>Registriere Dich bis zum 20.12.2026 unter samsung.de/theframeprodeals</li><li>Erhalte den Cashback innerhalb von 45 Werktagen auf Dein Konto.</li></ul><p>*Ausführliche Teilnahmebedingungen, Aktionsgeräte mit länderspezifischem Modell-Code sowie modellabhängige Cashbacks unter samsung.de/theframeprodeals</p><p><a href=\"https://cdn.expert.de/0a/23/31/2fc735b8c5ca67628941cb3cbe66acce40/SEG_VSX_The_Frame_Pro_Deals_TNBs.pdf.pdf\" target=\"_blank\" rel=\"\" title=\"Link: https://cdn.expert.de/0a/23/31/2fc735b8c5ca67628941cb3cbe66acce40/SEG_VSX_The_Frame_Pro_Deals_TNBs.pdf.pdf\">Zu den Teilnahmebedingungen</a></p>",
+"title": "Samsung Cashback",
+"pillTheme": "expert-outline",
+"pillTitle": null
+}
+},
+"e_4203": {
+"id": "e_4203",
+"priority": -10002,
+"showInCheckout": true,
+"type": "CASHBACK",
+"couponType": "EEC",
+"localizedProperties": {
+"description": "<p>Jetzt Philips Ambilight TV kaufen und Assassin's Creed sichern!</p><p>So funktioniert es:</p><ol><li>Kaufe zwischen dem 01.10. und 31.12.2026 ein teilnehmendes Aktionserät.</li><li>Registriere Dich frühestens 30 Kalendertage nach dem Kaufdatum bis spätestens zum 14.02.2027 unter <a href=\"http://www.ambilight-bonus.com/\" target=\"\" rel=\"\">www.ambilight-bonus.com</a></li><li>Du erhältst den Ubisoft Aktionscode per Email und kannst ihn unter <a href=\"http://www.ambilight-assassins-creed.com/\" target=\"\" rel=\"\">www.ambilight-assassins-creed.com</a> einlösen.</li><li>Mit Deiner erfolgreichen Registrierung nimmst Du automatisch am Gewinnspiel „Kaufpreis zurück“ teil. Während des Aktionszeitraums wird wöchentlich ein Gewinner aus allen bis zum jeweiligen Ziehungsstichtag vollständig registrierten und weiterhin teilnahmeberechtigten Teilnehmern gezogen. Teilnehmer, die nicht gewinnen, nehmen automatisch an den nachfolgenden Wochenziehungen teil.</li></ol><p><a href=\"https://cdn.expert.de/14/2f/81/f8313b9d41d87700ed740cff79413a762f/Teilnahmebedingungen_Philips_TV_Ubisoft_Voucher-Promotion_DACH.pdf.pdf\" target=\"\" rel=\"\" title=\"Link: https://cdn.expert.de/14/2f/81/f8313b9d41d87700ed740cff79413a762f/Teilnahmebedingungen_Philips_TV_Ubisoft_Voucher-Promotion_DACH.pdf.pdf\">Zu den Teilnahmebedingungen</a></p>",
+"title": "Assassin's Creed sichern!",
+"pillTheme": "expert-outline",
+"pillTitle": null
+}
+},
+"e_3693": {
+"id": "e_3693",
+"priority": 1,
+"showInCheckout": true,
+"type": "CASHBACK",
+"couponType": "EEC",
+"localizedProperties": {
+"description": "<p>Erhalte bis zum 31.01.2027 ein zusätzliches Jahr Garantie auf ausgewählte Modelle.</p><p>So funktioniert es:</p><ol><li>Kaufe zwischen dem 01.04.2026 und 31.01.2027 ein teilnehmendes Aktionsgerät.</li><li>Registriere Dein Gerät innerhalb von 60 Tagen nach Kauf unter&nbsp;<a href=\"http://www.sony.de/exwarranty\" target=\"\" rel=\"\">www.sony.de/exwarranty</a></li><li>Aktiviere die einjährige Garantieverlängerung.</li></ol>",
+"title": "+1 Jahr Garantieverlängerung",
+"pillTheme": "expert-outline",
+"pillTitle": null
+}
+}
+}
+}

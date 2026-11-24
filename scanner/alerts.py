@@ -6,16 +6,18 @@ previous scan), the target side per product (N2 fires per crossing) and the disp
 reported (N3 fires once per store and product). A failed ntfy send never fails the run: the alert stays
 in the file with `sent: false` and the run reports a warning.
 
-Effective price = the lower of the best shipped and the best pickup total; manufacturer cashback (M4)
-is not deducted yet. N4 (set deals, M3): a new bundle at the online shop or a store within the radius, or
-a discount that grew by at least 20 €, once per bundle and store. N5 and N6 come with M4.
+Effective price = the lower of the best shipped and the best pickup total, minus the product's cashback
+amount when the cashback step found one (`cashback.amount` in the product file). N4 (set deals, M3): a new
+bundle at the online shop or a store within the radius, or a discount that grew by at least 20 €, once per
+bundle and store. N5 (cashback, M4): a new promotion in `data/cashbacks.json`, amounts that became known,
+and 3 days before the end of the purchase period; once per event. N6 is N1 for a watched device.
 """
 
 from datetime import timedelta
 
 from .jsonfile import read_json, write_json
 from .probe import berlin, iso, parse_time
-from . import prices, stores, watchlist
+from . import cashback, prices, stores, watchlist
 
 FILE = "alerts.json"
 KEEP = 200
@@ -26,10 +28,11 @@ LOW_WINDOW = timedelta(days=30)
 DISPLAY_BELOW = 0.15  # N3: a Restposten or display offer at least 15 % below the best regular offer
 DEFAULT_MIN_DROP = 1.0  # € (config: notify.minDrop)
 SET_GROWTH = 20.0  # € (N4: a known set's discount grew by at least this)
+ENDING_DAYS = 3  # N5: a message this many days before the purchase period ends
 TAGS = {"price": ["chart_with_downwards_trend"], "target": ["dart"], "restposten": ["label"],
-        "set": ["package"], "failure": ["rotating_light"]}
+        "set": ["package"], "cashback": ["moneybag"], "failure": ["rotating_light"]}
 TITLES = {"price": "Price drop", "target": "Target price reached", "restposten": "Restposten deal",
-          "set": "Set deal", "failure": "expert-checker: scan failed"}
+          "set": "Set deal", "cashback": "Cashback", "failure": "expert-checker: scan failed"}
 
 
 class Alerts:
@@ -37,7 +40,8 @@ class Alerts:
         self.path = data_dir / FILE
         raw = read_json(self.path) or {}
         self.items = list(raw.get("alerts") or [])
-        self.state = {"cooldowns": {}, "prices": {}, "target": {}, "restposten": {}, "sets": {}, **(raw.get("state") or {})}
+        self.state = {"cooldowns": {}, "prices": {}, "target": {}, "restposten": {}, "sets": {}, "cashback": {},
+                      **(raw.get("state") or {})}
         self.ntfy = ntfy
         self.now = now
         self.raised = []  # ids of this run's alerts
@@ -61,6 +65,9 @@ class Alerts:
                     self.product_rules(record, by_id, min_drop)
                 if record and (record.get("setsScan") or {}).get("time") == iso(self.now):
                     self.set_rules(record, by_id, radius)
+        data = read_json(ctx.data / cashback.FILE)
+        if data and data.get("updated") == iso(self.now):
+            self.cashback_rules(data)
         self.failure_rules(status)
         return list(self.raised)
 
@@ -86,7 +93,8 @@ class Alerts:
             wanted = low is None or current["total"] < low
         raised = False
         if wanted:
-            text = (f"{label}: {fmt_price(current['total'])} {current['path']} (was {fmt_price(previous['total'])})"
+            cash = f" after {fmt_price(current['cashback'])} cashback" if current.get("cashback") else ""
+            text = (f"{label}: {fmt_price(current['total'])} {current['path']}{cash} (was {fmt_price(previous['total'])})"
                     f" · {store_text(by_id.get(current['storeId']), current['distanceKm'])}")
             raised = self.emit("price", f"price:{webcode}", text, url=store_url(record, current["storeId"]),
                                webcode=webcode, store_id=current["storeId"], cooldown=PRICE_COOLDOWN)
@@ -162,6 +170,44 @@ class Alerts:
         for key in [k for k in self.state["sets"] if k.startswith(webcode + ":") and k not in active]:
             del self.state["sets"][key]  # gone; the same bundle later is a new deal
 
+    def cashback_rules(self, data):
+        """N5: a new cashback or extra, amounts that became known, and the last 3 days of the purchase period."""
+        state = self.state["cashback"]
+        today = berlin(self.now).date()
+        for pid, p in (data.get("promotions") or {}).items():
+            if not p.get("active") or p.get("kind") == "other":
+                continue
+            st = state.setdefault(pid, {})
+            known = p.get("amountSource") in ("pdf", "override")
+            amounts = amount_text(p)
+            head = f"{p.get('title')}{f' ({p['brand']})' if p.get('brand') else ''}"
+            dates = f"buy until {p['buyTo']}" if p.get("buyTo") else "no end date"
+            if p.get("registerBy"):
+                dates += f", register by {p['registerBy']}"
+            watched = f", watched: {', '.join(p['watched'])}" if p.get("watched") else ""
+            if "new" not in st:
+                kind = "cashback" if p.get("kind") == "cashback" else "extra"
+                self.emit("cashback", None, f"New {kind}: {head}: {amounts}, {dates}{watched}", url=p.get("url") or p.get("pdfUrl"),
+                          title="New cashback" if kind == "cashback" else "New extra")
+                st["new"] = iso(self.now)
+                if known:
+                    st["amounts"] = iso(self.now)
+            elif known and "amounts" not in st:
+                self.emit("cashback", None, f"Amounts known: {head}: {amounts}, {dates}{watched}", url=p.get("url") or p.get("pdfUrl"),
+                          title="Cashback amounts known")
+                st["amounts"] = iso(self.now)
+            if p.get("buyTo") and "ending" not in st:
+                try:
+                    left = (datetime_date(p["buyTo"]) - today).days
+                except ValueError:
+                    left = None
+                if left is not None and 0 <= left <= ENDING_DAYS:
+                    self.emit("cashback", None, f"Ends in {left} day{'s' if left != 1 else ''}: {head}: {amounts}, {dates}{watched}",
+                              url=p.get("url") or p.get("pdfUrl"), title="Cashback ends soon", priority="high")
+                    st["ending"] = iso(self.now)
+        for pid in [k for k in state if k not in (data.get("promotions") or {})]:
+            del state[pid]
+
     def failure_rules(self, status):
         """N7: an aborted run (challenge, rate limit, too many failed calls) or a failed step (for example a
         store count change of more than 10 %). One message per 6 h. Push failures: run.push_data."""
@@ -214,14 +260,32 @@ class Alerts:
 # Helpers
 
 def effective(record):
-    """The lower of the best shipped and the best pickup total, with its path and store."""
+    """The lower of the best shipped and the best pickup total, minus a known cashback amount, with path and store."""
     best = record.get("best") or {}
     candidates = [(b["total"], path, b) for path, b in (("pickup", best.get("pickup")), ("shipped", best.get("shipped"))) if b]
     if not candidates:
         return None
     total, path, b = min(candidates, key=lambda c: c[0])
-    return {"total": total, "path": path, "storeId": b["storeId"], "distanceKm": b.get("distanceKm"),
-            "unknown": bool(b.get("unknown"))}
+    amount = (record.get("cashback") or {}).get("amount") or 0
+    return {"total": round(total - amount, 2), "path": path, "storeId": b["storeId"], "distanceKm": b.get("distanceKm"),
+            "unknown": bool(b.get("unknown")), "cashback": amount or None}
+
+
+def amount_text(promotion):
+    """`150–500 €` from the device amounts, `up to 1 000 € with soundbar` when doubled; `amount unknown` otherwise."""
+    amounts = sorted({d["amount"] for d in promotion.get("devices") or [] if d.get("amount") is not None})
+    if not amounts:
+        return "amount unknown"
+    text = fmt_price(amounts[0]) if len(amounts) == 1 else f"{fmt_price(amounts[0]).replace(' €', '')}–{fmt_price(amounts[-1])}"
+    doubles = [d["amountDouble"] for d in promotion.get("devices") or [] if d.get("amountDouble")]
+    if doubles:
+        text += f", up to {fmt_price(max(doubles))} with soundbar"
+    return text
+
+
+def datetime_date(iso_day):
+    from datetime import date
+    return date.fromisoformat(iso_day)
 
 
 def thirty_day_low(history, today, now):

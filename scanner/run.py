@@ -14,7 +14,7 @@ import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from . import alerts, prices, repo, sets, stores
+from . import alerts, cashback, prices, repo, sets, stores
 from .expert_api import ChallengeError, ExpertApi, ExpertApiError, RateLimitedError, ScanAborted
 from .jsonfile import read_json, write_json  # noqa: F401  (tests and steps use run.read_json / run.write_json)
 from .notify import Ntfy
@@ -30,7 +30,7 @@ PUSH_FAILURES_TO_ALERT = 3  # N7 after three failed pushes in a row (≈ 6 h)
 STOP_ERRORS = (ChallengeError, RateLimitedError, ScanAborted)
 EXIT_OK, EXIT_DEGRADED, EXIT_ABORTED, EXIT_LOCKED = 0, 1, 2, 3
 
-STEPS = {"stores": stores.step, "prices": prices.step, "sets": sets.step}  # name -> fn(ctx) -> summary dict; cashback in M4
+STEPS = {"stores": stores.step, "prices": prices.step, "sets": sets.step, "cashback": cashback.step}  # name -> fn(ctx) -> summary dict
 
 
 class Context:

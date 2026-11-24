@@ -75,6 +75,9 @@ def scan_product(ctx, product, store_list, max_distance_km):
         "offers": [],
         "history": previous.get("history") or [],
         "sets": previous.get("sets") or [],
+        "setsScan": previous.get("setsScan"),
+        "promotionIds": previous.get("promotionIds") or [],
+        "cashback": previous.get("cashback"),
     }
     if previous.get("articleError"):
         record["articleError"] = previous["articleError"]
