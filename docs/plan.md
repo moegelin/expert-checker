@@ -180,7 +180,7 @@ Revised 2026-11-23: the phone replaces GitHub Actions. The Actions table of 2026
 | Network | Wi-Fi and mobile data both work. Set scans run on Wi-Fi; on mobile data at most once a day | A price scan of 5 products moves ≈ 3.5 MB on the wire, 8 a day ≈ 30 MB; a set scan ≈ 7 MB (expert-api.md, "Request behaviour") |
 | Data push | `git pull --rebase` before the steps, `git add data`, `git commit`, `git push` after them, all in `scanner run --push` (`scanner/repo.py`), with the fine-grained PAT of test step 8 (this repo, Contents read/write, 90-day expiry) stored by `git credential.helper store` | Only the phone commits to `data/`, so the rebase never conflicts |
 | Failed push | Does not fail the run: the commits wait locally and go with the next push; N7 after three failed pushes in a row (≈ 6 h); the success ping is still sent | GitHub mails a week before the PAT expires. Renewal: new PAT, `git credential reject`, the next push asks for it |
-| Dead-man switch | healthchecks.io check "expert-scanner": cron `0 6-21/2 * * *`, Europe/Berlin, grace 2 h, integrations email and ntfy | The test check "expert-probe-phone" can be deleted after the window |
+| Dead-man switch | healthchecks.io check "expert-scanner": cron `0 8-20/2 * * *`, Europe/Berlin, grace 2 h, integrations email and ntfy (changed 2026-11-25 from `0 6-21/2`: the first run after the night pause drifts, see "Run schedule") | The test check "expert-probe-phone" can be deleted after the window |
 | Alerts | ntfy.sh topic (the app subscribed in the test); fallback `termux-notification` | |
 | Manual run | Termux: `bash ~/expert-checker/phone/run.sh manual` (ignores the time window) | |
 | Remote access | SSH into Termux from the Mac in the home Wi-Fi: `ssh -p 8022 192.168.178.61` (any user name; the Mac's `id_ed25519` key is in the phone's `~/.ssh/authorized_keys`, set up 2026-11-24 with `ssh-copy-id`). Claude runs repairs and manual runs over it. Still to do by the user: `sshd` in `~/.termux/boot/expert-checker.sh` so it survives a reboot, and `PasswordAuthentication no` in `$PREFIX/etc/ssh/sshd_config` | Relaying commands by hand through chat and WhatsApp was too slow (2026-11-24); the phone's IP may change with the router |
@@ -189,7 +189,9 @@ Revised 2026-11-23: the phone replaces GitHub Actions. The Actions table of 2026
 
 ### Run schedule (JobScheduler every 2 h; `run.sh` skips 22:00–06:00 Berlin)
 
-One job, one process. `scanner run` decides per step from the last-run times in `data/status.json`:
+One job, one process. `scanner run` decides per step from the last-run times in `data/status.json`.
+
+The period drifts at night (observed 2026-11-24/25: starts at 20:43, 22:47, 00:46, 03:32, 04:59, then 08:28): Android batches the periodic job while the phone idles (Doze), so the first run of the morning comes between 06:00 and about 08:30, not at 06:xx. The night starts are skipped by `run.sh` and cost nothing. Consequence for the dead-man switch: the first expected ping of the day is the 08:00 slot with 2 h grace; a "DOWN" at 08:00 with `0 6-21/2` (2026-11-25, 08:00) was this drift, not a failure.
 
 | Step | Cadence | Work per run | Calls per run (5 watched products) |
 |---|---|---|---|
