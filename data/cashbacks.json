@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T17:58:58Z",
+  "updated": "2026-11-25T07:28:32Z",
   "promotions": {
     "e_3157": {
       "id": "e_3157",
@@ -16,10 +16,11 @@
       "articleCount": 12294,
       "watched": [
         "11128346052",
-        "11128378730"
+        "11128378730",
+        "11128656509"
       ],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-24T17:58:58Z",
+      "lastSeen": "2026-11-25T07:28:32Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
@@ -43,7 +44,7 @@
         "11128346052"
       ],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-24T17:58:58Z",
+      "lastSeen": "2026-11-25T07:28:32Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
@@ -65,7 +66,7 @@
       "articleCount": 87,
       "watched": [],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-24T17:58:58Z",
+      "lastSeen": "2026-11-25T07:28:32Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
@@ -89,7 +90,7 @@
         "11128346052"
       ],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-24T17:58:58Z",
+      "lastSeen": "2026-11-25T07:28:32Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
@@ -111,7 +112,7 @@
       "articleCount": 4,
       "watched": [],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-24T17:58:58Z",
+      "lastSeen": "2026-11-25T07:28:32Z",
       "active": true,
       "sameInvoice": false,
       "amountSource": "pdf",
@@ -128,7 +129,7 @@
           "source": "pdf",
           "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128962771-gq65ls03hwuxzg-the-frame-pro-ls03hw-4k-vision-ai-smart-tv-2026-neo-qled-tv.html",
           "watched": false,
-          "price": 1513.9,
+          "price": 1433.75,
           "priceSource": "online"
         },
         {
@@ -143,7 +144,7 @@
           "source": "pdf",
           "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128972771-gq75ls03hwuxzg-the-frame-pro-ls03hw-4k-vision-ai-smart-tv-2026-neo-qled-tv.html",
           "watched": false,
-          "price": 1936.9,
+          "price": 2289,
           "priceSource": "online"
         },
         {
@@ -158,8 +159,8 @@
           "source": "pdf",
           "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11129004771-gq55ls03hwuxzg-the-frame-pro-ls03hw-4k-vision-ai-smart-tv-2026-neo-qled-tv.html",
           "watched": false,
-          "price": null,
-          "priceSource": null
+          "price": 1359.85,
+          "priceSource": "online"
         },
         {
           "articleId": "e_973373",
@@ -195,7 +196,7 @@
       "articleCount": 8,
       "watched": [],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-24T17:58:58Z",
+      "lastSeen": "2026-11-25T07:28:32Z",
       "active": true,
       "sameInvoice": true,
       "amountSource": "pdf",
@@ -287,7 +288,7 @@
           "source": "pdf",
           "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128377730-k98xr75m2pb-bravia-7-ii-rgb-led.html",
           "watched": false,
-          "price": 5329,
+          "price": 4839,
           "priceSource": "online"
         },
         {
@@ -378,6 +379,30 @@
         }
       ],
       "pdfLayout": "sony"
+    },
+    "e_4296": {
+      "id": "e_4296",
+      "kind": "other",
+      "title": "6FACH PAYBACK °Punkte",
+      "text": "Jetzt noch mehr PAYBACK-Punkte sammeln: Beim Kauf dieses Artikels sammelst Du 6fach PAYBACK °Punkte. So funktioniert’s: Einfach Coupon vor dem Einkauf auf PAYBACK.de oder in der PAYBACK App per Klick aktivieren. Die Einlösung des Coupons erfolgt automatisch durch Vorlage der (mobilen) PAYBACK Karte beim Einkauf in der Filiale vor Ort oder im Online-Shop durch Eingabe der Payback Kundennummer beim Check-Out.",
+      "url": null,
+      "pdfUrl": null,
+      "brand": null,
+      "buyFrom": null,
+      "buyTo": null,
+      "registerFrom": null,
+      "registerBy": null,
+      "articleCount": 14,
+      "watched": [
+        "11128656509"
+      ],
+      "firstSeen": "2026-11-25T07:28:32Z",
+      "lastSeen": "2026-11-25T07:28:32Z",
+      "active": true,
+      "sameInvoice": null,
+      "amountSource": "none",
+      "devices": [],
+      "soundbars": []
     }
   },
   "pdfs": {

@@ -1,6 +1,6 @@
 {
-  "lastRun": "2026-11-24T19:44:21Z",
-  "berlinTime": "2026-11-24 20:44",
+  "lastRun": "2026-11-25T07:28:32Z",
+  "berlinTime": "2026-11-25 08:28",
   "event": "schedule",
   "network": "wifi",
   "runner": "termux",
@@ -18,56 +18,58 @@
       "calls": 1
     },
     "prices": {
-      "lastAttempt": "2026-11-24T19:44:21Z",
+      "lastAttempt": "2026-11-25T07:28:32Z",
       "ok": true,
       "error": null,
       "products": 3,
-      "withOffer": 744,
-      "unknown": 1,
-      "incomplete": [],
+      "withOffer": 541,
+      "unknown": 213,
+      "incomplete": [
+        "11128346052"
+      ],
       "articleErrors": {},
-      "lastRun": "2026-11-24T19:44:21Z",
-      "calls": 1049
+      "lastRun": "2026-11-25T07:28:32Z",
+      "calls": 1047
     },
     "sets": {
-      "lastAttempt": "2026-11-24T19:44:21Z",
+      "lastAttempt": "2026-11-25T07:28:32Z",
       "ok": true,
       "error": null,
       "products": 3,
-      "stores": 745,
-      "sets": 195,
+      "stores": 754,
+      "sets": 201,
       "failed": 0,
       "skipped": [],
-      "lastRun": "2026-11-24T19:44:21Z",
-      "calls": 745
+      "lastRun": "2026-11-25T07:28:32Z",
+      "calls": 754
     },
     "cashback": {
-      "lastAttempt": "2026-11-24T17:58:58Z",
+      "lastAttempt": "2026-11-25T07:28:32Z",
       "ok": true,
       "error": null,
       "indexed": 83,
-      "kept": 6,
+      "kept": 7,
       "cashbacks": 2,
       "extras": 3,
       "devices": 12,
-      "articleLookups": 12,
+      "articleLookups": 0,
       "priceLookups": 12,
       "warnings": [],
-      "lastRun": "2026-11-24T17:58:58Z",
-      "calls": 25
+      "lastRun": "2026-11-25T07:28:32Z",
+      "calls": 13
     }
   },
   "skipped": [
-    "stores",
-    "cashback"
+    "stores"
   ],
-  "calls": 1794,
+  "calls": 1814,
   "alerts": [
-    "2026-11-24T19:44:21Z:set:11128378730:e_32110783",
-    "2026-11-24T19:44:21Z:set:11128378730:e_32410034",
-    "2026-11-24T19:44:21Z:set:11128378730:e_32472580",
-    "2026-11-24T19:44:21Z:set:11128378730:e_32472581",
-    "2026-11-24T19:44:21Z:set:11128378730:e_34627162"
+    "2026-11-25T07:28:32Z:set:11128378730:e_2879130",
+    "2026-11-25T07:28:32Z:set:11128378730:e_32110783",
+    "2026-11-25T07:28:32Z:set:11128378730:e_32410034",
+    "2026-11-25T07:28:32Z:set:11128378730:e_32472580",
+    "2026-11-25T07:28:32Z:set:11128378730:e_32472581",
+    "2026-11-25T07:28:32Z:set:11128378730:e_34627162"
   ],
-  "durationS": 140.4
+  "durationS": 130.8
 }
