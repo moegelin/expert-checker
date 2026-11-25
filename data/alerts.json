@@ -197,19 +197,43 @@
       "text": "Sony BRAVIA 9 II 65\": set with BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer −100 €, accessory effectively 299 € until 30.11.2026 · ESC Berlin, 4 km",
       "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128378730-k65xr95m2pb-bravia-9-ii-rgb-led.html?branch_id=e_34627162",
       "sent": true
+    },
+    {
+      "id": "2026-11-25T07:48:38Z:price:11128346052:e_39800614",
+      "time": "2026-11-25T07:48:38Z",
+      "kind": "price",
+      "webcode": "11128346052",
+      "storeId": "e_39800614",
+      "title": "Price drop",
+      "text": "Philips 65OLED951: 2 163,09 € shipped (was 2 168,65 €) · expert Krefeld, 484 km",
+      "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128346052-65oled951-oled-tv.html?branch_id=e_39800614",
+      "sent": true
+    },
+    {
+      "id": "2026-11-25T07:48:38Z:set:11128378730:e_32410034",
+      "time": "2026-11-25T07:48:38Z",
+      "kind": "set",
+      "webcode": "11128378730",
+      "storeId": "e_32410034",
+      "title": "Set deal",
+      "text": "Sony BRAVIA 9 II 65\": set with BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer −100 €, accessory effectively 299 € until 30.11.2026 · Online-Shop 319 €; 5 stores within 100 km, cheapest ESC Königs Wusterhausen/OT Zeesen, 31 km 299 €",
+      "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128378730-k65xr95m2pb-bravia-9-ii-rgb-led.html?branch_id=e_32410034",
+      "sent": true
     }
   ],
   "state": {
-    "cooldowns": {},
+    "cooldowns": {
+      "price:11128346052": "2026-11-25T07:48:38Z"
+    },
     "prices": {
       "11128346052": {
-        "total": 2168.65,
+        "total": 2163.09,
         "path": "shipped",
-        "storeId": "e_2879130",
-        "distanceKm": null,
+        "storeId": "e_39800614",
+        "distanceKm": 484.3,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-24T19:44:21Z"
+        "scan": "2026-11-25T07:48:38Z"
       },
       "11128378730": {
         "total": 3278.9,
@@ -218,7 +242,7 @@
         "distanceKm": 391.7,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-25T07:28:32Z"
+        "scan": "2026-11-25T07:48:38Z"
       },
       "11128379730": {
         "total": 3578.9,
@@ -235,18 +259,17 @@
         "distanceKm": 21.1,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-25T07:28:32Z"
+        "scan": "2026-11-25T07:48:38Z"
       }
     },
     "target": {},
     "restposten": {},
     "sets": {
-      "11128378730:20000159:e_2879130": 100,
-      "11128378730:20000159:e_32110783": 100,
-      "11128378730:20000159:e_32410034": 100,
-      "11128378730:20000159:e_32472580": 100,
-      "11128378730:20000159:e_32472581": 100,
-      "11128378730:20000159:e_34627162": 100
+      "11128378730:20000159": {
+        "discount": 100,
+        "effective": 299,
+        "scan": "2026-11-25T07:48:38Z"
+      }
     },
     "cashback": {
       "e_4066": {
