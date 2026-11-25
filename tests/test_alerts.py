@@ -173,7 +173,7 @@ class AlertsTest(unittest.TestCase):
         offers = [offer(ONLINE, 2500, shipped=2579.9), offer(RANGSDORF, 2095, shipped=2174.9, pickup=2095, display="Aussteller", distance=24.7)]
         self.run_rules(record(shipped=2174.9, pickup=2095, offers=offers))
         title, text, kw = self.ntfy.sent[-1]
-        self.assertEqual((title, text), ("Restposten deal", "Philips 65OLED951: 2 095 € Aussteller pickup, 19 % below 2 579,90 € · ESC Rangsdorf, 25 km"))
+        self.assertEqual((title, text), ("Restposten deal", "Philips 65OLED951: 2 095 € · ESC Rangsdorf, 25 km · Aussteller pickup"))
         self.assertEqual(kw["click"], f"{URL}?branch_id={RANGSDORF}")
         self.assertEqual(self.file()["state"]["restposten"], {f"{PHILIPS}:{RANGSDORF}": "2026-11-23T13:40:00Z"})
         self.run_rules(record(shipped=2174.9, pickup=2095, offers=offers, scan_time=T0 + timedelta(hours=2)), T0 + timedelta(hours=2))

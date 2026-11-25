@@ -120,6 +120,11 @@ def _run(args, env, now, steps, api, git, ntfy, clock, data, reexec):
             aborted = f"{name}: {entry['error']}"
         except ExpertApiError as e:
             entry["error"] = str(e)
+        finally:
+            try:
+                save_request_errors(data, api.calls[calls_before:], now, network, name)
+            except OSError as e:
+                warnings.append(f"could not save request diagnostics: {e}")
         entry["calls"] = len(api.calls) - calls_before
         results[name] = entry
 
@@ -164,6 +169,24 @@ def _run(args, env, now, steps, api, git, ntfy, clock, data, reexec):
         code = EXIT_OK
     print(status_line(status, push, push_state, code))
     return code
+
+
+def save_request_errors(data, calls, now, network, step):
+    """Keep the last 20 step incidents locally, including retries that eventually succeeded.
+
+    Keep at most 200 calls per incident. Successful steps never erase earlier evidence.
+    No notification payloads, credentials or response bodies are saved.
+    """
+    unusual = [c for c in calls if c.get("outcome") not in (None, "ok") or len(c.get("attempts", [])) > 1]
+    if not unusual:
+        return
+    fields = ("endpoint", "query", "outcome", "attempts", "networkErrors", "ms", "dc")
+    path = data / "request-errors.json"
+    incidents = (read_json(path) or {}).get("incidents", [])
+    incidents.append({"time": iso(now), "network": network, "step": step,
+                      "affectedCalls": len(unusual),
+                      "calls": [{k: c[k] for k in fields if k in c} for c in unusual[:200]]})
+    write_json(path, {"incidents": incidents[-20:]})
 
 
 def run_step(args, name, now=None, api=None, ntfy=None, env=os.environ):

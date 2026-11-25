@@ -6,3 +6,4 @@ data/.lock
 data/.push.json
 data/scanner.log
 data/run-last.md
+data/request-errors.json

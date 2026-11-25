@@ -136,9 +136,8 @@ class Alerts:
                 continue
             if total > (1 - DISPLAY_BELOW) * best_regular:
                 continue
-            share = round((1 - total / best_regular) * 100)
-            text = (f"{label}: {fmt_price(total)} {o['displayType']} pickup, {share} % below {fmt_price(best_regular)}"
-                    f" · {store_text(by_id.get(o['storeId']), o.get('distanceKm'))}")
+            text = (f"{label}: {fmt_price(total)} · {store_text(by_id.get(o['storeId']), o.get('distanceKm'))}"
+                    f" · {o['displayType']} pickup")
             self.emit("restposten", None, text, url=store_url(record, o["storeId"]), webcode=webcode,
                       store_id=o["storeId"])
             self.state["restposten"][key] = iso(self.now)

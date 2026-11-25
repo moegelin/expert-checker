@@ -183,6 +183,21 @@ class RunTest(unittest.TestCase):
     def test_scan_aborted_counts_as_aborted(self):
         self.assertEqual(self.go({"prices": step(error=ScanAborted("80 of 100 calls failed"))}), run.EXIT_ABORTED)
 
+    def test_aborted_scan_saves_request_errors_before_exit(self):
+        def fail(ctx):
+            ctx.api.calls.append({"endpoint": "/api/pricepds", "query": "storeId=e_1",
+                                  "outcome": "network", "attempts": ["timeout"] * 4,
+                                  "networkErrors": ["TimeoutError"], "ms": 30000, "dc": None,
+                                  "snippet": "response body excluded"})
+            raise ScanAborted("too many failures")
+
+        self.assertEqual(self.go({"prices": fail}, network="mobile"), run.EXIT_ABORTED)
+        incident = run.read_json(self.data / "request-errors.json")["incidents"][0]
+        self.assertEqual((incident["step"], incident["network"], incident["time"]),
+                         ("prices", "mobile", run.iso(T0)))
+        self.assertEqual(incident["calls"][0]["attempts"], ["timeout"] * 4)
+        self.assertNotIn("snippet", incident["calls"][0])
+
     def test_push_commits_and_pushes(self):
         code = self.go({"prices": step(calls=5)}, push=True)
         self.assertEqual(code, run.EXIT_OK)
@@ -290,6 +305,29 @@ class RunTest(unittest.TestCase):
         held = run.acquire_lock(self.data / ".lock")
         self.assertIsNotNone(held)
         run.release_lock(held)
+
+
+class RequestErrorsTest(unittest.TestCase):
+    def test_recovered_retries_are_kept_and_clean_runs_preserve_evidence(self):
+        with tempfile.TemporaryDirectory() as d:
+            data = Path(d)
+            call = {"outcome": "ok", "attempts": [500, 200]}
+            run.save_request_errors(data, [call], T0, "wifi", "prices")
+            before = (data / "request-errors.json").read_text()
+            run.save_request_errors(data, [{"outcome": "ok", "attempts": [200]}], T0, "wifi", "prices")
+            self.assertEqual((data / "request-errors.json").read_text(), before)
+
+    def test_incident_and_call_retention_is_bounded(self):
+        with tempfile.TemporaryDirectory() as d:
+            data = Path(d)
+            calls = [{"outcome": "http_error", "attempts": [500] * 4}] * 205
+            for i in range(22):
+                run.save_request_errors(data, calls, T0 + timedelta(hours=i), "mobile", "prices")
+            incidents = run.read_json(data / "request-errors.json")["incidents"]
+            self.assertEqual(len(incidents), 20)
+            self.assertEqual(incidents[0]["time"], run.iso(T0 + timedelta(hours=2)))
+            self.assertEqual(incidents[-1]["affectedCalls"], 205)
+            self.assertEqual(len(incidents[-1]["calls"]), 200)
 
 
 if __name__ == "__main__":
