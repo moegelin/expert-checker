@@ -107,9 +107,9 @@ class SetAlertTest(unittest.TestCase):
     def state(self):
         return run.read_json(self.dirs.data / "alerts.json")["state"]["sets"]
 
-    def deal(self, store_id, discount=100, bundle="20000083", distance=None, eff=319):
+    def deal(self, store_id, discount=100, bundle="20000083", distance=None, eff=319, acc="e_943283"):
         return {"bundleId": bundle, "storeId": store_id, "discount": discount, "promoted": 3788, "accessoryEffective": eff,
-                "accessory": "Theatre Bar 6", "validTo": "30.11.2026", "distanceKm": distance}
+                "accessory": "Theatre Bar 6", "accessoryIds": [acc], "validTo": "30.11.2026", "distanceKm": distance}
 
     def test_one_message_per_product_and_bundle_with_the_stores_in_range(self):
         rec = product(sets_=[self.deal(ONLINE_SHOP), self.deal(RANGSDORF, distance=24.7, eff=249),
@@ -121,7 +121,7 @@ class SetAlertTest(unittest.TestCase):
         self.assertEqual(text, 'Sony BRAVIA 9 II 65": set with Theatre Bar 6 −100 €, accessory effectively 249 € until 30.11.2026 · '
                                "Online-Shop 319 €; 2 stores within 50 km, cheapest ESC Rangsdorf, 25 km 249 €")
         self.assertEqual(kw["click"], f"https://www.expert.de/shop/{SONY65}-x.html?branch_id={RANGSDORF}")
-        self.assertEqual(self.state(), {f"{SONY65}:20000083": {"discount": 100, "effective": 249, "scan": run.iso(T0)}})
+        self.assertEqual(self.state(), {f"{SONY65}:acc:e_943283": {"discount": 100, "effective": 249, "scan": run.iso(T0)}})
         self.rules(rec)
         self.assertEqual(len(self.ntfy.sent), 1)  # known now
         self.rules(product(sets_=rec["sets"] + [self.deal("e_26051723", distance=168)]))
@@ -145,9 +145,22 @@ class SetAlertTest(unittest.TestCase):
         self.rules(product(sets_=[self.deal(ONLINE_SHOP, 100)]))
         self.assertEqual(len(self.ntfy.sent), 4)
 
-    def test_two_bundles_are_two_messages(self):
-        self.rules(product(sets_=[self.deal(ONLINE_SHOP), self.deal(ONLINE_SHOP, 200, bundle="20000084", eff=389)]))
+    def test_two_accessories_are_two_messages_but_a_new_bundle_id_for_the_same_accessory_is_not(self):
+        self.rules(product(sets_=[self.deal(ONLINE_SHOP), self.deal(ONLINE_SHOP, 200, bundle="20000084", eff=389, acc="e_950000")]))
         self.assertEqual(len(self.ntfy.sent), 2)
+        self.rules(product(sets_=[self.deal(ONLINE_SHOP, bundle="20000159")]))
+        self.assertEqual(len(self.ntfy.sent), 2)  # expert re-created the bundle under a new id
+
+    def test_old_per_store_state_counts_as_known(self):
+        inbox = alerts.Alerts(self.dirs.data, self.ntfy, T0)
+        inbox.state["sets"] = {f"{SONY65}:20000159:{ONLINE_SHOP}": 100, f"{SONY65}:20000159:{RANGSDORF}": 100}
+        inbox.set_rules(product(sets_=[self.deal(ONLINE_SHOP, bundle="20000159"), self.deal(RANGSDORF, bundle="20000159", distance=24.7)]),
+                        self.STORES, 50)
+        inbox.save()
+        self.assertEqual(self.ntfy.sent, [])
+        self.assertEqual(list(self.state()), [f"{SONY65}:acc:e_943283"])
+        self.rules(product(sets_=[self.deal(ONLINE_SHOP, 120, bundle="20000159")]))
+        self.assertEqual(len(self.ntfy.sent), 1)  # discount grew by 20 € against the migrated state
 
 
 if __name__ == "__main__":

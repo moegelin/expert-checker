@@ -158,8 +158,11 @@ class Alerts:
             in_range = store.get("online") or (s.get("distanceKm") is not None and s["distanceKm"] <= max_distance_km)
             if not in_range:
                 continue
-            b = bundles.setdefault(s["bundleId"], {"accessory": s.get("accessory"), "discount": 0, "best": None, "stores": 0,
-                                                  "online": None, "validTo": s.get("validTo")})
+            # keyed by the accessory articles, not the bundle id: expert re-creates bundles under new ids
+            # (20000083 → 20000159 overnight on 2026-11-24/25) and the same set must not count as new
+            b = bundles.setdefault(set_key(s), {"accessory": s.get("accessory"), "discount": 0, "best": None, "stores": 0,
+                                                "online": None, "validTo": s.get("validTo"), "bundleIds": set()})
+            b["bundleIds"].add(s["bundleId"])
             b["stores"] += 1
             b["discount"] = max(b["discount"], s.get("discount") or 0)
             eff = s.get("accessoryEffective")
@@ -167,9 +170,13 @@ class Alerts:
                 b["best"] = {"effective": eff, "store": store, "storeId": s["storeId"], "distanceKm": s.get("distanceKm")}
             if store.get("online") and eff is not None:
                 b["online"] = eff
-        for bundle_id, b in bundles.items():
-            key = f"{webcode}:{bundle_id}"
+        for set_id, b in bundles.items():
+            key = f"{webcode}:{set_id}"
             previous = self.state["sets"].get(key)
+            if previous is None:
+                previous = migrate_set_state(self.state["sets"], webcode, b["bundleIds"])
+                if previous is not None:
+                    self.state["sets"][key] = previous
             best_eff = b["best"]["effective"] if b["best"] else None
             if previous is not None:
                 grew = b["discount"] - (previous.get("discount") or 0) >= SET_GROWTH
@@ -193,7 +200,8 @@ class Alerts:
             self.emit("set", None, text, url=store_url(record, store_id), webcode=webcode, store_id=store_id)
             self.state["sets"][key] = {"discount": b["discount"], "effective": best_eff, "scan": record.get("lastScan")}
         for key in [k for k in self.state["sets"] if k.startswith(webcode + ":") and k.split(":", 1)[1] not in bundles]:
-            del self.state["sets"][key]  # gone; the same bundle later is a new deal
+            del self.state["sets"][key]  # gone (or an old per-store or per-bundle key); the same set later is a new deal
+
 
     def cashback_rules(self, data):
         """N5: a new cashback or extra, amounts that became known, and the last 3 days of the purchase period."""
@@ -283,6 +291,25 @@ class Alerts:
 
 
 # Helpers
+
+def set_key(s):
+    """`acc:e_943283` from the accessory article ids, the bundle id when a set has none."""
+    ids = sorted(a for a in (s.get("accessoryIds") or []) if a)
+    return "acc:" + "+".join(ids) if ids else str(s["bundleId"])
+
+
+def migrate_set_state(sets_state, webcode, bundle_ids):
+    """The state of the rules before 2026-11-25 was keyed `webcode:bundleId:storeId` (one message per store)
+    and then `webcode:bundleId`; a set known under one of those keys is not new. Returns the old entry or None."""
+    for key, value in sets_state.items():
+        parts = key.split(":")
+        if parts[0] != webcode or len(parts) < 2 or parts[1] not in bundle_ids:
+            continue
+        if isinstance(value, dict):
+            return value
+        return {"discount": value, "effective": None}
+    return None
+
 
 def effective(record):
     """The lower of the best shipped and the best pickup total, minus a known cashback amount, with path and store."""

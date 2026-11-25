@@ -4,7 +4,7 @@
    #liste | #p-<webcode> | #cashback | #o-<promotion id> | #einstellungen. */
 "use strict";
 
-const APP_VERSION = "2026-11-24.6";
+const APP_VERSION = "2026-11-25.1";
 const REPO = "moegelin/expert-checker";
 const BRANCH = "main";
 const ROOT = new URL("../", location.href).href;        // repo root on Pages (data/, config/)
@@ -369,8 +369,14 @@ function chart(p, H) {
 function scanInfo() {
   const st = state.status;
   if (!st || !st.lastRun) return { text: "unbekannt", warn: true, detail: "Kein Status gefunden." };
-  const h = (Date.now() - Date.parse(st.lastRun)) / 3600000;
   const steps = st.steps || {};
+  // expected next run: 2 h after the last one, or after the night pause (22:00–06:00 Berlin) when it falls into it
+  const hourBerlin = +new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Berlin", hour: "2-digit", hour12: false }).format(new Date());
+  const sinceH = (Date.now() - Date.parse(st.lastRun)) / 3600000;
+  const lastHour = +new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Berlin", hour: "2-digit", hour12: false }).format(new Date(st.lastRun));
+  const night = hourBerlin >= 22 || hourBerlin < 6;
+  const overNight = lastHour >= 20 && (hourBerlin < 9 || night);  // the run before the pause, now early morning
+  const h = night ? 0 : overNight ? Math.max(0, hourBerlin - 6) : sinceH;
   const problems = [];
   if (st.aborted) problems.push(`Lauf abgebrochen: ${st.aborted}`);
   Object.entries(steps).forEach(([name, s]) => { if (s.ok === false && s.lastAttempt === st.lastRun) problems.push(`Schritt ${name} fehlgeschlagen: ${s.error || "unbekannt"}`); });
