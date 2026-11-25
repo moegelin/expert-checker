@@ -10,6 +10,7 @@ Exit codes: 0 clean, 1 degraded (a step, the pull or the push failed; the run ha
 import fcntl
 import json
 import os
+import sys
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -47,7 +48,10 @@ class Context:
         self.options = options or {}  # sub-command flags, for example {"force": True} for `stores --force`
 
 
-def main(args, env=os.environ, now=None, steps=None, api=None, git=None, ntfy=None, clock=time.monotonic):
+REEXEC_FLAG = "EXPERT_CHECKER_REEXEC"  # set on the restarted process so a run restarts at most once
+
+
+def main(args, env=os.environ, now=None, steps=None, api=None, git=None, ntfy=None, clock=time.monotonic, reexec=None):
     data = Path(args.data)
     data.mkdir(parents=True, exist_ok=True)
     lock = acquire_lock(data / ".lock")
@@ -56,12 +60,20 @@ def main(args, env=os.environ, now=None, steps=None, api=None, git=None, ntfy=No
         return EXIT_LOCKED
     try:
         return _run(args, env, now or datetime.now(timezone.utc), steps if steps is not None else STEPS,
-                    api, git, ntfy, clock, data)
+                    api, git, ntfy, clock, data, reexec or _reexec)
     finally:
         release_lock(lock)
 
 
-def _run(args, env, now, steps, api, git, ntfy, clock, data):
+def _reexec():
+    """Restart `python -m scanner …` with the same arguments on the code the pull just brought in. The lock
+    fd is not inheritable, so the new process takes the lock itself."""
+    os.environ[REEXEC_FLAG] = "1"
+    sys.stdout.flush()
+    os.execv(sys.executable, [sys.executable, "-m", "scanner", *sys.argv[1:]])
+
+
+def _run(args, env, now, steps, api, git, ntfy, clock, data, reexec):
     started = clock()
     api = api or ExpertApi()
     ntfy = ntfy or Ntfy(env=env)
@@ -75,9 +87,14 @@ def _run(args, env, now, steps, api, git, ntfy, clock, data):
     inbox = alerts.Alerts(data, ntfy, now)
 
     if push_wanted:
+        before = _head(git)
         ok, error = repo.pull(git)
         if not ok:
             warnings.append(f"pull failed: {error}")
+        elif before and _head(git) != before and not env.get(REEXEC_FLAG):
+            # the modules of this process are the old code: restart on the new one (same run, same lock file)
+            print(f"code updated {before[:7]} → {_head(git)[:7]}, restarting the run")
+            reexec()
 
     due = due_steps(previous, now, network)
     results = dict(previous.get("steps", {}))
@@ -200,6 +217,11 @@ def push_data(git, push_state, stamp, inbox):
                        f"Check the PAT (expiry) and the network. Last error: {error}",
                        priority="high", title="expert-checker: push failed")
     return result
+
+
+def _head(git):
+    r = git("rev-parse", "HEAD")
+    return (r.stdout or "").strip() if r.returncode == 0 else ""
 
 
 def due_steps(status, now, network):

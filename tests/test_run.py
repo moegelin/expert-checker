@@ -186,8 +186,8 @@ class RunTest(unittest.TestCase):
     def test_push_commits_and_pushes(self):
         code = self.go({"prices": step(calls=5)}, push=True)
         self.assertEqual(code, run.EXIT_OK)
-        self.assertEqual([c[0] for c in self.git.calls], ["pull", "add", "diff", "commit", "push"])
-        self.assertEqual(self.git.calls[3], ["commit", "--quiet", "-m", "scan: 2026-11-23 14:40 CET"])
+        self.assertEqual([c[0] for c in self.git.calls], ["rev-parse", "pull", "add", "diff", "commit", "push"])  # the second rev-parse only after a successful pull with a known head
+        self.assertEqual(self.git.calls[4], ["commit", "--quiet", "-m", "scan: 2026-11-23 14:40 CET"])
         self.assertEqual(self.push_state, {"failures": 0, "last": "2026-11-23 14:40 CET",
                                            "lastSuccess": "2026-11-23 14:40 CET", "error": None})
         self.assertTrue(self.line.endswith("· pushed"))
@@ -195,13 +195,13 @@ class RunTest(unittest.TestCase):
 
     def test_no_changes_no_push(self):
         self.go({"prices": step()}, push=True, git=FakeGit(staged=False))
-        self.assertEqual([c[0] for c in self.git.calls], ["pull", "add", "diff"])
+        self.assertEqual([c[0] for c in self.git.calls], ["rev-parse", "pull", "add", "diff"])
         self.assertTrue(self.line.endswith("· no changes"))
 
     def test_earlier_failed_push_is_retried_without_changes(self):
         self.go({"prices": step()}, push=True, git=FakeGit(staged=False),
                 push_state={"failures": 2, "last": "x", "lastSuccess": None, "error": "e"})
-        self.assertEqual([c[0] for c in self.git.calls], ["pull", "add", "diff", "push"])
+        self.assertEqual([c[0] for c in self.git.calls], ["rev-parse", "pull", "add", "diff", "push"])
         self.assertEqual(self.push_state["failures"], 0)
 
     def test_third_failed_push_alerts(self):
@@ -223,6 +223,31 @@ class RunTest(unittest.TestCase):
         self.assertEqual(self.push_state["failures"], 1)
         self.assertEqual(self.ntfy.sent, [])
 
+    def test_a_pull_that_changes_the_code_restarts_the_run_once(self):
+        class MovingGit(FakeGit):
+            def __call__(self, *args):
+                r = super().__call__(*args)
+                if args[0] == "rev-parse":
+                    r.stdout = "aaaaaaa1\n" if len([c for c in self.calls if c[0] == "rev-parse"]) == 1 else "bbbbbbb2\n"
+                return r
+        restarted = []
+        log = []
+        git = MovingGit()
+        self.dir = tempfile.TemporaryDirectory()
+        data = Path(self.dir.name) / "data"
+        data.mkdir()
+        with contextlib.redirect_stdout(io.StringIO()) as out:
+            run.main(argparse.Namespace(data=str(data), event="schedule", network="wifi", push=True), env={},
+                     now=T0, steps={"prices": step(log=log, name="prices")}, api=FakeApi(), git=git, ntfy=FakeNtfy(),
+                     clock=lambda: 0.0, reexec=lambda: restarted.append(True))
+        self.assertEqual(restarted, [True])
+        self.assertIn("code updated aaaaaaa → bbbbbbb, restarting the run", out.getvalue())
+        with contextlib.redirect_stdout(io.StringIO()):
+            run.main(argparse.Namespace(data=str(data), event="schedule", network="wifi", push=True),
+                     env={run.REEXEC_FLAG: "1"}, now=T0, steps={"prices": step(log=log, name="prices")}, api=FakeApi(),
+                     git=MovingGit(), ntfy=FakeNtfy(), clock=lambda: 0.0, reexec=lambda: restarted.append(True))
+        self.assertEqual(restarted, [True])  # the restarted process does not restart again
+
     def test_pull_failure_is_a_warning_and_the_run_continues(self):
         log = []
         git = FakeGit(fail={"pull": (1, "CONFLICT")})
@@ -231,7 +256,7 @@ class RunTest(unittest.TestCase):
         self.assertEqual(log, ["prices"])
         self.assertEqual(self.status["warnings"], ["pull failed: CONFLICT"])
         self.assertIn("pull failed: CONFLICT", self.line)
-        self.assertEqual([c[0] for c in self.git.calls], ["pull", "rebase", "add", "diff", "commit", "push"])
+        self.assertEqual([c[0] for c in self.git.calls], ["rev-parse", "pull", "rebase", "add", "diff", "commit", "push"])
 
     def test_without_push_git_is_not_touched(self):
         self.go({"prices": step()})
