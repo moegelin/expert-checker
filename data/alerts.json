@@ -233,7 +233,7 @@
         "distanceKm": 484.3,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-25T07:48:38Z"
+        "scan": "2026-11-25T09:42:44Z"
       },
       "11128378730": {
         "total": 3278.9,
@@ -242,7 +242,7 @@
         "distanceKm": 391.7,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-25T07:48:38Z"
+        "scan": "2026-11-25T09:42:44Z"
       },
       "11128379730": {
         "total": 3578.9,
@@ -259,13 +259,13 @@
         "distanceKm": 21.1,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-25T07:48:38Z"
+        "scan": "2026-11-25T09:42:44Z"
       }
     },
     "target": {},
     "restposten": {},
     "sets": {
-      "11128378730:20000159": {
+      "11128378730:acc:e_943283": {
         "discount": 100,
         "effective": 299,
         "scan": "2026-11-25T07:48:38Z"
