@@ -230,6 +230,28 @@
       "text": "run aborted: prices: ScanAborted: 19 of 20 calls failed; prices failed: ScanAborted: 19 of 20 calls failed",
       "url": null,
       "sent": true
+    },
+    {
+      "id": "2026-11-25T17:43:04Z:restposten:11128346052:e_32472580",
+      "time": "2026-11-25T17:43:04Z",
+      "kind": "restposten",
+      "webcode": "11128346052",
+      "storeId": "e_32472580",
+      "title": "Restposten deal",
+      "text": "Philips 65OLED951: 2 249 € Aussteller pickup, 27 % below 3 068,90 € · ESC Fürstenwalde, 50 km",
+      "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128346052-65oled951-oled-tv.html?branch_id=e_32472580",
+      "sent": true
+    },
+    {
+      "id": "2026-11-25T17:43:04Z:restposten:11128346052:e_32472581",
+      "time": "2026-11-25T17:43:04Z",
+      "kind": "restposten",
+      "webcode": "11128346052",
+      "storeId": "e_32472581",
+      "title": "Restposten deal",
+      "text": "Philips 65OLED951: 2 249 € Aussteller pickup, 27 % below 3 068,90 € · ESC Rangsdorf, 25 km",
+      "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128346052-65oled951-oled-tv.html?branch_id=e_32472581",
+      "sent": true
     }
   ],
   "state": {
@@ -245,7 +267,7 @@
         "distanceKm": 484.3,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-25T15:43:56Z"
+        "scan": "2026-11-25T17:43:04Z"
       },
       "11128378730": {
         "total": 3278.9,
@@ -254,7 +276,7 @@
         "distanceKm": 391.7,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-25T15:43:56Z"
+        "scan": "2026-11-25T17:43:04Z"
       },
       "11128379730": {
         "total": 3578.9,
@@ -271,11 +293,14 @@
         "distanceKm": 21.1,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-25T15:43:56Z"
+        "scan": "2026-11-25T17:43:04Z"
       }
     },
     "target": {},
-    "restposten": {},
+    "restposten": {
+      "11128346052:e_32472580": "2026-11-25T17:43:04Z",
+      "11128346052:e_32472581": "2026-11-25T17:43:04Z"
+    },
     "sets": {
       "11128378730:acc:e_943283": {
         "discount": 100,
