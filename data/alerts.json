@@ -219,11 +219,23 @@
       "text": "Sony BRAVIA 9 II 65\": set with BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer −100 €, accessory effectively 299 € until 30.11.2026 · Online-Shop 319 €; 5 stores within 100 km, cheapest ESC Königs Wusterhausen/OT Zeesen, 31 km 299 €",
       "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128378730-k65xr95m2pb-bravia-9-ii-rgb-led.html?branch_id=e_32410034",
       "sent": true
+    },
+    {
+      "id": "2026-11-25T11:43:40Z:failure:failure:run",
+      "time": "2026-11-25T11:43:40Z",
+      "kind": "failure",
+      "webcode": null,
+      "storeId": null,
+      "title": "expert-checker: scan failed",
+      "text": "run aborted: prices: ScanAborted: 19 of 20 calls failed; prices failed: ScanAborted: 19 of 20 calls failed",
+      "url": null,
+      "sent": true
     }
   ],
   "state": {
     "cooldowns": {
-      "price:11128346052": "2026-11-25T07:48:38Z"
+      "price:11128346052": "2026-11-25T07:48:38Z",
+      "failure:run": "2026-11-25T11:43:40Z"
     },
     "prices": {
       "11128346052": {
@@ -233,7 +245,7 @@
         "distanceKm": 484.3,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-25T09:42:44Z"
+        "scan": "2026-11-25T11:43:40Z"
       },
       "11128378730": {
         "total": 3278.9,
