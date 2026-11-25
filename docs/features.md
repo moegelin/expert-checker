@@ -55,7 +55,7 @@ Built 2026-11-24 (plan.md §6, "M2 scope"): https://moegelin.github.io/expert-ch
 | Settings: postcode, radius, target prices, ntfy topic name (display only), GitHub token | in | token in `localStorage`, never in the repo. Built 2026-11-24: postcode with geocoding, radius, scanner status, token check; target prices live on the product page; the ntfy topic is not shown (it is a secret on the phone, the app only names the channel) |
 | "Scan now" button | out | dropped 2026-11-23: no Actions; a manual run is `phone/run.sh manual` in Termux, a Termux:Widget shortcut is M5 |
 | Home-screen install (manifest, icons, offline shell) | in | data needs network; built 2026-11-24: `sw.js` caches the shell and the last data copy, images from `cdn.expert.de` on first load |
-| Last-scan age (from `data/status.json`) with warning when older than 4 h | in | runs every 2 h |
+| Last-scan age (from `data/status.json`) with warning when older than 4 h | in | runs every 2 h; the warning skips the night pause 22:00–06:00 and the morning until 09:00 (2026-11-25) |
 | Alert inbox (list of `data/alerts.json`) | out | M5 |
 | Price history sparkline | out | M5 |
 | Web push from the PWA (no ntfy app) | out | version 2 |
