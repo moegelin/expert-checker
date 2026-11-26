@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T19:43:15Z",
+  "updated": "2026-11-26T05:57:45Z",
   "promotions": {
     "e_3157": {
       "id": "e_3157",
@@ -20,7 +20,7 @@
         "11128656509"
       ],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-25T19:43:15Z",
+      "lastSeen": "2026-11-26T05:57:45Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
@@ -44,7 +44,7 @@
         "11128346052"
       ],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-25T19:43:15Z",
+      "lastSeen": "2026-11-26T05:57:45Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
@@ -66,7 +66,7 @@
       "articleCount": 87,
       "watched": [],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-25T19:43:15Z",
+      "lastSeen": "2026-11-26T05:57:45Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
@@ -90,7 +90,7 @@
         "11128346052"
       ],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-25T19:43:15Z",
+      "lastSeen": "2026-11-26T05:57:45Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
@@ -112,7 +112,7 @@
       "articleCount": 4,
       "watched": [],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-25T19:43:15Z",
+      "lastSeen": "2026-11-26T05:57:45Z",
       "active": true,
       "sameInvoice": false,
       "amountSource": "pdf",
@@ -196,7 +196,7 @@
       "articleCount": 8,
       "watched": [],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-25T19:43:15Z",
+      "lastSeen": "2026-11-26T05:57:45Z",
       "active": true,
       "sameInvoice": true,
       "amountSource": "pdf",
@@ -397,7 +397,7 @@
         "11128656509"
       ],
       "firstSeen": "2026-11-25T07:28:32Z",
-      "lastSeen": "2026-11-25T19:43:15Z",
+      "lastSeen": "2026-11-26T05:57:45Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
