@@ -28,6 +28,13 @@
       "targetPrice": null,
       "alertMode": "every",
       "watchSets": true
+    },
+    {
+      "webcode": "11128258791",
+      "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128258791-65c89l-sqd-mini-led-tv.html",
+      "targetPrice": null,
+      "alertMode": "every",
+      "watchSets": true
     }
   ]
 }
