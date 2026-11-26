@@ -263,22 +263,33 @@
       "text": "Sony BRAVIA 9 II 65\": set with BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer −100 €, accessory effectively 279 € until 30.11.2026 · Online-Shop 279 €",
       "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128378730-k65xr95m2pb-bravia-9-ii-rgb-led.html?branch_id=e_2879130",
       "sent": true
+    },
+    {
+      "id": "2026-11-26T19:42:50Z:price:11128346052:e_2879130",
+      "time": "2026-11-26T19:42:50Z",
+      "kind": "price",
+      "webcode": "11128346052",
+      "storeId": "e_2879130",
+      "title": "Price drop",
+      "text": "Philips 65OLED951: 2 089 € shipped (was 2 163,09 €) · Online-Shop",
+      "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128346052-65oled951-oled-tv.html?branch_id=e_2879130",
+      "sent": true
     }
   ],
   "state": {
     "cooldowns": {
-      "price:11128346052": "2026-11-25T07:48:38Z",
+      "price:11128346052": "2026-11-26T19:42:50Z",
       "failure:run": "2026-11-25T11:43:40Z"
     },
     "prices": {
       "11128346052": {
-        "total": 2163.09,
+        "total": 2089,
         "path": "shipped",
-        "storeId": "e_39800614",
-        "distanceKm": 484.3,
+        "storeId": "e_2879130",
+        "distanceKm": null,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-26T17:44:38Z"
+        "scan": "2026-11-26T19:42:50Z"
       },
       "11128378730": {
         "total": 3278.9,
@@ -304,7 +315,7 @@
         "distanceKm": 21.1,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-26T17:44:38Z"
+        "scan": "2026-11-26T19:42:50Z"
       }
     },
     "target": {},
