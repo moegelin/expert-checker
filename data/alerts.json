@@ -274,12 +274,23 @@
       "text": "Philips 65OLED951: 2 089 € shipped (was 2 163,09 €) · Online-Shop",
       "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128346052-65oled951-oled-tv.html?branch_id=e_2879130",
       "sent": true
+    },
+    {
+      "id": "2026-11-26T20:30:12Z:failure:failure:run",
+      "time": "2026-11-26T20:30:12Z",
+      "kind": "failure",
+      "webcode": null,
+      "storeId": null,
+      "title": "expert-checker: scan failed",
+      "text": "run aborted: prices: ScanAborted: 5 of 24 calls failed; prices failed: ScanAborted: 5 of 24 calls failed",
+      "url": null,
+      "sent": true
     }
   ],
   "state": {
     "cooldowns": {
       "price:11128346052": "2026-11-26T19:42:50Z",
-      "failure:run": "2026-11-25T11:43:40Z"
+      "failure:run": "2026-11-26T20:30:12Z"
     },
     "prices": {
       "11128346052": {
@@ -289,7 +300,7 @@
         "distanceKm": null,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-26T19:42:50Z"
+        "scan": "2026-11-26T20:30:12Z"
       },
       "11128378730": {
         "total": 3278.9,
@@ -315,7 +326,7 @@
         "distanceKm": 21.1,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-26T19:42:50Z"
+        "scan": "2026-11-26T20:30:12Z"
       }
     },
     "target": {},
