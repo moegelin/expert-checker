@@ -1,8 +1,8 @@
 {
-  "lastRun": "2026-11-26T15:44:35Z",
-  "berlinTime": "2026-11-26 16:44",
+  "lastRun": "2026-11-26T17:44:38Z",
+  "berlinTime": "2026-11-26 18:44",
   "event": "schedule",
-  "network": "wifi",
+  "network": "mobile",
   "runner": "termux",
   "aborted": null,
   "warnings": [],
@@ -18,15 +18,15 @@
       "calls": 1
     },
     "prices": {
-      "lastAttempt": "2026-11-26T15:44:35Z",
+      "lastAttempt": "2026-11-26T17:44:38Z",
       "ok": true,
       "error": null,
       "products": 2,
-      "withOffer": 301,
-      "unknown": 217,
+      "withOffer": 300,
+      "unknown": 218,
       "incomplete": [],
       "articleErrors": {},
-      "lastRun": "2026-11-26T15:44:35Z",
+      "lastRun": "2026-11-26T17:44:38Z",
       "calls": 698
     },
     "sets": {
@@ -42,7 +42,7 @@
       "calls": 518
     },
     "cashback": {
-      "lastAttempt": "2026-11-26T11:44:14Z",
+      "lastAttempt": "2026-11-26T17:44:38Z",
       "ok": true,
       "error": null,
       "indexed": 83,
@@ -53,15 +53,15 @@
       "articleLookups": 0,
       "priceLookups": 12,
       "warnings": [],
-      "lastRun": "2026-11-26T11:44:14Z",
+      "lastRun": "2026-11-26T17:44:38Z",
       "calls": 13
     }
   },
   "skipped": [
     "stores",
-    "cashback"
+    "sets"
   ],
-  "calls": 1216,
+  "calls": 711,
   "alerts": [],
-  "durationS": 71.1
+  "durationS": 70.8
 }
