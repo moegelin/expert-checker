@@ -12,19 +12,19 @@
   "alertMode": "every",
   "watchSets": true,
   "role": "watch",
-  "lastScan": "2026-11-26T05:57:45Z",
+  "lastScan": "2026-11-26T07:46:44Z",
   "scan": {
-    "time": "2026-11-26T05:57:45Z",
+    "time": "2026-11-26T07:46:44Z",
     "stores": 349,
-    "withOffer": 172,
+    "withOffer": 188,
     "failed": 0,
-    "unknown": 58,
+    "unknown": 42,
     "vanished": 0,
     "dropped": 0,
     "incomplete": false,
     "retried": false,
     "cacheLevels": {
-      "MOST_RECENT": 172
+      "MOST_RECENT": 188
     }
   },
   "best": {
@@ -54,7 +54,7 @@
       "distanceKm": 396.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T13:43:52Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_12609536",
@@ -145,11 +145,8 @@
       "totalPickup": null,
       "distanceKm": 461.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:43:15Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:05Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_14756048",
@@ -184,7 +181,7 @@
       "distanceKm": 447.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:06Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_14756051",
@@ -199,8 +196,8 @@
       "totalPickup": null,
       "distanceKm": 479.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T15:44:26Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:05Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_14756052",
@@ -216,7 +213,7 @@
       "distanceKm": 319.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:06Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_15090077",
@@ -232,7 +229,7 @@
       "distanceKm": 424.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:06Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_15305380",
@@ -267,7 +264,7 @@
       "distanceKm": 416.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:06Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_17314681",
@@ -282,8 +279,8 @@
       "totalPickup": null,
       "distanceKm": 443.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:07Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:06Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_18323570",
@@ -298,8 +295,8 @@
       "totalPickup": null,
       "distanceKm": 467.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T15:44:27Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:07Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_18751463",
@@ -334,7 +331,7 @@
       "distanceKm": 430.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:08Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906832",
@@ -369,7 +366,7 @@
       "distanceKm": 477.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T15:44:28Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906845",
@@ -384,8 +381,8 @@
       "totalPickup": null,
       "distanceKm": 232.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:09Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:08Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906846",
@@ -400,8 +397,8 @@
       "totalPickup": null,
       "distanceKm": 324.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:08Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:08Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906849",
@@ -436,7 +433,7 @@
       "distanceKm": 400.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:08Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906866",
@@ -452,7 +449,7 @@
       "distanceKm": 266.1,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:08Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906876",
@@ -468,7 +465,7 @@
       "distanceKm": 411.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T17:43:29Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906881",
@@ -483,8 +480,8 @@
       "totalPickup": null,
       "distanceKm": 391.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:09Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:09Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906888",
@@ -499,8 +496,8 @@
       "totalPickup": null,
       "distanceKm": 411.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:10Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:10Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906889",
@@ -516,7 +513,7 @@
       "distanceKm": 248.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:10Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906899",
@@ -532,7 +529,7 @@
       "distanceKm": 328.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:10Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906905",
@@ -547,8 +544,8 @@
       "totalPickup": null,
       "distanceKm": 422.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:10Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:10Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906921",
@@ -582,11 +579,8 @@
       "totalPickup": null,
       "distanceKm": 405.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:43:18Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:11Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906924",
@@ -601,8 +595,8 @@
       "totalPickup": null,
       "distanceKm": 405.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:10Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:10Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906925",
@@ -618,7 +612,7 @@
       "distanceKm": 419.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:12Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906928",
@@ -634,7 +628,7 @@
       "distanceKm": 122.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:11Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906930",
@@ -649,8 +643,8 @@
       "totalPickup": null,
       "distanceKm": 479.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T17:43:31Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:11Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906936",
@@ -684,8 +678,8 @@
       "totalPickup": null,
       "distanceKm": 468.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:11Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:12Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906954",
@@ -700,8 +694,8 @@
       "totalPickup": null,
       "distanceKm": 484.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T15:44:34Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:12Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906960",
@@ -716,8 +710,8 @@
       "totalPickup": null,
       "distanceKm": 393.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:12Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:12Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906965",
@@ -751,11 +745,8 @@
       "totalPickup": null,
       "distanceKm": 438.9,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:43:20Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:13Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906978",
@@ -771,7 +762,7 @@
       "distanceKm": 487.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:13Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906984",
@@ -806,7 +797,7 @@
       "distanceKm": 432.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T13:44:00Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1906999",
@@ -840,11 +831,8 @@
       "totalPickup": null,
       "distanceKm": 111.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:43:20Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:14Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907031",
@@ -859,8 +847,8 @@
       "totalPickup": null,
       "distanceKm": 483.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:13Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:13Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907032",
@@ -875,8 +863,8 @@
       "totalPickup": null,
       "distanceKm": 384.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T15:44:33Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:14Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907035",
@@ -892,7 +880,7 @@
       "distanceKm": 384.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:14Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907041",
@@ -964,11 +952,8 @@
       "totalPickup": null,
       "distanceKm": 471.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:43:24Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:15Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907060",
@@ -984,7 +969,7 @@
       "distanceKm": 509.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T17:43:35Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907073",
@@ -999,8 +984,8 @@
       "totalPickup": null,
       "distanceKm": 320.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:15Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:15Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907082",
@@ -1015,8 +1000,8 @@
       "totalPickup": null,
       "distanceKm": 395.9,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T17:43:35Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:15Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907090",
@@ -1051,7 +1036,7 @@
       "distanceKm": 437.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T13:44:03Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907100",
@@ -1067,7 +1052,7 @@
       "distanceKm": 464.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:16Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907117",
@@ -1121,7 +1106,7 @@
       "distanceKm": 590.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:43:50Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907159",
@@ -1136,8 +1121,8 @@
       "totalPickup": null,
       "distanceKm": 461.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:18Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:17Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907160",
@@ -1153,7 +1138,7 @@
       "distanceKm": 463.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:18Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907161",
@@ -1168,11 +1153,8 @@
       "totalPickup": null,
       "distanceKm": 567.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:43:25Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:18Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907162",
@@ -1187,8 +1169,8 @@
       "totalPickup": null,
       "distanceKm": 502.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T15:44:37Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:17Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907172",
@@ -1203,8 +1185,8 @@
       "totalPickup": null,
       "distanceKm": 436.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:18Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:18Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907176",
@@ -1219,11 +1201,8 @@
       "totalPickup": null,
       "distanceKm": 358.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:43:30Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:18Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907179",
@@ -1258,7 +1237,7 @@
       "distanceKm": 486.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T17:43:38Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907187",
@@ -1273,8 +1252,8 @@
       "totalPickup": null,
       "distanceKm": 422.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:20Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:19Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907199",
@@ -1289,8 +1268,8 @@
       "totalPickup": null,
       "distanceKm": 438.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:19Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:19Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907201",
@@ -1325,7 +1304,7 @@
       "distanceKm": 301.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:21Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907226",
@@ -1341,7 +1320,7 @@
       "distanceKm": 404.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:21Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907245",
@@ -1356,8 +1335,8 @@
       "totalPickup": null,
       "distanceKm": 410.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T15:44:40Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:21Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907256",
@@ -1373,7 +1352,7 @@
       "distanceKm": 456.1,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:22Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907257",
@@ -1389,7 +1368,7 @@
       "distanceKm": 405.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:22Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907267",
@@ -1404,11 +1383,8 @@
       "totalPickup": null,
       "distanceKm": 264.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:43:31Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:21Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907269",
@@ -1423,8 +1399,8 @@
       "totalPickup": null,
       "distanceKm": 380.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:22Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:21Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907273",
@@ -1439,8 +1415,8 @@
       "totalPickup": null,
       "distanceKm": 574.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:22Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:21Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907279",
@@ -1455,11 +1431,8 @@
       "totalPickup": null,
       "distanceKm": 458.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:43:31Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:21Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907281",
@@ -1475,7 +1448,7 @@
       "distanceKm": 282.0,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:22Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907286",
@@ -1490,8 +1463,8 @@
       "totalPickup": null,
       "distanceKm": 230.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:22Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:21Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907297",
@@ -1506,8 +1479,8 @@
       "totalPickup": null,
       "distanceKm": 486.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:23Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:22Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907298",
@@ -1523,7 +1496,7 @@
       "distanceKm": 436.1,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:23Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907299",
@@ -1539,7 +1512,7 @@
       "distanceKm": 416.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T15:44:41Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907301",
@@ -1554,8 +1527,8 @@
       "totalPickup": null,
       "distanceKm": 429.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:23Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:22Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907303",
@@ -1570,8 +1543,8 @@
       "totalPickup": null,
       "distanceKm": 250.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T17:43:41Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:22Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907316",
@@ -1586,11 +1559,8 @@
       "totalPickup": null,
       "distanceKm": 336.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:43:33Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:23Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907322",
@@ -1625,7 +1595,7 @@
       "distanceKm": 414.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:43:56Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907324",
@@ -1640,8 +1610,8 @@
       "totalPickup": null,
       "distanceKm": 482.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:24Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:23Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907343",
@@ -1657,7 +1627,7 @@
       "distanceKm": 416.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T15:44:43Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907357",
@@ -1673,7 +1643,7 @@
       "distanceKm": 402.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:25Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907361",
@@ -1726,8 +1696,8 @@
       "totalPickup": null,
       "distanceKm": 533.9,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:26Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:25Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907371",
@@ -1743,7 +1713,7 @@
       "distanceKm": 246.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:27Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907380",
@@ -1759,7 +1729,7 @@
       "distanceKm": 427.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:26Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907390",
@@ -1775,7 +1745,7 @@
       "distanceKm": 245.0,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:25Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907398",
@@ -1791,7 +1761,7 @@
       "distanceKm": 298.0,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:27Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907418",
@@ -1807,7 +1777,7 @@
       "distanceKm": 380.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:43:58Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907423",
@@ -1822,8 +1792,8 @@
       "totalPickup": null,
       "distanceKm": 480.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:26Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:27Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907427",
@@ -1839,7 +1809,7 @@
       "distanceKm": 215.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:26Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907430",
@@ -1854,8 +1824,8 @@
       "totalPickup": null,
       "distanceKm": 385.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:27Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:27Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907435",
@@ -1871,7 +1841,7 @@
       "distanceKm": 442.0,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:27Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907438",
@@ -1887,7 +1857,7 @@
       "distanceKm": 682.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:28Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907441",
@@ -1921,8 +1891,8 @@
       "totalPickup": null,
       "distanceKm": 412.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:28Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:28Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907468",
@@ -1930,15 +1900,15 @@
       "shipping": 79.9,
       "codeDiscount": 0,
       "codeTitle": null,
-      "onlineStock": 1,
+      "onlineStock": 2,
       "storeStock": 0,
       "displayType": null,
       "totalShipped": 3548.9,
       "totalPickup": null,
       "distanceKm": 288.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T15:44:46Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:28Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907470",
@@ -1953,8 +1923,8 @@
       "totalPickup": null,
       "distanceKm": 472.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:29Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:27Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907472",
@@ -1988,8 +1958,8 @@
       "totalPickup": null,
       "distanceKm": 179.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:29Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:28Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907501",
@@ -2024,7 +1994,7 @@
       "distanceKm": 392.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:28Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907536",
@@ -2058,8 +2028,8 @@
       "totalPickup": null,
       "distanceKm": 393.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:29Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:31Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907577",
@@ -2075,7 +2045,7 @@
       "distanceKm": 563.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T15:44:50Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_1907589",
@@ -2091,7 +2061,7 @@
       "distanceKm": 214.9,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:30Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_19972180",
@@ -2107,7 +2077,7 @@
       "distanceKm": 167.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:03Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_19972181",
@@ -2141,8 +2111,8 @@
       "totalPickup": null,
       "distanceKm": 509.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:31Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:30Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2126219",
@@ -2157,8 +2127,8 @@
       "totalPickup": null,
       "distanceKm": 439.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:31Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:31Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2144945",
@@ -2174,7 +2144,7 @@
       "distanceKm": 606.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:04Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_21476261",
@@ -2189,8 +2159,8 @@
       "totalPickup": null,
       "distanceKm": 309.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:32Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:32Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_21476262",
@@ -2206,7 +2176,7 @@
       "distanceKm": 337.0,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:04Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_21476263",
@@ -2221,8 +2191,8 @@
       "totalPickup": null,
       "distanceKm": 291.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:31Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:31Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2150035",
@@ -2237,8 +2207,8 @@
       "totalPickup": null,
       "distanceKm": 571.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:32Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:32Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_21578520",
@@ -2254,7 +2224,7 @@
       "distanceKm": 185.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:04Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2201255",
@@ -2270,7 +2240,7 @@
       "distanceKm": 211.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:32Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_22326563",
@@ -2285,8 +2255,8 @@
       "totalPickup": null,
       "distanceKm": 428.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:33Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:33Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2237090",
@@ -2302,7 +2272,7 @@
       "distanceKm": 408.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T15:44:50Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2266385",
@@ -2317,8 +2287,8 @@
       "totalPickup": null,
       "distanceKm": 230.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:33Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:33Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2268016",
@@ -2334,7 +2304,7 @@
       "distanceKm": 529.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:33Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2268063",
@@ -2350,7 +2320,7 @@
       "distanceKm": 335.1,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:34Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2268069",
@@ -2384,8 +2354,8 @@
       "totalPickup": null,
       "distanceKm": 575.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:34Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:35Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2268081",
@@ -2400,8 +2370,8 @@
       "totalPickup": null,
       "distanceKm": 211.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:34Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:34Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_24135176",
@@ -2417,7 +2387,7 @@
       "distanceKm": 485.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T17:43:51Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2426079",
@@ -2433,7 +2403,7 @@
       "distanceKm": 421.0,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:07Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_24686946",
@@ -2449,7 +2419,7 @@
       "distanceKm": 343.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:07Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2469251",
@@ -2484,7 +2454,7 @@
       "distanceKm": 451.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:35Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_25254885",
@@ -2499,8 +2469,8 @@
       "totalPickup": null,
       "distanceKm": 164.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:35Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:35Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_25254886",
@@ -2515,8 +2485,8 @@
       "totalPickup": null,
       "distanceKm": 162.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:36Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:36Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_25401148",
@@ -2531,8 +2501,8 @@
       "totalPickup": null,
       "distanceKm": 309.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:36Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:36Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_25401149",
@@ -2547,8 +2517,8 @@
       "totalPickup": null,
       "distanceKm": 264.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:36Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:36Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2552963",
@@ -2564,7 +2534,7 @@
       "distanceKm": 480.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:36Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_25731520",
@@ -2579,8 +2549,8 @@
       "totalPickup": null,
       "distanceKm": 471.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:36Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:36Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_25910829",
@@ -2615,7 +2585,7 @@
       "distanceKm": 125.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:09Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_26051722",
@@ -2630,8 +2600,8 @@
       "totalPickup": null,
       "distanceKm": 177.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:36Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:36Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_26051723",
@@ -2646,8 +2616,8 @@
       "totalPickup": null,
       "distanceKm": 168.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:36Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:36Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_26344894",
@@ -2663,7 +2633,7 @@
       "distanceKm": 500.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:09Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_26647453",
@@ -2678,8 +2648,8 @@
       "totalPickup": null,
       "distanceKm": 225.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:36Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:36Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2673978",
@@ -2733,7 +2703,7 @@
       "distanceKm": 671.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:37Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_27284126",
@@ -2749,7 +2719,7 @@
       "distanceKm": 360.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:37Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2737312",
@@ -2783,8 +2753,8 @@
       "totalPickup": null,
       "distanceKm": 244.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:37Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:38Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2739093",
@@ -2819,7 +2789,7 @@
       "distanceKm": 537.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:11Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_27613192",
@@ -2853,8 +2823,8 @@
       "totalPickup": null,
       "distanceKm": 464.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T19:44:12Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:39Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_28713528",
@@ -2869,11 +2839,8 @@
       "totalPickup": null,
       "distanceKm": 469.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:44:01Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:39Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_28756292",
@@ -2889,7 +2856,7 @@
       "distanceKm": 352.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:39Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2879130",
@@ -2904,8 +2871,8 @@
       "totalPickup": null,
       "distanceKm": null,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:48Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:50Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_2917802",
@@ -2920,11 +2887,8 @@
       "totalPickup": null,
       "distanceKm": 188.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T07:49:08Z",
-      "seen": "2026-11-25T07:48:38Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T09:42:44Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:40Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_29487094",
@@ -2940,7 +2904,7 @@
       "distanceKm": 496.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:12Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_29514128",
@@ -2955,8 +2919,8 @@
       "totalPickup": null,
       "distanceKm": 388.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T19:44:12Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:40Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_29703322",
@@ -2971,11 +2935,8 @@
       "totalPickup": null,
       "distanceKm": 376.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:44:02Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:40Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_29932478",
@@ -2991,7 +2952,7 @@
       "distanceKm": 500.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:39Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_29932479",
@@ -3006,8 +2967,8 @@
       "totalPickup": null,
       "distanceKm": 533.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:40Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:40Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_30481005",
@@ -3022,8 +2983,8 @@
       "totalPickup": null,
       "distanceKm": 216.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T19:44:12Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:41Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_30553851",
@@ -3038,8 +2999,8 @@
       "totalPickup": null,
       "distanceKm": 405.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T19:44:13Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:40Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_30553854",
@@ -3054,8 +3015,8 @@
       "totalPickup": null,
       "distanceKm": 402.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T19:44:13Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:41Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_30584101",
@@ -3070,24 +3031,24 @@
       "totalPickup": null,
       "distanceKm": 254.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:39Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:40Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_30725279",
-      "price": 3469,
+      "price": 3469.95,
       "shipping": 79.9,
       "codeDiscount": 0,
       "codeTitle": null,
-      "onlineStock": 1,
+      "onlineStock": 3,
       "storeStock": 0,
       "displayType": null,
-      "totalShipped": 3548.9,
+      "totalShipped": 3549.85,
       "totalPickup": null,
       "distanceKm": 474.9,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T19:44:13Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:42Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_31315790",
@@ -3102,8 +3063,8 @@
       "totalPickup": null,
       "distanceKm": 181.9,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:40Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:41Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_31343294",
@@ -3118,8 +3079,8 @@
       "totalPickup": null,
       "distanceKm": 194.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:41Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:41Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_31826556",
@@ -3134,8 +3095,8 @@
       "totalPickup": null,
       "distanceKm": 382.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:41Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:41Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_31826557",
@@ -3150,8 +3111,8 @@
       "totalPickup": null,
       "distanceKm": 408.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:41Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:41Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_31952339",
@@ -3167,7 +3128,7 @@
       "distanceKm": 369.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:41Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_31952340",
@@ -3182,8 +3143,8 @@
       "totalPickup": null,
       "distanceKm": 272.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T19:44:14Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:42Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_31952341",
@@ -3199,7 +3160,7 @@
       "distanceKm": 254.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T17:43:56Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_32103156",
@@ -3214,8 +3175,8 @@
       "totalPickup": null,
       "distanceKm": 461.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:41Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:42Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_32110783",
@@ -3230,8 +3191,8 @@
       "totalPickup": null,
       "distanceKm": 81.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:41Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:41Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_32410034",
@@ -3246,8 +3207,8 @@
       "totalPickup": null,
       "distanceKm": 31.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:42Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:43Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_32472580",
@@ -3262,8 +3223,8 @@
       "totalPickup": null,
       "distanceKm": 50.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:42Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:43Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_32472581",
@@ -3279,7 +3240,7 @@
       "distanceKm": 24.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:42Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_32667526",
@@ -3295,7 +3256,7 @@
       "distanceKm": 526.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:42Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_33858322",
@@ -3310,8 +3271,8 @@
       "totalPickup": null,
       "distanceKm": 574.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:41Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:42Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_33961708",
@@ -3326,8 +3287,8 @@
       "totalPickup": null,
       "distanceKm": 151.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:42Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:44Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_33961709",
@@ -3342,8 +3303,8 @@
       "totalPickup": null,
       "distanceKm": 174.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:42Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:43Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_34511885",
@@ -3358,11 +3319,8 @@
       "totalPickup": null,
       "distanceKm": 572.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:44:11Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:44Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_34511886",
@@ -3377,8 +3335,8 @@
       "totalPickup": null,
       "distanceKm": 495.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:43Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:43Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_34511887",
@@ -3393,8 +3351,8 @@
       "totalPickup": null,
       "distanceKm": 553.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T19:44:16Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:44Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_34511888",
@@ -3409,11 +3367,8 @@
       "totalPickup": null,
       "distanceKm": 584.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:44:11Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:44Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_34627162",
@@ -3429,7 +3384,7 @@
       "distanceKm": 4.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:16Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_36242297",
@@ -3445,7 +3400,7 @@
       "distanceKm": 477.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:44Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_36405583",
@@ -3461,7 +3416,7 @@
       "distanceKm": 429.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:17Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_36696318",
@@ -3476,8 +3431,8 @@
       "totalPickup": null,
       "distanceKm": 679.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:45Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:46Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_36986843",
@@ -3493,7 +3448,7 @@
       "distanceKm": 329.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:17Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_36986844",
@@ -3508,8 +3463,8 @@
       "totalPickup": null,
       "distanceKm": 345.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:44Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:46Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_37568546",
@@ -3524,8 +3479,8 @@
       "totalPickup": null,
       "distanceKm": 377.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:44Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:47Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_37711505",
@@ -3540,8 +3495,8 @@
       "totalPickup": null,
       "distanceKm": 374.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:44Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:46Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_37907016",
@@ -3556,8 +3511,8 @@
       "totalPickup": null,
       "distanceKm": 118.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:44Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:46Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_38226027",
@@ -3572,8 +3527,8 @@
       "totalPickup": null,
       "distanceKm": 193.9,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:45Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:46Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_38877254",
@@ -3608,7 +3563,7 @@
       "distanceKm": 283.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:45Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_38877256",
@@ -3661,8 +3616,8 @@
       "totalPickup": null,
       "distanceKm": 484.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:45Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:47Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_39923995",
@@ -3696,11 +3651,8 @@
       "totalPickup": null,
       "distanceKm": 260.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T09:44:26Z",
-      "seen": "2026-11-25T09:42:44Z",
-      "unknown": true,
-      "unknownSince": "2026-11-25T13:43:20Z",
-      "unknownReason": "missing"
+      "cachedOn": "2026-11-26T07:47:47Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_40239259",
@@ -3716,7 +3668,7 @@
       "distanceKm": 353.1,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:20Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_40239262",
@@ -3731,8 +3683,8 @@
       "totalPickup": null,
       "distanceKm": 347.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:46Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:48Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_40696701",
@@ -3747,8 +3699,8 @@
       "totalPickup": null,
       "distanceKm": 427.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:46Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:48Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_40696704",
@@ -3764,7 +3716,7 @@
       "distanceKm": 397.0,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:20Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_40757250",
@@ -3780,7 +3732,7 @@
       "distanceKm": 581.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T13:44:40Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_40757251",
@@ -3795,8 +3747,8 @@
       "totalPickup": null,
       "distanceKm": 598.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:47Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:48Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_40847599",
@@ -3812,7 +3764,7 @@
       "distanceKm": 214.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:47Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_40886826",
@@ -3827,8 +3779,8 @@
       "totalPickup": null,
       "distanceKm": 340.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:47Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:49Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_40983883",
@@ -3843,8 +3795,8 @@
       "totalPickup": null,
       "distanceKm": 354.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:47Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "cachedOn": "2026-11-26T07:47:49Z",
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_41192084",
@@ -3860,7 +3812,7 @@
       "distanceKm": 234.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:48Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_8956393",
@@ -3876,7 +3828,7 @@
       "distanceKm": 482.1,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:48Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "storeId": "e_9290075",
@@ -3892,7 +3844,7 @@
       "distanceKm": 407.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:48Z",
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     }
   ],
   "history": [
@@ -3933,7 +3885,7 @@
       "distanceKm": 447.5,
       "productPrice": 3469,
       "accessoryEffective": 599,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -3955,7 +3907,7 @@
       "distanceKm": 443.6,
       "productPrice": 3499,
       "accessoryEffective": 599,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -3977,7 +3929,7 @@
       "distanceKm": 477.7,
       "productPrice": 3399,
       "accessoryEffective": 449,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -3999,7 +3951,7 @@
       "distanceKm": 411.2,
       "productPrice": 3399,
       "accessoryEffective": 479,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4021,7 +3973,7 @@
       "distanceKm": 391.7,
       "productPrice": 3199,
       "accessoryEffective": 519.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4043,7 +3995,7 @@
       "distanceKm": 411.3,
       "productPrice": 3469,
       "accessoryEffective": 489,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4065,7 +4017,7 @@
       "distanceKm": 405.1,
       "productPrice": 3469,
       "accessoryEffective": 399,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4087,7 +4039,7 @@
       "distanceKm": 484.2,
       "productPrice": 3339,
       "accessoryEffective": 629,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4109,7 +4061,7 @@
       "distanceKm": 483.3,
       "productPrice": 3499,
       "accessoryEffective": 449,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4131,7 +4083,7 @@
       "distanceKm": 384.4,
       "productPrice": 3399,
       "accessoryEffective": 449.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4153,7 +4105,7 @@
       "distanceKm": 437.8,
       "productPrice": 3499,
       "accessoryEffective": 449,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4175,7 +4127,7 @@
       "distanceKm": 502.6,
       "productPrice": 3339,
       "accessoryEffective": 629,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4197,7 +4149,7 @@
       "distanceKm": 438.7,
       "productPrice": 3399,
       "accessoryEffective": 549,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4219,7 +4171,7 @@
       "distanceKm": 458.6,
       "productPrice": 3469,
       "accessoryEffective": 449,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4241,7 +4193,7 @@
       "distanceKm": 429.4,
       "productPrice": 3499,
       "accessoryEffective": 449,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4263,7 +4215,7 @@
       "distanceKm": 482.1,
       "productPrice": 3499,
       "accessoryEffective": 449,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4285,7 +4237,7 @@
       "distanceKm": 427.8,
       "productPrice": 3339,
       "accessoryEffective": 449,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4307,7 +4259,7 @@
       "distanceKm": 439.8,
       "productPrice": 3469,
       "accessoryEffective": 489,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4329,7 +4281,7 @@
       "distanceKm": 451.7,
       "productPrice": 3499,
       "accessoryEffective": 449,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4351,7 +4303,7 @@
       "distanceKm": 469.8,
       "productPrice": 3469,
       "accessoryEffective": 499,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4373,7 +4325,7 @@
       "distanceKm": 461.3,
       "productPrice": 3489,
       "accessoryEffective": 629,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4395,7 +4347,7 @@
       "distanceKm": 495.1,
       "productPrice": 3469,
       "accessoryEffective": 599,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4417,7 +4369,7 @@
       "distanceKm": 584.3,
       "productPrice": 3469,
       "accessoryEffective": 599,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000084",
@@ -4439,7 +4391,7 @@
       "distanceKm": 429.2,
       "productPrice": 3499,
       "accessoryEffective": 449,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4461,7 +4413,7 @@
       "distanceKm": 396.2,
       "productPrice": 3299,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4483,7 +4435,7 @@
       "distanceKm": 198.8,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4505,7 +4457,7 @@
       "distanceKm": 319.3,
       "productPrice": 3469,
       "accessoryEffective": 399,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4527,7 +4479,7 @@
       "distanceKm": 199.0,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4549,7 +4501,7 @@
       "distanceKm": 461.6,
       "productPrice": 3469,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4571,7 +4523,7 @@
       "distanceKm": 491.2,
       "productPrice": 3469,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4593,7 +4545,7 @@
       "distanceKm": 479.5,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4615,7 +4567,7 @@
       "distanceKm": 319.7,
       "productPrice": 3469,
       "accessoryEffective": 399,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4637,7 +4589,7 @@
       "distanceKm": 424.7,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4659,7 +4611,7 @@
       "distanceKm": 324.8,
       "productPrice": 3469,
       "accessoryEffective": 399,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4681,7 +4633,7 @@
       "distanceKm": 416.6,
       "productPrice": 3469,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4703,7 +4655,7 @@
       "distanceKm": 467.4,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4725,7 +4677,7 @@
       "distanceKm": 102.8,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4747,7 +4699,7 @@
       "distanceKm": 475.6,
       "productPrice": 3469,
       "accessoryEffective": 349,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4769,7 +4721,7 @@
       "distanceKm": 232.3,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4791,7 +4743,7 @@
       "distanceKm": 324.8,
       "productPrice": 3469,
       "accessoryEffective": 399,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4813,7 +4765,7 @@
       "distanceKm": 186.9,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4835,7 +4787,7 @@
       "distanceKm": 400.3,
       "productPrice": 3299,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4857,7 +4809,7 @@
       "distanceKm": 266.1,
       "productPrice": 3469,
       "accessoryEffective": 243.77,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4879,7 +4831,7 @@
       "distanceKm": 248.6,
       "productPrice": 3469,
       "accessoryEffective": 349,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4901,7 +4853,7 @@
       "distanceKm": 328.3,
       "productPrice": 3469,
       "accessoryEffective": 399,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4923,7 +4875,7 @@
       "distanceKm": 422.5,
       "productPrice": 3479.99,
       "accessoryEffective": 244.96,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4945,7 +4897,7 @@
       "distanceKm": 405.1,
       "productPrice": 3469,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4967,7 +4919,7 @@
       "distanceKm": 122.8,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -4989,7 +4941,7 @@
       "distanceKm": 479.3,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5011,7 +4963,7 @@
       "distanceKm": 366.9,
       "productPrice": 3469,
       "accessoryEffective": 243.77,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5033,7 +4985,7 @@
       "distanceKm": 468.4,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5055,7 +5007,7 @@
       "distanceKm": 393.4,
       "productPrice": 3449,
       "accessoryEffective": 243.77,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5077,7 +5029,7 @@
       "distanceKm": 257.2,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5099,7 +5051,7 @@
       "distanceKm": 438.9,
       "productPrice": 3469,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5121,7 +5073,7 @@
       "distanceKm": 432.7,
       "productPrice": 3299,
       "accessoryEffective": 928,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5143,7 +5095,7 @@
       "distanceKm": 111.2,
       "productPrice": 3469,
       "accessoryEffective": 319,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5165,7 +5117,7 @@
       "distanceKm": 384.3,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5187,7 +5139,7 @@
       "distanceKm": 116.9,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5209,7 +5161,7 @@
       "distanceKm": 213.7,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5231,7 +5183,7 @@
       "distanceKm": 360.2,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5253,7 +5205,7 @@
       "distanceKm": 471.5,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5275,7 +5227,7 @@
       "distanceKm": 509.3,
       "productPrice": 3339,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5297,7 +5249,7 @@
       "distanceKm": 320.1,
       "productPrice": 3469,
       "accessoryEffective": 399,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5319,7 +5271,7 @@
       "distanceKm": 395.9,
       "productPrice": 3299,
       "accessoryEffective": 228,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5341,7 +5293,7 @@
       "distanceKm": 437.3,
       "productPrice": 3469,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5363,7 +5315,7 @@
       "distanceKm": 464.6,
       "productPrice": 3339,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5385,7 +5337,7 @@
       "distanceKm": 374.0,
       "productPrice": 3469,
       "accessoryEffective": 243.77,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5407,7 +5359,7 @@
       "distanceKm": 416.0,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5429,7 +5381,7 @@
       "distanceKm": 590.7,
       "productPrice": 3499,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5451,7 +5403,7 @@
       "distanceKm": 461.6,
       "productPrice": 3339,
       "accessoryEffective": 289.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5473,7 +5425,7 @@
       "distanceKm": 463.5,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5495,7 +5447,7 @@
       "distanceKm": 567.6,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5517,7 +5469,7 @@
       "distanceKm": 436.7,
       "productPrice": 3469,
       "accessoryEffective": 314.77,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5539,7 +5491,7 @@
       "distanceKm": 358.8,
       "productPrice": 3469,
       "accessoryEffective": 243.77,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5561,7 +5513,7 @@
       "distanceKm": 231.2,
       "productPrice": 3469,
       "accessoryEffective": 269,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5583,7 +5535,7 @@
       "distanceKm": 486.8,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5605,7 +5557,7 @@
       "distanceKm": 422.1,
       "productPrice": 3469,
       "accessoryEffective": 243.77,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5627,7 +5579,7 @@
       "distanceKm": 260.0,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5649,7 +5601,7 @@
       "distanceKm": 301.6,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5671,7 +5623,7 @@
       "distanceKm": 404.3,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5693,7 +5645,7 @@
       "distanceKm": 410.4,
       "productPrice": 3299,
       "accessoryEffective": 244.96,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5715,7 +5667,7 @@
       "distanceKm": 456.1,
       "productPrice": 3339,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5737,7 +5689,7 @@
       "distanceKm": 380.6,
       "productPrice": 3498,
       "accessoryEffective": 228,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5759,7 +5711,7 @@
       "distanceKm": 282.0,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5781,7 +5733,7 @@
       "distanceKm": 230.8,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5803,7 +5755,7 @@
       "distanceKm": 486.0,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5825,7 +5777,7 @@
       "distanceKm": 416.2,
       "productPrice": 3469,
       "accessoryEffective": 319.97,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5847,7 +5799,7 @@
       "distanceKm": 414.4,
       "productPrice": 3299,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5869,7 +5821,7 @@
       "distanceKm": 416.6,
       "productPrice": 3299,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5891,7 +5843,7 @@
       "distanceKm": 402.2,
       "productPrice": 3469,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5913,7 +5865,7 @@
       "distanceKm": 245.9,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5935,7 +5887,7 @@
       "distanceKm": 133.9,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5957,7 +5909,7 @@
       "distanceKm": 533.9,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -5979,7 +5931,7 @@
       "distanceKm": 246.7,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6001,7 +5953,7 @@
       "distanceKm": 245.0,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6023,7 +5975,7 @@
       "distanceKm": 298.0,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6045,7 +5997,7 @@
       "distanceKm": 380.6,
       "productPrice": 3399,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6067,7 +6019,7 @@
       "distanceKm": 480.3,
       "productPrice": 3399,
       "accessoryEffective": 349,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6089,7 +6041,7 @@
       "distanceKm": 215.2,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6111,7 +6063,7 @@
       "distanceKm": 682.2,
       "productPrice": 3499,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6133,7 +6085,7 @@
       "distanceKm": 412.4,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6155,7 +6107,7 @@
       "distanceKm": 288.7,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6177,7 +6129,7 @@
       "distanceKm": 472.5,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6199,7 +6151,7 @@
       "distanceKm": 411.3,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6221,7 +6173,7 @@
       "distanceKm": 179.8,
       "productPrice": 3499,
       "accessoryEffective": 319,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6243,7 +6195,7 @@
       "distanceKm": 392.7,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6265,7 +6217,7 @@
       "distanceKm": 430.7,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6287,7 +6239,7 @@
       "distanceKm": 393.7,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6309,7 +6261,7 @@
       "distanceKm": 563.3,
       "productPrice": 3469,
       "accessoryEffective": 256.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6331,7 +6283,7 @@
       "distanceKm": 214.9,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6353,7 +6305,7 @@
       "distanceKm": 606.4,
       "productPrice": 3499,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6375,7 +6327,7 @@
       "distanceKm": 309.2,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6397,7 +6349,7 @@
       "distanceKm": 337.0,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6419,7 +6371,7 @@
       "distanceKm": 291.8,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6441,7 +6393,7 @@
       "distanceKm": 571.5,
       "productPrice": 3499,
       "accessoryEffective": 259,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6463,7 +6415,7 @@
       "distanceKm": 185.4,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6485,7 +6437,7 @@
       "distanceKm": 211.7,
       "productPrice": 3469,
       "accessoryEffective": 349,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6507,7 +6459,7 @@
       "distanceKm": 428.4,
       "productPrice": 3299,
       "accessoryEffective": 245.96,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6529,7 +6481,7 @@
       "distanceKm": 408.6,
       "productPrice": 3469,
       "accessoryEffective": 314.77,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6551,7 +6503,7 @@
       "distanceKm": 230.3,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6573,7 +6525,7 @@
       "distanceKm": 529.3,
       "productPrice": 3499,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6595,7 +6547,7 @@
       "distanceKm": 335.1,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6617,7 +6569,7 @@
       "distanceKm": 313.2,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6639,7 +6591,7 @@
       "distanceKm": 575.5,
       "productPrice": 3499,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6661,7 +6613,7 @@
       "distanceKm": 211.0,
       "productPrice": 3299,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6683,7 +6635,7 @@
       "distanceKm": 485.5,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6705,7 +6657,7 @@
       "distanceKm": 421.0,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6727,7 +6679,7 @@
       "distanceKm": 343.2,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6749,7 +6701,7 @@
       "distanceKm": 228.8,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6771,7 +6723,7 @@
       "distanceKm": 164.0,
       "productPrice": 3499,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6793,7 +6745,7 @@
       "distanceKm": 162.8,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6815,7 +6767,7 @@
       "distanceKm": 309.7,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6837,7 +6789,7 @@
       "distanceKm": 264.5,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6859,7 +6811,7 @@
       "distanceKm": 480.6,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6881,7 +6833,7 @@
       "distanceKm": 156.2,
       "productPrice": 3469,
       "accessoryEffective": 240,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6903,7 +6855,7 @@
       "distanceKm": 125.3,
       "productPrice": 3469,
       "accessoryEffective": 240,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6925,7 +6877,7 @@
       "distanceKm": 168.1,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6947,7 +6899,7 @@
       "distanceKm": 500.8,
       "productPrice": 3469,
       "accessoryEffective": 250.94,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6969,7 +6921,7 @@
       "distanceKm": 225.5,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -6991,7 +6943,7 @@
       "distanceKm": 323.4,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7013,7 +6965,7 @@
       "distanceKm": 185.4,
       "productPrice": 3469,
       "accessoryEffective": 319,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7035,7 +6987,7 @@
       "distanceKm": 671.5,
       "productPrice": 3499,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7057,7 +7009,7 @@
       "distanceKm": 360.4,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7079,7 +7031,7 @@
       "distanceKm": 290.9,
       "productPrice": 3469,
       "accessoryEffective": 247,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7101,7 +7053,7 @@
       "distanceKm": 244.8,
       "productPrice": 3469,
       "accessoryEffective": 243.77,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7123,7 +7075,7 @@
       "distanceKm": 426.8,
       "productPrice": 3469,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7145,7 +7097,7 @@
       "distanceKm": 537.4,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7167,7 +7119,7 @@
       "distanceKm": 468.1,
       "productPrice": 3469,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7189,7 +7141,7 @@
       "distanceKm": 464.3,
       "productPrice": 3469,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7211,7 +7163,7 @@
       "distanceKm": 352.2,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7233,7 +7185,7 @@
       "distanceKm": null,
       "productPrice": 3469,
       "accessoryEffective": 309,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7255,7 +7207,7 @@
       "distanceKm": 188.2,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7277,7 +7229,7 @@
       "distanceKm": 496.4,
       "productPrice": 3469,
       "accessoryEffective": 250.94,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7299,7 +7251,7 @@
       "distanceKm": 388.6,
       "productPrice": 3469,
       "accessoryEffective": 233,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7321,7 +7273,7 @@
       "distanceKm": 376.0,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7343,7 +7295,7 @@
       "distanceKm": 500.5,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7365,7 +7317,7 @@
       "distanceKm": 533.8,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7387,7 +7339,7 @@
       "distanceKm": 216.7,
       "productPrice": 3469,
       "accessoryEffective": 240,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7409,7 +7361,7 @@
       "distanceKm": 254.1,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7429,9 +7381,9 @@
       "validTo": "30.11.2026",
       "storeId": "e_30725279",
       "distanceKm": 474.9,
-      "productPrice": 3469,
-      "accessoryEffective": 250.94,
-      "seen": "2026-11-26T05:57:45Z"
+      "productPrice": 3469.95,
+      "accessoryEffective": 249.99,
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7453,7 +7405,7 @@
       "distanceKm": 181.9,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7475,7 +7427,7 @@
       "distanceKm": 194.1,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7497,7 +7449,7 @@
       "distanceKm": 382.7,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7519,7 +7471,7 @@
       "distanceKm": 408.2,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7541,7 +7493,7 @@
       "distanceKm": 369.7,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7563,7 +7515,7 @@
       "distanceKm": 272.8,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7585,7 +7537,7 @@
       "distanceKm": 254.8,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7607,7 +7559,7 @@
       "distanceKm": 81.0,
       "productPrice": 3469,
       "accessoryEffective": 399,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7629,7 +7581,7 @@
       "distanceKm": 31.2,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7651,7 +7603,7 @@
       "distanceKm": 50.3,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7673,7 +7625,7 @@
       "distanceKm": 24.7,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7695,7 +7647,7 @@
       "distanceKm": 526.3,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7717,7 +7669,7 @@
       "distanceKm": 574.0,
       "productPrice": 3499,
       "accessoryEffective": 319,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7739,7 +7691,7 @@
       "distanceKm": 151.3,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7761,7 +7713,7 @@
       "distanceKm": 174.7,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7783,7 +7735,7 @@
       "distanceKm": 572.0,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7805,7 +7757,7 @@
       "distanceKm": 553.8,
       "productPrice": 3469,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7827,7 +7779,7 @@
       "distanceKm": 4.3,
       "productPrice": 3469,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7849,7 +7801,7 @@
       "distanceKm": 477.4,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7871,7 +7823,7 @@
       "distanceKm": 679.5,
       "productPrice": 3499,
       "accessoryEffective": 299,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7893,7 +7845,7 @@
       "distanceKm": 329.4,
       "productPrice": 3469,
       "accessoryEffective": 250.94,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7915,7 +7867,7 @@
       "distanceKm": 345.6,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7937,7 +7889,7 @@
       "distanceKm": 377.2,
       "productPrice": 3475,
       "accessoryEffective": 325,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7959,7 +7911,7 @@
       "distanceKm": 118.6,
       "productPrice": 3469,
       "accessoryEffective": 399,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -7981,7 +7933,7 @@
       "distanceKm": 193.9,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8003,7 +7955,7 @@
       "distanceKm": 246.8,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8025,7 +7977,7 @@
       "distanceKm": 283.4,
       "productPrice": 3469,
       "accessoryEffective": 240,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8047,7 +7999,7 @@
       "distanceKm": 203.5,
       "productPrice": 3469,
       "accessoryEffective": 240,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8069,7 +8021,7 @@
       "distanceKm": 366.8,
       "productPrice": 3469,
       "accessoryEffective": 309,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8091,7 +8043,7 @@
       "distanceKm": 484.3,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8113,7 +8065,7 @@
       "distanceKm": 524.9,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8135,7 +8087,7 @@
       "distanceKm": 260.5,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8157,7 +8109,7 @@
       "distanceKm": 353.1,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8179,7 +8131,7 @@
       "distanceKm": 347.4,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8201,7 +8153,7 @@
       "distanceKm": 427.1,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8223,7 +8175,7 @@
       "distanceKm": 397.0,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8245,7 +8197,7 @@
       "distanceKm": 581.5,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8267,7 +8219,7 @@
       "distanceKm": 598.6,
       "productPrice": 3469,
       "accessoryEffective": 256.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8289,7 +8241,7 @@
       "distanceKm": 214.5,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8311,7 +8263,7 @@
       "distanceKm": 340.4,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8333,7 +8285,7 @@
       "distanceKm": 234.6,
       "productPrice": 3469,
       "accessoryEffective": 240,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8355,7 +8307,7 @@
       "distanceKm": 482.1,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     },
     {
       "bundleId": "20000159",
@@ -8377,11 +8329,11 @@
       "distanceKm": 407.2,
       "productPrice": 3469,
       "accessoryEffective": 227,
-      "seen": "2026-11-26T05:57:45Z"
+      "seen": "2026-11-26T07:46:44Z"
     }
   ],
   "setsScan": {
-    "time": "2026-11-26T05:57:45Z",
+    "time": "2026-11-26T07:46:44Z",
     "stores": 230,
     "withSet": 203,
     "failed": 0
