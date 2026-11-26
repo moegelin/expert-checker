@@ -12,19 +12,19 @@
   "alertMode": "every",
   "watchSets": true,
   "role": "watch",
-  "lastScan": "2026-11-26T09:43:20Z",
+  "lastScan": "2026-11-26T11:44:14Z",
   "scan": {
-    "time": "2026-11-26T09:43:20Z",
+    "time": "2026-11-26T11:44:14Z",
     "stores": 349,
-    "withOffer": 135,
+    "withOffer": 107,
     "failed": 0,
-    "unknown": 93,
-    "vanished": 55,
-    "dropped": 2,
+    "unknown": 121,
+    "vanished": 28,
+    "dropped": 0,
     "incomplete": false,
     "retried": false,
     "cacheLevels": {
-      "MOST_RECENT": 135
+      "MOST_RECENT": 107
     }
   },
   "best": {
@@ -54,7 +54,7 @@
       "distanceKm": 396.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T13:43:52Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_12609536",
@@ -146,7 +146,10 @@
       "distanceKm": 461.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:05Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_14756048",
@@ -181,7 +184,10 @@
       "distanceKm": 447.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:06Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_14756051",
@@ -197,7 +203,7 @@
       "distanceKm": 479.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:43:42Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_14756052",
@@ -213,7 +219,10 @@
       "distanceKm": 319.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:06Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_15090077",
@@ -285,8 +294,8 @@
       "totalPickup": null,
       "distanceKm": 443.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T07:47:06Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:31Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_18323570",
@@ -302,7 +311,7 @@
       "distanceKm": 467.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:43:43Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_18751463",
@@ -337,7 +346,10 @@
       "distanceKm": 430.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:08Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1906832",
@@ -372,7 +384,7 @@
       "distanceKm": 477.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:43:44Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1906845",
@@ -388,7 +400,10 @@
       "distanceKm": 232.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:08Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1906846",
@@ -404,7 +419,10 @@
       "distanceKm": 324.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:08Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1906849",
@@ -439,7 +457,7 @@
       "distanceKm": 400.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:43:45Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1906866",
@@ -455,7 +473,10 @@
       "distanceKm": 266.1,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:08Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1906876",
@@ -471,7 +492,7 @@
       "distanceKm": 411.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:43:45Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1906881",
@@ -486,8 +507,8 @@
       "totalPickup": null,
       "distanceKm": 391.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:43:46Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:34Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1906888",
@@ -502,8 +523,8 @@
       "totalPickup": null,
       "distanceKm": 411.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T07:47:10Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:34Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1906889",
@@ -538,7 +559,10 @@
       "distanceKm": 328.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:10Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1906905",
@@ -553,8 +577,8 @@
       "totalPickup": null,
       "distanceKm": 422.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:43:47Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:34Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1906921",
@@ -607,8 +631,8 @@
       "totalPickup": null,
       "distanceKm": 405.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:43:47Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:35Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1906925",
@@ -624,7 +648,10 @@
       "distanceKm": 419.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:12Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1906928",
@@ -640,7 +667,10 @@
       "distanceKm": 122.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:11Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1906930",
@@ -655,8 +685,8 @@
       "totalPickup": null,
       "distanceKm": 479.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:43:48Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:35Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1906936",
@@ -691,7 +721,10 @@
       "distanceKm": 468.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:12Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1906954",
@@ -706,8 +739,8 @@
       "totalPickup": null,
       "distanceKm": 484.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T07:47:12Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:36Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1906960",
@@ -722,8 +755,8 @@
       "totalPickup": null,
       "distanceKm": 393.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T07:47:12Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:36Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1906965",
@@ -739,7 +772,10 @@
       "distanceKm": 257.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:43:48Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1906966",
@@ -755,7 +791,7 @@
       "distanceKm": 438.9,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:13Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1906978",
@@ -770,8 +806,8 @@
       "totalPickup": null,
       "distanceKm": 487.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:13Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:37Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1906984",
@@ -806,7 +842,7 @@
       "distanceKm": 432.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:43:50Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1906999",
@@ -859,8 +895,8 @@
       "totalPickup": null,
       "distanceKm": 483.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:43:50Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:37Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907032",
@@ -876,7 +912,7 @@
       "distanceKm": 384.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:43:50Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907035",
@@ -892,7 +928,7 @@
       "distanceKm": 384.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:43:50Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907041",
@@ -965,7 +1001,10 @@
       "distanceKm": 471.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:43:51Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1907060",
@@ -980,8 +1019,8 @@
       "totalPickup": null,
       "distanceKm": 509.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T17:43:35Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:39Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907073",
@@ -1015,8 +1054,8 @@
       "totalPickup": null,
       "distanceKm": 395.9,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:43:51Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:39Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907090",
@@ -1050,8 +1089,8 @@
       "totalPickup": null,
       "distanceKm": 437.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T13:44:03Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:39Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907100",
@@ -1067,7 +1106,7 @@
       "distanceKm": 464.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:16Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907117",
@@ -1121,7 +1160,7 @@
       "distanceKm": 590.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:43:50Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907159",
@@ -1137,7 +1176,7 @@
       "distanceKm": 461.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:43:54Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907160",
@@ -1190,8 +1229,8 @@
       "totalPickup": null,
       "distanceKm": 502.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T07:47:17Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:40Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907172",
@@ -1206,8 +1245,8 @@
       "totalPickup": null,
       "distanceKm": 436.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:43:55Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:40Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907176",
@@ -1261,7 +1300,7 @@
       "distanceKm": 486.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T17:43:38Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907187",
@@ -1295,8 +1334,8 @@
       "totalPickup": null,
       "distanceKm": 438.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:43:55Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:41Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907201",
@@ -1331,7 +1370,7 @@
       "distanceKm": 301.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:43:56Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907226",
@@ -1347,7 +1386,10 @@
       "distanceKm": 404.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:21Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1907245",
@@ -1362,8 +1404,8 @@
       "totalPickup": null,
       "distanceKm": 410.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T07:47:21Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:43Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907256",
@@ -1378,8 +1420,8 @@
       "totalPickup": null,
       "distanceKm": 456.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:22Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:43Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907257",
@@ -1395,7 +1437,10 @@
       "distanceKm": 405.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:22Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1907267",
@@ -1411,7 +1456,10 @@
       "distanceKm": 264.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:21Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1907269",
@@ -1426,8 +1474,8 @@
       "totalPickup": null,
       "distanceKm": 380.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:43:57Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:43Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907273",
@@ -1442,8 +1490,8 @@
       "totalPickup": null,
       "distanceKm": 574.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T07:47:21Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:44Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907279",
@@ -1477,8 +1525,8 @@
       "totalPickup": null,
       "distanceKm": 282.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:43:58Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:43Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907286",
@@ -1513,7 +1561,10 @@
       "distanceKm": 486.0,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:22Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_1907298",
@@ -1548,7 +1599,7 @@
       "distanceKm": 416.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:43:59Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907301",
@@ -1563,8 +1614,8 @@
       "totalPickup": null,
       "distanceKm": 429.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T07:47:22Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:44Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907303",
@@ -1579,8 +1630,8 @@
       "totalPickup": null,
       "distanceKm": 250.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:43:59Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:44Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907316",
@@ -1633,8 +1684,8 @@
       "totalPickup": null,
       "distanceKm": 414.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-25T19:43:56Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:45Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907324",
@@ -1650,7 +1701,7 @@
       "distanceKm": 482.1,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:00Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907343",
@@ -1666,7 +1717,7 @@
       "distanceKm": 416.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T15:44:43Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907357",
@@ -1739,7 +1790,7 @@
       "distanceKm": 533.9,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:01Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907371",
@@ -1773,8 +1824,8 @@
       "totalPickup": null,
       "distanceKm": 427.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:02Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:47Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907390",
@@ -1808,8 +1859,8 @@
       "totalPickup": null,
       "distanceKm": 298.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:02Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:46Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907418",
@@ -1825,7 +1876,7 @@
       "distanceKm": 380.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:01Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907423",
@@ -1840,8 +1891,8 @@
       "totalPickup": null,
       "distanceKm": 480.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:02Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:47Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907427",
@@ -1913,8 +1964,8 @@
       "totalPickup": null,
       "distanceKm": 682.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:28Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:47Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907441",
@@ -1968,7 +2019,7 @@
       "distanceKm": 288.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:28Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907470",
@@ -1984,7 +2035,7 @@
       "distanceKm": 472.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:27Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907472",
@@ -2018,8 +2069,8 @@
       "totalPickup": null,
       "distanceKm": 179.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T07:47:28Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:49Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907501",
@@ -2091,8 +2142,8 @@
       "totalPickup": null,
       "distanceKm": 393.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T07:47:31Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:49Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907577",
@@ -2108,7 +2159,7 @@
       "distanceKm": 563.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T15:44:50Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_1907589",
@@ -2181,7 +2232,7 @@
       "distanceKm": 509.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:07Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_2126219",
@@ -2196,8 +2247,8 @@
       "totalPickup": null,
       "distanceKm": 439.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T07:47:31Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:51Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_2144945",
@@ -2213,7 +2264,7 @@
       "distanceKm": 606.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:04Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_21476261",
@@ -2228,8 +2279,8 @@
       "totalPickup": null,
       "distanceKm": 309.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:07Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:51Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_21476262",
@@ -2244,8 +2295,8 @@
       "totalPickup": null,
       "distanceKm": 337.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:07Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:52Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_21476263",
@@ -2260,8 +2311,8 @@
       "totalPickup": null,
       "distanceKm": 291.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:07Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:52Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_2150035",
@@ -2276,8 +2327,8 @@
       "totalPickup": null,
       "distanceKm": 571.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:08Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:52Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_21578520",
@@ -2331,7 +2382,7 @@
       "distanceKm": 428.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:33Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_2237090",
@@ -2346,8 +2397,8 @@
       "totalPickup": null,
       "distanceKm": 408.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:08Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:53Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_2266385",
@@ -2382,7 +2433,7 @@
       "distanceKm": 529.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:33Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_2268063",
@@ -2398,7 +2449,10 @@
       "distanceKm": 335.1,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:34Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_2268069",
@@ -2432,8 +2486,8 @@
       "totalPickup": null,
       "distanceKm": 575.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T07:47:35Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:54Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_2268081",
@@ -2448,8 +2502,8 @@
       "totalPickup": null,
       "distanceKm": 211.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:09Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:53Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_24135176",
@@ -2464,8 +2518,8 @@
       "totalPickup": null,
       "distanceKm": 485.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:10Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:54Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_2426079",
@@ -2481,7 +2535,10 @@
       "distanceKm": 421.0,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:07Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_24686946",
@@ -2534,8 +2591,8 @@
       "totalPickup": null,
       "distanceKm": 451.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:35Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:54Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_25254885",
@@ -2550,8 +2607,8 @@
       "totalPickup": null,
       "distanceKm": 164.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:10Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:54Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_25254886",
@@ -2585,8 +2642,8 @@
       "totalPickup": null,
       "distanceKm": 309.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:11Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:54Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_25401149",
@@ -2601,8 +2658,8 @@
       "totalPickup": null,
       "distanceKm": 264.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:11Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:54Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_2552963",
@@ -2617,8 +2674,8 @@
       "totalPickup": null,
       "distanceKm": 480.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:11Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:55Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_25731520",
@@ -2633,8 +2690,8 @@
       "totalPickup": null,
       "distanceKm": 471.2,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:12Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:55Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_25910829",
@@ -2669,7 +2726,10 @@
       "distanceKm": 125.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:12Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_26051722",
@@ -2723,7 +2783,7 @@
       "distanceKm": 500.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:11Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_26647453",
@@ -2795,8 +2855,8 @@
       "totalPickup": null,
       "distanceKm": 671.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T05:58:37Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:55Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_27284126",
@@ -2811,8 +2871,8 @@
       "totalPickup": null,
       "distanceKm": 360.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:12Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:55Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_2737312",
@@ -2866,7 +2926,10 @@
       "distanceKm": 426.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:13Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_27509128",
@@ -2920,7 +2983,10 @@
       "distanceKm": 469.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:14Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_28756292",
@@ -2954,8 +3020,8 @@
       "totalPickup": null,
       "distanceKm": null,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:21Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:45:05Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_2917802",
@@ -2990,7 +3056,7 @@
       "distanceKm": 496.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:13Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_29514128",
@@ -3044,7 +3110,7 @@
       "distanceKm": 500.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:14Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_29932479",
@@ -3059,8 +3125,8 @@
       "totalPickup": null,
       "distanceKm": 533.8,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:14Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:57Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_30481005",
@@ -3094,8 +3160,8 @@
       "totalPickup": null,
       "distanceKm": 405.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:14Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:57Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_30553854",
@@ -3111,7 +3177,7 @@
       "distanceKm": 402.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:41Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_30584101",
@@ -3146,7 +3212,7 @@
       "distanceKm": 474.9,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:14Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_31315790",
@@ -3199,8 +3265,8 @@
       "totalPickup": null,
       "distanceKm": 382.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:15Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:58Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_31826557",
@@ -3216,7 +3282,7 @@
       "distanceKm": 408.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:41Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_31952339",
@@ -3232,7 +3298,10 @@
       "distanceKm": 369.7,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:41Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_31952340",
@@ -3248,7 +3317,7 @@
       "distanceKm": 272.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:14Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_31952341",
@@ -3264,7 +3333,7 @@
       "distanceKm": 254.8,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:15Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_32103156",
@@ -3279,8 +3348,8 @@
       "totalPickup": null,
       "distanceKm": 461.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T07:47:42Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:59Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_32110783",
@@ -3334,7 +3403,10 @@
       "distanceKm": 50.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:43Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_32472581",
@@ -3369,7 +3441,7 @@
       "distanceKm": 526.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:16Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_33858322",
@@ -3384,8 +3456,8 @@
       "totalPickup": null,
       "distanceKm": 574.0,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:17Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:59Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_33961708",
@@ -3400,8 +3472,8 @@
       "totalPickup": null,
       "distanceKm": 151.3,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:16Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:59Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_33961709",
@@ -3416,8 +3488,8 @@
       "totalPickup": null,
       "distanceKm": 174.7,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:16Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:44:59Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_34511885",
@@ -3433,7 +3505,10 @@
       "distanceKm": 572.0,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:44Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_34511886",
@@ -3449,7 +3524,10 @@
       "distanceKm": 495.1,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:43Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_34511887",
@@ -3484,7 +3562,10 @@
       "distanceKm": 584.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:44Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_34627162",
@@ -3519,7 +3600,7 @@
       "distanceKm": 477.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:44Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_36405583",
@@ -3535,7 +3616,7 @@
       "distanceKm": 429.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:18Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_36696318",
@@ -3551,7 +3632,7 @@
       "distanceKm": 679.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:46Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_36986843",
@@ -3567,7 +3648,7 @@
       "distanceKm": 329.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:18Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_36986844",
@@ -3582,8 +3663,8 @@
       "totalPickup": null,
       "distanceKm": 345.6,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:18Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:45:02Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_37568546",
@@ -3599,7 +3680,7 @@
       "distanceKm": 377.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:19Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_37711505",
@@ -3691,7 +3772,10 @@
       "distanceKm": 283.4,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T05:58:45Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T09:43:20Z",
+      "unknown": true,
+      "unknownSince": "2026-11-26T11:44:14Z",
+      "unknownReason": "missing"
     },
     {
       "storeId": "e_38998105",
@@ -3726,7 +3810,7 @@
       "distanceKm": 484.3,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T07:47:47Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_39923995",
@@ -3779,8 +3863,8 @@
       "totalPickup": null,
       "distanceKm": 353.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:19Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:45:04Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_40239262",
@@ -3795,8 +3879,8 @@
       "totalPickup": null,
       "distanceKm": 347.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:19Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:45:03Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_40696701",
@@ -3831,7 +3915,7 @@
       "distanceKm": 397.0,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-25T19:44:20Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_40757250",
@@ -3847,7 +3931,7 @@
       "distanceKm": 581.5,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:20Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_40757251",
@@ -3863,7 +3947,7 @@
       "distanceKm": 598.6,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:20Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_40847599",
@@ -3878,8 +3962,8 @@
       "totalPickup": null,
       "distanceKm": 214.5,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:21Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:45:05Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_40886826",
@@ -3894,8 +3978,8 @@
       "totalPickup": null,
       "distanceKm": 340.4,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:20Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:45:04Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_40983883",
@@ -3911,7 +3995,7 @@
       "distanceKm": 354.2,
       "cacheLevel": "MOST_RECENT",
       "cachedOn": "2026-11-26T09:44:20Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_41192084",
@@ -3945,8 +4029,8 @@
       "totalPickup": null,
       "distanceKm": 482.1,
       "cacheLevel": "MOST_RECENT",
-      "cachedOn": "2026-11-26T09:44:21Z",
-      "seen": "2026-11-26T09:43:20Z"
+      "cachedOn": "2026-11-26T11:45:06Z",
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "storeId": "e_9290075",
@@ -3997,116 +4081,6 @@
       "accessoryIds": [
         "e_973662"
       ],
-      "unpromoted": 4268,
-      "promoted": 4068,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_14756049",
-      "distanceKm": 447.5,
-      "productPrice": 3469,
-      "accessoryEffective": 599,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 4298,
-      "promoted": 4098,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_17314681",
-      "distanceKm": 443.6,
-      "productPrice": 3499,
-      "accessoryEffective": 599,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 4048,
-      "promoted": 3848,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906836",
-      "distanceKm": 477.7,
-      "productPrice": 3399,
-      "accessoryEffective": 449,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 4078,
-      "promoted": 3878,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906876",
-      "distanceKm": 411.2,
-      "productPrice": 3399,
-      "accessoryEffective": 479,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 3918.99,
-      "promoted": 3718.99,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906881",
-      "distanceKm": 391.7,
-      "productPrice": 3199,
-      "accessoryEffective": 519.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
       "unpromoted": 4158,
       "promoted": 3958,
       "discount": 200,
@@ -4116,51 +4090,7 @@
       "distanceKm": 411.3,
       "productPrice": 3469,
       "accessoryEffective": 489,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 4068,
-      "promoted": 3868,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906924",
-      "distanceKm": 405.1,
-      "productPrice": 3469,
-      "accessoryEffective": 399,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 4168,
-      "promoted": 3968,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906954",
-      "distanceKm": 484.2,
-      "productPrice": 3339,
-      "accessoryEffective": 629,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000084",
@@ -4182,29 +4112,7 @@
       "distanceKm": 483.3,
       "productPrice": 3499,
       "accessoryEffective": 449,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 4048.99,
-      "promoted": 3848.99,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907032",
-      "distanceKm": 384.4,
-      "productPrice": 3399,
-      "accessoryEffective": 449.99,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000084",
@@ -4226,51 +4134,7 @@
       "distanceKm": 437.8,
       "productPrice": 3499,
       "accessoryEffective": 449,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 4168,
-      "promoted": 3968,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907162",
-      "distanceKm": 502.6,
-      "productPrice": 3339,
-      "accessoryEffective": 629,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 4118,
-      "promoted": 3918,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907279",
-      "distanceKm": 458.6,
-      "productPrice": 3469,
-      "accessoryEffective": 449,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000084",
@@ -4288,11 +4152,11 @@
       "discount": 200,
       "validFrom": "01.11.2026",
       "validTo": "30.11.2026",
-      "storeId": "e_1907324",
-      "distanceKm": 482.1,
-      "productPrice": 3499,
-      "accessoryEffective": 449,
-      "seen": "2026-11-26T09:43:20Z"
+      "storeId": "e_1907199",
+      "distanceKm": 438.7,
+      "productPrice": 3399,
+      "accessoryEffective": 549,
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000084",
@@ -4314,117 +4178,7 @@
       "distanceKm": 427.8,
       "productPrice": 3339,
       "accessoryEffective": 449,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 4158,
-      "promoted": 3958,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2126219",
-      "distanceKm": 439.8,
-      "productPrice": 3469,
-      "accessoryEffective": 489,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 4168,
-      "promoted": 3968,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_28713528",
-      "distanceKm": 469.8,
-      "productPrice": 3469,
-      "accessoryEffective": 499,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 4318,
-      "promoted": 4118,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_32103156",
-      "distanceKm": 461.3,
-      "productPrice": 3489,
-      "accessoryEffective": 629,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 4268,
-      "promoted": 4068,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_34511886",
-      "distanceKm": 495.1,
-      "productPrice": 3469,
-      "accessoryEffective": 599,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000084",
-      "promotionId": "e_4206",
-      "articleIds": [
-        "e_973660",
-        "e_973662"
-      ],
-      "accessory": "HTA7100KIT.CEL Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_973662"
-      ],
-      "unpromoted": 4268,
-      "promoted": 4068,
-      "discount": 200,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_34511888",
-      "distanceKm": 584.3,
-      "productPrice": 3469,
-      "accessoryEffective": 599,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000084",
@@ -4442,11 +4196,11 @@
       "discount": 200,
       "validFrom": "01.11.2026",
       "validTo": "30.11.2026",
-      "storeId": "e_36405583",
-      "distanceKm": 429.2,
+      "storeId": "e_24993632",
+      "distanceKm": 451.7,
       "productPrice": 3499,
       "accessoryEffective": 449,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -4468,117 +4222,7 @@
       "distanceKm": 396.2,
       "productPrice": 3299,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_12609536",
-      "distanceKm": 198.8,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3968,
-      "promoted": 3868,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_13068209",
-      "distanceKm": 319.3,
-      "productPrice": 3469,
-      "accessoryEffective": 399,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_13068215",
-      "distanceKm": 199.0,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868.99,
-      "promoted": 3768.99,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_14756046",
-      "distanceKm": 461.6,
-      "productPrice": 3469,
-      "accessoryEffective": 299.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868.99,
-      "promoted": 3768.99,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_14756048",
-      "distanceKm": 491.2,
-      "productPrice": 3469,
-      "accessoryEffective": 299.99,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -4600,95 +4244,7 @@
       "distanceKm": 479.5,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3968,
-      "promoted": 3868,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_14756052",
-      "distanceKm": 319.7,
-      "productPrice": 3469,
-      "accessoryEffective": 399,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_15090077",
-      "distanceKm": 424.7,
-      "productPrice": 3469,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3968,
-      "promoted": 3868,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_15305380",
-      "distanceKm": 324.8,
-      "productPrice": 3469,
-      "accessoryEffective": 399,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868.99,
-      "promoted": 3768.99,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_15526147",
-      "distanceKm": 416.6,
-      "productPrice": 3469,
-      "accessoryEffective": 299.99,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -4710,117 +4266,7 @@
       "distanceKm": 467.4,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_18751463",
-      "distanceKm": 102.8,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3918,
-      "promoted": 3818,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906832",
-      "distanceKm": 475.6,
-      "productPrice": 3469,
-      "accessoryEffective": 349,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906845",
-      "distanceKm": 232.3,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3968,
-      "promoted": 3868,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906846",
-      "distanceKm": 324.8,
-      "productPrice": 3469,
-      "accessoryEffective": 399,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906849",
-      "distanceKm": 186.9,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -4842,139 +4288,7 @@
       "distanceKm": 400.3,
       "productPrice": 3299,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3812.77,
-      "promoted": 3712.77,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906866",
-      "distanceKm": 266.1,
-      "productPrice": 3469,
-      "accessoryEffective": 243.77,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3918,
-      "promoted": 3818,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906889",
-      "distanceKm": 248.6,
-      "productPrice": 3469,
-      "accessoryEffective": 349,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3968,
-      "promoted": 3868,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906899",
-      "distanceKm": 328.3,
-      "productPrice": 3469,
-      "accessoryEffective": 399,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3824.95,
-      "promoted": 3724.95,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906905",
-      "distanceKm": 422.5,
-      "productPrice": 3479.99,
-      "accessoryEffective": 244.96,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868.99,
-      "promoted": 3768.99,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906923",
-      "distanceKm": 405.1,
-      "productPrice": 3469,
-      "accessoryEffective": 299.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906928",
-      "distanceKm": 122.8,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -4996,271 +4310,7 @@
       "distanceKm": 479.3,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3812.77,
-      "promoted": 3712.77,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906936",
-      "distanceKm": 366.9,
-      "productPrice": 3469,
-      "accessoryEffective": 243.77,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906944",
-      "distanceKm": 468.4,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3792.77,
-      "promoted": 3692.77,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906960",
-      "distanceKm": 393.4,
-      "productPrice": 3449,
-      "accessoryEffective": 243.77,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906965",
-      "distanceKm": 257.2,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868.99,
-      "promoted": 3768.99,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906966",
-      "distanceKm": 438.9,
-      "productPrice": 3469,
-      "accessoryEffective": 299.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 4327,
-      "promoted": 4227,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1906988",
-      "distanceKm": 432.7,
-      "productPrice": 3299,
-      "accessoryEffective": 928,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3888,
-      "promoted": 3788,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907013",
-      "distanceKm": 111.2,
-      "productPrice": 3469,
-      "accessoryEffective": 319,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907035",
-      "distanceKm": 384.3,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907041",
-      "distanceKm": 116.9,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907043",
-      "distanceKm": 213.7,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907049",
-      "distanceKm": 360.2,
-      "productPrice": 3469,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907050",
-      "distanceKm": 471.5,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -5282,7 +4332,7 @@
       "distanceKm": 509.3,
       "productPrice": 3339,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -5295,280 +4345,16 @@
       "accessoryIds": [
         "e_943283"
       ],
-      "unpromoted": 3968,
-      "promoted": 3868,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907073",
-      "distanceKm": 320.1,
-      "productPrice": 3469,
-      "accessoryEffective": 399,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3627,
-      "promoted": 3527,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907082",
-      "distanceKm": 395.9,
-      "productPrice": 3299,
-      "accessoryEffective": 228,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868.99,
-      "promoted": 3768.99,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907090",
-      "distanceKm": 437.3,
-      "productPrice": 3469,
-      "accessoryEffective": 299.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3738.99,
-      "promoted": 3638.99,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907100",
-      "distanceKm": 464.6,
-      "productPrice": 3339,
-      "accessoryEffective": 299.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3812.77,
-      "promoted": 3712.77,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907117",
-      "distanceKm": 374.0,
-      "productPrice": 3469,
-      "accessoryEffective": 243.77,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907128",
-      "distanceKm": 416.0,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907154",
-      "distanceKm": 590.7,
-      "productPrice": 3499,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3728.99,
-      "promoted": 3628.99,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907159",
-      "distanceKm": 461.6,
-      "productPrice": 3339,
-      "accessoryEffective": 289.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907160",
-      "distanceKm": 463.5,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907161",
-      "distanceKm": 567.6,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3883.77,
-      "promoted": 3783.77,
+      "unpromoted": 3873.77,
+      "promoted": 3773.77,
       "discount": 100,
       "validFrom": "01.11.2026",
       "validTo": "30.11.2026",
       "storeId": "e_1907172",
       "distanceKm": 436.7,
       "productPrice": 3469,
-      "accessoryEffective": 314.77,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3812.77,
-      "promoted": 3712.77,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907176",
-      "distanceKm": 358.8,
-      "productPrice": 3469,
-      "accessoryEffective": 243.77,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3838,
-      "promoted": 3738,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907179",
-      "distanceKm": 231.2,
-      "productPrice": 3469,
-      "accessoryEffective": 269,
-      "seen": "2026-11-26T09:43:20Z"
+      "accessoryEffective": 304.77,
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -5590,95 +4376,7 @@
       "distanceKm": 486.8,
       "productPrice": 3469,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3812.77,
-      "promoted": 3712.77,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907187",
-      "distanceKm": 422.1,
-      "productPrice": 3469,
-      "accessoryEffective": 243.77,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907201",
-      "distanceKm": 260.0,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907216",
-      "distanceKm": 301.6,
-      "productPrice": 3469,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907226",
-      "distanceKm": 404.3,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -5700,51 +4398,7 @@
       "distanceKm": 410.4,
       "productPrice": 3299,
       "accessoryEffective": 244.96,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3718,
-      "promoted": 3618,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907256",
-      "distanceKm": 456.1,
-      "productPrice": 3339,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3826,
-      "promoted": 3726,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907269",
-      "distanceKm": 380.6,
-      "productPrice": 3498,
-      "accessoryEffective": 228,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -5766,73 +4420,7 @@
       "distanceKm": 282.0,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907286",
-      "distanceKm": 230.8,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907297",
-      "distanceKm": 486.0,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3888.97,
-      "promoted": 3788.97,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907299",
-      "distanceKm": 416.2,
-      "productPrice": 3469,
-      "accessoryEffective": 319.97,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -5854,95 +4442,7 @@
       "distanceKm": 414.4,
       "productPrice": 3299,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3648,
-      "promoted": 3548,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907343",
-      "distanceKm": 416.6,
-      "productPrice": 3299,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868.99,
-      "promoted": 3768.99,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907357",
-      "distanceKm": 402.2,
-      "productPrice": 3469,
-      "accessoryEffective": 299.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907361",
-      "distanceKm": 245.9,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907363",
-      "distanceKm": 133.9,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -5964,51 +4464,7 @@
       "distanceKm": 533.9,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907371",
-      "distanceKm": 246.7,
-      "productPrice": 3469,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907390",
-      "distanceKm": 245.0,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -6030,7 +4486,7 @@
       "distanceKm": 298.0,
       "productPrice": 3469,
       "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -6052,7 +4508,7 @@
       "distanceKm": 380.6,
       "productPrice": 3399,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -6065,236 +4521,16 @@
       "accessoryIds": [
         "e_943283"
       ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907423",
-      "distanceKm": 480.3,
-      "productPrice": 3399,
-      "accessoryEffective": 349,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907427",
-      "distanceKm": 215.2,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3898,
-      "promoted": 3798,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907438",
-      "distanceKm": 682.2,
-      "productPrice": 3499,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907444",
-      "distanceKm": 412.4,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907468",
-      "distanceKm": 288.7,
-      "productPrice": 3469,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907470",
-      "distanceKm": 472.5,
-      "productPrice": 3469,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907472",
-      "distanceKm": 411.3,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3918,
-      "promoted": 3818,
+      "unpromoted": 3908,
+      "promoted": 3808,
       "discount": 100,
       "validFrom": "01.11.2026",
       "validTo": "30.11.2026",
       "storeId": "e_1907497",
       "distanceKm": 179.8,
       "productPrice": 3499,
-      "accessoryEffective": 319,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907517",
-      "distanceKm": 392.7,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907536",
-      "distanceKm": 430.7,
-      "productPrice": 3469,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907554",
-      "distanceKm": 393.7,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
+      "accessoryEffective": 309,
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -6316,51 +4552,7 @@
       "distanceKm": 563.3,
       "productPrice": 3469,
       "accessoryEffective": 256.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_1907589",
-      "distanceKm": 214.9,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3878,
-      "promoted": 3778,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2144945",
-      "distanceKm": 606.4,
-      "productPrice": 3499,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -6382,7 +4574,7 @@
       "distanceKm": 309.2,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -6404,95 +4596,7 @@
       "distanceKm": 337.0,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848.98,
-      "promoted": 3748.98,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_21476263",
-      "distanceKm": 291.8,
-      "productPrice": 3469,
-      "accessoryEffective": 279.98,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3858,
-      "promoted": 3758,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2150035",
-      "distanceKm": 571.5,
-      "productPrice": 3499,
-      "accessoryEffective": 259,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_21578520",
-      "distanceKm": 185.4,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3918,
-      "promoted": 3818,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2201255",
-      "distanceKm": 211.7,
-      "productPrice": 3469,
-      "accessoryEffective": 349,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -6514,51 +4618,7 @@
       "distanceKm": 428.4,
       "productPrice": 3299,
       "accessoryEffective": 245.96,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3883.77,
-      "promoted": 3783.77,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2237090",
-      "distanceKm": 408.6,
-      "productPrice": 3469,
-      "accessoryEffective": 314.77,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2266385",
-      "distanceKm": 230.3,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -6580,51 +4640,7 @@
       "distanceKm": 529.3,
       "productPrice": 3499,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2268063",
-      "distanceKm": 335.1,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2268069",
-      "distanceKm": 313.2,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -6646,7 +4662,7 @@
       "distanceKm": 575.5,
       "productPrice": 3499,
       "accessoryEffective": 299.99,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -6668,7 +4684,7 @@
       "distanceKm": 211.0,
       "productPrice": 3299,
       "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -6690,425 +4706,7 @@
       "distanceKm": 485.5,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_24686946",
-      "distanceKm": 343.2,
-      "productPrice": 3469,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2469251",
-      "distanceKm": 228.8,
-      "productPrice": 3469,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3898,
-      "promoted": 3798,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_25254885",
-      "distanceKm": 164.0,
-      "productPrice": 3499,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_25254886",
-      "distanceKm": 162.8,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848.98,
-      "promoted": 3748.98,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_25401148",
-      "distanceKm": 309.7,
-      "productPrice": 3469,
-      "accessoryEffective": 279.98,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848.98,
-      "promoted": 3748.98,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_25401149",
-      "distanceKm": 264.5,
-      "productPrice": 3469,
-      "accessoryEffective": 279.98,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3819.94,
-      "promoted": 3719.94,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2552963",
-      "distanceKm": 480.6,
-      "productPrice": 3469.95,
-      "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3809,
-      "promoted": 3709,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_25910829",
-      "distanceKm": 156.2,
-      "productPrice": 3469,
-      "accessoryEffective": 240,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3809,
-      "promoted": 3709,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_25910830",
-      "distanceKm": 125.3,
-      "productPrice": 3469,
-      "accessoryEffective": 240,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3819.94,
-      "promoted": 3719.94,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_26344894",
-      "distanceKm": 500.8,
-      "productPrice": 3469.95,
-      "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_26647453",
-      "distanceKm": 225.5,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2673978",
-      "distanceKm": 323.4,
-      "productPrice": 3469,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3888,
-      "promoted": 3788,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_26799835",
-      "distanceKm": 185.4,
-      "productPrice": 3469,
-      "accessoryEffective": 319,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3898,
-      "promoted": 3798,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_26802905",
-      "distanceKm": 671.5,
-      "productPrice": 3499,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848.98,
-      "promoted": 3748.98,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_27284126",
-      "distanceKm": 360.4,
-      "productPrice": 3469,
-      "accessoryEffective": 279.98,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3812.77,
-      "promoted": 3712.77,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2739092",
-      "distanceKm": 244.8,
-      "productPrice": 3469,
-      "accessoryEffective": 243.77,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868.99,
-      "promoted": 3768.99,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2739093",
-      "distanceKm": 426.8,
-      "productPrice": 3469,
-      "accessoryEffective": 299.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868.99,
-      "promoted": 3768.99,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_28570377",
-      "distanceKm": 464.3,
-      "productPrice": 3469,
-      "accessoryEffective": 299.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_28756292",
-      "distanceKm": 352.2,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -7130,447 +4728,7 @@
       "distanceKm": null,
       "productPrice": 3469,
       "accessoryEffective": 309,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_2917802",
-      "distanceKm": 188.2,
-      "productPrice": 3469,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3819.94,
-      "promoted": 3719.94,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_29487094",
-      "distanceKm": 496.4,
-      "productPrice": 3469.95,
-      "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3802,
-      "promoted": 3702,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_29514128",
-      "distanceKm": 388.6,
-      "productPrice": 3469,
-      "accessoryEffective": 233,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_29703322",
-      "distanceKm": 376.0,
-      "productPrice": 3469,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3819.94,
-      "promoted": 3719.94,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_29932478",
-      "distanceKm": 500.5,
-      "productPrice": 3469.95,
-      "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3819.94,
-      "promoted": 3719.94,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_29932479",
-      "distanceKm": 533.8,
-      "productPrice": 3469.95,
-      "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3809,
-      "promoted": 3709,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_30481005",
-      "distanceKm": 216.7,
-      "productPrice": 3469,
-      "accessoryEffective": 240,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_30584101",
-      "distanceKm": 254.1,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3819.94,
-      "promoted": 3719.94,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_30725279",
-      "distanceKm": 474.9,
-      "productPrice": 3469.95,
-      "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_31315790",
-      "distanceKm": 181.9,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_31343294",
-      "distanceKm": 194.1,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_31826556",
-      "distanceKm": 382.7,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_31826557",
-      "distanceKm": 408.2,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_31952339",
-      "distanceKm": 369.7,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848.98,
-      "promoted": 3748.98,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_31952340",
-      "distanceKm": 272.8,
-      "productPrice": 3469,
-      "accessoryEffective": 279.98,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848.98,
-      "promoted": 3748.98,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_31952341",
-      "distanceKm": 254.8,
-      "productPrice": 3469,
-      "accessoryEffective": 279.98,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3968,
-      "promoted": 3868,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_32110783",
-      "distanceKm": 81.0,
-      "productPrice": 3469,
-      "accessoryEffective": 399,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_32410034",
-      "distanceKm": 31.2,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_32472580",
-      "distanceKm": 50.3,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3819.94,
-      "promoted": 3719.94,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_32667526",
-      "distanceKm": 526.3,
-      "productPrice": 3469.95,
-      "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -7592,7 +4750,7 @@
       "distanceKm": 574.0,
       "productPrice": 3499,
       "accessoryEffective": 319,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -7610,297 +4768,11 @@
       "discount": 100,
       "validFrom": "01.11.2026",
       "validTo": "30.11.2026",
-      "storeId": "e_33961709",
-      "distanceKm": 174.7,
+      "storeId": "e_33961708",
+      "distanceKm": 151.3,
       "productPrice": 3469,
       "accessoryEffective": 279.98,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_34511885",
-      "distanceKm": 572.0,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868.99,
-      "promoted": 3768.99,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_34511887",
-      "distanceKm": 553.8,
-      "productPrice": 3469,
-      "accessoryEffective": 299.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3868,
-      "promoted": 3768,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_34627162",
-      "distanceKm": 4.3,
-      "productPrice": 3469,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3819.94,
-      "promoted": 3719.94,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_36242297",
-      "distanceKm": 477.4,
-      "productPrice": 3469.95,
-      "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3898,
-      "promoted": 3798,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_36696318",
-      "distanceKm": 679.5,
-      "productPrice": 3499,
-      "accessoryEffective": 299,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3819.94,
-      "promoted": 3719.94,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_36986843",
-      "distanceKm": 329.4,
-      "productPrice": 3469.95,
-      "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3819.94,
-      "promoted": 3719.94,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_36986844",
-      "distanceKm": 345.6,
-      "productPrice": 3469.95,
-      "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3900,
-      "promoted": 3800,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_37568546",
-      "distanceKm": 377.2,
-      "productPrice": 3475,
-      "accessoryEffective": 325,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3968,
-      "promoted": 3868,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_37907016",
-      "distanceKm": 118.6,
-      "productPrice": 3469,
-      "accessoryEffective": 399,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_38226027",
-      "distanceKm": 193.9,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_38877254",
-      "distanceKm": 246.8,
-      "productPrice": 3469,
-      "accessoryEffective": 249,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3809,
-      "promoted": 3709,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_38877255",
-      "distanceKm": 283.4,
-      "productPrice": 3469,
-      "accessoryEffective": 240,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3878,
-      "promoted": 3778,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_38998105",
-      "distanceKm": 366.8,
-      "productPrice": 3469,
-      "accessoryEffective": 309,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     },
     {
       "bundleId": "20000159",
@@ -7922,299 +4794,13 @@
       "distanceKm": 484.3,
       "productPrice": 3469.95,
       "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_39923995",
-      "distanceKm": 524.9,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848,
-      "promoted": 3748,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_39962719",
-      "distanceKm": 260.5,
-      "productPrice": 3469,
-      "accessoryEffective": 279,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848.98,
-      "promoted": 3748.98,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_40239259",
-      "distanceKm": 353.1,
-      "productPrice": 3469,
-      "accessoryEffective": 279.98,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848.98,
-      "promoted": 3748.98,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_40239262",
-      "distanceKm": 347.4,
-      "productPrice": 3469,
-      "accessoryEffective": 279.98,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_40696701",
-      "distanceKm": 427.1,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_40696704",
-      "distanceKm": 397.0,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3818,
-      "promoted": 3718,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_40757250",
-      "distanceKm": 581.5,
-      "productPrice": 3499,
-      "accessoryEffective": 219,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3825.99,
-      "promoted": 3725.99,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_40757251",
-      "distanceKm": 598.6,
-      "productPrice": 3469,
-      "accessoryEffective": 256.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3819.94,
-      "promoted": 3719.94,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_40847599",
-      "distanceKm": 214.5,
-      "productPrice": 3469.95,
-      "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3848.98,
-      "promoted": 3748.98,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_40886826",
-      "distanceKm": 340.4,
-      "productPrice": 3469,
-      "accessoryEffective": 279.98,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3809,
-      "promoted": 3709,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_41192084",
-      "distanceKm": 234.6,
-      "productPrice": 3469,
-      "accessoryEffective": 240,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3819.94,
-      "promoted": 3719.94,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_8956393",
-      "distanceKm": 482.1,
-      "productPrice": 3469.95,
-      "accessoryEffective": 249.99,
-      "seen": "2026-11-26T09:43:20Z"
-    },
-    {
-      "bundleId": "20000159",
-      "promotionId": "e_4205",
-      "articleIds": [
-        "e_973660",
-        "e_943283"
-      ],
-      "accessory": "BRAVIA Theatre Bar 6 schwarz Soundbar mit Subwoofer",
-      "accessoryIds": [
-        "e_943283"
-      ],
-      "unpromoted": 3796,
-      "promoted": 3696,
-      "discount": 100,
-      "validFrom": "01.11.2026",
-      "validTo": "30.11.2026",
-      "storeId": "e_9290075",
-      "distanceKm": 407.2,
-      "productPrice": 3469,
-      "accessoryEffective": 227,
-      "seen": "2026-11-26T09:43:20Z"
+      "seen": "2026-11-26T11:44:14Z"
     }
   ],
   "setsScan": {
-    "time": "2026-11-26T09:43:20Z",
+    "time": "2026-11-26T11:44:14Z",
     "stores": 228,
-    "withSet": 192,
+    "withSet": 33,
     "failed": 0
   },
   "promotionIds": [
