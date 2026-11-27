@@ -285,12 +285,23 @@
       "text": "run aborted: prices: ScanAborted: 5 of 24 calls failed; prices failed: ScanAborted: 5 of 24 calls failed",
       "url": null,
       "sent": true
+    },
+    {
+      "id": "2026-11-27T05:54:13Z:failure:failure:run",
+      "time": "2026-11-27T05:54:13Z",
+      "kind": "failure",
+      "webcode": null,
+      "storeId": null,
+      "title": "expert-checker: scan failed",
+      "text": "run aborted: prices: ScanAborted: 8 of 38 calls failed; prices failed: ScanAborted: 8 of 38 calls failed",
+      "url": null,
+      "sent": true
     }
   ],
   "state": {
     "cooldowns": {
       "price:11128346052": "2026-11-26T19:42:50Z",
-      "failure:run": "2026-11-26T20:30:12Z"
+      "failure:run": "2026-11-27T05:54:13Z"
     },
     "prices": {
       "11128346052": {
@@ -326,7 +337,7 @@
         "distanceKm": 21.1,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-26T20:30:12Z"
+        "scan": "2026-11-27T05:54:13Z"
       }
     },
     "target": {},

@@ -1,10 +1,10 @@
 {
-  "lastRun": "2026-11-26T20:30:12Z",
-  "berlinTime": "2026-11-26 21:30",
-  "event": "manual",
+  "lastRun": "2026-11-27T05:54:13Z",
+  "berlinTime": "2026-11-27 06:54",
+  "event": "schedule",
   "network": "wifi",
   "runner": "termux",
-  "aborted": "prices: ScanAborted: 5 of 24 calls failed",
+  "aborted": "prices: ScanAborted: 8 of 38 calls failed",
   "warnings": [],
   "steps": {
     "stores": {
@@ -18,16 +18,16 @@
       "calls": 1
     },
     "prices": {
-      "lastAttempt": "2026-11-26T20:30:12Z",
+      "lastAttempt": "2026-11-27T05:54:13Z",
       "ok": false,
-      "error": "ScanAborted: 5 of 24 calls failed",
+      "error": "ScanAborted: 8 of 38 calls failed",
       "products": 2,
       "withOffer": 502,
       "unknown": 18,
       "incomplete": [],
       "articleErrors": {},
       "lastRun": "2026-11-26T19:42:50Z",
-      "calls": 760
+      "calls": 774
     },
     "sets": {
       "lastAttempt": "2026-11-26T15:44:35Z",
@@ -58,12 +58,11 @@
     }
   },
   "skipped": [
-    "stores",
-    "cashback"
+    "stores"
   ],
-  "calls": 760,
+  "calls": 774,
   "alerts": [
-    "2026-11-26T20:30:12Z:failure:failure:run"
+    "2026-11-27T05:54:13Z:failure:failure:run"
   ],
-  "durationS": 100.2
+  "durationS": 137.3
 }
