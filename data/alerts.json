@@ -305,13 +305,13 @@
     },
     "prices": {
       "11128346052": {
-        "total": 2099,
-        "path": "pickup",
-        "storeId": "e_32472581",
-        "distanceKm": 24.7,
+        "total": 3078.9,
+        "path": "shipped",
+        "storeId": "e_34627162",
+        "distanceKm": 4.3,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-27T09:43:56Z"
+        "scan": "2026-11-27T19:45:53Z"
       },
       "11128378730": {
         "total": 3278.9,
@@ -337,16 +337,16 @@
         "distanceKm": 214.5,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-27T17:43:39Z"
+        "scan": "2026-11-27T19:45:53Z"
       },
       "11128258791": {
         "total": 1199,
         "path": "shipped",
-        "storeId": "e_25910829",
-        "distanceKm": 156.2,
+        "storeId": "e_32472580",
+        "distanceKm": 50.3,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-27T17:43:39Z"
+        "scan": "2026-11-27T19:45:53Z"
       }
     },
     "target": {},
