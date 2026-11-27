@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T10:21:49Z",
+  "updated": "2026-11-27T17:43:39Z",
   "promotions": {
     "e_3157": {
       "id": "e_3157",
@@ -20,7 +20,7 @@
         "11128656509"
       ],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-27T10:21:49Z",
+      "lastSeen": "2026-11-27T17:43:39Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
@@ -44,7 +44,7 @@
         "11128346052"
       ],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-27T10:21:49Z",
+      "lastSeen": "2026-11-27T17:43:39Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
@@ -66,7 +66,7 @@
       "articleCount": 87,
       "watched": [],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-27T10:21:49Z",
+      "lastSeen": "2026-11-27T17:43:39Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
@@ -90,7 +90,7 @@
         "11128346052"
       ],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-27T10:21:49Z",
+      "lastSeen": "2026-11-27T17:43:39Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
@@ -112,7 +112,7 @@
       "articleCount": 4,
       "watched": [],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-27T10:21:49Z",
+      "lastSeen": "2026-11-27T17:43:39Z",
       "active": true,
       "sameInvoice": false,
       "amountSource": "pdf",
@@ -129,7 +129,7 @@
           "source": "pdf",
           "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128962771-gq65ls03hwuxzg-the-frame-pro-ls03hw-4k-vision-ai-smart-tv-2026-neo-qled-tv.html",
           "watched": false,
-          "price": 1425,
+          "price": 1519.9,
           "priceSource": "online"
         },
         {
@@ -159,7 +159,7 @@
           "source": "pdf",
           "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11129004771-gq55ls03hwuxzg-the-frame-pro-ls03hw-4k-vision-ai-smart-tv-2026-neo-qled-tv.html",
           "watched": false,
-          "price": 1175,
+          "price": 1318.9,
           "priceSource": "online"
         },
         {
@@ -196,7 +196,7 @@
       "articleCount": 8,
       "watched": [],
       "firstSeen": "2026-11-24T17:58:58Z",
-      "lastSeen": "2026-11-27T10:21:49Z",
+      "lastSeen": "2026-11-27T17:43:39Z",
       "active": true,
       "sameInvoice": true,
       "amountSource": "pdf",
@@ -273,7 +273,7 @@
           "source": "pdf",
           "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128376730-k85xr75m2pb-bravia-7-ii-rgb-led.html",
           "watched": false,
-          "price": 2457.9,
+          "price": 2378,
           "priceSource": "online"
         },
         {
@@ -397,7 +397,7 @@
         "11128656509"
       ],
       "firstSeen": "2026-11-25T07:28:32Z",
-      "lastSeen": "2026-11-27T10:21:49Z",
+      "lastSeen": "2026-11-27T17:43:39Z",
       "active": true,
       "sameInvoice": null,
       "amountSource": "none",
