@@ -1,10 +1,10 @@
 {
-  "lastRun": "2026-11-27T09:43:56Z",
-  "berlinTime": "2026-11-27 10:43",
-  "event": "schedule",
+  "lastRun": "2026-11-27T10:21:49Z",
+  "berlinTime": "2026-11-27 11:21",
+  "event": "manual",
   "network": "wifi",
   "runner": "termux",
-  "aborted": "prices: ScanAborted: 58 of 287 calls failed",
+  "aborted": null,
   "warnings": [],
   "steps": {
     "stores": {
@@ -18,34 +18,34 @@
       "calls": 1
     },
     "prices": {
-      "lastAttempt": "2026-11-27T09:43:56Z",
-      "ok": false,
-      "error": "ScanAborted: 58 of 287 calls failed",
-      "products": 2,
-      "withOffer": 502,
-      "unknown": 18,
-      "incomplete": [],
-      "articleErrors": {},
-      "lastRun": "2026-11-26T19:42:50Z",
-      "calls": 1141
-    },
-    "sets": {
-      "lastAttempt": "2026-11-26T15:44:35Z",
+      "lastAttempt": "2026-11-27T10:21:49Z",
       "ok": true,
       "error": null,
-      "products": 2,
-      "stores": 518,
+      "products": 3,
+      "withOffer": 417,
+      "unknown": 224,
+      "incomplete": [],
+      "articleErrors": {},
+      "lastRun": "2026-11-27T10:21:49Z",
+      "calls": 1049
+    },
+    "sets": {
+      "lastAttempt": "2026-11-27T10:21:49Z",
+      "ok": true,
+      "error": null,
+      "products": 3,
+      "stores": 641,
       "sets": 0,
       "failed": 0,
       "skipped": [],
-      "lastRun": "2026-11-26T15:44:35Z",
-      "calls": 518
+      "lastRun": "2026-11-27T10:21:49Z",
+      "calls": 641
     },
     "cashback": {
-      "lastAttempt": "2026-11-26T17:44:38Z",
+      "lastAttempt": "2026-11-27T10:21:49Z",
       "ok": true,
       "error": null,
-      "indexed": 83,
+      "indexed": 84,
       "kept": 7,
       "cashbacks": 2,
       "extras": 3,
@@ -53,14 +53,14 @@
       "articleLookups": 0,
       "priceLookups": 12,
       "warnings": [],
-      "lastRun": "2026-11-26T17:44:38Z",
+      "lastRun": "2026-11-27T10:21:49Z",
       "calls": 13
     }
   },
   "skipped": [
     "stores"
   ],
-  "calls": 1141,
+  "calls": 1703,
   "alerts": [],
-  "durationS": 209.6
+  "durationS": 127.8
 }

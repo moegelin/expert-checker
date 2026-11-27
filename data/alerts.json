@@ -337,7 +337,16 @@
         "distanceKm": 214.5,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-27T09:43:56Z"
+        "scan": "2026-11-27T10:21:49Z"
+      },
+      "11128258791": {
+        "total": 1199,
+        "path": "shipped",
+        "storeId": "e_25910829",
+        "distanceKm": 156.2,
+        "unknown": false,
+        "cashback": null,
+        "scan": "2026-11-27T10:21:49Z"
       }
     },
     "target": {},
