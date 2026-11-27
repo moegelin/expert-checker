@@ -232,8 +232,13 @@ function enrich(cfg) {
     return { ...o, s, inRange, shipped: o.onlineStock > 0 && o.totalShipped != null ? o.totalShipped : null, pickup: inRange && o.storeStock > 0 ? o.price : null };
   });
   const byTotal = k => (a, b) => a[k] - b[k] || (a.unknown ? 1 : 0) - (b.unknown ? 1 : 0) || (a.distanceKm == null ? 1e9 : a.distanceKm) - (b.distanceKm == null ? 1e9 : b.distanceKm);
-  const ship = offers.filter(o => o.shipped != null).sort(byTotal("shipped"))[0] || null;
-  const pick = offers.filter(o => o.pickup != null).sort(byTotal("pickup"))[0] || null;
+  // display items (Aussteller) are tracked beside the price, not in it: ship and pick are new units only
+  const regular = offers.filter(o => !isDisp(o));
+  const ship = regular.filter(o => o.shipped != null).sort(byTotal("shipped"))[0] || null;
+  const pick = regular.filter(o => o.pickup != null).sort(byTotal("pickup"))[0] || null;
+  const disp = offers.filter(o => isDisp(o) && (o.pickup != null || o.shipped != null))
+    .map(o => { const byPick = o.pickup != null && (o.shipped == null || o.pickup <= o.shipped); return { ...o, path: byPick ? "pick" : "ship", total: byPick ? o.pickup : o.shipped }; })
+    .sort(byTotal("total"))[0] || null;
   const info = rec.cashback || null;
   const cb = info && info.amount ? info.amount : 0;
   const off = info ? { id: info.promotionId, brand: info.brand || "", title: info.title, to: dmy(info.buyTo), regBy: dmy(info.registerBy),
@@ -258,7 +263,7 @@ function enrich(cfg) {
   const extras = (rec.promotionIds || []).map(promoOf).filter(p => p && !isEnded(p) && p.kind === "extra");
   return {
     ...cfg, rec, name, sub: subtitle(rec, name), image: rec.image || null, radius, pending: false,
-    off, cb, offers, ship, pick, shipEff, pickEff, bestKind, bestOff, gross, best, good, target,
+    off, cb, offers, ship, pick, disp, shipEff, pickEff, bestKind, bestOff, gross, best, good, target,
     aboveLow: best != null && min30 != null ? round2(best - min30) : null,
     atTarget: target != null && best != null && best <= target,
     toTarget: target != null && best != null ? round2(best - target) : null,
@@ -273,6 +278,7 @@ function enrich(cfg) {
   };
 }
 const dispBadge = o => o && o.displayType ? `<span class="badge b-aus">${esc(o.displayType)}</span>` : "";
+const isDisp = o => !!o.displayType && o.displayType !== "Restposten";  // Restposten is a normal offer (requirements)
 const unknownNote = o => o && o.unknown ? ", Preis vom letzten Scan" : "";
 function codeName(o) { const m = /\b([A-Z]{3,}\d{1,3})\b/.exec(o.codeTitle || ""); return m ? `Code ${m[1]}` : (o.codeTitle || "Gutscheincode"); }
 function codeLine(o) { return o.codeDiscount ? `, ${esc(codeName(o))} −${eur0(o.codeDiscount)}` : ""; }
@@ -298,6 +304,7 @@ function ledger(p, big) {
   const ak = k === "pick" ? "ship" : "pick", a = ak === "ship" ? p.ship : p.pick;
   if (a) rows.push(lr(`${label(ak)}${dispBadge(a)}`, `${sub(a, ak)}${p.cb ? `, mit Cashback ${money(ak === "ship" ? p.shipEff : p.pickEff)}` : ""}`, money(ak === "ship" ? a.shipped : a.pickup), "alt"));
   else if (o) rows.push(lr(label(ak), ak === "ship" ? "niemand verschickt gerade" : `kein Markt im Umkreis von ${p.radius} km`, "", "alt"));
+  if (p.disp) rows.push(lr(esc(p.disp.displayType), `nicht im Preis: ${sub(p.disp, p.disp.path)}`, money(p.disp.total), "disp"));
   (big ? p.groups : p.groups.slice(0, 1)).forEach(g => {
     const x = g.best, eff = x.accessoryEffective;
     rows.push(lr(`Set mit ${esc(shortAcc(g.accessory))}`, `nicht im Preis: im selben Warenkorb bei ${esc(storeName(x.s))}${x.s.online ? "" : ` (${km(x.distanceKm)})`} kostet das Zubehör ${money(eff)} statt ${money(round2(eff + x.discount))}${g.count > 1 ? `, bei ${g.count} Märkten` : ""}${big && x.validTo ? `, bis ${esc(x.validTo)}` : ""}`, `− ${eur0(x.discount)}`, "set"));
@@ -344,21 +351,24 @@ function extOf(p) {
 function chart(p, H) {
   const W = 420, L = 50, Rr = 10, T = 12, B = 28, hist = p.hist, n = hist.length;
   const a = hist.map(h => h.shipped == null ? null : h.shipped), b = hist.map(h => h.pickup == null ? null : h.pickup);
+  const c = hist.map(h => h.display == null ? null : h.display);  // display items, since 2026-11-27
   const tline = p.target != null ? p.target + p.cb : null;
-  const all = [...a, ...b].filter(v => v != null).concat(tline != null ? [tline] : []);
+  const all = [...a, ...b, ...c].filter(v => v != null).concat(tline != null ? [tline] : []);
   if (!n || !all.length) return `<div class="note" style="border-top:0;padding:4px 0 8px">Noch kein Preisverlauf.</div>`;
   let min = Math.min(...all), max = Math.max(...all); const pad = (max - min || 100) * .12; min -= pad; max += pad;
   const x = i => L + (n > 1 ? i / (n - 1) : 0.5) * (W - L - Rr), y = v => T + (1 - (v - min) / (max - min)) * (H - T - B);
   const path = arr => { let d = "", open = false; arr.forEach((v, i) => { if (v == null) { open = false; return; } d += (open ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1) + " "; open = true; }); return d; };
   const ticks = [0, 1, 2, 3].map(k => { const v = min + pad + (max - min - 2 * pad) * k / 3; return `<text x="${L - 6}" y="${(y(v) + 3).toFixed(1)}" text-anchor="end" font-size="12" fill="var(--muted)">${eur0(v).replace(" €", "")}</text><line x1="${L}" x2="${W - Rr}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="var(--line)"/>`; }).join("");
   const last = arr => { for (let k = arr.length - 1; k >= 0; k--) if (arr[k] != null) return k; return -1; };
-  const la = last(a), lb = last(b);
+  const la = last(a), lb = last(b), lc = last(c);
   const left = fmtDate(hist[0].date), right = hist[n - 1].date === todayISO() ? "heute" : fmtDate(hist[n - 1].date);
   return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Preisverlauf ${n} Tage">
     ${ticks}
     ${tline != null ? `<line x1="${L}" x2="${W - Rr}" y1="${y(tline).toFixed(1)}" y2="${y(tline).toFixed(1)}" stroke="var(--line-2)" stroke-dasharray="4 3"/>` : ""}
     ${la >= 0 && n > 1 ? `<path d="${path(a)} L${x(la).toFixed(1)} ${(H - B).toFixed(1)} L${x(0).toFixed(1)} ${(H - B).toFixed(1)} Z" fill="var(--blue)" opacity=".08"/><path d="${path(a)}" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linejoin="round"/>` : ""}
     ${lb >= 0 && n > 1 ? `<path d="${path(b)}" fill="none" stroke="var(--green)" stroke-width="2" stroke-linejoin="round"/>` : ""}
+    ${lc >= 0 && n > 1 ? `<path d="${path(c)}" fill="none" stroke="var(--red)" stroke-width="2" stroke-dasharray="5 4" stroke-linejoin="round"/>` : ""}
+    ${lc >= 0 ? `<circle cx="${x(lc).toFixed(1)}" cy="${y(c[lc]).toFixed(1)}" r="3.5" fill="var(--card)" stroke="var(--red)" stroke-width="2"/>` : ""}
     ${lb >= 0 ? `<circle cx="${x(lb).toFixed(1)}" cy="${y(b[lb]).toFixed(1)}" r="3.5" fill="var(--green)"/>` : ""}
     ${la >= 0 ? `<circle cx="${x(la).toFixed(1)}" cy="${y(a[la]).toFixed(1)}" r="3.5" fill="var(--blue)"/>` : ""}
     <text x="${L}" y="${H - 6}" font-size="12" fill="var(--muted)">${n > 1 ? left : "heute"}</text>${n > 1 ? `<text x="${W - Rr}" y="${H - 6}" font-size="12" fill="var(--muted)" text-anchor="end">${right}</text>` : ""}
@@ -516,7 +526,7 @@ function renderProduct(wc) {
     ${cashCard}${setCard}${extraCard}${nAkt ? "" : `<div class="card note">Zurzeit keine Aktion für dieses Gerät: kein Cashback des Herstellers, kein Set-Deal, keine Zugabe im Aktionsindex.</div>`}
     ${alertCard(p)}
     <div class="sec"><h2>Preisverlauf</h2><span class="hint">${p.hist.length} ${p.hist.length === 1 ? "Tag" : "Tage"}, bester Preis je Weg${p.cb ? ", ohne Cashback" : ""}</span></div>
-    <div class="card chart">${chart(p, 160)}<div class="leg"><span><i style="background:var(--blue)"></i>Versand</span><span><i style="background:var(--green)"></i>Abholung ≤ ${p.radius} km</span>${p.target != null ? `<span><i style="background:var(--line-2);height:1px"></i>Zielpreis ${eur0(p.target)}${p.cb ? " + Cashback" : ""}</span>` : ""}</div></div>
+    <div class="card chart">${chart(p, 160)}<div class="leg"><span><i style="background:var(--blue)"></i>Versand</span><span><i style="background:var(--green)"></i>Abholung ≤ ${p.radius} km</span>${p.hist.some(h => h.display != null) || p.disp ? `<span><i class="dash"></i>Aussteller</span>` : ""}${p.target != null ? `<span><i style="background:var(--line-2);height:1px"></i>Zielpreis ${eur0(p.target)}${p.cb ? " + Cashback" : ""}</span>` : ""}</div>${p.hist.some(h => h.display != null) || p.disp ? `<div class="note" style="border-top:0;padding:6px 0 2px">Neugeräte in den Linien, Aussteller gestrichelt daneben: sie zählen nicht als Bestpreis.</div>` : ""}</div>
     <div class="sec"><h2>Abholung im Umkreis</h2><span class="hint">${p.inR.length ? `${p.inR.length} ${p.inR.length === 1 ? "Markt" : "Märkte"}, nach Entfernung` : `${p.radius} km`}</span></div>
     <div class="grp">${p.inR.map(o => storeCard(o, "pick")).join("") || `<div class="card note">Kein Markt im Umkreis von ${p.radius} km hat das Gerät.</div>`}</div>
     <p class="foot left">Auf expert.de wählst du den Markt mit der <b>PLZ</b>; der Link öffnet die Produktseite direkt mit diesem Markt.</p>

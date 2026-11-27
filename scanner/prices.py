@@ -5,21 +5,33 @@ point and the product data (name, brand, image URL from `search/article` and `me
 Rules of §3: a call that fails after the retries, and a body without `bruttoPrice` where the previous scan
 had an offer, count as "unknown": the previous offer is kept with a flag for up to 24 h. A run in which
 more than half of a product's known offers vanish is marked incomplete (`scan.incomplete`); the alert step
-sends no price alert for it. `price.cacheLevel` and `cachedOn` are recorded per offer and summed per scan. When a product's sweep
-aborts (more than 20 % failed calls), it is retried once after a pause; a second abort ends the run.
+sends no price alert for it. `price.cacheLevel` and `cachedOn` are recorded per offer and summed per scan.
+
+A store that does not list the article answers `500` for good (TCL 65C89L: 63 of 349 stores, 2026-11-27),
+which looked like an outage to the 20 % abort rule. So: the stores whose call ended in an HTTP error last
+scan (`scan.failedStores`) get one attempt and do not count for the rule. When a sweep still aborts, the
+step pauses, asks up to three stores that just answered (the online shop without any) once more, and when
+they answer, finishes the remaining stores without the rule: the failures are per store, not an outage.
+When a control call fails too, the abort stands and ends the run.
+
+Display items (`displayType` other than Restposten) are tracked beside the price, not in it: `best.shipped`
+and `best.pickup` and the history points `shipped` and `pickup` cover new units only; `best.display` and the
+history point `display` hold the cheapest display item on either path.
 """
 
 import time
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 
-from .expert_api import ChallengeError, ExpertApiError, RateLimitedError, ScanAborted
+from .expert_api import ONLINE_SHOP, RETRIES, ChallengeError, ExpertApiError, RateLimitedError, ScanAborted
 from .jsonfile import read_json, write_json
 from .probe import berlin, iso, parse_time
 from . import stores, watchlist
 
 UNKNOWN_KEEP = timedelta(hours=24)
 ABORT_RETRY_PAUSE = 20  # seconds; a burst of 500s right after a sweep aborted a product once (expert-api.md, 2026-11-23)
+CONTROL_CALLS = 3  # stores that answered before the abort, asked once more after the pause
+REGULAR_DISPLAY_TYPES = (None, "Restposten")  # Restposten counts as a normal offer (requirements)
 SLEEP = time.sleep
 INCOMPLETE_SHARE = 0.5
 HISTORY_DAYS = 90
@@ -85,18 +97,15 @@ def scan_product(ctx, product, store_list, max_distance_km):
         fetch_article(ctx.api, record)
 
     store_ids = [s["id"] for s in store_list]
-    retried = False
-    try:
-        results = ctx.api.map(lambda store_id: ctx.api.pricepds(webcode, store_id), store_ids)
-    except ScanAborted:
-        SLEEP(ABORT_RETRY_PAUSE)  # one more try after a short pause; a second abort ends the run
-        results = ctx.api.map(lambda store_id: ctx.api.pricepds(webcode, store_id), store_ids)
-        retried = True
+    expected = set((previous.get("scan") or {}).get("failedStores") or [])
+    results, retried = sweep(ctx.api, webcode, store_ids, expected)
     by_id = {s["id"]: s for s in store_list}
     previous_offers = {o["storeId"]: o for o in previous.get("offers") or []}
     offers, scan = merge_offers(results, store_ids, by_id, previous_offers, ctx.now, max_distance_km)
     scan["time"] = iso(ctx.now)
     scan["retried"] = retried
+    scan["failedStores"] = [sid for sid, r in zip(store_ids, results) if _http_error(r)]
+    scan["failedAgain"] = sum(sid in expected for sid in scan["failedStores"])
     best = best_offers(offers)
     record.update({
         "lastScan": iso(ctx.now),
@@ -111,6 +120,43 @@ def scan_product(ctx, product, store_list, max_distance_km):
 
 def product_path(data_dir, webcode):
     return data_dir / "products" / f"{webcode}.json"
+
+
+def sweep(api, webcode, store_ids, expected):
+    """`pricepds` at every store. Returns (results in store order, retried). Stores in `expected` answered
+    with an HTTP error last scan: one attempt, outside the abort rule. After an abort: pause, control calls,
+    and the rest of the stores without the rule when the controls answer (see the module docstring)."""
+    def call(store_id):
+        return api.pricepds(webcode, store_id, retries=0 if store_id in expected else RETRIES)
+
+    try:
+        return api.map(call, store_ids, ignore=expected), False
+    except ScanAborted as aborted:
+        SLEEP(ABORT_RETRY_PAUSE)
+        results = list(aborted.results or [None] * len(store_ids))
+        answered = [sid for sid, r in zip(store_ids, results) if isinstance(r, dict)]
+        controls = answered[:CONTROL_CALLS] or [ONLINE_SHOP]
+        try:
+            for store_id in controls:
+                api.pricepds(webcode, store_id)
+        except (ChallengeError, RateLimitedError):
+            raise
+        except ExpertApiError:
+            raise ScanAborted(f"{aborted}; {len(controls)} control call(s) after {ABORT_RETRY_PAUSE} s failed too") from aborted
+        remaining = [sid for sid, r in zip(store_ids, results) if not isinstance(r, dict)]
+        rest = api.map(call, remaining, ignore=expected, abort=False)
+        for store_id, result in zip(remaining, rest):
+            results[store_ids.index(store_id)] = result
+        return results, True
+
+
+def _http_error(result):
+    return isinstance(result, ExpertApiError) and result.outcome == "http_error"
+
+
+def is_display(offer):
+    """A real display item. Restposten (clearance) is a normal offer; see requirements."""
+    return offer.get("displayType") not in REGULAR_DISPLAY_TYPES
 
 
 def fetch_article(api, record):
@@ -239,12 +285,12 @@ def _shipping(price):
 
 
 def best_offers(offers):
-    """Best shipped and pickup (§4). Known offers win over kept-unknown ones at the same total; then the nearer store."""
-    def pick(key):
-        candidates = [o for o in offers.values() if o.get(key) is not None]
-        if not candidates:
-            return None
-        o = min(candidates, key=lambda o: (o[key], bool(o.get("unknown")), o["distanceKm"] if o["distanceKm"] is not None else 1e9, o["storeId"]))
+    """Best shipped and pickup of the new units, and the cheapest display item on either path (§4). Known
+    offers win over kept-unknown ones at the same total; then the nearer store."""
+    def rank(o, key):
+        return (o[key], bool(o.get("unknown")), o["distanceKm"] if o["distanceKm"] is not None else 1e9, o["storeId"])
+
+    def entry(o, key):
         best = {"storeId": o["storeId"], "total": o[key], "price": o["price"], "distanceKm": o["distanceKm"],
                 "displayType": o["displayType"]}
         if key == "totalShipped":
@@ -253,19 +299,33 @@ def best_offers(offers):
             best["unknown"] = True
         return best
 
-    return {"shipped": pick("totalShipped"), "pickup": pick("totalPickup")}
+    def pick(key):
+        candidates = [o for o in offers.values() if o.get(key) is not None and not is_display(o)]
+        return entry(min(candidates, key=lambda o: rank(o, key)), key) if candidates else None
+
+    def display():
+        candidates = [(o, key) for o in offers.values() if is_display(o)
+                      for key in ("totalPickup", "totalShipped") if o.get(key) is not None]
+        if not candidates:
+            return None
+        o, key = min(candidates, key=lambda c: rank(c[0], c[1]))
+        return {**entry(o, key), "path": "pickup" if key == "totalPickup" else "shipped"}
+
+    return {"shipped": pick("totalShipped"), "pickup": pick("totalPickup"), "display": display()}
+
+
+HISTORY_KEYS = ("shipped", "pickup", "display")
 
 
 def update_history(history, date, best):
-    """One point per Berlin day with the day's lowest best shipped and pickup totals; the last 90 days."""
-    shipped = (best or {}).get("shipped")
-    pickup = (best or {}).get("pickup")
-    point = {"date": date, "shipped": shipped["total"] if shipped else None, "pickup": pickup["total"] if pickup else None}
+    """One point per Berlin day with the day's lowest best shipped and pickup totals of new units and the
+    day's cheapest display item; the last 90 days. Points before 2026-11-27 have no `display`."""
+    best = best or {}
+    point = {"date": date, **{k: best[k]["total"] if best.get(k) else None for k in HISTORY_KEYS}}
     points = [p for p in history if p.get("date") != date]
     today = next((p for p in history if p.get("date") == date), None)
     if today:
-        point = {"date": date, "shipped": _min(today.get("shipped"), point["shipped"]),
-                 "pickup": _min(today.get("pickup"), point["pickup"])}
+        point = {"date": date, **{k: _min(today.get(k), point[k]) for k in HISTORY_KEYS}}
     points.append(point)
     points.sort(key=lambda p: p["date"])
     return points[-HISTORY_DAYS:]

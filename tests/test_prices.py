@@ -1,4 +1,5 @@
 import unittest
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 
 from scanner import expert_api, prices, run, stores
@@ -61,33 +62,43 @@ class PricesTest(unittest.TestCase):
         self.assertEqual((freital["totalShipped"], freital["totalPickup"]), (None, None))  # not shipped, 168 km away
         self.assertNotIn(PASTERNAK, offers)
 
-    def test_best_shipped_and_pickup(self):
+    def test_best_shipped_and_pickup_are_new_units_and_the_display_item_is_tracked_beside_them(self):
         self.scan()
         best = self.product()["best"]
-        self.assertEqual(best["shipped"], {"storeId": RANGSDORF, "total": 2174.9, "price": 2095, "distanceKm": 24.7,
-                                           "displayType": "Aussteller", "shipping": 79.9, "codeDiscount": 0})
-        self.assertEqual(best["pickup"], {"storeId": RANGSDORF, "total": 2095, "price": 2095, "distanceKm": 24.7,
-                                          "displayType": "Aussteller"})
+        self.assertEqual(best["shipped"], {"storeId": ONLINE_SHOP, "total": 2428.9, "price": 2359, "distanceKm": None,
+                                           "displayType": None, "shipping": 79.9, "codeDiscount": 10})
+        self.assertIsNone(best["pickup"])  # Rangsdorf is an Aussteller, Freital is 168 km away
+        self.assertEqual(best["display"], {"storeId": RANGSDORF, "total": 2095, "price": 2095, "distanceKm": 24.7,
+                                           "displayType": "Aussteller", "path": "pickup"})
+
+    def test_restposten_is_a_regular_offer(self):
+        clearance = dict(fixture("pricepds-philips-rangsdorf"))
+        clearance["price"] = {**clearance["price"], "itemOnDisplay": {"onDisplay": True, "type": "Restposten"}}
+        self.scan(**{pricepds_key(PHILIPS, RANGSDORF): [json_response(clearance)]})
+        best = self.product()["best"]
+        self.assertEqual((best["pickup"]["storeId"], best["pickup"]["displayType"]), (RANGSDORF, "Restposten"))
+        self.assertEqual(best["shipped"]["storeId"], RANGSDORF)
+        self.assertIsNone(best["display"])
 
     def test_scan_block_records_cache_levels(self):
         self.scan()
         s = self.product()["scan"]
         self.assertEqual(s, {"time": "2026-11-23T13:40:00Z", "stores": 7, "withOffer": 3, "failed": 0, "unknown": 0,
                              "vanished": 0, "dropped": 0, "incomplete": False, "retried": False,
-                             "cacheLevels": {"MOST_RECENT": 3}})
+                             "cacheLevels": {"MOST_RECENT": 3}, "failedStores": [], "failedAgain": 0})
 
     def test_history_point_per_berlin_day_keeps_the_days_minimum(self):
         self.scan()
-        self.assertEqual(self.product()["history"], [{"date": "2026-11-23", "shipped": 2174.9, "pickup": 2095}])
+        self.assertEqual(self.product()["history"], [{"date": "2026-11-23", "shipped": 2428.9, "pickup": None, "display": 2095}])
         dearer = dict(fixture("pricepds-philips-rangsdorf"))
         dearer["price"] = {**dearer["price"], "bruttoPrice": 2195}
         self.scan(now=T0 + timedelta(hours=2), **{pricepds_key(PHILIPS, RANGSDORF): [json_response(dearer)]})
-        self.assertEqual(self.product()["history"], [{"date": "2026-11-23", "shipped": 2174.9, "pickup": 2095}])
-        self.assertEqual(self.product()["best"]["pickup"]["total"], 2195)
-        self.scan(now=T0 + timedelta(hours=9), **{pricepds_key(PHILIPS, RANGSDORF): [json_response(dearer)]})  # 23:40 Berlin, 24 Nov? no: 22:40
+        self.assertEqual(self.product()["history"], [{"date": "2026-11-23", "shipped": 2428.9, "pickup": None, "display": 2095}])
+        self.assertEqual(self.product()["best"]["display"]["total"], 2195)
+        self.scan(now=T0 + timedelta(hours=9), **{pricepds_key(PHILIPS, RANGSDORF): [json_response(dearer)]})  # 22:40 Berlin
         self.scan(now=T0 + timedelta(hours=10), **{pricepds_key(PHILIPS, RANGSDORF): [json_response(dearer)]})  # 00:40 on 24 Nov
         self.assertEqual([p["date"] for p in self.product()["history"]], ["2026-11-23", "2026-11-24"])
-        self.assertEqual(self.product()["history"][1], {"date": "2026-11-24", "shipped": 2274.9, "pickup": 2195})
+        self.assertEqual(self.product()["history"][1], {"date": "2026-11-24", "shipped": 2428.9, "pickup": None, "display": 2195})
 
     def test_history_is_capped_at_90_days(self):
         self.scan()
@@ -109,11 +120,25 @@ class PricesTest(unittest.TestCase):
         self.assertEqual((kept["unknown"], kept["unknownSince"], kept["unknownReason"], kept["price"]),
                          (True, "2026-11-23T15:40:00Z", "failed", 2095))
         self.assertEqual(kept["seen"], "2026-11-23T13:40:00Z")
-        self.assertEqual(p["best"]["pickup"]["storeId"], RANGSDORF)
-        self.assertTrue(p["best"]["pickup"]["unknown"])
+        self.assertEqual(p["best"]["display"]["storeId"], RANGSDORF)
+        self.assertTrue(p["best"]["display"]["unknown"])
         self.assertEqual(p["scan"], {"time": "2026-11-23T15:40:00Z", "stores": 7, "withOffer": 2, "failed": 1,
                                      "unknown": 1, "vanished": 1, "dropped": 0, "incomplete": False,
-                                     "retried": False, "cacheLevels": {"MOST_RECENT": 2}})
+                                     "retried": False, "cacheLevels": {"MOST_RECENT": 2},
+                                     "failedStores": [RANGSDORF], "failedAgain": 0})
+
+    def test_store_that_failed_last_scan_gets_one_attempt_and_is_outside_the_abort_rule(self):
+        self.scan()
+        self.scan(now=T0 + timedelta(hours=2), **{pricepds_key(PHILIPS, RANGSDORF): failing()})
+        saved = expert_api.ABORT_MIN_CALLS
+        expert_api.ABORT_MIN_CALLS = 2  # 1 of 7 failed would abort with the rule in force
+        self.addCleanup(setattr, expert_api, "ABORT_MIN_CALLS", saved)
+        _, api, transport = self.scan(now=T0 + timedelta(hours=4), **{pricepds_key(PHILIPS, RANGSDORF): failing()})
+        rangsdorf = [c for c in api.calls if RANGSDORF in c["query"]]
+        self.assertEqual([c["attempts"] for c in rangsdorf], [[500]])
+        p = self.product()
+        self.assertEqual((p["scan"]["failedStores"], p["scan"]["failedAgain"], p["scan"]["retried"]), ([RANGSDORF], 1, False))
+        self.assertEqual(p["scan"]["failed"], 1)
 
     def test_thin_body_without_price_keeps_the_previous_offer(self):
         self.scan()
@@ -135,7 +160,7 @@ class PricesTest(unittest.TestCase):
         self.assertNotIn(RANGSDORF, [o["storeId"] for o in p["offers"]])
         self.assertEqual((p["scan"]["unknown"], p["scan"]["dropped"]), (0, 1))
         self.assertEqual(p["best"]["shipped"]["storeId"], ONLINE_SHOP)
-        self.assertIsNone(p["best"]["pickup"])
+        self.assertIsNone(p["best"]["display"])
 
     def test_offer_that_comes_back_clears_the_flag(self):
         self.scan()
@@ -203,7 +228,8 @@ class PricesTest(unittest.TestCase):
         self.scan()
         p = self.product()
         self.assertIsNone(p["best"]["pickup"])
-        self.assertEqual(p["best"]["shipped"]["storeId"], RANGSDORF)
+        self.assertEqual((p["best"]["display"]["storeId"], p["best"]["display"]["path"], p["best"]["display"]["total"]),
+                         (RANGSDORF, "shipped", 2174.9))
 
     def test_missing_watchlist_fails_the_step(self):
         dirs = Dirs(location=None)
@@ -228,7 +254,8 @@ class PricesTest(unittest.TestCase):
 
 
 class AbortRetryTest(unittest.TestCase):
-    """A burst of 500s aborts a product's sweep; the step waits and tries the product once more."""
+    """A burst of 500s aborts a product's sweep; the step waits, asks stores that answered once more, and
+    finishes the rest without the rule when they answer. When they fail too, the abort ends the run."""
 
     def setUp(self):
         self.dirs = Dirs(products=({"webcode": PHILIPS},))
@@ -250,13 +277,46 @@ class AbortRetryTest(unittest.TestCase):
         p = run.read_json(self.dirs.data / "products" / f"{PHILIPS}.json")
         self.assertTrue(p["scan"]["retried"])
         self.assertEqual(p["scan"]["failed"], 0)
+        per_store = Counter(c["query"] for c in api.calls if "pricepds" in c["endpoint"])
+        self.assertEqual(max(per_store.values()), 2)  # sweep + retry, or sweep + control call; never a third time
 
-    def test_second_abort_ends_the_run(self):
+    def test_stores_that_fail_for_good_do_not_end_the_run(self):
+        """Stores that do not list the article answer 500 every time (TCL 65C89L, 2026-11-27): the control
+        calls answer, the rest of the sweep runs without the rule, the product is written and remembers them."""
+        api, transport, _ = recorded_api(**{pricepds_key(PHILIPS, RANGSDORF): failing(), pricepds_key(PHILIPS, FREITAL): failing()})
+        summary = prices.step(self.dirs.ctx(api))
+        self.assertEqual(self.sleeps, [prices.ABORT_RETRY_PAUSE])
+        self.assertEqual((summary["withOffer"], summary["unknown"]), (1, 0))
+        p = run.read_json(self.dirs.data / "products" / f"{PHILIPS}.json")
+        self.assertEqual((p["scan"]["retried"], p["scan"]["failed"], p["scan"]["failedStores"], p["scan"]["failedAgain"]),
+                         (True, 2, sorted([FREITAL, RANGSDORF]), 0))
+        self.assertEqual([o["storeId"] for o in p["offers"]], [ONLINE_SHOP])
+        self.assertEqual(p["best"]["shipped"]["storeId"], ONLINE_SHOP)
+        # next scan: the two stores get one attempt each and the rule is quiet, no pause, no retry
+        self.sleeps.clear()
         api, _, _ = recorded_api(**{pricepds_key(PHILIPS, RANGSDORF): failing(), pricepds_key(PHILIPS, FREITAL): failing()})
-        with self.assertRaises(ScanAborted):
+        prices.step(self.dirs.ctx(api, now=T0 + timedelta(hours=2)))
+        self.assertEqual(self.sleeps, [])
+        self.assertEqual([c["attempts"] for c in api.calls if RANGSDORF in c["query"] or FREITAL in c["query"]], [[500], [500]])
+        p = run.read_json(self.dirs.data / "products" / f"{PHILIPS}.json")
+        self.assertEqual((p["scan"]["retried"], p["scan"]["failedAgain"]), (False, 2))
+
+    def test_failed_control_calls_end_the_run(self):
+        every_store = {pricepds_key(PHILIPS, sid): failing() for sid in (ONLINE_SHOP, RANGSDORF, FREITAL)}
+        api, _, _ = recorded_api(**every_store, pricepds=failing())  # the recorded stores and all the others
+        with self.assertRaises(ScanAborted) as ctx:
             prices.step(self.dirs.ctx(api))
+        self.assertIn("control call", str(ctx.exception))
         self.assertEqual(self.sleeps, [prices.ABORT_RETRY_PAUSE])
         self.assertFalse((self.dirs.data / "products" / f"{PHILIPS}.json").exists())
+
+    def test_control_calls_use_stores_that_answered(self):
+        api, transport, _ = recorded_api(**{pricepds_key(PHILIPS, RANGSDORF): failing(), pricepds_key(PHILIPS, FREITAL): failing()})
+        prices.step(self.dirs.ctx(api))
+        pricepds = [c["query"] for c in api.calls if "pricepds" in c["endpoint"]]
+        first_sweep = pricepds[:pricepds.index(pricepds[0], 1)]  # up to the first repeated store = the control call
+        self.assertNotIn(RANGSDORF, pricepds[len(first_sweep)])
+        self.assertNotIn(FREITAL, pricepds[len(first_sweep)])
 
 
 class HelpersTest(unittest.TestCase):
@@ -275,12 +335,21 @@ class HelpersTest(unittest.TestCase):
         best = prices.best_offers(offers)
         self.assertEqual(best["pickup"]["storeId"], "e_3")
         self.assertNotIn("unknown", best["pickup"])
-        self.assertEqual(prices.best_offers({}), {"shipped": None, "pickup": None})
+        self.assertEqual(prices.best_offers({}), {"shipped": None, "pickup": None, "display": None})
 
-    def test_update_history_merges_nulls(self):
+    def test_display_takes_the_cheaper_path(self):
+        offers = {
+            "e_1": {"storeId": "e_1", "totalShipped": 150, "totalPickup": None, "price": 100, "distanceKm": 300, "displayType": "Aussteller", "shipping": 50, "codeDiscount": 0},
+            "e_2": {"storeId": "e_2", "totalShipped": 160, "totalPickup": 120, "price": 120, "distanceKm": 10, "displayType": "Ausstellungsstück", "shipping": 40, "codeDiscount": 0},
+        }
+        best = prices.best_offers(offers)
+        self.assertEqual((best["display"]["storeId"], best["display"]["path"], best["display"]["total"]), ("e_2", "pickup", 120))
+        self.assertEqual((best["shipped"], best["pickup"]), (None, None))
+
+    def test_update_history_merges_nulls_and_old_points_without_display(self):
         h = prices.update_history([{"date": "2026-11-23", "shipped": None, "pickup": 5}], "2026-11-23",
-                                  {"shipped": {"total": 7}, "pickup": None})
-        self.assertEqual(h, [{"date": "2026-11-23", "shipped": 7, "pickup": 5}])
+                                  {"shipped": {"total": 7}, "pickup": None, "display": {"total": 3}})
+        self.assertEqual(h, [{"date": "2026-11-23", "shipped": 7, "pickup": 5, "display": 3}])
 
 
 if __name__ == "__main__":

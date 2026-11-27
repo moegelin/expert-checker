@@ -205,6 +205,8 @@ The period drifts at night (observed 2026-11-24/25: starts at 20:43, 22:47, 00:4
 
 Rules: 8 workers, retry `500` three times with 1–2 s delay, exponential backoff on `429 (Too Many Requests)`, abort the run when > 20 % of calls fail (fail ping, N7). A call that still fails after the retries (test: 1 of 763, finding F4) and a thin body without `bruttoPrice` where the previous scan had an offer (finding F3) count as "unknown": the previous offer is kept with a flag for up to 24 h and raises no alert. A run in which more than half of a product's previous offers vanish is marked incomplete and sends no price alert for that product. More than 10 products → the price step scans them in two halves in consecutive runs. The requirement "150 stores, then the rest 30 minutes later" is not needed on the phone either: a product takes about 25 s.
 
+Stores that do not list an article answer `500` for good (TCL 65C89L: 110 of 349, expert-api.md 2026-11-27), which the 20 % rule took for an outage: every run from 2026-11-26 21:30 on aborted at the TCL and skipped `sets` and `cashback`. Since 2026-11-27: the stores whose call ended in an HTTP error last scan are stored per product (`scan.failedStores`), get one attempt in the next sweep and do not count for the rule (`scan.failedAgain` counts them). When a sweep still aborts, the step pauses 20 s, asks up to three stores that just answered once more (the online shop when none did) and, when they answer, finishes the remaining stores without the rule; the failures are per store, not an outage. When a control call fails too, the abort stands and ends the run as before (N7).
+
 The writers in the file table of §4 (`refresh-stores`, `scan-prices`, `scan-sets`, `scan-cashback`) are the steps `stores`, `prices`, `sets` and `cashback` of this table.
 
 ## 4. Data model
@@ -231,8 +233,14 @@ erDiagram
     string role "watch | cashback-tv | cashback-soundbar"
     string alertMode "every | low30 | target"
     string image "data/img/<webcode>.jpg"
-    object best "shipped, pickup (storeId, total)"
+    object best "shipped, pickup (new units), display (storeId, total, path)"
     string lastScan
+  }
+  HISTORY_POINT {
+    string date PK "Berlin day"
+    number shipped "day's lowest best shipped total, new units"
+    number pickup "day's lowest best pickup total, new units"
+    number display "day's cheapest display item on either path (since 2026-11-27)"
   }
   OFFER {
     string storeId PK
@@ -327,6 +335,7 @@ Best price formulas (unchanged from requirements):
 - `totalPickup = price`, only when `storeStock > 0` and `distanceKm ≤ maxDistanceKm`.
 - `accessoryEffective = set.promotedPrice − TV price at the same store`.
 - Restposten counts as a normal offer; `displayType` is shown as a badge.
+- Display items (`displayType` other than Restposten) are tracked beside the price, not in it (decided 2026-11-27): `best.shipped`, `best.pickup`, the history points `shipped` and `pickup`, the effective price of N1/N2 and the app's headline price cover new units only; `best.display` and the history point `display` hold the cheapest display item on either path. The app shows it as its own receipt row ("nicht im Preis") and as a dashed line in the chart; N3 (display deal) is unchanged.
 
 ## 5. Notification rules
 

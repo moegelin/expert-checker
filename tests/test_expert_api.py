@@ -274,6 +274,43 @@ class MapTest(unittest.TestCase):
         with self.assertRaises(ScanAborted):
             api.map(lambda s: api.pricepds("1", s), [f"s{i}" for i in range(200)])
 
+    def test_abort_carries_the_results_so_far(self):
+        transport = FakeTransport(default=lambda url: json_response({}, 404) if int(url.rsplit("s", 1)[1]) % 4 == 0
+                                  else json_response({"ok": 1}))
+        api, _ = make_api(transport)
+        with self.assertRaises(ScanAborted) as ctx:
+            api.map(lambda s: api.pricepds("1", s), [f"s{i}" for i in range(200)])
+        results = ctx.exception.results
+        self.assertEqual(len(results), 200)
+        self.assertTrue(any(isinstance(r, ExpertApiError) for r in results))
+        self.assertTrue(any(r == {"ok": 1} for r in results))
+        self.assertTrue(any(r is None for r in results))  # not started
+
+    def test_ignored_items_do_not_count_for_the_abort_rule(self):
+        transport = FakeTransport(default=lambda url: json_response({}, 404) if int(url.rsplit("s", 1)[1]) % 4 == 0
+                                  else json_response({"ok": 1}))
+        api, _ = make_api(transport)
+        expected = {f"s{i}" for i in range(0, 200, 4)}
+        results = api.map(lambda s: api.pricepds("1", s), [f"s{i}" for i in range(200)], ignore=expected)
+        self.assertEqual(sum(isinstance(r, ExpertApiError) for r in results), 50)
+        with self.assertRaises(ScanAborted):  # only 10 of the 50 expected: 40 of 190 counted calls fail, over 20 %
+            api.map(lambda s: api.pricepds("1", s), [f"s{i}" for i in range(200)], ignore={f"s{i}" for i in range(0, 40, 4)})
+
+    def test_abort_rule_can_be_turned_off(self):
+        transport = FakeTransport(default=lambda url: json_response({}, 404))
+        api, _ = make_api(transport)
+        results = api.map(lambda s: api.pricepds("1", s), [f"s{i}" for i in range(50)], abort=False)
+        self.assertEqual(sum(isinstance(r, ExpertApiError) for r in results), 50)
+
+    def test_pricepds_without_retries_asks_once(self):
+        transport = FakeTransport(default=lambda url: json_response(SERVER_ERROR, 500))
+        api, clock = make_api(transport)
+        with self.assertRaises(ExpertApiError) as ctx:
+            api.pricepds("1", "e_1", retries=0)
+        self.assertEqual(len(transport.requests), 1)
+        self.assertEqual(clock.sleeps, [])
+        self.assertIn("after 0 retries", str(ctx.exception))
+
     def test_20_percent_failures_do_not_abort(self):
         transport = FakeTransport(default=lambda url: json_response({}, 404) if int(url.rsplit("s", 1)[1]) % 5 == 0
                                   else json_response({"ok": 1}))

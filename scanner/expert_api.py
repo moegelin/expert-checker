@@ -74,7 +74,12 @@ class RateLimitedError(ExpertApiError):
 
 
 class ScanAborted(Exception):
-    """Too many calls of one `map` failed."""
+    """Too many calls of one `map` failed. `results` holds what the map had so far: results in item order,
+    an exception for a failed item, `None` for one that had not finished."""
+
+    def __init__(self, message, results=None):
+        super().__init__(message)
+        self.results = results
 
 
 class Response:
@@ -117,8 +122,10 @@ class ExpertApi:
             headers={"Cookie": f"fmarktcookie={ONLINE_SHOP}"},
         )
 
-    def pricepds(self, webcode, store_id):
-        return self.get_json("/api/pricepds", webcode=webcode, storeId=store_id)
+    def pricepds(self, webcode, store_id, retries=RETRIES):
+        """`retries` < RETRIES for a store that answered `500` last time too: a store that does not list the
+        article answers `500` for good (TCL 65C89L, 2026-11-27), four attempts each would be wasted."""
+        return self.get_json("/api/pricepds", retries=retries, webcode=webcode, storeId=store_id)
 
     def promotion_index(self, store_id):
         return self.get_json("/api/promotions/getIndex", storeId=store_id)
@@ -134,20 +141,20 @@ class ExpertApi:
 
     # Requests
 
-    def get_json(self, path, **params):
+    def get_json(self, path, retries=RETRIES, **params):
         query = urllib.parse.urlencode(params)
-        return self._call("GET", path, query, None, {})
+        return self._call("GET", path, query, None, {}, retries)
 
     def post_json(self, path, body, headers=None):
         data = json.dumps(body).encode()
         return self._call("POST", path, "", data, {"Content-Type": "application/json", **(headers or {})})
 
-    def _call(self, method, path, query, data, extra_headers):
+    def _call(self, method, path, query, data, extra_headers, retries=RETRIES):
         url = BASE_URL + path + (f"?{query}" if query else "")
         headers = {**HEADERS, **extra_headers}
         entry = {"endpoint": path, "query": query, "attempts": [], "ms": None, "bytes": None,
                  "dc": None, "outcome": None, "snippet": None, "networkErrors": []}
-        retries = 0
+        retried = 0
         try:
             while True:
                 self._wait_for_gate()
@@ -159,8 +166,8 @@ class ExpertApi:
                     entry["ms"] = round((self._clock() - start) * 1000)
                     entry["attempts"].append("timeout" if _is_timeout(e) else "network")
                     entry["networkErrors"].append(f"{entry['ms']} ms: {e!r}"[:SNIPPET_CHARS])
-                    if retries < RETRIES:
-                        retries += 1
+                    if retried < retries:
+                        retried += 1
                         self._sleep(self._rng(*RETRY_DELAY))
                         continue
                     raise NetworkError(f"{method} {path}: {e!r}") from e
@@ -179,11 +186,11 @@ class ExpertApi:
                     self._rate_limited(resp.headers.get("retry-after"), path)
                     continue
                 if resp.status >= 500:
-                    if retries < RETRIES:
-                        retries += 1
+                    if retried < retries:
+                        retried += 1
                         self._sleep(self._rng(*RETRY_DELAY))
                         continue
-                    raise ExpertApiError(f"{method} {path}: HTTP {resp.status} after {RETRIES} retries", resp.status)
+                    raise ExpertApiError(f"{method} {path}: HTTP {resp.status} after {retried} retries", resp.status)
                 if resp.status == 403 and not is_json:
                     raise ChallengeError(f"{method} {path}: non-JSON 403", resp.status)
                 if not 200 <= resp.status < 300:
@@ -222,15 +229,19 @@ class ExpertApi:
 
     # Parallel calls
 
-    def map(self, fn, items):
+    def map(self, fn, items, ignore=(), abort=True):
         """Run fn over items on WORKERS threads. Returns results in order; failed items hold their exception.
 
-        Raises ChallengeError and RateLimitedError at once, and ScanAborted when more than 20 % of at
-        least 20 finished calls failed. Items that have not started yet are skipped in both cases.
+        Raises ChallengeError and RateLimitedError at once, and ScanAborted (with the results so far) when
+        more than 20 % of at least 20 finished calls failed. Items that have not started yet are skipped in
+        both cases. Items in `ignore` are expected to fail (stores that answered `500` last time too) and
+        count neither as finished nor as failed; `abort=False` turns the 20 % rule off, the challenge and
+        rate-limit stops stay.
         """
         items = list(items)
         results = [None] * len(items)
         stop = threading.Event()
+        ignore = set(ignore)
 
         def run(item):
             if stop.is_set():
@@ -252,16 +263,18 @@ class ExpertApi:
                         error = future.exception()
                         if isinstance(error, _Skipped):
                             continue
-                        finished += 1
                         if isinstance(error, (ChallengeError, RateLimitedError)):
                             raise error
+                        index = futures[future]
+                        counted = items[index] not in ignore
+                        finished += counted
                         if error is not None:
-                            failed += 1
-                            results[futures[future]] = error
+                            failed += counted
+                            results[index] = error
                         else:
-                            results[futures[future]] = future.result()
-                    if finished >= ABORT_MIN_CALLS and failed > ABORT_FAILED_SHARE * finished:
-                        raise ScanAborted(f"{failed} of {finished} calls failed")
+                            results[index] = future.result()
+                    if abort and finished >= ABORT_MIN_CALLS and failed > ABORT_FAILED_SHARE * finished:
+                        raise ScanAborted(f"{failed} of {finished} calls failed", results)
             except BaseException:
                 stop.set()
                 pool.shutdown(wait=True, cancel_futures=True)
