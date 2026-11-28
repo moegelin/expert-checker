@@ -334,7 +334,7 @@
         "distanceKm": 509.2,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-28T08:01:36Z"
+        "scan": "2026-11-28T11:42:44Z"
       },
       "11128378730": {
         "total": 3278.9,
@@ -360,16 +360,16 @@
         "distanceKm": 214.5,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-28T09:42:52Z"
+        "scan": "2026-11-28T11:42:44Z"
       },
       "11128258791": {
-        "total": 1190.9,
+        "total": 1199,
         "path": "shipped",
-        "storeId": "e_38998105",
-        "distanceKm": 366.8,
+        "storeId": "e_34627162",
+        "distanceKm": 4.3,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-28T09:42:52Z"
+        "scan": "2026-11-28T11:42:44Z"
       }
     },
     "target": {},
