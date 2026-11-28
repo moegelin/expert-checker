@@ -307,12 +307,24 @@
       "text": "Philips 65OLED951: 2 353,90 € shipped (was 3 078,90 €) · Techno-Land Deizisau, 509 km",
       "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128346052-65oled951-oled-tv.html?branch_id=e_20575054",
       "sent": true
+    },
+    {
+      "id": "2026-11-28T09:42:52Z:price:11128258791:e_38998105",
+      "time": "2026-11-28T09:42:52Z",
+      "kind": "price",
+      "webcode": "11128258791",
+      "storeId": "e_38998105",
+      "title": "Price drop",
+      "text": "11128258791: 1 190,90 € shipped (was 1 199 €) · expert Roters Varel, 367 km",
+      "url": "https://www.expert.de/shop/unsere-produkte/tv-audio/fernseher/lcd-led-fernseher/11128258791-65c89l-sqd-mini-led-tv.html?branch_id=e_38998105",
+      "sent": true
     }
   ],
   "state": {
     "cooldowns": {
       "price:11128346052": "2026-11-28T06:27:04Z",
-      "failure:run": "2026-11-27T05:54:13Z"
+      "failure:run": "2026-11-27T05:54:13Z",
+      "price:11128258791": "2026-11-28T09:42:52Z"
     },
     "prices": {
       "11128346052": {
@@ -348,16 +360,16 @@
         "distanceKm": 214.5,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-28T08:01:36Z"
+        "scan": "2026-11-28T09:42:52Z"
       },
       "11128258791": {
-        "total": 1199,
+        "total": 1190.9,
         "path": "shipped",
-        "storeId": "e_34627162",
-        "distanceKm": 4.3,
+        "storeId": "e_38998105",
+        "distanceKm": 366.8,
         "unknown": false,
         "cashback": null,
-        "scan": "2026-11-28T08:01:36Z"
+        "scan": "2026-11-28T09:42:52Z"
       }
     },
     "target": {},
